@@ -1,0 +1,5534 @@
+[
+  {
+    "Zil": "#OBJECT (ROOM T-A (IN ROOMS) (DESC \"Translucent Room\") (FLAGS RLANDBIT) (TMAZE %<TABLE () 0 0 0 0 0 0 T-B 1 T-C 0 T-E 0 0 0 0 0 -1>) (CAPACITY 1) (GLOBAL BLACK-PASSAGE) (ACTION TMAZE-F))",
+    "Name": "T-A",
+    "Exits": {},
+    "Properties": {
+      "#IN": "ROOMS",
+      "DESC": [
+        "Translucent Room"
+      ],
+      "FLAGS": [
+        "RLANDBIT"
+      ],
+      "TMAZE": [
+        {
+          "Source": "C:\\opt\\historicalsource\\enchanter\\TERROR.zil:188",
+          "Name": null,
+          "Zil": "%<TABLE () 0 0 0 0 0 0 T-B 1 T-C 0 T-E 0 0 0 0 0 -1>",
+          "Flags": "0",
+          "Data": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            {
+              "Atom": "T-B"
+            },
+            1,
+            {
+              "Atom": "T-C"
+            },
+            0,
+            {
+              "Atom": "T-E"
+            },
+            0,
+            0,
+            0,
+            0,
+            0,
+            -1
+          ]
+        }
+      ],
+      "CAPACITY": [
+        1
+      ],
+      "GLOBAL": [
+        {
+          "Atom": "BLACK-PASSAGE"
+        }
+      ],
+      "ACTION": [
+        {
+          "Atom": "TMAZE-F"
+        }
+      ]
+    },
+    "IsRoom": true
+  },
+  {
+    "Zil": "#OBJECT (ROOM T-B (IN ROOMS) (DESC \"Translucent Room\") (FLAGS RLANDBIT) (TMAZE %<TABLE () 0 0 0 0 0 0 0 0 T-D 1 T-F 1 T-C 0 T-A 1 -1>) (CAPACITY 2) (GLOBAL BLACK-PASSAGE) (ACTION TMAZE-F))",
+    "Name": "T-B",
+    "Exits": {},
+    "Properties": {
+      "#IN": "ROOMS",
+      "DESC": [
+        "Translucent Room"
+      ],
+      "FLAGS": [
+        "RLANDBIT"
+      ],
+      "TMAZE": [
+        {
+          "Source": "C:\\opt\\historicalsource\\enchanter\\TERROR.zil:199",
+          "Name": null,
+          "Zil": "%<TABLE () 0 0 0 0 0 0 0 0 T-D 1 T-F 1 T-C 0 T-A 1 -1>",
+          "Flags": "0",
+          "Data": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            {
+              "Atom": "T-D"
+            },
+            1,
+            {
+              "Atom": "T-F"
+            },
+            1,
+            {
+              "Atom": "T-C"
+            },
+            0,
+            {
+              "Atom": "T-A"
+            },
+            1,
+            -1
+          ]
+        }
+      ],
+      "CAPACITY": [
+        2
+      ],
+      "GLOBAL": [
+        {
+          "Atom": "BLACK-PASSAGE"
+        }
+      ],
+      "ACTION": [
+        {
+          "Atom": "TMAZE-F"
+        }
+      ]
+    },
+    "IsRoom": true
+  },
+  {
+    "Zil": "#OBJECT (ROOM T-C (IN ROOMS) (DESC \"Translucent Room\") (FLAGS RLANDBIT) (TMAZE %<TABLE () T-A 0 0 0 T-B 0 T-D 0 T-F 0 T-G 0 T-E 1 0 0 -1>) (CAPACITY 3) (GLOBAL BLACK-PASSAGE) (ACTION TMAZE-F))",
+    "Name": "T-C",
+    "Exits": {},
+    "Properties": {
+      "#IN": "ROOMS",
+      "DESC": [
+        "Translucent Room"
+      ],
+      "FLAGS": [
+        "RLANDBIT"
+      ],
+      "TMAZE": [
+        {
+          "Source": "C:\\opt\\historicalsource\\enchanter\\TERROR.zil:210",
+          "Name": null,
+          "Zil": "%<TABLE () T-A 0 0 0 T-B 0 T-D 0 T-F 0 T-G 0 T-E 1 0 0 -1>",
+          "Flags": "0",
+          "Data": [
+            {
+              "Atom": "T-A"
+            },
+            0,
+            0,
+            0,
+            {
+              "Atom": "T-B"
+            },
+            0,
+            {
+              "Atom": "T-D"
+            },
+            0,
+            {
+              "Atom": "T-F"
+            },
+            0,
+            {
+              "Atom": "T-G"
+            },
+            0,
+            {
+              "Atom": "T-E"
+            },
+            1,
+            0,
+            0,
+            -1
+          ]
+        }
+      ],
+      "CAPACITY": [
+        3
+      ],
+      "GLOBAL": [
+        {
+          "Atom": "BLACK-PASSAGE"
+        }
+      ],
+      "ACTION": [
+        {
+          "Atom": "TMAZE-F"
+        }
+      ]
+    },
+    "IsRoom": true
+  },
+  {
+    "Zil": "#OBJECT (ROOM T-D (IN ROOMS) (DESC \"Translucent Room\") (FLAGS RLANDBIT) (TMAZE %<TABLE () T-B 1 0 0 0 0 0 0 0 0 T-I 0 T-F 1 T-C 0 -1>) (CAPACITY 4) (GLOBAL BLACK-PASSAGE) (ACTION TMAZE-F))",
+    "Name": "T-D",
+    "Exits": {},
+    "Properties": {
+      "#IN": "ROOMS",
+      "DESC": [
+        "Translucent Room"
+      ],
+      "FLAGS": [
+        "RLANDBIT"
+      ],
+      "TMAZE": [
+        {
+          "Source": "C:\\opt\\historicalsource\\enchanter\\TERROR.zil:221",
+          "Name": null,
+          "Zil": "%<TABLE () T-B 1 0 0 0 0 0 0 0 0 T-I 0 T-F 1 T-C 0 -1>",
+          "Flags": "0",
+          "Data": [
+            {
+              "Atom": "T-B"
+            },
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            {
+              "Atom": "T-I"
+            },
+            0,
+            {
+              "Atom": "T-F"
+            },
+            1,
+            {
+              "Atom": "T-C"
+            },
+            0,
+            -1
+          ]
+        }
+      ],
+      "CAPACITY": [
+        4
+      ],
+      "GLOBAL": [
+        {
+          "Atom": "BLACK-PASSAGE"
+        }
+      ],
+      "ACTION": [
+        {
+          "Atom": "TMAZE-F"
+        }
+      ]
+    },
+    "IsRoom": true
+  },
+  {
+    "Zil": "#OBJECT (ROOM T-E (IN ROOMS) (DESC \"Translucent Room\") (FLAGS RLANDBIT) (TMAZE %<TABLE () 0 0 T-A 0 T-C 1 T-F 0 T-G 1 0 0 0 0 0 0 -1>) (CAPACITY 5) (GLOBAL BLACK-PASSAGE) (ACTION TMAZE-F))",
+    "Name": "T-E",
+    "Exits": {},
+    "Properties": {
+      "#IN": "ROOMS",
+      "DESC": [
+        "Translucent Room"
+      ],
+      "FLAGS": [
+        "RLANDBIT"
+      ],
+      "TMAZE": [
+        {
+          "Source": "C:\\opt\\historicalsource\\enchanter\\TERROR.zil:232",
+          "Name": null,
+          "Zil": "%<TABLE () 0 0 T-A 0 T-C 1 T-F 0 T-G 1 0 0 0 0 0 0 -1>",
+          "Flags": "0",
+          "Data": [
+            0,
+            0,
+            {
+              "Atom": "T-A"
+            },
+            0,
+            {
+              "Atom": "T-C"
+            },
+            1,
+            {
+              "Atom": "T-F"
+            },
+            0,
+            {
+              "Atom": "T-G"
+            },
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            -1
+          ]
+        }
+      ],
+      "CAPACITY": [
+        5
+      ],
+      "GLOBAL": [
+        {
+          "Atom": "BLACK-PASSAGE"
+        }
+      ],
+      "ACTION": [
+        {
+          "Atom": "TMAZE-F"
+        }
+      ]
+    },
+    "IsRoom": true
+  },
+  {
+    "Zil": "#OBJECT (ROOM T-F (IN ROOMS) (DESC \"Translucent Room\") (FLAGS RLANDBIT) (TMAZE %<TABLE () T-C 0 T-B 1 T-D 1 0 0 T-I 0 T-H 0 T-G 1 T-E 0 -1>) (CAPACITY 6) (GLOBAL BLACK-PASSAGE) (ACTION TMAZE-F))",
+    "Name": "T-F",
+    "Exits": {},
+    "Properties": {
+      "#IN": "ROOMS",
+      "DESC": [
+        "Translucent Room"
+      ],
+      "FLAGS": [
+        "RLANDBIT"
+      ],
+      "TMAZE": [
+        {
+          "Source": "C:\\opt\\historicalsource\\enchanter\\TERROR.zil:243",
+          "Name": null,
+          "Zil": "%<TABLE () T-C 0 T-B 1 T-D 1 0 0 T-I 0 T-H 0 T-G 1 T-E 0 -1>",
+          "Flags": "0",
+          "Data": [
+            {
+              "Atom": "T-C"
+            },
+            0,
+            {
+              "Atom": "T-B"
+            },
+            1,
+            {
+              "Atom": "T-D"
+            },
+            1,
+            0,
+            0,
+            {
+              "Atom": "T-I"
+            },
+            0,
+            {
+              "Atom": "T-H"
+            },
+            0,
+            {
+              "Atom": "T-G"
+            },
+            1,
+            {
+              "Atom": "T-E"
+            },
+            0,
+            -1
+          ]
+        }
+      ],
+      "CAPACITY": [
+        6
+      ],
+      "GLOBAL": [
+        {
+          "Atom": "BLACK-PASSAGE"
+        }
+      ],
+      "ACTION": [
+        {
+          "Atom": "TMAZE-F"
+        }
+      ]
+    },
+    "IsRoom": true
+  },
+  {
+    "Zil": "#OBJECT (ROOM T-G (IN ROOMS) (DESC \"Translucent Room\") (FLAGS RLANDBIT) (TMAZE %<TABLE () T-E 1 T-C 0 T-F 1 T-I 0 T-H 1 0 0 0 0 0 0 -1>) (CAPACITY 7) (GLOBAL BLACK-PASSAGE) (ACTION TMAZE-F))",
+    "Name": "T-G",
+    "Exits": {},
+    "Properties": {
+      "#IN": "ROOMS",
+      "DESC": [
+        "Translucent Room"
+      ],
+      "FLAGS": [
+        "RLANDBIT"
+      ],
+      "TMAZE": [
+        {
+          "Source": "C:\\opt\\historicalsource\\enchanter\\TERROR.zil:254",
+          "Name": null,
+          "Zil": "%<TABLE () T-E 1 T-C 0 T-F 1 T-I 0 T-H 1 0 0 0 0 0 0 -1>",
+          "Flags": "0",
+          "Data": [
+            {
+              "Atom": "T-E"
+            },
+            1,
+            {
+              "Atom": "T-C"
+            },
+            0,
+            {
+              "Atom": "T-F"
+            },
+            1,
+            {
+              "Atom": "T-I"
+            },
+            0,
+            {
+              "Atom": "T-H"
+            },
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            -1
+          ]
+        }
+      ],
+      "CAPACITY": [
+        7
+      ],
+      "GLOBAL": [
+        {
+          "Atom": "BLACK-PASSAGE"
+        }
+      ],
+      "ACTION": [
+        {
+          "Atom": "TMAZE-F"
+        }
+      ]
+    },
+    "IsRoom": true
+  },
+  {
+    "Zil": "#OBJECT (ROOM T-H (IN ROOMS) (DESC \"Translucent Room\") (FLAGS RLANDBIT) (TMAZE %<TABLE () T-G 1 T-F 0 T-I 0 0 0 0 0 0 0 0 0 0 0 -1>) (CAPACITY 8) (GLOBAL BLACK-PASSAGE) (ACTION TMAZE-F))",
+    "Name": "T-H",
+    "Exits": {},
+    "Properties": {
+      "#IN": "ROOMS",
+      "DESC": [
+        "Translucent Room"
+      ],
+      "FLAGS": [
+        "RLANDBIT"
+      ],
+      "TMAZE": [
+        {
+          "Source": "C:\\opt\\historicalsource\\enchanter\\TERROR.zil:265",
+          "Name": null,
+          "Zil": "%<TABLE () T-G 1 T-F 0 T-I 0 0 0 0 0 0 0 0 0 0 0 -1>",
+          "Flags": "0",
+          "Data": [
+            {
+              "Atom": "T-G"
+            },
+            1,
+            {
+              "Atom": "T-F"
+            },
+            0,
+            {
+              "Atom": "T-I"
+            },
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            -1
+          ]
+        }
+      ],
+      "CAPACITY": [
+        8
+      ],
+      "GLOBAL": [
+        {
+          "Atom": "BLACK-PASSAGE"
+        }
+      ],
+      "ACTION": [
+        {
+          "Atom": "TMAZE-F"
+        }
+      ]
+    },
+    "IsRoom": true
+  },
+  {
+    "Zil": "#OBJECT (ROOM T-I (IN ROOMS) (DESC \"Translucent Room\") (FLAGS RLANDBIT) (TMAZE %<TABLE () T-F 0 T-D 0 0 0 0 0 0 0 0 0 T-H 0 T-G 0 -1>) (CAPACITY 9) (GLOBAL BLACK-PASSAGE) (ACTION TMAZE-F))",
+    "Name": "T-I",
+    "Exits": {},
+    "Properties": {
+      "#IN": "ROOMS",
+      "DESC": [
+        "Translucent Room"
+      ],
+      "FLAGS": [
+        "RLANDBIT"
+      ],
+      "TMAZE": [
+        {
+          "Source": "C:\\opt\\historicalsource\\enchanter\\TERROR.zil:276",
+          "Name": null,
+          "Zil": "%<TABLE () T-F 0 T-D 0 0 0 0 0 0 0 0 0 T-H 0 T-G 0 -1>",
+          "Flags": "0",
+          "Data": [
+            {
+              "Atom": "T-F"
+            },
+            0,
+            {
+              "Atom": "T-D"
+            },
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            {
+              "Atom": "T-H"
+            },
+            0,
+            {
+              "Atom": "T-G"
+            },
+            0,
+            -1
+          ]
+        }
+      ],
+      "CAPACITY": [
+        9
+      ],
+      "GLOBAL": [
+        {
+          "Atom": "BLACK-PASSAGE"
+        }
+      ],
+      "ACTION": [
+        {
+          "Atom": "TMAZE-F"
+        }
+      ]
+    },
+    "IsRoom": true
+  },
+  {
+    "Zil": "#OBJECT (ROOM LANDING (IN ROOMS) (DESC \"Landing\") (LDESC \"The wall is cylindrical here, with exits east and west. The eastern one\r\nopens into a dark, enclosed space. The air is thick with acrid smoke, and\r\nblack, greasy ashes mar the floor. The mortar and stones of the walls\r\nare stained and crumbly.\") (EAST PER LANDING-EXIT-F) (WEST TO JUNCTION) (FLAGS ONBIT RLANDBIT RMUNGBIT) (PSEUDO \"ASHES\" ASHES-PSEUDO))",
+    "Name": "LANDING",
+    "Exits": {
+      "EAST": {
+        "PER": "LANDING-EXIT-F",
+        "TYPE": "FEXIT",
+        "Zil": "(EAST PER LANDING-EXIT-F)"
+      },
+      "WEST": {
+        "TO": "JUNCTION",
+        "TYPE": "UEXIT",
+        "Zil": "(WEST TO JUNCTION)"
+      }
+    },
+    "Properties": {
+      "#IN": "ROOMS",
+      "DESC": [
+        "Landing"
+      ],
+      "LDESC": [
+        "The wall is cylindrical here, with exits east and west. The eastern one\r\nopens into a dark, enclosed space. The air is thick with acrid smoke, and\r\nblack, greasy ashes mar the floor. The mortar and stones of the walls\r\nare stained and crumbly."
+      ],
+      "EAST": [
+        {
+          "Atom": "PER"
+        },
+        {
+          "Atom": "LANDING-EXIT-F"
+        }
+      ],
+      "WEST": [
+        {
+          "Atom": "TO"
+        },
+        {
+          "Atom": "JUNCTION"
+        }
+      ],
+      "FLAGS": [
+        "ONBIT",
+        "RLANDBIT",
+        "RMUNGBIT"
+      ],
+      "PSEUDO": [
+        "ASHES",
+        {
+          "Atom": "ASHES-PSEUDO"
+        }
+      ]
+    },
+    "IsRoom": true
+  },
+  {
+    "Zil": "#OBJECT (ROOM ENDLESS-STAIR (IN ROOMS) (DESC \"Winding Stair\") (UP PER ENDLESS-UP) (DOWN PER ENDLESS-DOWN) (WEST PER ENDLESS-EXIT-F) (ACTION ENDLESS-STAIR-F) (ADVFCN ADVENTURER-DROPS-OUT) (FLAGS RLANDBIT) (GLOBAL STAIRS))",
+    "Name": "ENDLESS-STAIR",
+    "Exits": {
+      "UP": {
+        "PER": "ENDLESS-UP",
+        "TYPE": "FEXIT",
+        "Zil": "(UP PER ENDLESS-UP)"
+      },
+      "DOWN": {
+        "PER": "ENDLESS-DOWN",
+        "TYPE": "FEXIT",
+        "Zil": "(DOWN PER ENDLESS-DOWN)"
+      },
+      "WEST": {
+        "PER": "ENDLESS-EXIT-F",
+        "TYPE": "FEXIT",
+        "Zil": "(WEST PER ENDLESS-EXIT-F)"
+      }
+    },
+    "Properties": {
+      "#IN": "ROOMS",
+      "DESC": [
+        "Winding Stair"
+      ],
+      "UP": [
+        {
+          "Atom": "PER"
+        },
+        {
+          "Atom": "ENDLESS-UP"
+        }
+      ],
+      "DOWN": [
+        {
+          "Atom": "PER"
+        },
+        {
+          "Atom": "ENDLESS-DOWN"
+        }
+      ],
+      "WEST": [
+        {
+          "Atom": "PER"
+        },
+        {
+          "Atom": "ENDLESS-EXIT-F"
+        }
+      ],
+      "ACTION": [
+        {
+          "Atom": "ENDLESS-STAIR-F"
+        }
+      ],
+      "ADVFCN": [
+        {
+          "Atom": "ADVENTURER-DROPS-OUT"
+        }
+      ],
+      "FLAGS": [
+        "RLANDBIT"
+      ],
+      "GLOBAL": [
+        {
+          "Atom": "STAIRS"
+        }
+      ]
+    },
+    "IsRoom": true
+  },
+  {
+    "Zil": "#OBJECT (ROOM REAL-STAIR (IN ROOMS) (DESC \"Winding Stair\") (LDESC \"This is a circular room with no floor. There are exits east and west.\r\nA crude drawing of stairsteps graces the ceiling. Downward is only\r\ndarkness.\") (WEST PER REAL-STAIR-EXIT-F) (EAST PER REAL-STAIR-EXIT-F) (DOWN PER REAL-STAIR-EXIT-F) (FLAGS RLANDBIT) (ACTION PIT-F) (GLOBAL STAIRS))",
+    "Name": "REAL-STAIR",
+    "Exits": {
+      "WEST": {
+        "PER": "REAL-STAIR-EXIT-F",
+        "TYPE": "FEXIT",
+        "Zil": "(WEST PER REAL-STAIR-EXIT-F)"
+      },
+      "EAST": {
+        "PER": "REAL-STAIR-EXIT-F",
+        "TYPE": "FEXIT",
+        "Zil": "(EAST PER REAL-STAIR-EXIT-F)"
+      },
+      "DOWN": {
+        "PER": "REAL-STAIR-EXIT-F",
+        "TYPE": "FEXIT",
+        "Zil": "(DOWN PER REAL-STAIR-EXIT-F)"
+      }
+    },
+    "Properties": {
+      "#IN": "ROOMS",
+      "DESC": [
+        "Winding Stair"
+      ],
+      "LDESC": [
+        "This is a circular room with no floor. There are exits east and west.\r\nA crude drawing of stairsteps graces the ceiling. Downward is only\r\ndarkness."
+      ],
+      "WEST": [
+        {
+          "Atom": "PER"
+        },
+        {
+          "Atom": "REAL-STAIR-EXIT-F"
+        }
+      ],
+      "EAST": [
+        {
+          "Atom": "PER"
+        },
+        {
+          "Atom": "REAL-STAIR-EXIT-F"
+        }
+      ],
+      "DOWN": [
+        {
+          "Atom": "PER"
+        },
+        {
+          "Atom": "REAL-STAIR-EXIT-F"
+        }
+      ],
+      "FLAGS": [
+        "RLANDBIT"
+      ],
+      "ACTION": [
+        {
+          "Atom": "PIT-F"
+        }
+      ],
+      "GLOBAL": [
+        {
+          "Atom": "STAIRS"
+        }
+      ]
+    },
+    "IsRoom": true
+  },
+  {
+    "Zil": "#OBJECT (ROOM PIT (IN ROOMS) (DESC \"Bottomless Pit\") (LDESC \"This is a circular pit of apparently infinite depth. The walls are of\r\ncrudely dressed stone. No floor is visible.\") (UP PER PIT-EXIT-F) (DOWN PER PIT-EXIT-F) (ACTION PIT-F) (FLAGS RLANDBIT ONBIT))",
+    "Name": "PIT",
+    "Exits": {
+      "UP": {
+        "PER": "PIT-EXIT-F",
+        "TYPE": "FEXIT",
+        "Zil": "(UP PER PIT-EXIT-F)"
+      },
+      "DOWN": {
+        "PER": "PIT-EXIT-F",
+        "TYPE": "FEXIT",
+        "Zil": "(DOWN PER PIT-EXIT-F)"
+      }
+    },
+    "Properties": {
+      "#IN": "ROOMS",
+      "DESC": [
+        "Bottomless Pit"
+      ],
+      "LDESC": [
+        "This is a circular pit of apparently infinite depth. The walls are of\r\ncrudely dressed stone. No floor is visible."
+      ],
+      "UP": [
+        {
+          "Atom": "PER"
+        },
+        {
+          "Atom": "PIT-EXIT-F"
+        }
+      ],
+      "DOWN": [
+        {
+          "Atom": "PER"
+        },
+        {
+          "Atom": "PIT-EXIT-F"
+        }
+      ],
+      "ACTION": [
+        {
+          "Atom": "PIT-F"
+        }
+      ],
+      "FLAGS": [
+        "RLANDBIT",
+        "ONBIT"
+      ]
+    },
+    "IsRoom": true
+  },
+  {
+    "Zil": "#OBJECT (ROOM WARLOCK-TOWER (IN ROOMS) (DESC \"Warlock's Tower\") (LDESC \"This is a room carved out of black basalt, eerily lit by flickering\r\nfires and the dim glow of magic.\") (DOWN \"The pit yawns before you, and the izyuk spell has worn off!\") (WEST \"The pit yawns before you, and the izyuk spell has worn off!\") (FLAGS RLANDBIT ONBIT) (ACTION WARLOCK-TOWER-F))",
+    "Name": "WARLOCK-TOWER",
+    "Exits": {
+      "DOWN": {
+        "MESSAGE": "The pit yawns before you, and the izyuk spell has worn off!",
+        "TYPE": "NEXIT",
+        "Zil": "(DOWN \"The pit yawns before you, and the izyuk spell has worn off!\")"
+      },
+      "WEST": {
+        "MESSAGE": "The pit yawns before you, and the izyuk spell has worn off!",
+        "TYPE": "NEXIT",
+        "Zil": "(WEST \"The pit yawns before you, and the izyuk spell has worn off!\")"
+      }
+    },
+    "Properties": {
+      "#IN": "ROOMS",
+      "DESC": [
+        "Warlock's Tower"
+      ],
+      "LDESC": [
+        "This is a room carved out of black basalt, eerily lit by flickering\r\nfires and the dim glow of magic."
+      ],
+      "DOWN": [
+        "The pit yawns before you, and the izyuk spell has worn off!"
+      ],
+      "WEST": [
+        "The pit yawns before you, and the izyuk spell has worn off!"
+      ],
+      "FLAGS": [
+        "RLANDBIT",
+        "ONBIT"
+      ],
+      "ACTION": [
+        {
+          "Atom": "WARLOCK-TOWER-F"
+        }
+      ]
+    },
+    "IsRoom": true
+  },
+  {
+    "Zil": "#OBJECT (ROOM KNOT-ROOM (IN ROOMS) (DESC \"Closet\") (LDESC \"This small room must have been a closet of some sort. To the north\r\nis a passage leading out into a courtyard. Another exit is\r\nto the south.\") (SOUTH TO DIM-DESCENT) (NORTH TO COURTYARD-1) (FLAGS RLANDBIT))",
+    "Name": "KNOT-ROOM",
+    "Exits": {
+      "SOUTH": {
+        "TO": "DIM-DESCENT",
+        "TYPE": "UEXIT",
+        "Zil": "(SOUTH TO DIM-DESCENT)"
+      },
+      "NORTH": {
+        "TO": "COURTYARD-1",
+        "TYPE": "UEXIT",
+        "Zil": "(NORTH TO COURTYARD-1)"
+      }
+    },
+    "Properties": {
+      "#IN": "ROOMS",
+      "DESC": [
+        "Closet"
+      ],
+      "LDESC": [
+        "This small room must have been a closet of some sort. To the north\r\nis a passage leading out into a courtyard. Another exit is\r\nto the south."
+      ],
+      "SOUTH": [
+        {
+          "Atom": "TO"
+        },
+        {
+          "Atom": "DIM-DESCENT"
+        }
+      ],
+      "NORTH": [
+        {
+          "Atom": "TO"
+        },
+        {
+          "Atom": "COURTYARD-1"
+        }
+      ],
+      "FLAGS": [
+        "RLANDBIT"
+      ]
+    },
+    "IsRoom": true
+  },
+  {
+    "Zil": "#OBJECT (ROOM PURLOINED-ROOM (IN ROOMS) (DESC \"Guarded Door\") (WEST TO NORTH-GATE) (UP TO MAP-ROOM IF DOOR-REALITY IS OPEN) (NORTH TO MAP-ROOM IF DOOR-REALITY IS OPEN) (FLAGS RLANDBIT) (ACTION PURLOINED-ROOM-F) (ADVFCN PURLOINED-ROOM-A) (GLOBAL DOOR-ILLUSION DOOR-REALITY))",
+    "Name": "PURLOINED-ROOM",
+    "Exits": {
+      "WEST": {
+        "TO": "NORTH-GATE",
+        "TYPE": "UEXIT",
+        "Zil": "(WEST TO NORTH-GATE)"
+      },
+      "UP": {
+        "TO": "MAP-ROOM",
+        "DOOR": "DOOR-REALITY",
+        "TYPE": "DEXIT",
+        "Zil": "(UP TO MAP-ROOM IF DOOR-REALITY IS OPEN)"
+      },
+      "NORTH": {
+        "TO": "MAP-ROOM",
+        "DOOR": "DOOR-REALITY",
+        "TYPE": "DEXIT",
+        "Zil": "(NORTH TO MAP-ROOM IF DOOR-REALITY IS OPEN)"
+      }
+    },
+    "Properties": {
+      "#IN": "ROOMS",
+      "DESC": [
+        "Guarded Door"
+      ],
+      "WEST": [
+        {
+          "Atom": "TO"
+        },
+        {
+          "Atom": "NORTH-GATE"
+        }
+      ],
+      "UP": [
+        {
+          "Atom": "TO"
+        },
+        {
+          "Atom": "MAP-ROOM"
+        },
+        {
+          "Atom": "IF"
+        },
+        {
+          "Atom": "DOOR-REALITY"
+        },
+        {
+          "Atom": "IS"
+        },
+        {
+          "Atom": "OPEN"
+        }
+      ],
+      "NORTH": [
+        {
+          "Atom": "TO"
+        },
+        {
+          "Atom": "MAP-ROOM"
+        },
+        {
+          "Atom": "IF"
+        },
+        {
+          "Atom": "DOOR-REALITY"
+        },
+        {
+          "Atom": "IS"
+        },
+        {
+          "Atom": "OPEN"
+        }
+      ],
+      "FLAGS": [
+        "RLANDBIT"
+      ],
+      "ACTION": [
+        {
+          "Atom": "PURLOINED-ROOM-F"
+        }
+      ],
+      "ADVFCN": [
+        {
+          "Atom": "PURLOINED-ROOM-A"
+        }
+      ],
+      "GLOBAL": [
+        {
+          "Atom": "DOOR-ILLUSION"
+        },
+        {
+          "Atom": "DOOR-REALITY"
+        }
+      ]
+    },
+    "IsRoom": true
+  },
+  {
+    "Zil": "#OBJECT (ROOM MAP-ROOM (IN ROOMS) (DESC \"Map Room\") (LDESC \"This room in the high tower appears to be a map room, with hundreds of ancient\r\nmaps covering the walls. A huge globe, made of gold, sits on a pedestal in the\r\ncenter of the room. Through the tower windows can be seen a vast forest\r\nstretching out to the northeast and the sea, covered in fog, to the east and\r\nsouth. Stairs to the south lead to the bottom of the tower.\") (DOWN TO PURLOINED-ROOM IF DOOR-REALITY IS OPEN) (SOUTH TO PURLOINED-ROOM IF DOOR-REALITY IS OPEN) (FLAGS RLANDBIT) (TEXT \"Through the windows you can discern a vast forest to the northeast and the\r\nfog-shrouded sea stretching out to the east and south.\") (GLOBAL DOOR-REALITY WINDOW FOREST SEA))",
+    "Name": "MAP-ROOM",
+    "Exits": {
+      "DOWN": {
+        "TO": "PURLOINED-ROOM",
+        "DOOR": "DOOR-REALITY",
+        "TYPE": "DEXIT",
+        "Zil": "(DOWN TO PURLOINED-ROOM IF DOOR-REALITY IS OPEN)"
+      },
+      "SOUTH": {
+        "TO": "PURLOINED-ROOM",
+        "DOOR": "DOOR-REALITY",
+        "TYPE": "DEXIT",
+        "Zil": "(SOUTH TO PURLOINED-ROOM IF DOOR-REALITY IS OPEN)"
+      }
+    },
+    "Properties": {
+      "#IN": "ROOMS",
+      "DESC": [
+        "Map Room"
+      ],
+      "LDESC": [
+        "This room in the high tower appears to be a map room, with hundreds of ancient\r\nmaps covering the walls. A huge globe, made of gold, sits on a pedestal in the\r\ncenter of the room. Through the tower windows can be seen a vast forest\r\nstretching out to the northeast and the sea, covered in fog, to the east and\r\nsouth. Stairs to the south lead to the bottom of the tower."
+      ],
+      "DOWN": [
+        {
+          "Atom": "TO"
+        },
+        {
+          "Atom": "PURLOINED-ROOM"
+        },
+        {
+          "Atom": "IF"
+        },
+        {
+          "Atom": "DOOR-REALITY"
+        },
+        {
+          "Atom": "IS"
+        },
+        {
+          "Atom": "OPEN"
+        }
+      ],
+      "SOUTH": [
+        {
+          "Atom": "TO"
+        },
+        {
+          "Atom": "PURLOINED-ROOM"
+        },
+        {
+          "Atom": "IF"
+        },
+        {
+          "Atom": "DOOR-REALITY"
+        },
+        {
+          "Atom": "IS"
+        },
+        {
+          "Atom": "OPEN"
+        }
+      ],
+      "FLAGS": [
+        "RLANDBIT"
+      ],
+      "TEXT": [
+        "Through the windows you can discern a vast forest to the northeast and the\r\nfog-shrouded sea stretching out to the east and south."
+      ],
+      "GLOBAL": [
+        {
+          "Atom": "DOOR-REALITY"
+        },
+        {
+          "Atom": "WINDOW"
+        },
+        {
+          "Atom": "FOREST"
+        },
+        {
+          "Atom": "SEA"
+        }
+      ]
+    },
+    "IsRoom": true
+  },
+  {
+    "Zil": "#OBJECT (ROOM MIRROR-HALL-1 (IN ROOMS) (DESC \"Hall of Mirrors One\") (WEST TO NW-TOWER) (EAST TO MIRROR-HALL-2) (FLAGS RLANDBIT) (COUNT 1) (ACTION MIRROR-HALL-F) (GLOBAL ADVENTURER-LG MIRROR MIRROR-STUFF SHARDS))",
+    "Name": "MIRROR-HALL-1",
+    "Exits": {
+      "WEST": {
+        "TO": "NW-TOWER",
+        "TYPE": "UEXIT",
+        "Zil": "(WEST TO NW-TOWER)"
+      },
+      "EAST": {
+        "TO": "MIRROR-HALL-2",
+        "TYPE": "UEXIT",
+        "Zil": "(EAST TO MIRROR-HALL-2)"
+      }
+    },
+    "Properties": {
+      "#IN": "ROOMS",
+      "DESC": [
+        "Hall of Mirrors One"
+      ],
+      "WEST": [
+        {
+          "Atom": "TO"
+        },
+        {
+          "Atom": "NW-TOWER"
+        }
+      ],
+      "EAST": [
+        {
+          "Atom": "TO"
+        },
+        {
+          "Atom": "MIRROR-HALL-2"
+        }
+      ],
+      "FLAGS": [
+        "RLANDBIT"
+      ],
+      "COUNT": [
+        1
+      ],
+      "ACTION": [
+        {
+          "Atom": "MIRROR-HALL-F"
+        }
+      ],
+      "GLOBAL": [
+        {
+          "Atom": "ADVENTURER-LG"
+        },
+        {
+          "Atom": "MIRROR"
+        },
+        {
+          "Atom": "MIRROR-STUFF"
+        },
+        {
+          "Atom": "SHARDS"
+        }
+      ]
+    },
+    "IsRoom": true
+  },
+  {
+    "Zil": "#OBJECT (ROOM MIRROR-HALL-2 (IN ROOMS) (DESC \"Hall of Mirrors Two\") (WEST TO MIRROR-HALL-1) (EAST TO MIRROR-HALL-3) (FLAGS RLANDBIT) (COUNT 2) (ACTION MIRROR-HALL-F) (GLOBAL ADVENTURER-LG MIRROR MIRROR-STUFF SHARDS))",
+    "Name": "MIRROR-HALL-2",
+    "Exits": {
+      "WEST": {
+        "TO": "MIRROR-HALL-1",
+        "TYPE": "UEXIT",
+        "Zil": "(WEST TO MIRROR-HALL-1)"
+      },
+      "EAST": {
+        "TO": "MIRROR-HALL-3",
+        "TYPE": "UEXIT",
+        "Zil": "(EAST TO MIRROR-HALL-3)"
+      }
+    },
+    "Properties": {
+      "#IN": "ROOMS",
+      "DESC": [
+        "Hall of Mirrors Two"
+      ],
+      "WEST": [
+        {
+          "Atom": "TO"
+        },
+        {
+          "Atom": "MIRROR-HALL-1"
+        }
+      ],
+      "EAST": [
+        {
+          "Atom": "TO"
+        },
+        {
+          "Atom": "MIRROR-HALL-3"
+        }
+      ],
+      "FLAGS": [
+        "RLANDBIT"
+      ],
+      "COUNT": [
+        2
+      ],
+      "ACTION": [
+        {
+          "Atom": "MIRROR-HALL-F"
+        }
+      ],
+      "GLOBAL": [
+        {
+          "Atom": "ADVENTURER-LG"
+        },
+        {
+          "Atom": "MIRROR"
+        },
+        {
+          "Atom": "MIRROR-STUFF"
+        },
+        {
+          "Atom": "SHARDS"
+        }
+      ]
+    },
+    "IsRoom": true
+  },
+  {
+    "Zil": "#OBJECT (ROOM MIRROR-HALL-3 (IN ROOMS) (DESC \"Hall of Mirrors Three\") (WEST TO MIRROR-HALL-2) (EAST TO MIRROR-HALL-4) (FLAGS RLANDBIT) (COUNT 3) (ACTION MIRROR-HALL-F) (GLOBAL ADVENTURER-LG MIRROR MIRROR-STUFF SHARDS))",
+    "Name": "MIRROR-HALL-3",
+    "Exits": {
+      "WEST": {
+        "TO": "MIRROR-HALL-2",
+        "TYPE": "UEXIT",
+        "Zil": "(WEST TO MIRROR-HALL-2)"
+      },
+      "EAST": {
+        "TO": "MIRROR-HALL-4",
+        "TYPE": "UEXIT",
+        "Zil": "(EAST TO MIRROR-HALL-4)"
+      }
+    },
+    "Properties": {
+      "#IN": "ROOMS",
+      "DESC": [
+        "Hall of Mirrors Three"
+      ],
+      "WEST": [
+        {
+          "Atom": "TO"
+        },
+        {
+          "Atom": "MIRROR-HALL-2"
+        }
+      ],
+      "EAST": [
+        {
+          "Atom": "TO"
+        },
+        {
+          "Atom": "MIRROR-HALL-4"
+        }
+      ],
+      "FLAGS": [
+        "RLANDBIT"
+      ],
+      "COUNT": [
+        3
+      ],
+      "ACTION": [
+        {
+          "Atom": "MIRROR-HALL-F"
+        }
+      ],
+      "GLOBAL": [
+        {
+          "Atom": "ADVENTURER-LG"
+        },
+        {
+          "Atom": "MIRROR"
+        },
+        {
+          "Atom": "MIRROR-STUFF"
+        },
+        {
+          "Atom": "SHARDS"
+        }
+      ]
+    },
+    "IsRoom": true
+  },
+  {
+    "Zil": "#OBJECT (ROOM MIRROR-HALL-4 (IN ROOMS) (DESC \"Hall of Mirrors Four\") (WEST TO MIRROR-HALL-3) (EAST TO NORTH-GATE) (FLAGS RLANDBIT) (COUNT 4) (ACTION MIRROR-HALL-F) (GLOBAL ADVENTURER-LG MIRROR MIRROR-STUFF SHARDS))",
+    "Name": "MIRROR-HALL-4",
+    "Exits": {
+      "WEST": {
+        "TO": "MIRROR-HALL-3",
+        "TYPE": "UEXIT",
+        "Zil": "(WEST TO MIRROR-HALL-3)"
+      },
+      "EAST": {
+        "TO": "NORTH-GATE",
+        "TYPE": "UEXIT",
+        "Zil": "(EAST TO NORTH-GATE)"
+      }
+    },
+    "Properties": {
+      "#IN": "ROOMS",
+      "DESC": [
+        "Hall of Mirrors Four"
+      ],
+      "WEST": [
+        {
+          "Atom": "TO"
+        },
+        {
+          "Atom": "MIRROR-HALL-3"
+        }
+      ],
+      "EAST": [
+        {
+          "Atom": "TO"
+        },
+        {
+          "Atom": "NORTH-GATE"
+        }
+      ],
+      "FLAGS": [
+        "RLANDBIT"
+      ],
+      "COUNT": [
+        4
+      ],
+      "ACTION": [
+        {
+          "Atom": "MIRROR-HALL-F"
+        }
+      ],
+      "GLOBAL": [
+        {
+          "Atom": "ADVENTURER-LG"
+        },
+        {
+          "Atom": "MIRROR"
+        },
+        {
+          "Atom": "MIRROR-STUFF"
+        },
+        {
+          "Atom": "SHARDS"
+        }
+      ]
+    },
+    "IsRoom": true
+  },
+  {
+    "Zil": "#OBJECT (ROOM INSIDE-GATE (IN ROOMS) (DESC \"Inside Gate\") (EAST TO COURTYARD-1) (WEST TO WEST-CASTLE) (OUT TO WEST-CASTLE) (SOUTH TO WEST-HALL) (NORTH TO PEBBLED-PATH) (FLAGS RLANDBIT ONBIT LIGHTBIT) (ACTION INSIDE-GATE-F) (GLOBAL IRON-GATE IRON-GATE-CHAINS HILLS ARCH COURTYARD))",
+    "Name": "INSIDE-GATE",
+    "Exits": {
+      "EAST": {
+        "TO": "COURTYARD-1",
+        "TYPE": "UEXIT",
+        "Zil": "(EAST TO COURTYARD-1)"
+      },
+      "WEST": {
+        "TO": "WEST-CASTLE",
+        "TYPE": "UEXIT",
+        "Zil": "(WEST TO WEST-CASTLE)"
+      },
+      "OUT": {
+        "TO": "WEST-CASTLE",
+        "TYPE": "UEXIT",
+        "Zil": "(OUT TO WEST-CASTLE)"
+      },
+      "SOUTH": {
+        "TO": "WEST-HALL",
+        "TYPE": "UEXIT",
+        "Zil": "(SOUTH TO WEST-HALL)"
+      },
+      "NORTH": {
+        "TO": "PEBBLED-PATH",
+        "TYPE": "UEXIT",
+        "Zil": "(NORTH TO PEBBLED-PATH)"
+      }
+    },
+    "Properties": {
+      "#IN": "ROOMS",
+      "DESC": [
+        "Inside Gate"
+      ],
+      "EAST": [
+        {
+          "Atom": "TO"
+        },
+        {
+          "Atom": "COURTYARD-1"
+        }
+      ],
+      "WEST": [
+        {
+          "Atom": "TO"
+        },
+        {
+          "Atom": "WEST-CASTLE"
+        }
+      ],
+      "OUT": [
+        {
+          "Atom": "TO"
+        },
+        {
+          "Atom": "WEST-CASTLE"
+        }
+      ],
+      "SOUTH": [
+        {
+          "Atom": "TO"
+        },
+        {
+          "Atom": "WEST-HALL"
+        }
+      ],
+      "NORTH": [
+        {
+          "Atom": "TO"
+        },
+        {
+          "Atom": "PEBBLED-PATH"
+        }
+      ],
+      "FLAGS": [
+        "RLANDBIT",
+        "ONBIT",
+        "LIGHTBIT"
+      ],
+      "ACTION": [
+        {
+          "Atom": "INSIDE-GATE-F"
+        }
+      ],
+      "GLOBAL": [
+        {
+          "Atom": "IRON-GATE"
+        },
+        {
+          "Atom": "IRON-GATE-CHAINS"
+        },
+        {
+          "Atom": "HILLS"
+        },
+        {
+          "Atom": "ARCH"
+        },
+        {
+          "Atom": "COURTYARD"
+        }
+      ]
+    },
+    "IsRoom": true
+  },
+  {
+    "Zil": "#OBJECT (ROOM PEBBLED-PATH (IN ROOMS) (DESC \"Pebbled Path\") (LDESC \"You are on a long pebbled path, stretching out to the north. To the south\r\nthe path continues through an open arch into an open area.\") (NORTH TO NW-TOWER) (SOUTH TO INSIDE-GATE) (FLAGS RLANDBIT ONBIT LIGHTBIT) (GLOBAL ARCH))",
+    "Name": "PEBBLED-PATH",
+    "Exits": {
+      "NORTH": {
+        "TO": "NW-TOWER",
+        "TYPE": "UEXIT",
+        "Zil": "(NORTH TO NW-TOWER)"
+      },
+      "SOUTH": {
+        "TO": "INSIDE-GATE",
+        "TYPE": "UEXIT",
+        "Zil": "(SOUTH TO INSIDE-GATE)"
+      }
+    },
+    "Properties": {
+      "#IN": "ROOMS",
+      "DESC": [
+        "Pebbled Path"
+      ],
+      "LDESC": [
+        "You are on a long pebbled path, stretching out to the north. To the south\r\nthe path continues through an open arch into an open area."
+      ],
+      "NORTH": [
+        {
+          "Atom": "TO"
+        },
+        {
+          "Atom": "NW-TOWER"
+        }
+      ],
+      "SOUTH": [
+        {
+          "Atom": "TO"
+        },
+        {
+          "Atom": "INSIDE-GATE"
+        }
+      ],
+      "FLAGS": [
+        "RLANDBIT",
+        "ONBIT",
+        "LIGHTBIT"
+      ],
+      "GLOBAL": [
+        {
+          "Atom": "ARCH"
+        }
+      ]
+    },
+    "IsRoom": true
+  },
+  {
+    "Zil": "#OBJECT (ROOM COURTYARD-1 (IN ROOMS) (DESC \"Courtyard\") (LDESC \"This is the westernmost point in a large open courtyard. The huge entrance\r\ngate to the castle looms ominously to the west. The courtyard widens as it\r\nproceeds to the east, where a large, ivy-covered temple stands. On either\r\nside of the temple are small towers. Far beyond the temple, high above, are\r\ntwo large towers marking the corners of the castle. A squat dark turret\r\nhunches between them, blackening the sky around it. A small path leads into\r\nthe castle to the south.\") (WEST TO INSIDE-GATE) (EAST TO COURTYARD-3) (NE TO COURTYARD-2) (SE TO COURTYARD-4) (SOUTH TO KNOT-ROOM) (FLAGS RLANDBIT ONBIT LIGHTBIT) (GLOBAL TEMPLE-OBJ COURTYARD TURRET TOWER))",
+    "Name": "COURTYARD-1",
+    "Exits": {
+      "WEST": {
+        "TO": "INSIDE-GATE",
+        "TYPE": "UEXIT",
+        "Zil": "(WEST TO INSIDE-GATE)"
+      },
+      "EAST": {
+        "TO": "COURTYARD-3",
+        "TYPE": "UEXIT",
+        "Zil": "(EAST TO COURTYARD-3)"
+      },
+      "NE": {
+        "TO": "COURTYARD-2",
+        "TYPE": "UEXIT",
+        "Zil": "(NE TO COURTYARD-2)"
+      },
+      "SE": {
+        "TO": "COURTYARD-4",
+        "TYPE": "UEXIT",
+        "Zil": "(SE TO COURTYARD-4)"
+      },
+      "SOUTH": {
+        "TO": "KNOT-ROOM",
+        "TYPE": "UEXIT",
+        "Zil": "(SOUTH TO KNOT-ROOM)"
+      }
+    },
+    "Properties": {
+      "#IN": "ROOMS",
+      "DESC": [
+        "Courtyard"
+      ],
+      "LDESC": [
+        "This is the westernmost point in a large open courtyard. The huge entrance\r\ngate to the castle looms ominously to the west. The courtyard widens as it\r\nproceeds to the east, where a large, ivy-covered temple stands. On either\r\nside of the temple are small towers. Far beyond the temple, high above, are\r\ntwo large towers marking the corners of the castle. A squat dark turret\r\nhunches between them, blackening the sky around it. A small path leads into\r\nthe castle to the south."
+      ],
+      "WEST": [
+        {
+          "Atom": "TO"
+        },
+        {
+          "Atom": "INSIDE-GATE"
+        }
+      ],
+      "EAST": [
+        {
+          "Atom": "TO"
+        },
+        {
+          "Atom": "COURTYARD-3"
+        }
+      ],
+      "NE": [
+        {
+          "Atom": "TO"
+        },
+        {
+          "Atom": "COURTYARD-2"
+        }
+      ],
+      "SE": [
+        {
+          "Atom": "TO"
+        },
+        {
+          "Atom": "COURTYARD-4"
+        }
+      ],
+      "SOUTH": [
+        {
+          "Atom": "TO"
+        },
+        {
+          "Atom": "KNOT-ROOM"
+        }
+      ],
+      "FLAGS": [
+        "RLANDBIT",
+        "ONBIT",
+        "LIGHTBIT"
+      ],
+      "GLOBAL": [
+        {
+          "Atom": "TEMPLE-OBJ"
+        },
+        {
+          "Atom": "COURTYARD"
+        },
+        {
+          "Atom": "TURRET"
+        },
+        {
+          "Atom": "TOWER"
+        }
+      ]
+    },
+    "IsRoom": true
+  },
+  {
+    "Zil": "#OBJECT (ROOM WEST-HALL (IN ROOMS) (DESC \"West Hall\") (LDESC \"This narrow promenade stretches into darkness to the south and, through\r\nan archway, toward an open area to the north.\") (NORTH TO INSIDE-GATE) (SOUTH TO SW-TOWER) (FLAGS RLANDBIT ONBIT) (GLOBAL ARCH))",
+    "Name": "WEST-HALL",
+    "Exits": {
+      "NORTH": {
+        "TO": "INSIDE-GATE",
+        "TYPE": "UEXIT",
+        "Zil": "(NORTH TO INSIDE-GATE)"
+      },
+      "SOUTH": {
+        "TO": "SW-TOWER",
+        "TYPE": "UEXIT",
+        "Zil": "(SOUTH TO SW-TOWER)"
+      }
+    },
+    "Properties": {
+      "#IN": "ROOMS",
+      "DESC": [
+        "West Hall"
+      ],
+      "LDESC": [
+        "This narrow promenade stretches into darkness to the south and, through\r\nan archway, toward an open area to the north."
+      ],
+      "NORTH": [
+        {
+          "Atom": "TO"
+        },
+        {
+          "Atom": "INSIDE-GATE"
+        }
+      ],
+      "SOUTH": [
+        {
+          "Atom": "TO"
+        },
+        {
+          "Atom": "SW-TOWER"
+        }
+      ],
+      "FLAGS": [
+        "RLANDBIT",
+        "ONBIT"
+      ],
+      "GLOBAL": [
+        {
+          "Atom": "ARCH"
+        }
+      ]
+    },
+    "IsRoom": true
+  },
+  {
+    "Zil": "#OBJECT (ROOM SW-TOWER (IN ROOMS) (DESC \"Tower\") (LDESC \"This dark and damp spot is at the base of the southwest tower of the castle.\r\nTwo corridors lead off to the north and east. A winding staircase ascends into\r\nthe tower.\") (NORTH TO WEST-HALL) (EAST TO DIM-DESCENT) (UP TO BEDROOM) (FLAGS RLANDBIT) (GLOBAL STAIRS TOWER))",
+    "Name": "SW-TOWER",
+    "Exits": {
+      "NORTH": {
+        "TO": "WEST-HALL",
+        "TYPE": "UEXIT",
+        "Zil": "(NORTH TO WEST-HALL)"
+      },
+      "EAST": {
+        "TO": "DIM-DESCENT",
+        "TYPE": "UEXIT",
+        "Zil": "(EAST TO DIM-DESCENT)"
+      },
+      "UP": {
+        "TO": "BEDROOM",
+        "TYPE": "UEXIT",
+        "Zil": "(UP TO BEDROOM)"
+      }
+    },
+    "Properties": {
+      "#IN": "ROOMS",
+      "DESC": [
+        "Tower"
+      ],
+      "LDESC": [
+        "This dark and damp spot is at the base of the southwest tower of the castle.\r\nTwo corridors lead off to the north and east. A winding staircase ascends into\r\nthe tower."
+      ],
+      "NORTH": [
+        {
+          "Atom": "TO"
+        },
+        {
+          "Atom": "WEST-HALL"
+        }
+      ],
+      "EAST": [
+        {
+          "Atom": "TO"
+        },
+        {
+          "Atom": "DIM-DESCENT"
+        }
+      ],
+      "UP": [
+        {
+          "Atom": "TO"
+        },
+        {
+          "Atom": "BEDROOM"
+        }
+      ],
+      "FLAGS": [
+        "RLANDBIT"
+      ],
+      "GLOBAL": [
+        {
+          "Atom": "STAIRS"
+        },
+        {
+          "Atom": "TOWER"
+        }
+      ]
+    },
+    "IsRoom": true
+  },
+  {
+    "Zil": "#OBJECT (ROOM BEDROOM (IN ROOMS) (DESC \"Bedroom\") (LDESC \"The eyrie is a round bedroom high in the tower. Narrow windows overlook\r\nthe outside. A stone stairway leads down.\") (DOWN TO SW-TOWER) (TEXT \"Through the window, you can see a long twisting road making its way\r\nthrough a land of low, smoky hills.\") (FLAGS RLANDBIT ONBIT LIGHTBIT) (GLOBAL STAIRS WINDOW HILLS))",
+    "Name": "BEDROOM",
+    "Exits": {
+      "DOWN": {
+        "TO": "SW-TOWER",
+        "TYPE": "UEXIT",
+        "Zil": "(DOWN TO SW-TOWER)"
+      }
+    },
+    "Properties": {
+      "#IN": "ROOMS",
+      "DESC": [
+        "Bedroom"
+      ],
+      "LDESC": [
+        "The eyrie is a round bedroom high in the tower. Narrow windows overlook\r\nthe outside. A stone stairway leads down."
+      ],
+      "DOWN": [
+        {
+          "Atom": "TO"
+        },
+        {
+          "Atom": "SW-TOWER"
+        }
+      ],
+      "TEXT": [
+        "Through the window, you can see a long twisting road making its way\r\nthrough a land of low, smoky hills."
+      ],
+      "FLAGS": [
+        "RLANDBIT",
+        "ONBIT",
+        "LIGHTBIT"
+      ],
+      "GLOBAL": [
+        {
+          "Atom": "STAIRS"
+        },
+        {
+          "Atom": "WINDOW"
+        },
+        {
+          "Atom": "HILLS"
+        }
+      ]
+    },
+    "IsRoom": true
+  },
+  {
+    "Zil": "#OBJECT (ROOM DIM-DESCENT (IN ROOMS) (DESC \"South Hall\") (LDESC \"The damp corridor continues east and west from here. A dark and forbidding\r\nstairway leads down to the south. In addition, a narrow passage leads to the\r\nnorth.\") (NORTH TO KNOT-ROOM) (WEST TO SW-TOWER) (EAST TO GALLERY) (DOWN TO DUNGEON) (SOUTH TO DUNGEON) (FLAGS RLANDBIT) (GLOBAL STAIRS))",
+    "Name": "DIM-DESCENT",
+    "Exits": {
+      "NORTH": {
+        "TO": "KNOT-ROOM",
+        "TYPE": "UEXIT",
+        "Zil": "(NORTH TO KNOT-ROOM)"
+      },
+      "WEST": {
+        "TO": "SW-TOWER",
+        "TYPE": "UEXIT",
+        "Zil": "(WEST TO SW-TOWER)"
+      },
+      "EAST": {
+        "TO": "GALLERY",
+        "TYPE": "UEXIT",
+        "Zil": "(EAST TO GALLERY)"
+      },
+      "DOWN": {
+        "TO": "DUNGEON",
+        "TYPE": "UEXIT",
+        "Zil": "(DOWN TO DUNGEON)"
+      },
+      "SOUTH": {
+        "TO": "DUNGEON",
+        "TYPE": "UEXIT",
+        "Zil": "(SOUTH TO DUNGEON)"
+      }
+    },
+    "Properties": {
+      "#IN": "ROOMS",
+      "DESC": [
+        "South Hall"
+      ],
+      "LDESC": [
+        "The damp corridor continues east and west from here. A dark and forbidding\r\nstairway leads down to the south. In addition, a narrow passage leads to the\r\nnorth."
+      ],
+      "NORTH": [
+        {
+          "Atom": "TO"
+        },
+        {
+          "Atom": "KNOT-ROOM"
+        }
+      ],
+      "WEST": [
+        {
+          "Atom": "TO"
+        },
+        {
+          "Atom": "SW-TOWER"
+        }
+      ],
+      "EAST": [
+        {
+          "Atom": "TO"
+        },
+        {
+          "Atom": "GALLERY"
+        }
+      ],
+      "DOWN": [
+        {
+          "Atom": "TO"
+        },
+        {
+          "Atom": "DUNGEON"
+        }
+      ],
+      "SOUTH": [
+        {
+          "Atom": "TO"
+        },
+        {
+          "Atom": "DUNGEON"
+        }
+      ],
+      "FLAGS": [
+        "RLANDBIT"
+      ],
+      "GLOBAL": [
+        {
+          "Atom": "STAIRS"
+        }
+      ]
+    },
+    "IsRoom": true
+  },
+  {
+    "Zil": "#OBJECT (ROOM DUNGEON (IN ROOMS) (DESC \"Dungeon\") (LDESC \"A dank and forgotten pit contains the dungeons. There is a cell to\r\nthe north, and a partly blocked passage leads even deeper into the\r\nearth. It looks as if there was once a mortared stone wall blocking this\r\npassage, but it has crumbled and collapsed, reopening the tunnel.\") (UP TO DIM-DESCENT) (DOWN TO T-A) (NORTH TO NORTH-CELL IF NORTH-CELL-DOOR IS OPEN) (IN TO NORTH-CELL IF NORTH-CELL-DOOR IS OPEN) (FLAGS RLANDBIT) (GLOBAL STAIRS STONE-WALL NORTH-CELL-DOOR) (PSEUDO \"CELL\" CELL-F))",
+    "Name": "DUNGEON",
+    "Exits": {
+      "UP": {
+        "TO": "DIM-DESCENT",
+        "TYPE": "UEXIT",
+        "Zil": "(UP TO DIM-DESCENT)"
+      },
+      "DOWN": {
+        "TO": "T-A",
+        "TYPE": "UEXIT",
+        "Zil": "(DOWN TO T-A)"
+      },
+      "NORTH": {
+        "TO": "NORTH-CELL",
+        "DOOR": "NORTH-CELL-DOOR",
+        "TYPE": "DEXIT",
+        "Zil": "(NORTH TO NORTH-CELL IF NORTH-CELL-DOOR IS OPEN)"
+      },
+      "IN": {
+        "TO": "NORTH-CELL",
+        "DOOR": "NORTH-CELL-DOOR",
+        "TYPE": "DEXIT",
+        "Zil": "(IN TO NORTH-CELL IF NORTH-CELL-DOOR IS OPEN)"
+      }
+    },
+    "Properties": {
+      "#IN": "ROOMS",
+      "DESC": [
+        "Dungeon"
+      ],
+      "LDESC": [
+        "A dank and forgotten pit contains the dungeons. There is a cell to\r\nthe north, and a partly blocked passage leads even deeper into the\r\nearth. It looks as if there was once a mortared stone wall blocking this\r\npassage, but it has crumbled and collapsed, reopening the tunnel."
+      ],
+      "UP": [
+        {
+          "Atom": "TO"
+        },
+        {
+          "Atom": "DIM-DESCENT"
+        }
+      ],
+      "DOWN": [
+        {
+          "Atom": "TO"
+        },
+        {
+          "Atom": "T-A"
+        }
+      ],
+      "NORTH": [
+        {
+          "Atom": "TO"
+        },
+        {
+          "Atom": "NORTH-CELL"
+        },
+        {
+          "Atom": "IF"
+        },
+        {
+          "Atom": "NORTH-CELL-DOOR"
+        },
+        {
+          "Atom": "IS"
+        },
+        {
+          "Atom": "OPEN"
+        }
+      ],
+      "IN": [
+        {
+          "Atom": "TO"
+        },
+        {
+          "Atom": "NORTH-CELL"
+        },
+        {
+          "Atom": "IF"
+        },
+        {
+          "Atom": "NORTH-CELL-DOOR"
+        },
+        {
+          "Atom": "IS"
+        },
+        {
+          "Atom": "OPEN"
+        }
+      ],
+      "FLAGS": [
+        "RLANDBIT"
+      ],
+      "GLOBAL": [
+        {
+          "Atom": "STAIRS"
+        },
+        {
+          "Atom": "STONE-WALL"
+        },
+        {
+          "Atom": "NORTH-CELL-DOOR"
+        }
+      ],
+      "PSEUDO": [
+        "CELL",
+        {
+          "Atom": "CELL-F"
+        }
+      ]
+    },
+    "IsRoom": true
+  },
+  {
+    "Zil": "#OBJECT (ROOM NORTH-CELL (IN ROOMS) (DESC \"Cell\") (SOUTH TO DUNGEON IF NORTH-CELL-DOOR IS OPEN) (EAST TO SECRET-PASSAGE IF NORTH-BLOCK-FLAG) (OUT TO DUNGEON IF NORTH-CELL-DOOR IS OPEN) (FLAGS RLANDBIT) (ACTION NORTH-CELL-F) (GLOBAL NORTH-CELL-DOOR STONE-WALL NORTH-BLOCK) (PSEUDO \"CELL\" CELL-F))",
+    "Name": "NORTH-CELL",
+    "Exits": {
+      "SOUTH": {
+        "TO": "DUNGEON",
+        "DOOR": "NORTH-CELL-DOOR",
+        "TYPE": "DEXIT",
+        "Zil": "(SOUTH TO DUNGEON IF NORTH-CELL-DOOR IS OPEN)"
+      },
+      "EAST": {
+        "TO": "SECRET-PASSAGE",
+        "COND": "NORTH-BLOCK-FLAG",
+        "TYPE": "CEXIT",
+        "Zil": "(EAST TO SECRET-PASSAGE IF NORTH-BLOCK-FLAG)"
+      },
+      "OUT": {
+        "TO": "DUNGEON",
+        "DOOR": "NORTH-CELL-DOOR",
+        "TYPE": "DEXIT",
+        "Zil": "(OUT TO DUNGEON IF NORTH-CELL-DOOR IS OPEN)"
+      }
+    },
+    "Properties": {
+      "#IN": "ROOMS",
+      "DESC": [
+        "Cell"
+      ],
+      "SOUTH": [
+        {
+          "Atom": "TO"
+        },
+        {
+          "Atom": "DUNGEON"
+        },
+        {
+          "Atom": "IF"
+        },
+        {
+          "Atom": "NORTH-CELL-DOOR"
+        },
+        {
+          "Atom": "IS"
+        },
+        {
+          "Atom": "OPEN"
+        }
+      ],
+      "EAST": [
+        {
+          "Atom": "TO"
+        },
+        {
+          "Atom": "SECRET-PASSAGE"
+        },
+        {
+          "Atom": "IF"
+        },
+        {
+          "Atom": "NORTH-BLOCK-FLAG"
+        }
+      ],
+      "OUT": [
+        {
+          "Atom": "TO"
+        },
+        {
+          "Atom": "DUNGEON"
+        },
+        {
+          "Atom": "IF"
+        },
+        {
+          "Atom": "NORTH-CELL-DOOR"
+        },
+        {
+          "Atom": "IS"
+        },
+        {
+          "Atom": "OPEN"
+        }
+      ],
+      "FLAGS": [
+        "RLANDBIT"
+      ],
+      "ACTION": [
+        {
+          "Atom": "NORTH-CELL-F"
+        }
+      ],
+      "GLOBAL": [
+        {
+          "Atom": "NORTH-CELL-DOOR"
+        },
+        {
+          "Atom": "STONE-WALL"
+        },
+        {
+          "Atom": "NORTH-BLOCK"
+        }
+      ],
+      "PSEUDO": [
+        "CELL",
+        {
+          "Atom": "CELL-F"
+        }
+      ]
+    },
+    "IsRoom": true
+  },
+  {
+    "Zil": "#OBJECT (ROOM SECRET-PASSAGE (IN ROOMS) (DESC \"Secret Passage\") (WEST TO NORTH-CELL IF NORTH-BLOCK-FLAG) (UP \"Unfortunately, this passage was never completed, so you don't get very\r\nfar (neither did the prisoners).\") (FLAGS RLANDBIT) (ACTION SECRET-PASSAGE-F) (GLOBAL STONE-WALL NORTH-BLOCK))",
+    "Name": "SECRET-PASSAGE",
+    "Exits": {
+      "WEST": {
+        "TO": "NORTH-CELL",
+        "COND": "NORTH-BLOCK-FLAG",
+        "TYPE": "CEXIT",
+        "Zil": "(WEST TO NORTH-CELL IF NORTH-BLOCK-FLAG)"
+      },
+      "UP": {
+        "MESSAGE": "Unfortunately, this passage was never completed, so you don't get very\r\nfar (neither did the prisoners).",
+        "TYPE": "NEXIT",
+        "Zil": "(UP \"Unfortunately, this passage was never completed, so you don't get very\r\nfar (neither did the prisoners).\")"
+      }
+    },
+    "Properties": {
+      "#IN": "ROOMS",
+      "DESC": [
+        "Secret Passage"
+      ],
+      "WEST": [
+        {
+          "Atom": "TO"
+        },
+        {
+          "Atom": "NORTH-CELL"
+        },
+        {
+          "Atom": "IF"
+        },
+        {
+          "Atom": "NORTH-BLOCK-FLAG"
+        }
+      ],
+      "UP": [
+        "Unfortunately, this passage was never completed, so you don't get very\r\nfar (neither did the prisoners)."
+      ],
+      "FLAGS": [
+        "RLANDBIT"
+      ],
+      "ACTION": [
+        {
+          "Atom": "SECRET-PASSAGE-F"
+        }
+      ],
+      "GLOBAL": [
+        {
+          "Atom": "STONE-WALL"
+        },
+        {
+          "Atom": "NORTH-BLOCK"
+        }
+      ]
+    },
+    "IsRoom": true
+  },
+  {
+    "Zil": "#OBJECT (ROOM SOUTH-GATE (IN ROOMS) (DESC \"South Gate\") (EAST TO SE-TOWER) (SOUTH TO MEADOW IF RUSTY-GATE IS OPEN) (WEST TO GALLERY) (NORTH TO EAST-HALL) (FLAGS RLANDBIT ONBIT) (ACTION SOUTH-GATE-F) (GLOBAL MEADOW-OBJ RUSTY-GATE BEACH-OBJ SEA))",
+    "Name": "SOUTH-GATE",
+    "Exits": {
+      "EAST": {
+        "TO": "SE-TOWER",
+        "TYPE": "UEXIT",
+        "Zil": "(EAST TO SE-TOWER)"
+      },
+      "SOUTH": {
+        "TO": "MEADOW",
+        "DOOR": "RUSTY-GATE",
+        "TYPE": "DEXIT",
+        "Zil": "(SOUTH TO MEADOW IF RUSTY-GATE IS OPEN)"
+      },
+      "WEST": {
+        "TO": "GALLERY",
+        "TYPE": "UEXIT",
+        "Zil": "(WEST TO GALLERY)"
+      },
+      "NORTH": {
+        "TO": "EAST-HALL",
+        "TYPE": "UEXIT",
+        "Zil": "(NORTH TO EAST-HALL)"
+      }
+    },
+    "Properties": {
+      "#IN": "ROOMS",
+      "DESC": [
+        "South Gate"
+      ],
+      "EAST": [
+        {
+          "Atom": "TO"
+        },
+        {
+          "Atom": "SE-TOWER"
+        }
+      ],
+      "SOUTH": [
+        {
+          "Atom": "TO"
+        },
+        {
+          "Atom": "MEADOW"
+        },
+        {
+          "Atom": "IF"
+        },
+        {
+          "Atom": "RUSTY-GATE"
+        },
+        {
+          "Atom": "IS"
+        },
+        {
+          "Atom": "OPEN"
+        }
+      ],
+      "WEST": [
+        {
+          "Atom": "TO"
+        },
+        {
+          "Atom": "GALLERY"
+        }
+      ],
+      "NORTH": [
+        {
+          "Atom": "TO"
+        },
+        {
+          "Atom": "EAST-HALL"
+        }
+      ],
+      "FLAGS": [
+        "RLANDBIT",
+        "ONBIT"
+      ],
+      "ACTION": [
+        {
+          "Atom": "SOUTH-GATE-F"
+        }
+      ],
+      "GLOBAL": [
+        {
+          "Atom": "MEADOW-OBJ"
+        },
+        {
+          "Atom": "RUSTY-GATE"
+        },
+        {
+          "Atom": "BEACH-OBJ"
+        },
+        {
+          "Atom": "SEA"
+        }
+      ]
+    },
+    "IsRoom": true
+  },
+  {
+    "Zil": "#OBJECT (ROOM EAST-HALL (IN ROOMS) (DESC \"East Hall\") (LDESC \"This short piece of corridor continues to the north and south.\") (NORTH TO BANQUET-HALL) (SOUTH TO SOUTH-GATE) (FLAGS RLANDBIT))",
+    "Name": "EAST-HALL",
+    "Exits": {
+      "NORTH": {
+        "TO": "BANQUET-HALL",
+        "TYPE": "UEXIT",
+        "Zil": "(NORTH TO BANQUET-HALL)"
+      },
+      "SOUTH": {
+        "TO": "SOUTH-GATE",
+        "TYPE": "UEXIT",
+        "Zil": "(SOUTH TO SOUTH-GATE)"
+      }
+    },
+    "Properties": {
+      "#IN": "ROOMS",
+      "DESC": [
+        "East Hall"
+      ],
+      "LDESC": [
+        "This short piece of corridor continues to the north and south."
+      ],
+      "NORTH": [
+        {
+          "Atom": "TO"
+        },
+        {
+          "Atom": "BANQUET-HALL"
+        }
+      ],
+      "SOUTH": [
+        {
+          "Atom": "TO"
+        },
+        {
+          "Atom": "SOUTH-GATE"
+        }
+      ],
+      "FLAGS": [
+        "RLANDBIT"
+      ]
+    },
+    "IsRoom": true
+  },
+  {
+    "Zil": "#OBJECT (ROOM SE-TOWER (IN ROOMS) (DESC \"Tower\") (LDESC \"This is the base of the southeast tower of the castle. From atop a winding\r\nstaircase comes a loud crashing and screeching noise. To the west is a\r\ncorridor and the southern gate of the castle.\") (WEST TO SOUTH-GATE) (UP TO ENGINE-ROOM) (FLAGS RLANDBIT) (ACTION SE-TOWER-F) (GLOBAL STAIRS VOICES))",
+    "Name": "SE-TOWER",
+    "Exits": {
+      "WEST": {
+        "TO": "SOUTH-GATE",
+        "TYPE": "UEXIT",
+        "Zil": "(WEST TO SOUTH-GATE)"
+      },
+      "UP": {
+        "TO": "ENGINE-ROOM",
+        "TYPE": "UEXIT",
+        "Zil": "(UP TO ENGINE-ROOM)"
+      }
+    },
+    "Properties": {
+      "#IN": "ROOMS",
+      "DESC": [
+        "Tower"
+      ],
+      "LDESC": [
+        "This is the base of the southeast tower of the castle. From atop a winding\r\nstaircase comes a loud crashing and screeching noise. To the west is a\r\ncorridor and the southern gate of the castle."
+      ],
+      "WEST": [
+        {
+          "Atom": "TO"
+        },
+        {
+          "Atom": "SOUTH-GATE"
+        }
+      ],
+      "UP": [
+        {
+          "Atom": "TO"
+        },
+        {
+          "Atom": "ENGINE-ROOM"
+        }
+      ],
+      "FLAGS": [
+        "RLANDBIT"
+      ],
+      "ACTION": [
+        {
+          "Atom": "SE-TOWER-F"
+        }
+      ],
+      "GLOBAL": [
+        {
+          "Atom": "STAIRS"
+        },
+        {
+          "Atom": "VOICES"
+        }
+      ]
+    },
+    "IsRoom": true
+  },
+  {
+    "Zil": "#OBJECT (ROOM BANQUET-HALL (IN ROOMS) (DESC \"Banquet Hall\") (NORTH TO JUNCTION) (SOUTH TO EAST-HALL) (EAST TO KITCHEN) (FLAGS RLANDBIT) (ACTION GUARD-WARNING-F) (ADVFCN ADV-VS-GANG) (GLOBAL VOICES))",
+    "Name": "BANQUET-HALL",
+    "Exits": {
+      "NORTH": {
+        "TO": "JUNCTION",
+        "TYPE": "UEXIT",
+        "Zil": "(NORTH TO JUNCTION)"
+      },
+      "SOUTH": {
+        "TO": "EAST-HALL",
+        "TYPE": "UEXIT",
+        "Zil": "(SOUTH TO EAST-HALL)"
+      },
+      "EAST": {
+        "TO": "KITCHEN",
+        "TYPE": "UEXIT",
+        "Zil": "(EAST TO KITCHEN)"
+      }
+    },
+    "Properties": {
+      "#IN": "ROOMS",
+      "DESC": [
+        "Banquet Hall"
+      ],
+      "NORTH": [
+        {
+          "Atom": "TO"
+        },
+        {
+          "Atom": "JUNCTION"
+        }
+      ],
+      "SOUTH": [
+        {
+          "Atom": "TO"
+        },
+        {
+          "Atom": "EAST-HALL"
+        }
+      ],
+      "EAST": [
+        {
+          "Atom": "TO"
+        },
+        {
+          "Atom": "KITCHEN"
+        }
+      ],
+      "FLAGS": [
+        "RLANDBIT"
+      ],
+      "ACTION": [
+        {
+          "Atom": "GUARD-WARNING-F"
+        }
+      ],
+      "ADVFCN": [
+        {
+          "Atom": "ADV-VS-GANG"
+        }
+      ],
+      "GLOBAL": [
+        {
+          "Atom": "VOICES"
+        }
+      ]
+    },
+    "IsRoom": true
+  },
+  {
+    "Zil": "#OBJECT (ROOM KITCHEN (IN ROOMS) (DESC \"Kitchen\") (LDESC \"The kitchen is dusty and disused. Old bones litter the floor, and the\r\ncarving knives are rusty. A rat nest fills one of the ovens, and cobwebs\r\nare everywhere. There is some rotting food in a garbage heap in one corner.\") (MUNGDESC \"The kitchen has been freshly used. The oven, though empty, is still\r\nwarm. Bones litter the floor, and the carving knives are bloody. The\r\nbones give all too clear an indication of the nature of the viands\r\nprepared here.\") (WEST TO BANQUET-HALL) (FLAGS RLANDBIT))",
+    "Name": "KITCHEN",
+    "Exits": {
+      "WEST": {
+        "TO": "BANQUET-HALL",
+        "TYPE": "UEXIT",
+        "Zil": "(WEST TO BANQUET-HALL)"
+      }
+    },
+    "Properties": {
+      "#IN": "ROOMS",
+      "DESC": [
+        "Kitchen"
+      ],
+      "LDESC": [
+        "The kitchen is dusty and disused. Old bones litter the floor, and the\r\ncarving knives are rusty. A rat nest fills one of the ovens, and cobwebs\r\nare everywhere. There is some rotting food in a garbage heap in one corner."
+      ],
+      "MUNGDESC": [
+        "The kitchen has been freshly used. The oven, though empty, is still\r\nwarm. Bones litter the floor, and the carving knives are bloody. The\r\nbones give all too clear an indication of the nature of the viands\r\nprepared here."
+      ],
+      "WEST": [
+        {
+          "Atom": "TO"
+        },
+        {
+          "Atom": "BANQUET-HALL"
+        }
+      ],
+      "FLAGS": [
+        "RLANDBIT"
+      ]
+    },
+    "IsRoom": true
+  },
+  {
+    "Zil": "#OBJECT (ROOM JUNCTION (IN ROOMS) (DESC \"Junction\") (LDESC \"The corridor widens here to form a large hall. To the north and south are\r\nsmall passages, and to the east is what appears to be an enormous spiral\r\nstaircase. A passage to the west leads into a courtyard. The walls here are\r\nscarred and black, and a strange heaviness hangs in the air.\") (WEST TO COURTYARD-7) (EAST TO LANDING) (SOUTH TO BANQUET-HALL) (NORTH TO LIBRARY) (FLAGS RLANDBIT RMUNGBIT) (ACTION JUNCTION-F) (GLOBAL STAIRS) (ADVFCN ADV-VS-GANG))",
+    "Name": "JUNCTION",
+    "Exits": {
+      "WEST": {
+        "TO": "COURTYARD-7",
+        "TYPE": "UEXIT",
+        "Zil": "(WEST TO COURTYARD-7)"
+      },
+      "EAST": {
+        "TO": "LANDING",
+        "TYPE": "UEXIT",
+        "Zil": "(EAST TO LANDING)"
+      },
+      "SOUTH": {
+        "TO": "BANQUET-HALL",
+        "TYPE": "UEXIT",
+        "Zil": "(SOUTH TO BANQUET-HALL)"
+      },
+      "NORTH": {
+        "TO": "LIBRARY",
+        "TYPE": "UEXIT",
+        "Zil": "(NORTH TO LIBRARY)"
+      }
+    },
+    "Properties": {
+      "#IN": "ROOMS",
+      "DESC": [
+        "Junction"
+      ],
+      "LDESC": [
+        "The corridor widens here to form a large hall. To the north and south are\r\nsmall passages, and to the east is what appears to be an enormous spiral\r\nstaircase. A passage to the west leads into a courtyard. The walls here are\r\nscarred and black, and a strange heaviness hangs in the air."
+      ],
+      "WEST": [
+        {
+          "Atom": "TO"
+        },
+        {
+          "Atom": "COURTYARD-7"
+        }
+      ],
+      "EAST": [
+        {
+          "Atom": "TO"
+        },
+        {
+          "Atom": "LANDING"
+        }
+      ],
+      "SOUTH": [
+        {
+          "Atom": "TO"
+        },
+        {
+          "Atom": "BANQUET-HALL"
+        }
+      ],
+      "NORTH": [
+        {
+          "Atom": "TO"
+        },
+        {
+          "Atom": "LIBRARY"
+        }
+      ],
+      "FLAGS": [
+        "RLANDBIT",
+        "RMUNGBIT"
+      ],
+      "ACTION": [
+        {
+          "Atom": "JUNCTION-F"
+        }
+      ],
+      "GLOBAL": [
+        {
+          "Atom": "STAIRS"
+        }
+      ],
+      "ADVFCN": [
+        {
+          "Atom": "ADV-VS-GANG"
+        }
+      ]
+    },
+    "IsRoom": true
+  },
+  {
+    "Zil": "#OBJECT (ROOM LIBRARY (IN ROOMS) (DESC \"Library\") (LDESC \"This is a library, or rather it was until it was ransacked and despoiled.\r\nMost of the contents of the room have been burned in a huge bonfire in the\r\ncenter of the room. Hundreds of charred and empty tubes are scattered\r\nabout, as if by someone searching, so ashes are strewn about. There\r\nare rat tracks in the ashes.\") (NORTH TO NORTH-GATE) (SOUTH TO JUNCTION) (FLAGS RLANDBIT) (ACTION GUARD-WARNING-F) (ADVFCN ADV-VS-GANG) (GLOBAL VOICES) (PSEUDO \"ASHES\" ASHES-PSEUDO \"TUBES\" TUBES-PSEUDO))",
+    "Name": "LIBRARY",
+    "Exits": {
+      "NORTH": {
+        "TO": "NORTH-GATE",
+        "TYPE": "UEXIT",
+        "Zil": "(NORTH TO NORTH-GATE)"
+      },
+      "SOUTH": {
+        "TO": "JUNCTION",
+        "TYPE": "UEXIT",
+        "Zil": "(SOUTH TO JUNCTION)"
+      }
+    },
+    "Properties": {
+      "#IN": "ROOMS",
+      "DESC": [
+        "Library"
+      ],
+      "LDESC": [
+        "This is a library, or rather it was until it was ransacked and despoiled.\r\nMost of the contents of the room have been burned in a huge bonfire in the\r\ncenter of the room. Hundreds of charred and empty tubes are scattered\r\nabout, as if by someone searching, so ashes are strewn about. There\r\nare rat tracks in the ashes."
+      ],
+      "NORTH": [
+        {
+          "Atom": "TO"
+        },
+        {
+          "Atom": "NORTH-GATE"
+        }
+      ],
+      "SOUTH": [
+        {
+          "Atom": "TO"
+        },
+        {
+          "Atom": "JUNCTION"
+        }
+      ],
+      "FLAGS": [
+        "RLANDBIT"
+      ],
+      "ACTION": [
+        {
+          "Atom": "GUARD-WARNING-F"
+        }
+      ],
+      "ADVFCN": [
+        {
+          "Atom": "ADV-VS-GANG"
+        }
+      ],
+      "GLOBAL": [
+        {
+          "Atom": "VOICES"
+        }
+      ],
+      "PSEUDO": [
+        "ASHES",
+        {
+          "Atom": "ASHES-PSEUDO"
+        },
+        "TUBES",
+        {
+          "Atom": "TUBES-PSEUDO"
+        }
+      ]
+    },
+    "IsRoom": true
+  },
+  {
+    "Zil": "#OBJECT (ROOM NORTH-GATE (IN ROOMS) (DESC \"North Gate\") (LDESC \"This small open area stands at the old north gate of the castle, now badly\r\nrusted. Through the gate, a forest can be seen. To the west, a hall glows with\r\nlight, and to the south, the dark castle can be reentered. A narrow passage\r\nto the east leads to the base of the northeast tower.\") (WEST TO MIRROR-HALL-4) (SOUTH TO LIBRARY) (EAST TO PURLOINED-ROOM) (NORTH TO FOREST-1 IF NORTH-GATE-OBJ IS OPEN ELSE \"The gate is rusted shut.\") (FLAGS RLANDBIT) (GLOBAL FOREST NORTH-GATE-OBJ TOWER))",
+    "Name": "NORTH-GATE",
+    "Exits": {
+      "WEST": {
+        "TO": "MIRROR-HALL-4",
+        "TYPE": "UEXIT",
+        "Zil": "(WEST TO MIRROR-HALL-4)"
+      },
+      "SOUTH": {
+        "TO": "LIBRARY",
+        "TYPE": "UEXIT",
+        "Zil": "(SOUTH TO LIBRARY)"
+      },
+      "EAST": {
+        "TO": "PURLOINED-ROOM",
+        "TYPE": "UEXIT",
+        "Zil": "(EAST TO PURLOINED-ROOM)"
+      },
+      "NORTH": {
+        "TO": "FOREST-1",
+        "DOOR": "NORTH-GATE-OBJ",
+        "ELSE": "The gate is rusted shut.",
+        "TYPE": "DEXIT",
+        "Zil": "(NORTH TO FOREST-1 IF NORTH-GATE-OBJ IS OPEN ELSE \"The gate is rusted shut.\")"
+      }
+    },
+    "Properties": {
+      "#IN": "ROOMS",
+      "DESC": [
+        "North Gate"
+      ],
+      "LDESC": [
+        "This small open area stands at the old north gate of the castle, now badly\r\nrusted. Through the gate, a forest can be seen. To the west, a hall glows with\r\nlight, and to the south, the dark castle can be reentered. A narrow passage\r\nto the east leads to the base of the northeast tower."
+      ],
+      "WEST": [
+        {
+          "Atom": "TO"
+        },
+        {
+          "Atom": "MIRROR-HALL-4"
+        }
+      ],
+      "SOUTH": [
+        {
+          "Atom": "TO"
+        },
+        {
+          "Atom": "LIBRARY"
+        }
+      ],
+      "EAST": [
+        {
+          "Atom": "TO"
+        },
+        {
+          "Atom": "PURLOINED-ROOM"
+        }
+      ],
+      "NORTH": [
+        {
+          "Atom": "TO"
+        },
+        {
+          "Atom": "FOREST-1"
+        },
+        {
+          "Atom": "IF"
+        },
+        {
+          "Atom": "NORTH-GATE-OBJ"
+        },
+        {
+          "Atom": "IS"
+        },
+        {
+          "Atom": "OPEN"
+        },
+        {
+          "Atom": "ELSE"
+        },
+        "The gate is rusted shut."
+      ],
+      "FLAGS": [
+        "RLANDBIT"
+      ],
+      "GLOBAL": [
+        {
+          "Atom": "FOREST"
+        },
+        {
+          "Atom": "NORTH-GATE-OBJ"
+        },
+        {
+          "Atom": "TOWER"
+        }
+      ]
+    },
+    "IsRoom": true
+  },
+  {
+    "Zil": "#OBJECT (ROOM FOREST-1 (IN ROOMS) (DESC \"Forest\") (LDESC \"You are in a dark forest, just north of a rusted gate. Except to\r\nthe east and south, the forest is thick all around you.\") (SOUTH TO NORTH-GATE) (NORTH \"The forest is deep and dark. I wouldn't go in there.\") (EAST TO FOREST-2) (WEST \"The forest is deep and dark. I wouldn't go in there.\") (NE \"The forest is deep and dark. I wouldn't go in there.\") (NW \"The forest is deep and dark. I wouldn't go in there.\") (SE \"The forest is deep and dark. I wouldn't go in there.\") (SW \"The forest is deep and dark. I wouldn't go in there.\") (FLAGS RLANDBIT ONBIT LIGHTBIT) (GLOBAL NORTH-GATE-OBJ FOREST TREES) (ACTION FOREST-1-F))",
+    "Name": "FOREST-1",
+    "Exits": {
+      "SOUTH": {
+        "TO": "NORTH-GATE",
+        "TYPE": "UEXIT",
+        "Zil": "(SOUTH TO NORTH-GATE)"
+      },
+      "NORTH": {
+        "MESSAGE": "The forest is deep and dark. I wouldn't go in there.",
+        "TYPE": "NEXIT",
+        "Zil": "(NORTH \"The forest is deep and dark. I wouldn't go in there.\")"
+      },
+      "EAST": {
+        "TO": "FOREST-2",
+        "TYPE": "UEXIT",
+        "Zil": "(EAST TO FOREST-2)"
+      },
+      "WEST": {
+        "MESSAGE": "The forest is deep and dark. I wouldn't go in there.",
+        "TYPE": "NEXIT",
+        "Zil": "(WEST \"The forest is deep and dark. I wouldn't go in there.\")"
+      },
+      "NE": {
+        "MESSAGE": "The forest is deep and dark. I wouldn't go in there.",
+        "TYPE": "NEXIT",
+        "Zil": "(NE \"The forest is deep and dark. I wouldn't go in there.\")"
+      },
+      "NW": {
+        "MESSAGE": "The forest is deep and dark. I wouldn't go in there.",
+        "TYPE": "NEXIT",
+        "Zil": "(NW \"The forest is deep and dark. I wouldn't go in there.\")"
+      },
+      "SE": {
+        "MESSAGE": "The forest is deep and dark. I wouldn't go in there.",
+        "TYPE": "NEXIT",
+        "Zil": "(SE \"The forest is deep and dark. I wouldn't go in there.\")"
+      },
+      "SW": {
+        "MESSAGE": "The forest is deep and dark. I wouldn't go in there.",
+        "TYPE": "NEXIT",
+        "Zil": "(SW \"The forest is deep and dark. I wouldn't go in there.\")"
+      }
+    },
+    "Properties": {
+      "#IN": "ROOMS",
+      "DESC": [
+        "Forest"
+      ],
+      "LDESC": [
+        "You are in a dark forest, just north of a rusted gate. Except to\r\nthe east and south, the forest is thick all around you."
+      ],
+      "SOUTH": [
+        {
+          "Atom": "TO"
+        },
+        {
+          "Atom": "NORTH-GATE"
+        }
+      ],
+      "NORTH": [
+        "The forest is deep and dark. I wouldn't go in there."
+      ],
+      "EAST": [
+        {
+          "Atom": "TO"
+        },
+        {
+          "Atom": "FOREST-2"
+        }
+      ],
+      "WEST": [
+        "The forest is deep and dark. I wouldn't go in there."
+      ],
+      "NE": [
+        "The forest is deep and dark. I wouldn't go in there."
+      ],
+      "NW": [
+        "The forest is deep and dark. I wouldn't go in there."
+      ],
+      "SE": [
+        "The forest is deep and dark. I wouldn't go in there."
+      ],
+      "SW": [
+        "The forest is deep and dark. I wouldn't go in there."
+      ],
+      "FLAGS": [
+        "RLANDBIT",
+        "ONBIT",
+        "LIGHTBIT"
+      ],
+      "GLOBAL": [
+        {
+          "Atom": "NORTH-GATE-OBJ"
+        },
+        {
+          "Atom": "FOREST"
+        },
+        {
+          "Atom": "TREES"
+        }
+      ],
+      "ACTION": [
+        {
+          "Atom": "FOREST-1-F"
+        }
+      ]
+    },
+    "IsRoom": true
+  },
+  {
+    "Zil": "#OBJECT (ROOM FOREST-2 (IN ROOMS) (DESC \"Swamp\") (LDESC \"You are in a thick forest shading into a deep and miasmic swamp.\r\nThe ground is very wet and boggy here, and footing is treacherous.\r\nLily pads cover the surface of the water, and frogs abound. Things\r\nlook drier to the west.\") (SOUTH \"There could be quicksand there. You should stay here.\") (NORTH \"There could be quicksand there. You should stay here.\") (EAST \"There could be quicksand there. You should stay here.\") (WEST TO FOREST-1) (NE \"There could be quicksand there. You should stay here.\") (NW \"There could be quicksand there. You should stay here.\") (SE \"There could be quicksand there. You should stay here.\") (SW \"There could be quicksand there. You should stay here.\") (FLAGS RLANDBIT ONBIT LIGHTBIT) (ACTION SWAMP-F) (GLOBAL FOREST GLOBAL-WATER) (PSEUDO \"SWAMP\" SWAMP-PSEUDO))",
+    "Name": "FOREST-2",
+    "Exits": {
+      "SOUTH": {
+        "MESSAGE": "There could be quicksand there. You should stay here.",
+        "TYPE": "NEXIT",
+        "Zil": "(SOUTH \"There could be quicksand there. You should stay here.\")"
+      },
+      "NORTH": {
+        "MESSAGE": "There could be quicksand there. You should stay here.",
+        "TYPE": "NEXIT",
+        "Zil": "(NORTH \"There could be quicksand there. You should stay here.\")"
+      },
+      "EAST": {
+        "MESSAGE": "There could be quicksand there. You should stay here.",
+        "TYPE": "NEXIT",
+        "Zil": "(EAST \"There could be quicksand there. You should stay here.\")"
+      },
+      "WEST": {
+        "TO": "FOREST-1",
+        "TYPE": "UEXIT",
+        "Zil": "(WEST TO FOREST-1)"
+      },
+      "NE": {
+        "MESSAGE": "There could be quicksand there. You should stay here.",
+        "TYPE": "NEXIT",
+        "Zil": "(NE \"There could be quicksand there. You should stay here.\")"
+      },
+      "NW": {
+        "MESSAGE": "There could be quicksand there. You should stay here.",
+        "TYPE": "NEXIT",
+        "Zil": "(NW \"There could be quicksand there. You should stay here.\")"
+      },
+      "SE": {
+        "MESSAGE": "There could be quicksand there. You should stay here.",
+        "TYPE": "NEXIT",
+        "Zil": "(SE \"There could be quicksand there. You should stay here.\")"
+      },
+      "SW": {
+        "MESSAGE": "There could be quicksand there. You should stay here.",
+        "TYPE": "NEXIT",
+        "Zil": "(SW \"There could be quicksand there. You should stay here.\")"
+      }
+    },
+    "Properties": {
+      "#IN": "ROOMS",
+      "DESC": [
+        "Swamp"
+      ],
+      "LDESC": [
+        "You are in a thick forest shading into a deep and miasmic swamp.\r\nThe ground is very wet and boggy here, and footing is treacherous.\r\nLily pads cover the surface of the water, and frogs abound. Things\r\nlook drier to the west."
+      ],
+      "SOUTH": [
+        "There could be quicksand there. You should stay here."
+      ],
+      "NORTH": [
+        "There could be quicksand there. You should stay here."
+      ],
+      "EAST": [
+        "There could be quicksand there. You should stay here."
+      ],
+      "WEST": [
+        {
+          "Atom": "TO"
+        },
+        {
+          "Atom": "FOREST-1"
+        }
+      ],
+      "NE": [
+        "There could be quicksand there. You should stay here."
+      ],
+      "NW": [
+        "There could be quicksand there. You should stay here."
+      ],
+      "SE": [
+        "There could be quicksand there. You should stay here."
+      ],
+      "SW": [
+        "There could be quicksand there. You should stay here."
+      ],
+      "FLAGS": [
+        "RLANDBIT",
+        "ONBIT",
+        "LIGHTBIT"
+      ],
+      "ACTION": [
+        {
+          "Atom": "SWAMP-F"
+        }
+      ],
+      "GLOBAL": [
+        {
+          "Atom": "FOREST"
+        },
+        {
+          "Atom": "GLOBAL-WATER"
+        }
+      ],
+      "PSEUDO": [
+        "SWAMP",
+        {
+          "Atom": "SWAMP-PSEUDO"
+        }
+      ]
+    },
+    "IsRoom": true
+  },
+  {
+    "Zil": "#OBJECT (ROOM NW-TOWER (IN ROOMS) (DESC \"Tower\") (LDESC \"This is the base of the northwest tower of the castle. A winding staircase\r\nleads up into the tower itself, and passages lead from here to the east and\r\nsouth.\") (UP TO JEWEL-ROOM) (EAST TO MIRROR-HALL-1) (SOUTH TO PEBBLED-PATH) (FLAGS RLANDBIT) (GLOBAL STAIRS TOWER))",
+    "Name": "NW-TOWER",
+    "Exits": {
+      "UP": {
+        "TO": "JEWEL-ROOM",
+        "TYPE": "UEXIT",
+        "Zil": "(UP TO JEWEL-ROOM)"
+      },
+      "EAST": {
+        "TO": "MIRROR-HALL-1",
+        "TYPE": "UEXIT",
+        "Zil": "(EAST TO MIRROR-HALL-1)"
+      },
+      "SOUTH": {
+        "TO": "PEBBLED-PATH",
+        "TYPE": "UEXIT",
+        "Zil": "(SOUTH TO PEBBLED-PATH)"
+      }
+    },
+    "Properties": {
+      "#IN": "ROOMS",
+      "DESC": [
+        "Tower"
+      ],
+      "LDESC": [
+        "This is the base of the northwest tower of the castle. A winding staircase\r\nleads up into the tower itself, and passages lead from here to the east and\r\nsouth."
+      ],
+      "UP": [
+        {
+          "Atom": "TO"
+        },
+        {
+          "Atom": "JEWEL-ROOM"
+        }
+      ],
+      "EAST": [
+        {
+          "Atom": "TO"
+        },
+        {
+          "Atom": "MIRROR-HALL-1"
+        }
+      ],
+      "SOUTH": [
+        {
+          "Atom": "TO"
+        },
+        {
+          "Atom": "PEBBLED-PATH"
+        }
+      ],
+      "FLAGS": [
+        "RLANDBIT"
+      ],
+      "GLOBAL": [
+        {
+          "Atom": "STAIRS"
+        },
+        {
+          "Atom": "TOWER"
+        }
+      ]
+    },
+    "IsRoom": true
+  },
+  {
+    "Zil": "#OBJECT (ROOM COURTYARD-2 (IN ROOMS) (DESC \"Courtyard\") (LDESC \"This is the northern part of the large interior courtyard of the castle.\r\nThe vast lawns continue from here south and west. To the southeast stands\r\na huge temple, on either side of which are dark towers. The courtyard\r\ncontinues east along a narrow path.\") (MUNGDESC \"The northern part of the interior courtyard is grey and lifeless. The\r\nvast lawns are withered and covered in black ash stretching from south\r\nto west. The temple stands to the southeast, and the courtyard continues\r\neast.\") (SW TO COURTYARD-1) (SE TO TEMPLE) (WEST TO COURTYARD-1) (EAST TO COURTYARD-5) (SOUTH TO COURTYARD-3) (FLAGS RLANDBIT ONBIT LIGHTBIT) (GLOBAL COURTYARD LAWN TEMPLE-OBJ))",
+    "Name": "COURTYARD-2",
+    "Exits": {
+      "SW": {
+        "TO": "COURTYARD-1",
+        "TYPE": "UEXIT",
+        "Zil": "(SW TO COURTYARD-1)"
+      },
+      "SE": {
+        "TO": "TEMPLE",
+        "TYPE": "UEXIT",
+        "Zil": "(SE TO TEMPLE)"
+      },
+      "WEST": {
+        "TO": "COURTYARD-1",
+        "TYPE": "UEXIT",
+        "Zil": "(WEST TO COURTYARD-1)"
+      },
+      "EAST": {
+        "TO": "COURTYARD-5",
+        "TYPE": "UEXIT",
+        "Zil": "(EAST TO COURTYARD-5)"
+      },
+      "SOUTH": {
+        "TO": "COURTYARD-3",
+        "TYPE": "UEXIT",
+        "Zil": "(SOUTH TO COURTYARD-3)"
+      }
+    },
+    "Properties": {
+      "#IN": "ROOMS",
+      "DESC": [
+        "Courtyard"
+      ],
+      "LDESC": [
+        "This is the northern part of the large interior courtyard of the castle.\r\nThe vast lawns continue from here south and west. To the southeast stands\r\na huge temple, on either side of which are dark towers. The courtyard\r\ncontinues east along a narrow path."
+      ],
+      "MUNGDESC": [
+        "The northern part of the interior courtyard is grey and lifeless. The\r\nvast lawns are withered and covered in black ash stretching from south\r\nto west. The temple stands to the southeast, and the courtyard continues\r\neast."
+      ],
+      "SW": [
+        {
+          "Atom": "TO"
+        },
+        {
+          "Atom": "COURTYARD-1"
+        }
+      ],
+      "SE": [
+        {
+          "Atom": "TO"
+        },
+        {
+          "Atom": "TEMPLE"
+        }
+      ],
+      "WEST": [
+        {
+          "Atom": "TO"
+        },
+        {
+          "Atom": "COURTYARD-1"
+        }
+      ],
+      "EAST": [
+        {
+          "Atom": "TO"
+        },
+        {
+          "Atom": "COURTYARD-5"
+        }
+      ],
+      "SOUTH": [
+        {
+          "Atom": "TO"
+        },
+        {
+          "Atom": "COURTYARD-3"
+        }
+      ],
+      "FLAGS": [
+        "RLANDBIT",
+        "ONBIT",
+        "LIGHTBIT"
+      ],
+      "GLOBAL": [
+        {
+          "Atom": "COURTYARD"
+        },
+        {
+          "Atom": "LAWN"
+        },
+        {
+          "Atom": "TEMPLE-OBJ"
+        }
+      ]
+    },
+    "IsRoom": true
+  },
+  {
+    "Zil": "#OBJECT (ROOM COURTYARD-3 (IN ROOMS) (DESC \"Courtyard\") (LDESC \"You are in the center of a large courtyard, which surrounds you in all\r\ndirections. Directly in front of you, to the east, is a large temple flanked\r\nby two smaller towers. Behind the temple can be seen the two eastern towers\r\nof the castle, shrouded in fog, and the single dark turret, black as night and\r\nsending dark streams of smoke into a lowering sky. From the temple comes\r\na howling, haunting chant.\") (MUNGDESC \"You are in the center of a large courtyard, which surrounds you. Everything\r\naround you is ashen and grey, and the air seems miasmic and oppressive. The\r\ndead grass seems to grab at your feet as you stand gazing around. To\r\nthe east is a temple flanked by two smaller towers. Behind it can be seen\r\nthe two eastern towers of the castle, shrouded in blood-red fog. Between them\r\nis a dark turret, black and ominous as night. It sends dark streams of smoke\r\ncurling around everything near it. From the temple can be heard a mournful\r\nchant.\") (NORTH TO COURTYARD-2) (SOUTH TO COURTYARD-4) (EAST TO TEMPLE) (WEST TO COURTYARD-1) (NE TO COURTYARD-5) (SE TO COURTYARD-6) (FLAGS RLANDBIT ONBIT LIGHTBIT) (GLOBAL COURTYARD LAWN TEMPLE-OBJ TOWER TURRET VOICES))",
+    "Name": "COURTYARD-3",
+    "Exits": {
+      "NORTH": {
+        "TO": "COURTYARD-2",
+        "TYPE": "UEXIT",
+        "Zil": "(NORTH TO COURTYARD-2)"
+      },
+      "SOUTH": {
+        "TO": "COURTYARD-4",
+        "TYPE": "UEXIT",
+        "Zil": "(SOUTH TO COURTYARD-4)"
+      },
+      "EAST": {
+        "TO": "TEMPLE",
+        "TYPE": "UEXIT",
+        "Zil": "(EAST TO TEMPLE)"
+      },
+      "WEST": {
+        "TO": "COURTYARD-1",
+        "TYPE": "UEXIT",
+        "Zil": "(WEST TO COURTYARD-1)"
+      },
+      "NE": {
+        "TO": "COURTYARD-5",
+        "TYPE": "UEXIT",
+        "Zil": "(NE TO COURTYARD-5)"
+      },
+      "SE": {
+        "TO": "COURTYARD-6",
+        "TYPE": "UEXIT",
+        "Zil": "(SE TO COURTYARD-6)"
+      }
+    },
+    "Properties": {
+      "#IN": "ROOMS",
+      "DESC": [
+        "Courtyard"
+      ],
+      "LDESC": [
+        "You are in the center of a large courtyard, which surrounds you in all\r\ndirections. Directly in front of you, to the east, is a large temple flanked\r\nby two smaller towers. Behind the temple can be seen the two eastern towers\r\nof the castle, shrouded in fog, and the single dark turret, black as night and\r\nsending dark streams of smoke into a lowering sky. From the temple comes\r\na howling, haunting chant."
+      ],
+      "MUNGDESC": [
+        "You are in the center of a large courtyard, which surrounds you. Everything\r\naround you is ashen and grey, and the air seems miasmic and oppressive. The\r\ndead grass seems to grab at your feet as you stand gazing around. To\r\nthe east is a temple flanked by two smaller towers. Behind it can be seen\r\nthe two eastern towers of the castle, shrouded in blood-red fog. Between them\r\nis a dark turret, black and ominous as night. It sends dark streams of smoke\r\ncurling around everything near it. From the temple can be heard a mournful\r\nchant."
+      ],
+      "NORTH": [
+        {
+          "Atom": "TO"
+        },
+        {
+          "Atom": "COURTYARD-2"
+        }
+      ],
+      "SOUTH": [
+        {
+          "Atom": "TO"
+        },
+        {
+          "Atom": "COURTYARD-4"
+        }
+      ],
+      "EAST": [
+        {
+          "Atom": "TO"
+        },
+        {
+          "Atom": "TEMPLE"
+        }
+      ],
+      "WEST": [
+        {
+          "Atom": "TO"
+        },
+        {
+          "Atom": "COURTYARD-1"
+        }
+      ],
+      "NE": [
+        {
+          "Atom": "TO"
+        },
+        {
+          "Atom": "COURTYARD-5"
+        }
+      ],
+      "SE": [
+        {
+          "Atom": "TO"
+        },
+        {
+          "Atom": "COURTYARD-6"
+        }
+      ],
+      "FLAGS": [
+        "RLANDBIT",
+        "ONBIT",
+        "LIGHTBIT"
+      ],
+      "GLOBAL": [
+        {
+          "Atom": "COURTYARD"
+        },
+        {
+          "Atom": "LAWN"
+        },
+        {
+          "Atom": "TEMPLE-OBJ"
+        },
+        {
+          "Atom": "TOWER"
+        },
+        {
+          "Atom": "TURRET"
+        },
+        {
+          "Atom": "VOICES"
+        }
+      ]
+    },
+    "IsRoom": true
+  },
+  {
+    "Zil": "#OBJECT (ROOM COURTYARD-4 (IN ROOMS) (DESC \"Courtyard\") (LDESC \"This is the southern part of the great courtyard, which spreads out to\r\nthe north and west. A narrow stretch of grass continues to the east. To\r\nthe northeast stands the temple, flanked by two small towers.\") (MUNGDESC \"This is the southern part of the courtyard, spreading north and west.\r\nThe ground is ashen and grey, and the air heavy with death. The dead grass\r\nseems to grab at your feet. A narrow stretch of scorched earth continues to\r\nthe east. To the northeast stands the temple, flanked by two small towers.\") (EAST TO COURTYARD-6) (NW TO COURTYARD-1) (WEST TO COURTYARD-1) (NORTH TO COURTYARD-3) (NE TO TEMPLE) (FLAGS RLANDBIT ONBIT LIGHTBIT) (GLOBAL COURTYARD LAWN TEMPLE-OBJ TOWER))",
+    "Name": "COURTYARD-4",
+    "Exits": {
+      "EAST": {
+        "TO": "COURTYARD-6",
+        "TYPE": "UEXIT",
+        "Zil": "(EAST TO COURTYARD-6)"
+      },
+      "NW": {
+        "TO": "COURTYARD-1",
+        "TYPE": "UEXIT",
+        "Zil": "(NW TO COURTYARD-1)"
+      },
+      "WEST": {
+        "TO": "COURTYARD-1",
+        "TYPE": "UEXIT",
+        "Zil": "(WEST TO COURTYARD-1)"
+      },
+      "NORTH": {
+        "TO": "COURTYARD-3",
+        "TYPE": "UEXIT",
+        "Zil": "(NORTH TO COURTYARD-3)"
+      },
+      "NE": {
+        "TO": "TEMPLE",
+        "TYPE": "UEXIT",
+        "Zil": "(NE TO TEMPLE)"
+      }
+    },
+    "Properties": {
+      "#IN": "ROOMS",
+      "DESC": [
+        "Courtyard"
+      ],
+      "LDESC": [
+        "This is the southern part of the great courtyard, which spreads out to\r\nthe north and west. A narrow stretch of grass continues to the east. To\r\nthe northeast stands the temple, flanked by two small towers."
+      ],
+      "MUNGDESC": [
+        "This is the southern part of the courtyard, spreading north and west.\r\nThe ground is ashen and grey, and the air heavy with death. The dead grass\r\nseems to grab at your feet. A narrow stretch of scorched earth continues to\r\nthe east. To the northeast stands the temple, flanked by two small towers."
+      ],
+      "EAST": [
+        {
+          "Atom": "TO"
+        },
+        {
+          "Atom": "COURTYARD-6"
+        }
+      ],
+      "NW": [
+        {
+          "Atom": "TO"
+        },
+        {
+          "Atom": "COURTYARD-1"
+        }
+      ],
+      "WEST": [
+        {
+          "Atom": "TO"
+        },
+        {
+          "Atom": "COURTYARD-1"
+        }
+      ],
+      "NORTH": [
+        {
+          "Atom": "TO"
+        },
+        {
+          "Atom": "COURTYARD-3"
+        }
+      ],
+      "NE": [
+        {
+          "Atom": "TO"
+        },
+        {
+          "Atom": "TEMPLE"
+        }
+      ],
+      "FLAGS": [
+        "RLANDBIT",
+        "ONBIT",
+        "LIGHTBIT"
+      ],
+      "GLOBAL": [
+        {
+          "Atom": "COURTYARD"
+        },
+        {
+          "Atom": "LAWN"
+        },
+        {
+          "Atom": "TEMPLE-OBJ"
+        },
+        {
+          "Atom": "TOWER"
+        }
+      ]
+    },
+    "IsRoom": true
+  },
+  {
+    "Zil": "#OBJECT (ROOM COURTYARD-5 (IN ROOMS) (DESC \"Courtyard\") (LDESC \"You are north of a small tower which connects with the temple to\r\nthe south. A large courtyard can be seen to the west and a smaller one\r\nto the southeast.\") (SE TO COURTYARD-7) (SW TO COURTYARD-3) (WEST TO COURTYARD-2) (SOUTH \"There is no entrance to the tower here.\") (FLAGS RLANDBIT ONBIT LIGHTBIT) (GLOBAL COURTYARD LAWN TEMPLE-OBJ TOWER))",
+    "Name": "COURTYARD-5",
+    "Exits": {
+      "SE": {
+        "TO": "COURTYARD-7",
+        "TYPE": "UEXIT",
+        "Zil": "(SE TO COURTYARD-7)"
+      },
+      "SW": {
+        "TO": "COURTYARD-3",
+        "TYPE": "UEXIT",
+        "Zil": "(SW TO COURTYARD-3)"
+      },
+      "WEST": {
+        "TO": "COURTYARD-2",
+        "TYPE": "UEXIT",
+        "Zil": "(WEST TO COURTYARD-2)"
+      },
+      "SOUTH": {
+        "MESSAGE": "There is no entrance to the tower here.",
+        "TYPE": "NEXIT",
+        "Zil": "(SOUTH \"There is no entrance to the tower here.\")"
+      }
+    },
+    "Properties": {
+      "#IN": "ROOMS",
+      "DESC": [
+        "Courtyard"
+      ],
+      "LDESC": [
+        "You are north of a small tower which connects with the temple to\r\nthe south. A large courtyard can be seen to the west and a smaller one\r\nto the southeast."
+      ],
+      "SE": [
+        {
+          "Atom": "TO"
+        },
+        {
+          "Atom": "COURTYARD-7"
+        }
+      ],
+      "SW": [
+        {
+          "Atom": "TO"
+        },
+        {
+          "Atom": "COURTYARD-3"
+        }
+      ],
+      "WEST": [
+        {
+          "Atom": "TO"
+        },
+        {
+          "Atom": "COURTYARD-2"
+        }
+      ],
+      "SOUTH": [
+        "There is no entrance to the tower here."
+      ],
+      "FLAGS": [
+        "RLANDBIT",
+        "ONBIT",
+        "LIGHTBIT"
+      ],
+      "GLOBAL": [
+        {
+          "Atom": "COURTYARD"
+        },
+        {
+          "Atom": "LAWN"
+        },
+        {
+          "Atom": "TEMPLE-OBJ"
+        },
+        {
+          "Atom": "TOWER"
+        }
+      ]
+    },
+    "IsRoom": true
+  },
+  {
+    "Zil": "#OBJECT (ROOM COURTYARD-6 (IN ROOMS) (DESC \"Courtyard\") (LDESC \"You are south of a small tower which connects with the temple to\r\nthe north. A large courtyard can be seen to the west and a smaller one\r\nto the northeast.\") (NE TO COURTYARD-7) (NW TO COURTYARD-3) (WEST TO COURTYARD-4) (NORTH \"There is no entrance to the tower here.\") (FLAGS RLANDBIT ONBIT LIGHTBIT) (GLOBAL COURTYARD LAWN TOWER TEMPLE-OBJ TREES))",
+    "Name": "COURTYARD-6",
+    "Exits": {
+      "NE": {
+        "TO": "COURTYARD-7",
+        "TYPE": "UEXIT",
+        "Zil": "(NE TO COURTYARD-7)"
+      },
+      "NW": {
+        "TO": "COURTYARD-3",
+        "TYPE": "UEXIT",
+        "Zil": "(NW TO COURTYARD-3)"
+      },
+      "WEST": {
+        "TO": "COURTYARD-4",
+        "TYPE": "UEXIT",
+        "Zil": "(WEST TO COURTYARD-4)"
+      },
+      "NORTH": {
+        "MESSAGE": "There is no entrance to the tower here.",
+        "TYPE": "NEXIT",
+        "Zil": "(NORTH \"There is no entrance to the tower here.\")"
+      }
+    },
+    "Properties": {
+      "#IN": "ROOMS",
+      "DESC": [
+        "Courtyard"
+      ],
+      "LDESC": [
+        "You are south of a small tower which connects with the temple to\r\nthe north. A large courtyard can be seen to the west and a smaller one\r\nto the northeast."
+      ],
+      "NE": [
+        {
+          "Atom": "TO"
+        },
+        {
+          "Atom": "COURTYARD-7"
+        }
+      ],
+      "NW": [
+        {
+          "Atom": "TO"
+        },
+        {
+          "Atom": "COURTYARD-3"
+        }
+      ],
+      "WEST": [
+        {
+          "Atom": "TO"
+        },
+        {
+          "Atom": "COURTYARD-4"
+        }
+      ],
+      "NORTH": [
+        "There is no entrance to the tower here."
+      ],
+      "FLAGS": [
+        "RLANDBIT",
+        "ONBIT",
+        "LIGHTBIT"
+      ],
+      "GLOBAL": [
+        {
+          "Atom": "COURTYARD"
+        },
+        {
+          "Atom": "LAWN"
+        },
+        {
+          "Atom": "TOWER"
+        },
+        {
+          "Atom": "TEMPLE-OBJ"
+        },
+        {
+          "Atom": "TREES"
+        }
+      ]
+    },
+    "IsRoom": true
+  },
+  {
+    "Zil": "#OBJECT (ROOM COURTYARD-7 (IN ROOMS) (DESC \"Courtyard\") (LDESC \"You are standing in a small courtyard between a large open hall to\r\nthe east and a temple to the west. The temple is flanked to the north\r\nand south by two small towers. Paths cross the lawn to the northwest and\r\nsouthwest.\") (MUNGDESC \"You are in a courtyard between an open hall to the east and a temple to\r\nthe west. The temple is flanked, north and south, by twin towers. Paths\r\ncross the scarred lawn to the northwest and southwest. Nothing now grows\r\nhere, however, and a foul stench fills the air.\") (EAST TO JUNCTION) (WEST TO TEMPLE) (SW TO COURTYARD-6) (NW TO COURTYARD-5) (FLAGS RLANDBIT ONBIT LIGHTBIT) (GLOBAL COURTYARD LAWN TEMPLE-OBJ TOWER))",
+    "Name": "COURTYARD-7",
+    "Exits": {
+      "EAST": {
+        "TO": "JUNCTION",
+        "TYPE": "UEXIT",
+        "Zil": "(EAST TO JUNCTION)"
+      },
+      "WEST": {
+        "TO": "TEMPLE",
+        "TYPE": "UEXIT",
+        "Zil": "(WEST TO TEMPLE)"
+      },
+      "SW": {
+        "TO": "COURTYARD-6",
+        "TYPE": "UEXIT",
+        "Zil": "(SW TO COURTYARD-6)"
+      },
+      "NW": {
+        "TO": "COURTYARD-5",
+        "TYPE": "UEXIT",
+        "Zil": "(NW TO COURTYARD-5)"
+      }
+    },
+    "Properties": {
+      "#IN": "ROOMS",
+      "DESC": [
+        "Courtyard"
+      ],
+      "LDESC": [
+        "You are standing in a small courtyard between a large open hall to\r\nthe east and a temple to the west. The temple is flanked to the north\r\nand south by two small towers. Paths cross the lawn to the northwest and\r\nsouthwest."
+      ],
+      "MUNGDESC": [
+        "You are in a courtyard between an open hall to the east and a temple to\r\nthe west. The temple is flanked, north and south, by twin towers. Paths\r\ncross the scarred lawn to the northwest and southwest. Nothing now grows\r\nhere, however, and a foul stench fills the air."
+      ],
+      "EAST": [
+        {
+          "Atom": "TO"
+        },
+        {
+          "Atom": "JUNCTION"
+        }
+      ],
+      "WEST": [
+        {
+          "Atom": "TO"
+        },
+        {
+          "Atom": "TEMPLE"
+        }
+      ],
+      "SW": [
+        {
+          "Atom": "TO"
+        },
+        {
+          "Atom": "COURTYARD-6"
+        }
+      ],
+      "NW": [
+        {
+          "Atom": "TO"
+        },
+        {
+          "Atom": "COURTYARD-5"
+        }
+      ],
+      "FLAGS": [
+        "RLANDBIT",
+        "ONBIT",
+        "LIGHTBIT"
+      ],
+      "GLOBAL": [
+        {
+          "Atom": "COURTYARD"
+        },
+        {
+          "Atom": "LAWN"
+        },
+        {
+          "Atom": "TEMPLE-OBJ"
+        },
+        {
+          "Atom": "TOWER"
+        }
+      ]
+    },
+    "IsRoom": true
+  },
+  {
+    "Zil": "#OBJECT (ROOM TEMPLE (IN ROOMS) (DESC \"Temple\") (LDESC \"This is the interior of a huge temple of primitive construction. A few\r\nflickering torches cast a sallow illumination over the altar, which, atop\r\na row of stairs, is still drenched with the blood of human sacrifice. Behind\r\nthe altar is an enormous statue of a demon which seems to reach towards you\r\nwith dripping fangs and razor-sharp talons. Two open doorways lead out of the\r\ntemple to the east and west, while two wooden doors stand at the north and\r\nsouth. A mass of hunched figures in the temple are chanting a haunting tune.\r\nThey don't seem interested in your presence.\") (NORTH TO TOWER-N IF TOWER-N-DOOR IS OPEN) (SOUTH TO TOWER-S IF TOWER-S-DOOR IS OPEN) (WEST TO COURTYARD-3) (EAST TO COURTYARD-7) (UP TO ALTAR) (FLAGS RLANDBIT ONBIT) (GLOBAL STAIRS TOWER-N-DOOR TOWER-S-DOOR STATUE TEMPLE-OBJ) (ACTION TEMPLE-F) (PSEUDO \"ALTAR\" ALTAR-PSEUDO))",
+    "Name": "TEMPLE",
+    "Exits": {
+      "NORTH": {
+        "TO": "TOWER-N",
+        "DOOR": "TOWER-N-DOOR",
+        "TYPE": "DEXIT",
+        "Zil": "(NORTH TO TOWER-N IF TOWER-N-DOOR IS OPEN)"
+      },
+      "SOUTH": {
+        "TO": "TOWER-S",
+        "DOOR": "TOWER-S-DOOR",
+        "TYPE": "DEXIT",
+        "Zil": "(SOUTH TO TOWER-S IF TOWER-S-DOOR IS OPEN)"
+      },
+      "WEST": {
+        "TO": "COURTYARD-3",
+        "TYPE": "UEXIT",
+        "Zil": "(WEST TO COURTYARD-3)"
+      },
+      "EAST": {
+        "TO": "COURTYARD-7",
+        "TYPE": "UEXIT",
+        "Zil": "(EAST TO COURTYARD-7)"
+      },
+      "UP": {
+        "TO": "ALTAR",
+        "TYPE": "UEXIT",
+        "Zil": "(UP TO ALTAR)"
+      }
+    },
+    "Properties": {
+      "#IN": "ROOMS",
+      "DESC": [
+        "Temple"
+      ],
+      "LDESC": [
+        "This is the interior of a huge temple of primitive construction. A few\r\nflickering torches cast a sallow illumination over the altar, which, atop\r\na row of stairs, is still drenched with the blood of human sacrifice. Behind\r\nthe altar is an enormous statue of a demon which seems to reach towards you\r\nwith dripping fangs and razor-sharp talons. Two open doorways lead out of the\r\ntemple to the east and west, while two wooden doors stand at the north and\r\nsouth. A mass of hunched figures in the temple are chanting a haunting tune.\r\nThey don't seem interested in your presence."
+      ],
+      "NORTH": [
+        {
+          "Atom": "TO"
+        },
+        {
+          "Atom": "TOWER-N"
+        },
+        {
+          "Atom": "IF"
+        },
+        {
+          "Atom": "TOWER-N-DOOR"
+        },
+        {
+          "Atom": "IS"
+        },
+        {
+          "Atom": "OPEN"
+        }
+      ],
+      "SOUTH": [
+        {
+          "Atom": "TO"
+        },
+        {
+          "Atom": "TOWER-S"
+        },
+        {
+          "Atom": "IF"
+        },
+        {
+          "Atom": "TOWER-S-DOOR"
+        },
+        {
+          "Atom": "IS"
+        },
+        {
+          "Atom": "OPEN"
+        }
+      ],
+      "WEST": [
+        {
+          "Atom": "TO"
+        },
+        {
+          "Atom": "COURTYARD-3"
+        }
+      ],
+      "EAST": [
+        {
+          "Atom": "TO"
+        },
+        {
+          "Atom": "COURTYARD-7"
+        }
+      ],
+      "UP": [
+        {
+          "Atom": "TO"
+        },
+        {
+          "Atom": "ALTAR"
+        }
+      ],
+      "FLAGS": [
+        "RLANDBIT",
+        "ONBIT"
+      ],
+      "GLOBAL": [
+        {
+          "Atom": "STAIRS"
+        },
+        {
+          "Atom": "TOWER-N-DOOR"
+        },
+        {
+          "Atom": "TOWER-S-DOOR"
+        },
+        {
+          "Atom": "STATUE"
+        },
+        {
+          "Atom": "TEMPLE-OBJ"
+        }
+      ],
+      "ACTION": [
+        {
+          "Atom": "TEMPLE-F"
+        }
+      ],
+      "PSEUDO": [
+        "ALTAR",
+        {
+          "Atom": "ALTAR-PSEUDO"
+        }
+      ]
+    },
+    "IsRoom": true
+  },
+  {
+    "Zil": "#OBJECT (ROOM ALTAR (IN ROOMS) (DESC \"Sacrificial Altar\") (LDESC \"This is the altar of the temple. Acrid smoke fills the air, and a feeling\r\nof lurking evil is all around. A low droning, just at the lowest end of\r\nyour perception, causes your hair to stand on end. Behind the altar is an\r\nenormous statue of a demon which reaches toward you with dripping fangs\r\nand razor-sharp talons. The fangs and talons are blood-red. In the\r\ntemple below is a mass of hunched figures, chanting in hideous tones.\") (DOWN TO TEMPLE) (FLAGS RLANDBIT ONBIT RMUNGBIT) (GLOBAL STAIRS STATUE VOICES) (PSEUDO \"ALTAR\" ALTAR-PSEUDO))",
+    "Name": "ALTAR",
+    "Exits": {
+      "DOWN": {
+        "TO": "TEMPLE",
+        "TYPE": "UEXIT",
+        "Zil": "(DOWN TO TEMPLE)"
+      }
+    },
+    "Properties": {
+      "#IN": "ROOMS",
+      "DESC": [
+        "Sacrificial Altar"
+      ],
+      "LDESC": [
+        "This is the altar of the temple. Acrid smoke fills the air, and a feeling\r\nof lurking evil is all around. A low droning, just at the lowest end of\r\nyour perception, causes your hair to stand on end. Behind the altar is an\r\nenormous statue of a demon which reaches toward you with dripping fangs\r\nand razor-sharp talons. The fangs and talons are blood-red. In the\r\ntemple below is a mass of hunched figures, chanting in hideous tones."
+      ],
+      "DOWN": [
+        {
+          "Atom": "TO"
+        },
+        {
+          "Atom": "TEMPLE"
+        }
+      ],
+      "FLAGS": [
+        "RLANDBIT",
+        "ONBIT",
+        "RMUNGBIT"
+      ],
+      "GLOBAL": [
+        {
+          "Atom": "STAIRS"
+        },
+        {
+          "Atom": "STATUE"
+        },
+        {
+          "Atom": "VOICES"
+        }
+      ],
+      "PSEUDO": [
+        "ALTAR",
+        {
+          "Atom": "ALTAR-PSEUDO"
+        }
+      ]
+    },
+    "IsRoom": true
+  },
+  {
+    "Zil": "#OBJECT (ROOM TOWER-N (IN ROOMS) (DESC \"Cell\") (LDESC \"This is a small prison cell in the north tower of the temple. Hideous shapes\r\ncan be seen through the iron-barred window in the prison door. From the temple,\r\na bloodcurdling chant can be heard.\") (SOUTH TO TEMPLE IF TOWER-N-DOOR IS OPEN) (FLAGS RLANDBIT ONBIT) (TEXT \"Hideous shapes chanting in unison can be seen through the cell window.\") (GLOBAL TOWER-N-DOOR WINDOW GUARDS) (PSEUDO \"CELL\" CELL-PSEUDO))",
+    "Name": "TOWER-N",
+    "Exits": {
+      "SOUTH": {
+        "TO": "TEMPLE",
+        "DOOR": "TOWER-N-DOOR",
+        "TYPE": "DEXIT",
+        "Zil": "(SOUTH TO TEMPLE IF TOWER-N-DOOR IS OPEN)"
+      }
+    },
+    "Properties": {
+      "#IN": "ROOMS",
+      "DESC": [
+        "Cell"
+      ],
+      "LDESC": [
+        "This is a small prison cell in the north tower of the temple. Hideous shapes\r\ncan be seen through the iron-barred window in the prison door. From the temple,\r\na bloodcurdling chant can be heard."
+      ],
+      "SOUTH": [
+        {
+          "Atom": "TO"
+        },
+        {
+          "Atom": "TEMPLE"
+        },
+        {
+          "Atom": "IF"
+        },
+        {
+          "Atom": "TOWER-N-DOOR"
+        },
+        {
+          "Atom": "IS"
+        },
+        {
+          "Atom": "OPEN"
+        }
+      ],
+      "FLAGS": [
+        "RLANDBIT",
+        "ONBIT"
+      ],
+      "TEXT": [
+        "Hideous shapes chanting in unison can be seen through the cell window."
+      ],
+      "GLOBAL": [
+        {
+          "Atom": "TOWER-N-DOOR"
+        },
+        {
+          "Atom": "WINDOW"
+        },
+        {
+          "Atom": "GUARDS"
+        }
+      ],
+      "PSEUDO": [
+        "CELL",
+        {
+          "Atom": "CELL-PSEUDO"
+        }
+      ]
+    },
+    "IsRoom": true
+  },
+  {
+    "Zil": "#OBJECT (ROOM TOWER-S (IN ROOMS) (DESC \"Cell\") (NORTH TO TEMPLE IF TOWER-S-DOOR IS OPEN) (FLAGS RLANDBIT ONBIT) (TEXT \"Hideous shapes chanting in unison can be seen through the cell window.\") (ACTION TOWER-S-F) (GLOBAL TOWER-S-DOOR WINDOW) (PSEUDO \"CELL\" CELL-PSEUDO))",
+    "Name": "TOWER-S",
+    "Exits": {
+      "NORTH": {
+        "TO": "TEMPLE",
+        "DOOR": "TOWER-S-DOOR",
+        "TYPE": "DEXIT",
+        "Zil": "(NORTH TO TEMPLE IF TOWER-S-DOOR IS OPEN)"
+      }
+    },
+    "Properties": {
+      "#IN": "ROOMS",
+      "DESC": [
+        "Cell"
+      ],
+      "NORTH": [
+        {
+          "Atom": "TO"
+        },
+        {
+          "Atom": "TEMPLE"
+        },
+        {
+          "Atom": "IF"
+        },
+        {
+          "Atom": "TOWER-S-DOOR"
+        },
+        {
+          "Atom": "IS"
+        },
+        {
+          "Atom": "OPEN"
+        }
+      ],
+      "FLAGS": [
+        "RLANDBIT",
+        "ONBIT"
+      ],
+      "TEXT": [
+        "Hideous shapes chanting in unison can be seen through the cell window."
+      ],
+      "ACTION": [
+        {
+          "Atom": "TOWER-S-F"
+        }
+      ],
+      "GLOBAL": [
+        {
+          "Atom": "TOWER-S-DOOR"
+        },
+        {
+          "Atom": "WINDOW"
+        }
+      ],
+      "PSEUDO": [
+        "CELL",
+        {
+          "Atom": "CELL-PSEUDO"
+        }
+      ]
+    },
+    "IsRoom": true
+  },
+  {
+    "Zil": "#OBJECT (ROOM GALLERY (IN ROOMS) (DESC \"Gallery\") (WEST TO DIM-DESCENT) (EAST TO SOUTH-GATE) (FLAGS RLANDBIT ONBIT) (ADVFCN GALLERY-A) (ACTION GALLERY-F))",
+    "Name": "GALLERY",
+    "Exits": {
+      "WEST": {
+        "TO": "DIM-DESCENT",
+        "TYPE": "UEXIT",
+        "Zil": "(WEST TO DIM-DESCENT)"
+      },
+      "EAST": {
+        "TO": "SOUTH-GATE",
+        "TYPE": "UEXIT",
+        "Zil": "(EAST TO SOUTH-GATE)"
+      }
+    },
+    "Properties": {
+      "#IN": "ROOMS",
+      "DESC": [
+        "Gallery"
+      ],
+      "WEST": [
+        {
+          "Atom": "TO"
+        },
+        {
+          "Atom": "DIM-DESCENT"
+        }
+      ],
+      "EAST": [
+        {
+          "Atom": "TO"
+        },
+        {
+          "Atom": "SOUTH-GATE"
+        }
+      ],
+      "FLAGS": [
+        "RLANDBIT",
+        "ONBIT"
+      ],
+      "ADVFCN": [
+        {
+          "Atom": "GALLERY-A"
+        }
+      ],
+      "ACTION": [
+        {
+          "Atom": "GALLERY-F"
+        }
+      ]
+    },
+    "IsRoom": true
+  },
+  {
+    "Zil": "#OBJECT (ROOM JEWEL-ROOM (IN ROOMS) (DESC \"Jewel Room\") (LDESC \"This fabulous room commands a magnificent view of the Lonely Mountain\r\nwhich lies to the north and west. The room itself is filled with\r\nbeautiful chests and cabinets which once contained precious jewels\r\nand other objets d'art. These are empty. Winding stone stairs\r\nlead down to the base of the tower.\") (DOWN TO NW-TOWER) (FLAGS RLANDBIT ONBIT) (TEXT \"You can see the Lonely Mountain to the northwest.\") (GLOBAL STAIRS MOUNTAIN WINDOW))",
+    "Name": "JEWEL-ROOM",
+    "Exits": {
+      "DOWN": {
+        "TO": "NW-TOWER",
+        "TYPE": "UEXIT",
+        "Zil": "(DOWN TO NW-TOWER)"
+      }
+    },
+    "Properties": {
+      "#IN": "ROOMS",
+      "DESC": [
+        "Jewel Room"
+      ],
+      "LDESC": [
+        "This fabulous room commands a magnificent view of the Lonely Mountain\r\nwhich lies to the north and west. The room itself is filled with\r\nbeautiful chests and cabinets which once contained precious jewels\r\nand other objets d'art. These are empty. Winding stone stairs\r\nlead down to the base of the tower."
+      ],
+      "DOWN": [
+        {
+          "Atom": "TO"
+        },
+        {
+          "Atom": "NW-TOWER"
+        }
+      ],
+      "FLAGS": [
+        "RLANDBIT",
+        "ONBIT"
+      ],
+      "TEXT": [
+        "You can see the Lonely Mountain to the northwest."
+      ],
+      "GLOBAL": [
+        {
+          "Atom": "STAIRS"
+        },
+        {
+          "Atom": "MOUNTAIN"
+        },
+        {
+          "Atom": "WINDOW"
+        }
+      ]
+    },
+    "IsRoom": true
+  },
+  {
+    "Zil": "#OBJECT (ROOM ENGINE-ROOM (IN ROOMS) (DESC \"Engine Room\") (DOWN TO SE-TOWER) (SE PER CROSS-ENGINE-ROOM) (FLAGS RLANDBIT ONBIT) (ACTION ENGINE-ROOM-F) (PSEUDO \"HAMMER\" HAMMER-F \"SPEARS\" HAMMER-F) (GLOBAL MACHINERY VOICES))",
+    "Name": "ENGINE-ROOM",
+    "Exits": {
+      "DOWN": {
+        "TO": "SE-TOWER",
+        "TYPE": "UEXIT",
+        "Zil": "(DOWN TO SE-TOWER)"
+      },
+      "SE": {
+        "PER": "CROSS-ENGINE-ROOM",
+        "TYPE": "FEXIT",
+        "Zil": "(SE PER CROSS-ENGINE-ROOM)"
+      }
+    },
+    "Properties": {
+      "#IN": "ROOMS",
+      "DESC": [
+        "Engine Room"
+      ],
+      "DOWN": [
+        {
+          "Atom": "TO"
+        },
+        {
+          "Atom": "SE-TOWER"
+        }
+      ],
+      "SE": [
+        {
+          "Atom": "PER"
+        },
+        {
+          "Atom": "CROSS-ENGINE-ROOM"
+        }
+      ],
+      "FLAGS": [
+        "RLANDBIT",
+        "ONBIT"
+      ],
+      "ACTION": [
+        {
+          "Atom": "ENGINE-ROOM-F"
+        }
+      ],
+      "PSEUDO": [
+        "HAMMER",
+        {
+          "Atom": "HAMMER-F"
+        },
+        "SPEARS",
+        {
+          "Atom": "HAMMER-F"
+        }
+      ],
+      "GLOBAL": [
+        {
+          "Atom": "MACHINERY"
+        },
+        {
+          "Atom": "VOICES"
+        }
+      ]
+    },
+    "IsRoom": true
+  },
+  {
+    "Zil": "#OBJECT (ROOM CLOSET (IN ROOMS) (DESC \"Control Room\") (LDESC \"This is the control room for all the machinery nearby. The controls are all\r\nmagical, of course. The walls are covered by blinking lights and shifting\r\ndisplays, interspersed with arcane dials and glowing buttons. It's all very\r\nmysterious looking. The exit, to the northwest, leads into a room with\r\nmachinery which would surely crush you if you were to attempt to enter it.\") (NW PER RECROSS-ENGINE-ROOM) (FLAGS RLANDBIT ONBIT) (PSEUDO \"HAMMER\" HAMMER-F \"SPEARS\" HAMMER-F) (GLOBAL MACHINERY VOICES))",
+    "Name": "CLOSET",
+    "Exits": {
+      "NW": {
+        "PER": "RECROSS-ENGINE-ROOM",
+        "TYPE": "FEXIT",
+        "Zil": "(NW PER RECROSS-ENGINE-ROOM)"
+      }
+    },
+    "Properties": {
+      "#IN": "ROOMS",
+      "DESC": [
+        "Control Room"
+      ],
+      "LDESC": [
+        "This is the control room for all the machinery nearby. The controls are all\r\nmagical, of course. The walls are covered by blinking lights and shifting\r\ndisplays, interspersed with arcane dials and glowing buttons. It's all very\r\nmysterious looking. The exit, to the northwest, leads into a room with\r\nmachinery which would surely crush you if you were to attempt to enter it."
+      ],
+      "NW": [
+        {
+          "Atom": "PER"
+        },
+        {
+          "Atom": "RECROSS-ENGINE-ROOM"
+        }
+      ],
+      "FLAGS": [
+        "RLANDBIT",
+        "ONBIT"
+      ],
+      "PSEUDO": [
+        "HAMMER",
+        {
+          "Atom": "HAMMER-F"
+        },
+        "SPEARS",
+        {
+          "Atom": "HAMMER-F"
+        }
+      ],
+      "GLOBAL": [
+        {
+          "Atom": "MACHINERY"
+        },
+        {
+          "Atom": "VOICES"
+        }
+      ]
+    },
+    "IsRoom": true
+  },
+  {
+    "Zil": "#OBJECT (ROOM MEADOW (IN ROOMS) (DESC \"Meadow\") (LDESC \"This is a meadow near the sea. There is a smell of salt in the air. Only\r\nheather and thistles grow here. To the north is a gate leading into the\r\ncastle. A narrow path to the southeast leads to the shore of the Sea.\") (SE TO BEACH) (NORTH TO SOUTH-GATE IF RUSTY-GATE IS OPEN) (SOUTH \"There's no path there.\") (EAST \"There's no path there.\") (WEST \"There's no path there.\") (NE \"There's no path there.\") (NW \"There's no path there.\") (SW \"There's no path there.\") (FLAGS RLANDBIT ONBIT LIGHTBIT) (GLOBAL RUSTY-GATE MEADOW-OBJ BEACH-OBJ SEA))",
+    "Name": "MEADOW",
+    "Exits": {
+      "SE": {
+        "TO": "BEACH",
+        "TYPE": "UEXIT",
+        "Zil": "(SE TO BEACH)"
+      },
+      "NORTH": {
+        "TO": "SOUTH-GATE",
+        "DOOR": "RUSTY-GATE",
+        "TYPE": "DEXIT",
+        "Zil": "(NORTH TO SOUTH-GATE IF RUSTY-GATE IS OPEN)"
+      },
+      "SOUTH": {
+        "MESSAGE": "There's no path there.",
+        "TYPE": "NEXIT",
+        "Zil": "(SOUTH \"There's no path there.\")"
+      },
+      "EAST": {
+        "MESSAGE": "There's no path there.",
+        "TYPE": "NEXIT",
+        "Zil": "(EAST \"There's no path there.\")"
+      },
+      "WEST": {
+        "MESSAGE": "There's no path there.",
+        "TYPE": "NEXIT",
+        "Zil": "(WEST \"There's no path there.\")"
+      },
+      "NE": {
+        "MESSAGE": "There's no path there.",
+        "TYPE": "NEXIT",
+        "Zil": "(NE \"There's no path there.\")"
+      },
+      "NW": {
+        "MESSAGE": "There's no path there.",
+        "TYPE": "NEXIT",
+        "Zil": "(NW \"There's no path there.\")"
+      },
+      "SW": {
+        "MESSAGE": "There's no path there.",
+        "TYPE": "NEXIT",
+        "Zil": "(SW \"There's no path there.\")"
+      }
+    },
+    "Properties": {
+      "#IN": "ROOMS",
+      "DESC": [
+        "Meadow"
+      ],
+      "LDESC": [
+        "This is a meadow near the sea. There is a smell of salt in the air. Only\r\nheather and thistles grow here. To the north is a gate leading into the\r\ncastle. A narrow path to the southeast leads to the shore of the Sea."
+      ],
+      "SE": [
+        {
+          "Atom": "TO"
+        },
+        {
+          "Atom": "BEACH"
+        }
+      ],
+      "NORTH": [
+        {
+          "Atom": "TO"
+        },
+        {
+          "Atom": "SOUTH-GATE"
+        },
+        {
+          "Atom": "IF"
+        },
+        {
+          "Atom": "RUSTY-GATE"
+        },
+        {
+          "Atom": "IS"
+        },
+        {
+          "Atom": "OPEN"
+        }
+      ],
+      "SOUTH": [
+        "There's no path there."
+      ],
+      "EAST": [
+        "There's no path there."
+      ],
+      "WEST": [
+        "There's no path there."
+      ],
+      "NE": [
+        "There's no path there."
+      ],
+      "NW": [
+        "There's no path there."
+      ],
+      "SW": [
+        "There's no path there."
+      ],
+      "FLAGS": [
+        "RLANDBIT",
+        "ONBIT",
+        "LIGHTBIT"
+      ],
+      "GLOBAL": [
+        {
+          "Atom": "RUSTY-GATE"
+        },
+        {
+          "Atom": "MEADOW-OBJ"
+        },
+        {
+          "Atom": "BEACH-OBJ"
+        },
+        {
+          "Atom": "SEA"
+        }
+      ]
+    },
+    "IsRoom": true
+  },
+  {
+    "Zil": "#OBJECT (ROOM BEACH (IN ROOMS) (DESC \"Beach\") (LDESC \"This is a rocky beach along a grey and lifeless sea. There is\r\ndead seaweed covering many rocks, and listless waves barely stir\r\nthe flotsam and jetsam here. There are many shells, but all are\r\nbroken. A narrow path to the northwest leads into a meadow.\") (NW TO MEADOW) (FLAGS RLANDBIT ONBIT LIGHTBIT) (GLOBAL MEADOW-OBJ BEACH-OBJ SEA GLOBAL-WATER) (PSEUDO \"WAVES\" WAVES-F \"ROCKS\" SEA-STUFF-F))",
+    "Name": "BEACH",
+    "Exits": {
+      "NW": {
+        "TO": "MEADOW",
+        "TYPE": "UEXIT",
+        "Zil": "(NW TO MEADOW)"
+      }
+    },
+    "Properties": {
+      "#IN": "ROOMS",
+      "DESC": [
+        "Beach"
+      ],
+      "LDESC": [
+        "This is a rocky beach along a grey and lifeless sea. There is\r\ndead seaweed covering many rocks, and listless waves barely stir\r\nthe flotsam and jetsam here. There are many shells, but all are\r\nbroken. A narrow path to the northwest leads into a meadow."
+      ],
+      "NW": [
+        {
+          "Atom": "TO"
+        },
+        {
+          "Atom": "MEADOW"
+        }
+      ],
+      "FLAGS": [
+        "RLANDBIT",
+        "ONBIT",
+        "LIGHTBIT"
+      ],
+      "GLOBAL": [
+        {
+          "Atom": "MEADOW-OBJ"
+        },
+        {
+          "Atom": "BEACH-OBJ"
+        },
+        {
+          "Atom": "SEA"
+        },
+        {
+          "Atom": "GLOBAL-WATER"
+        }
+      ],
+      "PSEUDO": [
+        "WAVES",
+        {
+          "Atom": "WAVES-F"
+        },
+        "ROCKS",
+        {
+          "Atom": "SEA-STUFF-F"
+        }
+      ]
+    },
+    "IsRoom": true
+  },
+  {
+    "Zil": "#OBJECT (ROOM WEST-CASTLE (IN ROOMS) (DESC \"Outside Gate\") (EAST TO INSIDE-GATE IF IRON-GATE IS OPEN ELSE \"The iron gate is locked.\") (IN TO INSIDE-GATE IF IRON-GATE IS OPEN ELSE \"The iron gate is locked.\") (WEST TO WESTERN-ROAD) (FLAGS RLANDBIT ONBIT LIGHTBIT) (ACTION WEST-CASTLE-F) (GLOBAL IRON-GATE IRON-GATE-CHAINS))",
+    "Name": "WEST-CASTLE",
+    "Exits": {
+      "EAST": {
+        "TO": "INSIDE-GATE",
+        "DOOR": "IRON-GATE",
+        "ELSE": "The iron gate is locked.",
+        "TYPE": "DEXIT",
+        "Zil": "(EAST TO INSIDE-GATE IF IRON-GATE IS OPEN ELSE \"The iron gate is locked.\")"
+      },
+      "IN": {
+        "TO": "INSIDE-GATE",
+        "DOOR": "IRON-GATE",
+        "ELSE": "The iron gate is locked.",
+        "TYPE": "DEXIT",
+        "Zil": "(IN TO INSIDE-GATE IF IRON-GATE IS OPEN ELSE \"The iron gate is locked.\")"
+      },
+      "WEST": {
+        "TO": "WESTERN-ROAD",
+        "TYPE": "UEXIT",
+        "Zil": "(WEST TO WESTERN-ROAD)"
+      }
+    },
+    "Properties": {
+      "#IN": "ROOMS",
+      "DESC": [
+        "Outside Gate"
+      ],
+      "EAST": [
+        {
+          "Atom": "TO"
+        },
+        {
+          "Atom": "INSIDE-GATE"
+        },
+        {
+          "Atom": "IF"
+        },
+        {
+          "Atom": "IRON-GATE"
+        },
+        {
+          "Atom": "IS"
+        },
+        {
+          "Atom": "OPEN"
+        },
+        {
+          "Atom": "ELSE"
+        },
+        "The iron gate is locked."
+      ],
+      "IN": [
+        {
+          "Atom": "TO"
+        },
+        {
+          "Atom": "INSIDE-GATE"
+        },
+        {
+          "Atom": "IF"
+        },
+        {
+          "Atom": "IRON-GATE"
+        },
+        {
+          "Atom": "IS"
+        },
+        {
+          "Atom": "OPEN"
+        },
+        {
+          "Atom": "ELSE"
+        },
+        "The iron gate is locked."
+      ],
+      "WEST": [
+        {
+          "Atom": "TO"
+        },
+        {
+          "Atom": "WESTERN-ROAD"
+        }
+      ],
+      "FLAGS": [
+        "RLANDBIT",
+        "ONBIT",
+        "LIGHTBIT"
+      ],
+      "ACTION": [
+        {
+          "Atom": "WEST-CASTLE-F"
+        }
+      ],
+      "GLOBAL": [
+        {
+          "Atom": "IRON-GATE"
+        },
+        {
+          "Atom": "IRON-GATE-CHAINS"
+        }
+      ]
+    },
+    "IsRoom": true
+  },
+  {
+    "Zil": "#OBJECT (ROOM WESTERN-ROAD (IN ROOMS) (DESC \"Western Road\") (LDESC \"You are on an east-west road, which wends its way through\r\nthe dark, rolling hills of this land. To the west rises a high\r\nmountain, to the east stands a high castle with dark towers.\") (EAST TO WEST-CASTLE) (WEST TO EAST-FORK) (NORTH \"You would become lost among the brambles. Better to stay on the road.\") (SOUTH \"You would become lost among the brambles. Better to stay on the road.\") (FLAGS RLANDBIT ONBIT LIGHTBIT) (GLOBAL HILLS MOUNTAIN DISTANT-CASTLE))",
+    "Name": "WESTERN-ROAD",
+    "Exits": {
+      "EAST": {
+        "TO": "WEST-CASTLE",
+        "TYPE": "UEXIT",
+        "Zil": "(EAST TO WEST-CASTLE)"
+      },
+      "WEST": {
+        "TO": "EAST-FORK",
+        "TYPE": "UEXIT",
+        "Zil": "(WEST TO EAST-FORK)"
+      },
+      "NORTH": {
+        "MESSAGE": "You would become lost among the brambles. Better to stay on the road.",
+        "TYPE": "NEXIT",
+        "Zil": "(NORTH \"You would become lost among the brambles. Better to stay on the road.\")"
+      },
+      "SOUTH": {
+        "MESSAGE": "You would become lost among the brambles. Better to stay on the road.",
+        "TYPE": "NEXIT",
+        "Zil": "(SOUTH \"You would become lost among the brambles. Better to stay on the road.\")"
+      }
+    },
+    "Properties": {
+      "#IN": "ROOMS",
+      "DESC": [
+        "Western Road"
+      ],
+      "LDESC": [
+        "You are on an east-west road, which wends its way through\r\nthe dark, rolling hills of this land. To the west rises a high\r\nmountain, to the east stands a high castle with dark towers."
+      ],
+      "EAST": [
+        {
+          "Atom": "TO"
+        },
+        {
+          "Atom": "WEST-CASTLE"
+        }
+      ],
+      "WEST": [
+        {
+          "Atom": "TO"
+        },
+        {
+          "Atom": "EAST-FORK"
+        }
+      ],
+      "NORTH": [
+        "You would become lost among the brambles. Better to stay on the road."
+      ],
+      "SOUTH": [
+        "You would become lost among the brambles. Better to stay on the road."
+      ],
+      "FLAGS": [
+        "RLANDBIT",
+        "ONBIT",
+        "LIGHTBIT"
+      ],
+      "GLOBAL": [
+        {
+          "Atom": "HILLS"
+        },
+        {
+          "Atom": "MOUNTAIN"
+        },
+        {
+          "Atom": "DISTANT-CASTLE"
+        }
+      ]
+    },
+    "IsRoom": true
+  },
+  {
+    "Zil": "#OBJECT (ROOM EAST-FORK (IN ROOMS) (DESC \"Eastern Fork\") (LDESC \"You are at a fork in the road where paths to the northwest and southwest\r\ngirdle the base of the Lonely Mountain and a smaller path winds its way\r\nto the east.\") (NW TO TRAIL-HEAD) (SW TO VILLAGE-EAST) (EAST TO WESTERN-ROAD) (FLAGS RLANDBIT ONBIT LIGHTBIT) (GLOBAL HILLS MOUNTAIN))",
+    "Name": "EAST-FORK",
+    "Exits": {
+      "NW": {
+        "TO": "TRAIL-HEAD",
+        "TYPE": "UEXIT",
+        "Zil": "(NW TO TRAIL-HEAD)"
+      },
+      "SW": {
+        "TO": "VILLAGE-EAST",
+        "TYPE": "UEXIT",
+        "Zil": "(SW TO VILLAGE-EAST)"
+      },
+      "EAST": {
+        "TO": "WESTERN-ROAD",
+        "TYPE": "UEXIT",
+        "Zil": "(EAST TO WESTERN-ROAD)"
+      }
+    },
+    "Properties": {
+      "#IN": "ROOMS",
+      "DESC": [
+        "Eastern Fork"
+      ],
+      "LDESC": [
+        "You are at a fork in the road where paths to the northwest and southwest\r\ngirdle the base of the Lonely Mountain and a smaller path winds its way\r\nto the east."
+      ],
+      "NW": [
+        {
+          "Atom": "TO"
+        },
+        {
+          "Atom": "TRAIL-HEAD"
+        }
+      ],
+      "SW": [
+        {
+          "Atom": "TO"
+        },
+        {
+          "Atom": "VILLAGE-EAST"
+        }
+      ],
+      "EAST": [
+        {
+          "Atom": "TO"
+        },
+        {
+          "Atom": "WESTERN-ROAD"
+        }
+      ],
+      "FLAGS": [
+        "RLANDBIT",
+        "ONBIT",
+        "LIGHTBIT"
+      ],
+      "GLOBAL": [
+        {
+          "Atom": "HILLS"
+        },
+        {
+          "Atom": "MOUNTAIN"
+        }
+      ]
+    },
+    "IsRoom": true
+  },
+  {
+    "Zil": "#OBJECT (ROOM TRAIL-HEAD (IN ROOMS) (DESC \"Trail Head\") (LDESC \"You are on the northeast side of the Lonely Mountain, walking a narrow\r\npath through rolling hills. On one side of the path is a sign and behind\r\nthat, to the northeast, a winding path through the thick undergrowth. The\r\ntrail continues to the southeast.\") (NE TO SHADY-BROOK) (NW TO SHACK-EAST) (SE TO EAST-FORK) (FLAGS RLANDBIT ONBIT LIGHTBIT) (GLOBAL HILLS MOUNTAIN UNDERGROWTH))",
+    "Name": "TRAIL-HEAD",
+    "Exits": {
+      "NE": {
+        "TO": "SHADY-BROOK",
+        "TYPE": "UEXIT",
+        "Zil": "(NE TO SHADY-BROOK)"
+      },
+      "NW": {
+        "TO": "SHACK-EAST",
+        "TYPE": "UEXIT",
+        "Zil": "(NW TO SHACK-EAST)"
+      },
+      "SE": {
+        "TO": "EAST-FORK",
+        "TYPE": "UEXIT",
+        "Zil": "(SE TO EAST-FORK)"
+      }
+    },
+    "Properties": {
+      "#IN": "ROOMS",
+      "DESC": [
+        "Trail Head"
+      ],
+      "LDESC": [
+        "You are on the northeast side of the Lonely Mountain, walking a narrow\r\npath through rolling hills. On one side of the path is a sign and behind\r\nthat, to the northeast, a winding path through the thick undergrowth. The\r\ntrail continues to the southeast."
+      ],
+      "NE": [
+        {
+          "Atom": "TO"
+        },
+        {
+          "Atom": "SHADY-BROOK"
+        }
+      ],
+      "NW": [
+        {
+          "Atom": "TO"
+        },
+        {
+          "Atom": "SHACK-EAST"
+        }
+      ],
+      "SE": [
+        {
+          "Atom": "TO"
+        },
+        {
+          "Atom": "EAST-FORK"
+        }
+      ],
+      "FLAGS": [
+        "RLANDBIT",
+        "ONBIT",
+        "LIGHTBIT"
+      ],
+      "GLOBAL": [
+        {
+          "Atom": "HILLS"
+        },
+        {
+          "Atom": "MOUNTAIN"
+        },
+        {
+          "Atom": "UNDERGROWTH"
+        }
+      ]
+    },
+    "IsRoom": true
+  },
+  {
+    "Zil": "#OBJECT (ROOM SHADY-BROOK (IN ROOMS) (DESC \"Shady Brook\") (LDESC \"The trail ends here. A ruined stone foundation marks the site of the\r\nOld Lingolf House, which presumably was a monument of some sort. The\r\ntrail head is off to the southwest, and a small brook flows slowly by.\") (SW TO TRAIL-HEAD) (FLAGS RLANDBIT ONBIT LIGHTBIT) (GLOBAL GLOBAL-WATER HILLS MOUNTAIN UNDERGROWTH))",
+    "Name": "SHADY-BROOK",
+    "Exits": {
+      "SW": {
+        "TO": "TRAIL-HEAD",
+        "TYPE": "UEXIT",
+        "Zil": "(SW TO TRAIL-HEAD)"
+      }
+    },
+    "Properties": {
+      "#IN": "ROOMS",
+      "DESC": [
+        "Shady Brook"
+      ],
+      "LDESC": [
+        "The trail ends here. A ruined stone foundation marks the site of the\r\nOld Lingolf House, which presumably was a monument of some sort. The\r\ntrail head is off to the southwest, and a small brook flows slowly by."
+      ],
+      "SW": [
+        {
+          "Atom": "TO"
+        },
+        {
+          "Atom": "TRAIL-HEAD"
+        }
+      ],
+      "FLAGS": [
+        "RLANDBIT",
+        "ONBIT",
+        "LIGHTBIT"
+      ],
+      "GLOBAL": [
+        {
+          "Atom": "GLOBAL-WATER"
+        },
+        {
+          "Atom": "HILLS"
+        },
+        {
+          "Atom": "MOUNTAIN"
+        },
+        {
+          "Atom": "UNDERGROWTH"
+        }
+      ]
+    },
+    "IsRoom": true
+  },
+  {
+    "Zil": "#OBJECT (ROOM SHACK-EAST (IN ROOMS) (DESC \"Trail\") (LDESC \"The trail turns a corner here, bending out of sight to the southeast and\r\nsouthwest. The ground is higher here than to the south, allowing you to make\r\nout the top of the Lonely Mountain, shrouded in clouds. No path from here\r\nleads up the mountain, however.\") (SE TO TRAIL-HEAD) (SW TO SHACK-ROOM) (FLAGS RLANDBIT ONBIT LIGHTBIT) (GLOBAL HILLS MOUNTAIN))",
+    "Name": "SHACK-EAST",
+    "Exits": {
+      "SE": {
+        "TO": "TRAIL-HEAD",
+        "TYPE": "UEXIT",
+        "Zil": "(SE TO TRAIL-HEAD)"
+      },
+      "SW": {
+        "TO": "SHACK-ROOM",
+        "TYPE": "UEXIT",
+        "Zil": "(SW TO SHACK-ROOM)"
+      }
+    },
+    "Properties": {
+      "#IN": "ROOMS",
+      "DESC": [
+        "Trail"
+      ],
+      "LDESC": [
+        "The trail turns a corner here, bending out of sight to the southeast and\r\nsouthwest. The ground is higher here than to the south, allowing you to make\r\nout the top of the Lonely Mountain, shrouded in clouds. No path from here\r\nleads up the mountain, however."
+      ],
+      "SE": [
+        {
+          "Atom": "TO"
+        },
+        {
+          "Atom": "TRAIL-HEAD"
+        }
+      ],
+      "SW": [
+        {
+          "Atom": "TO"
+        },
+        {
+          "Atom": "SHACK-ROOM"
+        }
+      ],
+      "FLAGS": [
+        "RLANDBIT",
+        "ONBIT",
+        "LIGHTBIT"
+      ],
+      "GLOBAL": [
+        {
+          "Atom": "HILLS"
+        },
+        {
+          "Atom": "MOUNTAIN"
+        }
+      ]
+    },
+    "IsRoom": true
+  },
+  {
+    "Zil": "#OBJECT (ROOM SHACK-ROOM (IN ROOMS) (DESC \"Outside of Shack\") (LDESC \"You are south of an old wooden shack, apparently deserted.\r\nThe trail extends from northeast to southwest here, circling the Lonely\r\nMountain, which lies to the southeast.\") (NE TO SHACK-EAST) (EAST TO SHACK-EAST) (WEST TO WEST-FORK) (SW TO WEST-FORK) (NORTH TO SHACK) (IN TO SHACK) (FLAGS RLANDBIT ONBIT LIGHTBIT) (GLOBAL SHACK-OBJ HILLS MOUNTAIN))",
+    "Name": "SHACK-ROOM",
+    "Exits": {
+      "NE": {
+        "TO": "SHACK-EAST",
+        "TYPE": "UEXIT",
+        "Zil": "(NE TO SHACK-EAST)"
+      },
+      "EAST": {
+        "TO": "SHACK-EAST",
+        "TYPE": "UEXIT",
+        "Zil": "(EAST TO SHACK-EAST)"
+      },
+      "WEST": {
+        "TO": "WEST-FORK",
+        "TYPE": "UEXIT",
+        "Zil": "(WEST TO WEST-FORK)"
+      },
+      "SW": {
+        "TO": "WEST-FORK",
+        "TYPE": "UEXIT",
+        "Zil": "(SW TO WEST-FORK)"
+      },
+      "NORTH": {
+        "TO": "SHACK",
+        "TYPE": "UEXIT",
+        "Zil": "(NORTH TO SHACK)"
+      },
+      "IN": {
+        "TO": "SHACK",
+        "TYPE": "UEXIT",
+        "Zil": "(IN TO SHACK)"
+      }
+    },
+    "Properties": {
+      "#IN": "ROOMS",
+      "DESC": [
+        "Outside of Shack"
+      ],
+      "LDESC": [
+        "You are south of an old wooden shack, apparently deserted.\r\nThe trail extends from northeast to southwest here, circling the Lonely\r\nMountain, which lies to the southeast."
+      ],
+      "NE": [
+        {
+          "Atom": "TO"
+        },
+        {
+          "Atom": "SHACK-EAST"
+        }
+      ],
+      "EAST": [
+        {
+          "Atom": "TO"
+        },
+        {
+          "Atom": "SHACK-EAST"
+        }
+      ],
+      "WEST": [
+        {
+          "Atom": "TO"
+        },
+        {
+          "Atom": "WEST-FORK"
+        }
+      ],
+      "SW": [
+        {
+          "Atom": "TO"
+        },
+        {
+          "Atom": "WEST-FORK"
+        }
+      ],
+      "NORTH": [
+        {
+          "Atom": "TO"
+        },
+        {
+          "Atom": "SHACK"
+        }
+      ],
+      "IN": [
+        {
+          "Atom": "TO"
+        },
+        {
+          "Atom": "SHACK"
+        }
+      ],
+      "FLAGS": [
+        "RLANDBIT",
+        "ONBIT",
+        "LIGHTBIT"
+      ],
+      "GLOBAL": [
+        {
+          "Atom": "SHACK-OBJ"
+        },
+        {
+          "Atom": "HILLS"
+        },
+        {
+          "Atom": "MOUNTAIN"
+        }
+      ]
+    },
+    "IsRoom": true
+  },
+  {
+    "Zil": "#OBJECT (ROOM SHACK (IN ROOMS) (DESC \"Inside Shack\") (LDESC \"The inside of the shack is a shambles. An overturned table and bench,\r\nand a few broken windows remain. An oven is the only fixture\r\nthat's even recognizable. The door is to the south.\") (FLAGS RLANDBIT ONBIT LIGHTBIT) (GLOBAL SHACK-OBJ WINDOW) (SOUTH TO SHACK-ROOM) (OUT TO SHACK-ROOM) (TEXT \"You can't see much except for scrubby vegetation.\") (PSEUDO \"TABLE\" SHACK-STUFF \"BENCH\" SHACK-STUFF))",
+    "Name": "SHACK",
+    "Exits": {
+      "SOUTH": {
+        "TO": "SHACK-ROOM",
+        "TYPE": "UEXIT",
+        "Zil": "(SOUTH TO SHACK-ROOM)"
+      },
+      "OUT": {
+        "TO": "SHACK-ROOM",
+        "TYPE": "UEXIT",
+        "Zil": "(OUT TO SHACK-ROOM)"
+      }
+    },
+    "Properties": {
+      "#IN": "ROOMS",
+      "DESC": [
+        "Inside Shack"
+      ],
+      "LDESC": [
+        "The inside of the shack is a shambles. An overturned table and bench,\r\nand a few broken windows remain. An oven is the only fixture\r\nthat's even recognizable. The door is to the south."
+      ],
+      "FLAGS": [
+        "RLANDBIT",
+        "ONBIT",
+        "LIGHTBIT"
+      ],
+      "GLOBAL": [
+        {
+          "Atom": "SHACK-OBJ"
+        },
+        {
+          "Atom": "WINDOW"
+        }
+      ],
+      "SOUTH": [
+        {
+          "Atom": "TO"
+        },
+        {
+          "Atom": "SHACK-ROOM"
+        }
+      ],
+      "OUT": [
+        {
+          "Atom": "TO"
+        },
+        {
+          "Atom": "SHACK-ROOM"
+        }
+      ],
+      "TEXT": [
+        "You can't see much except for scrubby vegetation."
+      ],
+      "PSEUDO": [
+        "TABLE",
+        {
+          "Atom": "SHACK-STUFF"
+        },
+        "BENCH",
+        {
+          "Atom": "SHACK-STUFF"
+        }
+      ]
+    },
+    "IsRoom": true
+  },
+  {
+    "Zil": "#OBJECT (ROOM WEST-FORK (IN ROOMS) (DESC \"Fork\") (LDESC \"You stand at a point of decision on a road which makes a wide\r\nfork to the northeast and southeast, circling the base of the Lonely Mountain,\r\nwhich looms high overhead to the east. A very long and winding road starts\r\nhere and stretches out of sight to the west through low, smoky hills.\") (WEST TO LONG-ROAD) (NE TO SHACK-ROOM) (SE TO DUSTY-ROAD) (FLAGS RLANDBIT ONBIT LIGHTBIT) (GLOBAL HILLS MOUNTAIN))",
+    "Name": "WEST-FORK",
+    "Exits": {
+      "WEST": {
+        "TO": "LONG-ROAD",
+        "TYPE": "UEXIT",
+        "Zil": "(WEST TO LONG-ROAD)"
+      },
+      "NE": {
+        "TO": "SHACK-ROOM",
+        "TYPE": "UEXIT",
+        "Zil": "(NE TO SHACK-ROOM)"
+      },
+      "SE": {
+        "TO": "DUSTY-ROAD",
+        "TYPE": "UEXIT",
+        "Zil": "(SE TO DUSTY-ROAD)"
+      }
+    },
+    "Properties": {
+      "#IN": "ROOMS",
+      "DESC": [
+        "Fork"
+      ],
+      "LDESC": [
+        "You stand at a point of decision on a road which makes a wide\r\nfork to the northeast and southeast, circling the base of the Lonely Mountain,\r\nwhich looms high overhead to the east. A very long and winding road starts\r\nhere and stretches out of sight to the west through low, smoky hills."
+      ],
+      "WEST": [
+        {
+          "Atom": "TO"
+        },
+        {
+          "Atom": "LONG-ROAD"
+        }
+      ],
+      "NE": [
+        {
+          "Atom": "TO"
+        },
+        {
+          "Atom": "SHACK-ROOM"
+        }
+      ],
+      "SE": [
+        {
+          "Atom": "TO"
+        },
+        {
+          "Atom": "DUSTY-ROAD"
+        }
+      ],
+      "FLAGS": [
+        "RLANDBIT",
+        "ONBIT",
+        "LIGHTBIT"
+      ],
+      "GLOBAL": [
+        {
+          "Atom": "HILLS"
+        },
+        {
+          "Atom": "MOUNTAIN"
+        }
+      ]
+    },
+    "IsRoom": true
+  },
+  {
+    "Zil": "#OBJECT (ROOM DUSTY-ROAD (IN ROOMS) (DESC \"Dusty Trail\") (LDESC \"The trail here turns dry and dusty. To the northwest is the fork leading to\r\nthe Long Road, and the trail continues to the southeast.\") (NW TO WEST-FORK) (SE TO HAIRPIN-LOOP) (FLAGS RLANDBIT ONBIT LIGHTBIT) (GLOBAL HILLS MOUNTAIN))",
+    "Name": "DUSTY-ROAD",
+    "Exits": {
+      "NW": {
+        "TO": "WEST-FORK",
+        "TYPE": "UEXIT",
+        "Zil": "(NW TO WEST-FORK)"
+      },
+      "SE": {
+        "TO": "HAIRPIN-LOOP",
+        "TYPE": "UEXIT",
+        "Zil": "(SE TO HAIRPIN-LOOP)"
+      }
+    },
+    "Properties": {
+      "#IN": "ROOMS",
+      "DESC": [
+        "Dusty Trail"
+      ],
+      "LDESC": [
+        "The trail here turns dry and dusty. To the northwest is the fork leading to\r\nthe Long Road, and the trail continues to the southeast."
+      ],
+      "NW": [
+        {
+          "Atom": "TO"
+        },
+        {
+          "Atom": "WEST-FORK"
+        }
+      ],
+      "SE": [
+        {
+          "Atom": "TO"
+        },
+        {
+          "Atom": "HAIRPIN-LOOP"
+        }
+      ],
+      "FLAGS": [
+        "RLANDBIT",
+        "ONBIT",
+        "LIGHTBIT"
+      ],
+      "GLOBAL": [
+        {
+          "Atom": "HILLS"
+        },
+        {
+          "Atom": "MOUNTAIN"
+        }
+      ]
+    },
+    "IsRoom": true
+  },
+  {
+    "Zil": "#OBJECT (ROOM HAIRPIN-LOOP (IN ROOMS) (DESC \"Loop\") (LDESC \"The trail makes a hairpin turn here, swinging out to the northwest and\r\nnortheast, where it enters a small village. Low, smoky hills stretch\r\nout to the west and south.\") (NE TO VILLAGE) (NW TO DUSTY-ROAD) (FLAGS RLANDBIT ONBIT LIGHTBIT) (GLOBAL HILLS MOUNTAIN))",
+    "Name": "HAIRPIN-LOOP",
+    "Exits": {
+      "NE": {
+        "TO": "VILLAGE",
+        "TYPE": "UEXIT",
+        "Zil": "(NE TO VILLAGE)"
+      },
+      "NW": {
+        "TO": "DUSTY-ROAD",
+        "TYPE": "UEXIT",
+        "Zil": "(NW TO DUSTY-ROAD)"
+      }
+    },
+    "Properties": {
+      "#IN": "ROOMS",
+      "DESC": [
+        "Loop"
+      ],
+      "LDESC": [
+        "The trail makes a hairpin turn here, swinging out to the northwest and\r\nnortheast, where it enters a small village. Low, smoky hills stretch\r\nout to the west and south."
+      ],
+      "NE": [
+        {
+          "Atom": "TO"
+        },
+        {
+          "Atom": "VILLAGE"
+        }
+      ],
+      "NW": [
+        {
+          "Atom": "TO"
+        },
+        {
+          "Atom": "DUSTY-ROAD"
+        }
+      ],
+      "FLAGS": [
+        "RLANDBIT",
+        "ONBIT",
+        "LIGHTBIT"
+      ],
+      "GLOBAL": [
+        {
+          "Atom": "HILLS"
+        },
+        {
+          "Atom": "MOUNTAIN"
+        }
+      ]
+    },
+    "IsRoom": true
+  },
+  {
+    "Zil": "#OBJECT (ROOM VILLAGE (IN ROOMS) (DESC \"Deserted Village\") (LDESC \"This is the castle's village. Formerly, peasants lived here, going to\r\ntheir farm plots each day. Merchants and artisans made it a center of\r\ncultural activity. But now it's deserted. Or almost: there is smoke\r\nrising from a particularly decrepit hovel to the south. A path travels\r\nthrough the village from southwest to northeast, heading towards the\r\ncastle, and a less-used trail heads north up the mountain.\") (NE TO VILLAGE-EAST) (SW TO HAIRPIN-LOOP) (NORTH TO MOUNTAIN-TRAIL) (UP TO MOUNTAIN-TRAIL) (EAST \"You wander around in the village, find nothing of interest, and return to\r\nthe path.\") (WEST \"You wander around in the village, find nothing of interest, and return to\r\nthe path.\") (NW \"You wander around in the village, find nothing of interest, and return to\r\nthe path.\") (SE \"You wander around in the village, find nothing of interest, and return to\r\nthe path.\") (IN PER HOVEL-KLUDGE) (SOUTH PER HOVEL-KLUDGE) (FLAGS RLANDBIT ONBIT LIGHTBIT) (GLOBAL HOVEL HILLS MOUNTAIN))",
+    "Name": "VILLAGE",
+    "Exits": {
+      "NE": {
+        "TO": "VILLAGE-EAST",
+        "TYPE": "UEXIT",
+        "Zil": "(NE TO VILLAGE-EAST)"
+      },
+      "SW": {
+        "TO": "HAIRPIN-LOOP",
+        "TYPE": "UEXIT",
+        "Zil": "(SW TO HAIRPIN-LOOP)"
+      },
+      "NORTH": {
+        "TO": "MOUNTAIN-TRAIL",
+        "TYPE": "UEXIT",
+        "Zil": "(NORTH TO MOUNTAIN-TRAIL)"
+      },
+      "UP": {
+        "TO": "MOUNTAIN-TRAIL",
+        "TYPE": "UEXIT",
+        "Zil": "(UP TO MOUNTAIN-TRAIL)"
+      },
+      "EAST": {
+        "MESSAGE": "You wander around in the village, find nothing of interest, and return to\r\nthe path.",
+        "TYPE": "NEXIT",
+        "Zil": "(EAST \"You wander around in the village, find nothing of interest, and return to\r\nthe path.\")"
+      },
+      "WEST": {
+        "MESSAGE": "You wander around in the village, find nothing of interest, and return to\r\nthe path.",
+        "TYPE": "NEXIT",
+        "Zil": "(WEST \"You wander around in the village, find nothing of interest, and return to\r\nthe path.\")"
+      },
+      "NW": {
+        "MESSAGE": "You wander around in the village, find nothing of interest, and return to\r\nthe path.",
+        "TYPE": "NEXIT",
+        "Zil": "(NW \"You wander around in the village, find nothing of interest, and return to\r\nthe path.\")"
+      },
+      "SE": {
+        "MESSAGE": "You wander around in the village, find nothing of interest, and return to\r\nthe path.",
+        "TYPE": "NEXIT",
+        "Zil": "(SE \"You wander around in the village, find nothing of interest, and return to\r\nthe path.\")"
+      },
+      "IN": {
+        "PER": "HOVEL-KLUDGE",
+        "TYPE": "FEXIT",
+        "Zil": "(IN PER HOVEL-KLUDGE)"
+      },
+      "SOUTH": {
+        "PER": "HOVEL-KLUDGE",
+        "TYPE": "FEXIT",
+        "Zil": "(SOUTH PER HOVEL-KLUDGE)"
+      }
+    },
+    "Properties": {
+      "#IN": "ROOMS",
+      "DESC": [
+        "Deserted Village"
+      ],
+      "LDESC": [
+        "This is the castle's village. Formerly, peasants lived here, going to\r\ntheir farm plots each day. Merchants and artisans made it a center of\r\ncultural activity. But now it's deserted. Or almost: there is smoke\r\nrising from a particularly decrepit hovel to the south. A path travels\r\nthrough the village from southwest to northeast, heading towards the\r\ncastle, and a less-used trail heads north up the mountain."
+      ],
+      "NE": [
+        {
+          "Atom": "TO"
+        },
+        {
+          "Atom": "VILLAGE-EAST"
+        }
+      ],
+      "SW": [
+        {
+          "Atom": "TO"
+        },
+        {
+          "Atom": "HAIRPIN-LOOP"
+        }
+      ],
+      "NORTH": [
+        {
+          "Atom": "TO"
+        },
+        {
+          "Atom": "MOUNTAIN-TRAIL"
+        }
+      ],
+      "UP": [
+        {
+          "Atom": "TO"
+        },
+        {
+          "Atom": "MOUNTAIN-TRAIL"
+        }
+      ],
+      "EAST": [
+        "You wander around in the village, find nothing of interest, and return to\r\nthe path."
+      ],
+      "WEST": [
+        "You wander around in the village, find nothing of interest, and return to\r\nthe path."
+      ],
+      "NW": [
+        "You wander around in the village, find nothing of interest, and return to\r\nthe path."
+      ],
+      "SE": [
+        "You wander around in the village, find nothing of interest, and return to\r\nthe path."
+      ],
+      "IN": [
+        {
+          "Atom": "PER"
+        },
+        {
+          "Atom": "HOVEL-KLUDGE"
+        }
+      ],
+      "SOUTH": [
+        {
+          "Atom": "PER"
+        },
+        {
+          "Atom": "HOVEL-KLUDGE"
+        }
+      ],
+      "FLAGS": [
+        "RLANDBIT",
+        "ONBIT",
+        "LIGHTBIT"
+      ],
+      "GLOBAL": [
+        {
+          "Atom": "HOVEL"
+        },
+        {
+          "Atom": "HILLS"
+        },
+        {
+          "Atom": "MOUNTAIN"
+        }
+      ]
+    },
+    "IsRoom": true
+  },
+  {
+    "Zil": "#OBJECT (ROOM MOUNTAIN-TRAIL (IN ROOMS) (DESC \"Mountain Trail\") (LDESC \"This spot halfway up the Lonely Mountain is desolate of vegetation. Short,\r\nstunted trees with branches empty surround you and the air is heavy and\r\nsmoke-filled.\") (DOWN TO VILLAGE) (SOUTH TO VILLAGE) (UP TO VISTA) (NORTH TO VISTA) (EAST \"The trail is narrow and only heads up and down.\") (WEST \"The trail is narrow and only heads up and down.\") (FLAGS RLANDBIT ONBIT LIGHTBIT) (GLOBAL HILLS MOUNTAIN TREES))",
+    "Name": "MOUNTAIN-TRAIL",
+    "Exits": {
+      "DOWN": {
+        "TO": "VILLAGE",
+        "TYPE": "UEXIT",
+        "Zil": "(DOWN TO VILLAGE)"
+      },
+      "SOUTH": {
+        "TO": "VILLAGE",
+        "TYPE": "UEXIT",
+        "Zil": "(SOUTH TO VILLAGE)"
+      },
+      "UP": {
+        "TO": "VISTA",
+        "TYPE": "UEXIT",
+        "Zil": "(UP TO VISTA)"
+      },
+      "NORTH": {
+        "TO": "VISTA",
+        "TYPE": "UEXIT",
+        "Zil": "(NORTH TO VISTA)"
+      },
+      "EAST": {
+        "MESSAGE": "The trail is narrow and only heads up and down.",
+        "TYPE": "NEXIT",
+        "Zil": "(EAST \"The trail is narrow and only heads up and down.\")"
+      },
+      "WEST": {
+        "MESSAGE": "The trail is narrow and only heads up and down.",
+        "TYPE": "NEXIT",
+        "Zil": "(WEST \"The trail is narrow and only heads up and down.\")"
+      }
+    },
+    "Properties": {
+      "#IN": "ROOMS",
+      "DESC": [
+        "Mountain Trail"
+      ],
+      "LDESC": [
+        "This spot halfway up the Lonely Mountain is desolate of vegetation. Short,\r\nstunted trees with branches empty surround you and the air is heavy and\r\nsmoke-filled."
+      ],
+      "DOWN": [
+        {
+          "Atom": "TO"
+        },
+        {
+          "Atom": "VILLAGE"
+        }
+      ],
+      "SOUTH": [
+        {
+          "Atom": "TO"
+        },
+        {
+          "Atom": "VILLAGE"
+        }
+      ],
+      "UP": [
+        {
+          "Atom": "TO"
+        },
+        {
+          "Atom": "VISTA"
+        }
+      ],
+      "NORTH": [
+        {
+          "Atom": "TO"
+        },
+        {
+          "Atom": "VISTA"
+        }
+      ],
+      "EAST": [
+        "The trail is narrow and only heads up and down."
+      ],
+      "WEST": [
+        "The trail is narrow and only heads up and down."
+      ],
+      "FLAGS": [
+        "RLANDBIT",
+        "ONBIT",
+        "LIGHTBIT"
+      ],
+      "GLOBAL": [
+        {
+          "Atom": "HILLS"
+        },
+        {
+          "Atom": "MOUNTAIN"
+        },
+        {
+          "Atom": "TREES"
+        }
+      ]
+    },
+    "IsRoom": true
+  },
+  {
+    "Zil": "#OBJECT (ROOM VISTA (IN ROOMS) (DESC \"Lonely Mountain\") (LDESC \"This is the top of the Lonely Mountain. In olden days, mariners had\r\nnamed it Signal Mountain, for its glistening peak reflected the pale\r\nmoonlight, providing an unmistakable landmark on unclouded nights. The\r\nbald mountain face is made of a shining substance whose nature is\r\nunknown to you. Looking to the west, low hills stretch to the horizon,\r\nand small pieces of the Long Road can be seen winding their way to\r\ndistant lands. To the east, far away, can be seen a great castle at the\r\nedge of the Sea. Three turrets it has; two, old and still\r\nmajestic, lie on either side of a third, cold, black as night and squat\r\nas a toad. An evil smoke seems to emanate from this tower, shrouding the\r\nothers in a darkening fog. A small mountain trail leaves the peak and descends\r\nto the south into a small village far below.\") (DOWN TO MOUNTAIN-TRAIL) (SOUTH TO MOUNTAIN-TRAIL) (EAST \"At the last moment, you remember that you don't know a flying spell.\") (WEST \"At the last moment, you remember that you don't know a flying spell.\") (NORTH \"At the last moment, you remember that you don't know a flying spell.\") (FLAGS RLANDBIT ONBIT LIGHTBIT) (GLOBAL DISTANT-CASTLE HILLS MOUNTAIN))",
+    "Name": "VISTA",
+    "Exits": {
+      "DOWN": {
+        "TO": "MOUNTAIN-TRAIL",
+        "TYPE": "UEXIT",
+        "Zil": "(DOWN TO MOUNTAIN-TRAIL)"
+      },
+      "SOUTH": {
+        "TO": "MOUNTAIN-TRAIL",
+        "TYPE": "UEXIT",
+        "Zil": "(SOUTH TO MOUNTAIN-TRAIL)"
+      },
+      "EAST": {
+        "MESSAGE": "At the last moment, you remember that you don't know a flying spell.",
+        "TYPE": "NEXIT",
+        "Zil": "(EAST \"At the last moment, you remember that you don't know a flying spell.\")"
+      },
+      "WEST": {
+        "MESSAGE": "At the last moment, you remember that you don't know a flying spell.",
+        "TYPE": "NEXIT",
+        "Zil": "(WEST \"At the last moment, you remember that you don't know a flying spell.\")"
+      },
+      "NORTH": {
+        "MESSAGE": "At the last moment, you remember that you don't know a flying spell.",
+        "TYPE": "NEXIT",
+        "Zil": "(NORTH \"At the last moment, you remember that you don't know a flying spell.\")"
+      }
+    },
+    "Properties": {
+      "#IN": "ROOMS",
+      "DESC": [
+        "Lonely Mountain"
+      ],
+      "LDESC": [
+        "This is the top of the Lonely Mountain. In olden days, mariners had\r\nnamed it Signal Mountain, for its glistening peak reflected the pale\r\nmoonlight, providing an unmistakable landmark on unclouded nights. The\r\nbald mountain face is made of a shining substance whose nature is\r\nunknown to you. Looking to the west, low hills stretch to the horizon,\r\nand small pieces of the Long Road can be seen winding their way to\r\ndistant lands. To the east, far away, can be seen a great castle at the\r\nedge of the Sea. Three turrets it has; two, old and still\r\nmajestic, lie on either side of a third, cold, black as night and squat\r\nas a toad. An evil smoke seems to emanate from this tower, shrouding the\r\nothers in a darkening fog. A small mountain trail leaves the peak and descends\r\nto the south into a small village far below."
+      ],
+      "DOWN": [
+        {
+          "Atom": "TO"
+        },
+        {
+          "Atom": "MOUNTAIN-TRAIL"
+        }
+      ],
+      "SOUTH": [
+        {
+          "Atom": "TO"
+        },
+        {
+          "Atom": "MOUNTAIN-TRAIL"
+        }
+      ],
+      "EAST": [
+        "At the last moment, you remember that you don't know a flying spell."
+      ],
+      "WEST": [
+        "At the last moment, you remember that you don't know a flying spell."
+      ],
+      "NORTH": [
+        "At the last moment, you remember that you don't know a flying spell."
+      ],
+      "FLAGS": [
+        "RLANDBIT",
+        "ONBIT",
+        "LIGHTBIT"
+      ],
+      "GLOBAL": [
+        {
+          "Atom": "DISTANT-CASTLE"
+        },
+        {
+          "Atom": "HILLS"
+        },
+        {
+          "Atom": "MOUNTAIN"
+        }
+      ]
+    },
+    "IsRoom": true
+  },
+  {
+    "Zil": "#OBJECT (ROOM VILLAGE-EAST (IN ROOMS) (DESC \"Village Outskirts\") (LDESC \"You are on a road which enters a small village to the southwest and comes\r\nto a fork to the northeast. The Lonely Mountain looms above but there is\r\nno path from here which ascends the mountain.\") (SW TO VILLAGE) (NE TO EAST-FORK) (SOUTH \"There is no road there.\") (NORTH \"There is no road there.\") (FLAGS RLANDBIT ONBIT LIGHTBIT) (GLOBAL HILLS MOUNTAIN))",
+    "Name": "VILLAGE-EAST",
+    "Exits": {
+      "SW": {
+        "TO": "VILLAGE",
+        "TYPE": "UEXIT",
+        "Zil": "(SW TO VILLAGE)"
+      },
+      "NE": {
+        "TO": "EAST-FORK",
+        "TYPE": "UEXIT",
+        "Zil": "(NE TO EAST-FORK)"
+      },
+      "SOUTH": {
+        "MESSAGE": "There is no road there.",
+        "TYPE": "NEXIT",
+        "Zil": "(SOUTH \"There is no road there.\")"
+      },
+      "NORTH": {
+        "MESSAGE": "There is no road there.",
+        "TYPE": "NEXIT",
+        "Zil": "(NORTH \"There is no road there.\")"
+      }
+    },
+    "Properties": {
+      "#IN": "ROOMS",
+      "DESC": [
+        "Village Outskirts"
+      ],
+      "LDESC": [
+        "You are on a road which enters a small village to the southwest and comes\r\nto a fork to the northeast. The Lonely Mountain looms above but there is\r\nno path from here which ascends the mountain."
+      ],
+      "SW": [
+        {
+          "Atom": "TO"
+        },
+        {
+          "Atom": "VILLAGE"
+        }
+      ],
+      "NE": [
+        {
+          "Atom": "TO"
+        },
+        {
+          "Atom": "EAST-FORK"
+        }
+      ],
+      "SOUTH": [
+        "There is no road there."
+      ],
+      "NORTH": [
+        "There is no road there."
+      ],
+      "FLAGS": [
+        "RLANDBIT",
+        "ONBIT",
+        "LIGHTBIT"
+      ],
+      "GLOBAL": [
+        {
+          "Atom": "HILLS"
+        },
+        {
+          "Atom": "MOUNTAIN"
+        }
+      ]
+    },
+    "IsRoom": true
+  },
+  {
+    "Zil": "#OBJECT (ROOM LONG-ROAD (IN ROOMS) (DESC \"Long Road\") (EAST PER LONG-ROAD-EXIT-F) (WEST PER LONG-ROAD-EXIT-F) (ACTION LONG-ROAD-F) (FLAGS RLANDBIT ONBIT LIGHTBIT) (GLOBAL HILLS MOUNTAIN FOREST TREES) (PSEUDO \"FARM\" FARM-PSEUDO))",
+    "Name": "LONG-ROAD",
+    "Exits": {
+      "EAST": {
+        "PER": "LONG-ROAD-EXIT-F",
+        "TYPE": "FEXIT",
+        "Zil": "(EAST PER LONG-ROAD-EXIT-F)"
+      },
+      "WEST": {
+        "PER": "LONG-ROAD-EXIT-F",
+        "TYPE": "FEXIT",
+        "Zil": "(WEST PER LONG-ROAD-EXIT-F)"
+      }
+    },
+    "Properties": {
+      "#IN": "ROOMS",
+      "DESC": [
+        "Long Road"
+      ],
+      "EAST": [
+        {
+          "Atom": "PER"
+        },
+        {
+          "Atom": "LONG-ROAD-EXIT-F"
+        }
+      ],
+      "WEST": [
+        {
+          "Atom": "PER"
+        },
+        {
+          "Atom": "LONG-ROAD-EXIT-F"
+        }
+      ],
+      "ACTION": [
+        {
+          "Atom": "LONG-ROAD-F"
+        }
+      ],
+      "FLAGS": [
+        "RLANDBIT",
+        "ONBIT",
+        "LIGHTBIT"
+      ],
+      "GLOBAL": [
+        {
+          "Atom": "HILLS"
+        },
+        {
+          "Atom": "MOUNTAIN"
+        },
+        {
+          "Atom": "FOREST"
+        },
+        {
+          "Atom": "TREES"
+        }
+      ],
+      "PSEUDO": [
+        "FARM",
+        {
+          "Atom": "FARM-PSEUDO"
+        }
+      ]
+    },
+    "IsRoom": true
+  }
+]

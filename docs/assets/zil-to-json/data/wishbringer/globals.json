@@ -1,0 +1,401 @@
+{
+  "C-TABLE": {
+    "Table": "T?C-TABLE"
+  },
+  "C-DEMONS": 330,
+  "C-INTS": 330,
+  "CLOCK-WAIT": false,
+  "PRSA": 0,
+  "PRSI": 0,
+  "PRSO": 0,
+  "P-TABLE": 0,
+  "P-ONEOBJ": 0,
+  "P-SYNTAX": 0,
+  "P-LEN": 0,
+  "P-DIR": 0,
+  "LAST-PLAYER-LOC": 0,
+  "WINNER": 0,
+  "P-LEXV": {
+    "Table": "T?P-LEXV"
+  },
+  "LAST-PSEUDO-LOC": false,
+  "ITAKE-LOC": false,
+  "P-INBUF": {
+    "Table": "T?P-INBUF"
+  },
+  "P-CONT": false,
+  "P-IT-OBJECT": false,
+  "P-HER-OBJECT": false,
+  "P-HIM-OBJECT": false,
+  "P-THEM-OBJECT": false,
+  "P-OFLAG": false,
+  "P-MERGED": false,
+  "P-ACLAUSE": false,
+  "P-ANAM": false,
+  "P-AADJ": false,
+  "P-ITBL": {
+    "Table": "T?P-ITBL"
+  },
+  "P-OTBL": {
+    "Table": "T?P-OTBL"
+  },
+  "P-VTBL": {
+    "Table": "T?P-VTBL"
+  },
+  "P-OVTBL": {
+    "Table": "T?P-OVTBL"
+  },
+  "P-NCN": 0,
+  "QUOTE-FLAG": false,
+  "P-ADVERB": false,
+  "P-WON": false,
+  "L-PRSA": false,
+  "L-PRSO": false,
+  "L-PRSI": false,
+  "L-WINNER": false,
+  "BOTTOM?": false,
+  "P-WALK-DIR": false,
+  "POWER": 0,
+  "OFFENDED": {
+    "Table": "T?OFFENDED"
+  },
+  "P-NUMBER": -1,
+  "P-AMOUNT": 0,
+  "P-DOLLAR-FLAG": false,
+  "P-DIRECTION": 0,
+  "UNKNOWN-MSGS": {
+    "Table": "T?UNKNOWN-MSGS"
+  },
+  "P-SLOCBITS": 0,
+  "P-CCTBL": {
+    "Table": "T?P-CCTBL"
+  },
+  "P-GWIMBIT": 0,
+  "P-NAM": false,
+  "P-XNAM": false,
+  "P-ADJ": false,
+  "P-XADJ": false,
+  "P-ADJN": false,
+  "P-XADJN": false,
+  "P-PRSO": {
+    "Table": "T?P-PRSO"
+  },
+  "P-PRSI": {
+    "Table": "T?P-PRSI"
+  },
+  "P-BUTS": {
+    "Table": "T?P-BUTS"
+  },
+  "P-MERGE": {
+    "Table": "T?P-MERGE"
+  },
+  "P-OCLAUSE": {
+    "Table": "T?P-OCLAUSE"
+  },
+  "P-MATCHLEN": 0,
+  "P-GETFLAGS": 0,
+  "P-AND": false,
+  "P-MOBY-FOUND": false,
+  "ALWAYS-LIT?": false,
+  "YOU-SEE": "You can see ",
+  "YOU-HEAR": "You can hear ",
+  "P-PROMPT": 2,
+  "NO-LUCK?": false,
+  "SHELL-SCRIPT": 5,
+  "BOOT-PATH": {
+    "Table": "T?BOOT-PATH"
+  },
+  "DIRECTION-TABLES": {
+    "Table": "T?DIRECTION-TABLES"
+  },
+  "DIR-NAMES": {
+    "Table": "T?DIR-NAMES"
+  },
+  "BOOT-LOC": 0,
+  "LAST-PLACE": {
+    "Atom": "CLIFF-EDGE"
+  },
+  "JAIL-SCRIPT": 24,
+  "HERE": 0,
+  "LIT": {
+    "Atom": "T"
+  },
+  "MOVES": 0,
+  "SCORE": 0,
+  "IGNORANCE": {
+    "Table": "T?IGNORANCE"
+  },
+  "LIKELIES": {
+    "Table": "T?LIKELIES"
+  },
+  "GAME": "Wishbringer",
+  "I-ASSUME": "(Presumably, you mean",
+  "CANT": "You can't",
+  "VERBOSE": false,
+  "SUPER-BRIEF": false,
+  "YES-INBUF": {
+    "Table": "T?YES-INBUF"
+  },
+  "YES-LEXV": {
+    "Table": "T?YES-LEXV"
+  },
+  "OKAY": "Okay, ",
+  "GSCORE": 0,
+  "GMOVES": 0,
+  "SPELLS": 0,
+  "SAYING?": false,
+  "YAWNS": {
+    "Table": "T?YAWNS"
+  },
+  "FIRST-WARNING?": {
+    "Atom": "T"
+  },
+  "HO-HUM": {
+    "Table": "T?HO-HUM"
+  },
+  "YUKS": {
+    "Table": "T?YUKS"
+  },
+  "USELESSNESS": {
+    "Table": "T?USELESSNESS"
+  },
+  "CRISP-SCRIPT": 0,
+  "ANGER": 5,
+  "YELL-TYPES": {
+    "Table": "T?YELL-TYPES"
+  },
+  "GET-GOINGS": {
+    "Table": "T?GET-GOINGS"
+  },
+  "INSULTS": {
+    "Table": "T?INSULTS"
+  },
+  "SWIPES": {
+    "Table": "T?SWIPES"
+  },
+  "CONSIDERATIONS": {
+    "Table": "T?CONSIDERATIONS"
+  },
+  "BORINGS": {
+    "Table": "T?BORINGS"
+  },
+  "BEGS": {
+    "Table": "T?BEGS"
+  },
+  "DIGGER-SCRIPT": 0,
+  "ENVELOPE-PEERED-AT?": false,
+  "MACGUFFIN-SCRIPT": 0,
+  "VOSS-SCRIPT": 0,
+  "GOOD-VOSS-RESPONSES": {
+    "Table": "T?GOOD-VOSS-RESPONSES"
+  },
+  "BAD-VOSS-RESPONSES": {
+    "Table": "T?BAD-VOSS-RESPONSES"
+  },
+  "NOTE-GIVEN?": false,
+  "VOSS-OFFERS": {
+    "Table": "T?VOSS-OFFERS"
+  },
+  "HORSE-SAVED?": false,
+  "HORSE-SCRIPT": 4,
+  "POWER-WORDS": {
+    "Table": "T?POWER-WORDS"
+  },
+  "Q-SIGHS": {
+    "Table": "T?Q-SIGHS"
+  },
+  "Q-EXCUSES": {
+    "Table": "T?Q-EXCUSES"
+  },
+  "LADY-REACTIONS": {
+    "Table": "T?LADY-REACTIONS"
+  },
+  "WOMAN-SCRIPT": 0,
+  "WOMAN-WAITS": {
+    "Table": "T?WOMAN-WAITS"
+  },
+  "LETTER-READ-TO-WOMAN?": false,
+  "IMMOBILIZED?": false,
+  "CROW-OFFERS": {
+    "Table": "T?CROW-OFFERS"
+  },
+  "SKEWED?": false,
+  "WHERE-FROM": false,
+  "POOCH": {
+    "Atom": "POODLE"
+  },
+  "POODLE-HAPPY?": false,
+  "HELLHOUND-HAPPY?": false,
+  "POODLE-HINTS": {
+    "Table": "T?POODLE-HINTS"
+  },
+  "DOG-SCRIPT": 0,
+  "P-HINT": 0,
+  "NO-MOVIE?": {
+    "Atom": "T"
+  },
+  "MOVIE-STATUS": {
+    "Atom": "T"
+  },
+  "NO-ENTERS": {
+    "Table": "T?NO-ENTERS"
+  },
+  "LOOKED-IN-CARTON?": false,
+  "MOVIE-SCRIPT": 0,
+  "MOVIE-VISIBLE?": false,
+  "NO-CR?": false,
+  "FUZZIES": {
+    "Table": "T?FUZZIES"
+  },
+  "NIPS": {
+    "Table": "T?NIPS"
+  },
+  "PIRANHA-SCRIPT": 3,
+  "CHOCOLATE-SCRIPT": 0,
+  "NOTE-READ?": false,
+  "WIN-TRY": 3,
+  "TURNS": {
+    "Table": "T?TURNS"
+  },
+  "EONE": " the Evil One",
+  "CANDLE-TAKEN?": false,
+  "PIT-FULL?": false,
+  "ON-STUMP?": false,
+  "H-NAMES": {
+    "Table": "T?H-NAMES"
+  },
+  "VERT": 3,
+  "HORZ": 5,
+  "POSSIBILITIES": {
+    "Table": "T?POSSIBILITIES"
+  },
+  "WISDOM": 1,
+  "WISE-SAYINGS": {
+    "Table": "T?WISE-SAYINGS"
+  },
+  "HOUSE-VISITED?": false,
+  "TOLL-DEMANDS": {
+    "Table": "T?TOLL-DEMANDS"
+  },
+  "COIN-OFFERED?": false,
+  "SIGHTINGS": {
+    "Table": "T?SIGHTINGS"
+  },
+  "SNAKE-GONE?": false,
+  "TROLL-SCARED?": false,
+  "TLOC": false,
+  "TRAILS": {
+    "Table": "T?TRAILS"
+  },
+  "BUMPS": {
+    "Table": "T?BUMPS"
+  },
+  "T-PROB": 0,
+  "FALLS": {
+    "Table": "T?FALLS"
+  },
+  "FROZENS": {
+    "Table": "T?FROZENS"
+  },
+  "FACES": {
+    "Table": "T?FACES"
+  },
+  "NAUGHTY-BITS": {
+    "Table": "T?NAUGHTY-BITS"
+  },
+  "WOMAN-SEEN-ENVELOPE?": false,
+  "GCAN": {
+    "Atom": "SNAKE-CAN"
+  },
+  "GIVE-AWAYS": {
+    "Table": "T?GIVE-AWAYS"
+  },
+  "ENDING?": false,
+  "SUCCESS?": false,
+  "VAPOR-YELLS": {
+    "Table": "T?VAPOR-YELLS"
+  },
+  "FRIGHTS": {
+    "Table": "T?FRIGHTS"
+  },
+  "DROP-OFFS": {
+    "Table": "T?DROP-OFFS"
+  },
+  "CRAMPS": {
+    "Table": "T?CRAMPS"
+  },
+  "GRUE-COVERED?": false,
+  "SLEEP-SCRIPT": 0,
+  "MILK-SCRIPT": 0,
+  "STROLLS": {
+    "Table": "T?STROLLS"
+  },
+  "CHAINED?": false,
+  "COAT-WORN?": {
+    "Atom": "T"
+  },
+  "FUZZY-FROM": {
+    "Atom": "LOBBY"
+  },
+  "FUZZY?": false,
+  "BLURS": {
+    "Table": "T?BLURS"
+  },
+  "NICES": {
+    "Table": "T?NICES"
+  },
+  "BROOM-SIT?": false,
+  "BEEN-TO-ISLAND?": false,
+  "RETURN-FROM-ISLAND?": false,
+  "ADVENTURER": ", brave Adventurer",
+  "KING-SCRIPT": 0,
+  "KING-OFFERS": {
+    "Table": "T?KING-OFFERS"
+  },
+  "SCRAMS": {
+    "Table": "T?SCRAMS"
+  },
+  "CLAMPED?": false,
+  "BOX-SEEN?": false,
+  "BOX-DANGEROUS?": false,
+  "BOX-YELLS": {
+    "Table": "T?BOX-YELLS"
+  },
+  "BOX-SCRIPT": 0,
+  "BOX-COMING": 0,
+  "EAT-SCRIPT": 0,
+  "PREVIOUS-LOC": false,
+  "BOX-CLOSERS": {
+    "Table": "T?BOX-CLOSERS"
+  },
+  "BOX-EVEN-CLOSERS": {
+    "Table": "T?BOX-EVEN-CLOSERS"
+  },
+  "BAD-BOX-COMINGS": {
+    "Table": "T?BAD-BOX-COMINGS"
+  },
+  "BAD-BOX-ARRIVALS": {
+    "Table": "T?BAD-BOX-ARRIVALS"
+  },
+  "SMALL-SCRIPT": 0,
+  "BOX-ALIVE?": false,
+  "SMALL-BOX-COMING": 0,
+  "PREVIOUS-SMALL-LOC": false,
+  "CUDDLES": {
+    "Table": "T?CUDDLES"
+  },
+  "SMALL-BOX-ARRIVALS": {
+    "Table": "T?SMALL-BOX-ARRIVALS"
+  },
+  "JAIL-VISITS": 0,
+  "JAIL-SOUNDS": {
+    "Table": "T?JAIL-SOUNDS"
+  },
+  "DESTINATIONS": {
+    "Table": "T?DESTINATIONS"
+  },
+  "RAIN-ROOM": false,
+  "LUCKY?": false,
+  "DARK-PLACE": false,
+  "ECLIPSE?": false
+}
