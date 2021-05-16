@@ -1,0 +1,18 @@
+<ng-container *ngIf="o.Atom != undefined">
+    <span>{{o.Atom}} </span>
+</ng-container>
+<ng-container *ngIf="o.Form != undefined">
+    <app-zil-form [o]="o"></app-zil-form>
+</ng-container>
+<ng-container *ngIf="isArray(o)">
+    <app-zil-array [o]="o" [indented]="false"></app-zil-array>
+    <!--
+    (
+        <ng-container *ngFor="let child of o">
+            <app-zil-object  [o]="child"></app-zil-object>
+            &nbsp;
+        </ng-container>
+    )
+   -->
+</ng-container>
+<span *ngIf="!(   (o.Atom != undefined)   ||   (o.Form != undefined)   ||   (isArray(o))   )">{{normalizeWhitespace(stringify(o))}}</span>

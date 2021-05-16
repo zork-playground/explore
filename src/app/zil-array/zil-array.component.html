@@ -1,0 +1,10 @@
+<div>
+        <ng-container *ngFor="let child of o; index as j">
+            <div [style.marginLeft]="j==0?'0em':'2em'">
+                <span *ngIf="j==0">(</span>
+                <app-zil-object [o]="child"></app-zil-object>
+                <span *ngIf="j==o.length-1"></span>
+            </div>
+        </ng-container>
+        )
+</div>

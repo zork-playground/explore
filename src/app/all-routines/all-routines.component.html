@@ -1,0 +1,163 @@
+<div class="bg-grey-600" style="padding:16px;">
+    <div class="bg-grey-100" style="padding:16px; border-radius:16px;">
+        <h1 class="color-grey-900 pb-3">Foundation Routines</h1>
+        <table *ngIf="isInitialized" class="table table-hover table-striped table-borderless shadow-lg" style="border-radius:8px; width:auto;">
+            <thead>
+                <tr>
+                    <th>Routine</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let r of foundationRoutines">
+                    <td><a class="text-reset text-decoration-none" [href]="'games/'+gameId+'/routines/'+r.name"><span class="color-primary-900" style="font-weight:bold">{{r.name}}</span></a></td>
+                    <td class="color-grey-700">{{r.description}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="bg-grey-100" style="margin-top:16px; padding:16px; border-radius:16px;">
+        <h1 class="color-grey-900 pb-3">Room Action Functions</h1>
+        <p>These handle events like entering the room (M-ENTER, called by V-WALK&gt;GOTO and V-BOARD), looking in the room (M-LOOK), beginning of each turn (M-BEG), end of each turn (M-END).</p>
+        <table *ngIf="isInitialized" class="table table-hover table-striped table-borderless shadow-lg" style="border-radius:8px; width:auto;">
+            <thead>
+                <tr>
+                    <th>Action Function</th>
+                    <th>For Rooms</th>
+                </tr>
+            </thead>
+            <tbody>
+                <ng-container *ngFor="let o of allRoutines">
+                    <tr *ngIf="allGameData.metadata[o.Name]['isActionForRooms'].length > 0">
+                        <td><a class="text-reset text-decoration-none" [href]="'games/'+gameId+'/routines/'+o.Name"><span class="color-primary-900" style="font-weight:bold">{{o.Name}}</span></a></td>
+                        <td class="color-grey-700">
+                            <span *ngFor="let objName of allGameData.metadata[o.Name]['isActionForRooms']; index as i"><span *ngIf="i>0">,<br/></span>
+                                {{objName}}</span>
+                        </td>
+                    </tr>
+                </ng-container>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="bg-grey-100" style="margin-top:16px; padding:16px; border-radius:16px;">
+        <h1 class="color-grey-900 pb-3">Syntax Pre-Action Functions</h1>
+        <p>These are called early during the turn (after Room M-BEG), often just to sanity check whether a verb/action can even be done. Example: PRE-READ handles "It's impossible to read in the dark."</p>
+        <table *ngIf="isInitialized" class="table table-hover table-striped table-borderless shadow-lg" style="border-radius:8px; width:auto;">
+            <thead>
+                <tr>
+                    <th>Pre-Action Function</th>
+                    <th>For Syntax</th>
+                </tr>
+            </thead>
+            <tbody>
+                <ng-container *ngFor="let o of allRoutines">
+                    <tr *ngIf="allGameData.metadata[o.Name]['isPreactionForSyntaxes'].length > 0">
+                        <td><a class="text-reset text-decoration-none" [href]="'games/'+gameId+'/routines/'+o.Name"><span class="color-primary-900" style="font-weight:bold">{{o.Name}}</span></a></td>
+                        <td class="color-grey-700">
+                            <div *ngFor="let s of allGameData.metadata[o.Name]['isPreactionForSyntaxes']">
+                                <!-- TODO: extract the logic below to a common component, it's used also in all-syntaxes -->
+                                {{s.Verb.toLowerCase()}} {{s.Preposition1?.toLowerCase()}} <i>{{s.Object1?.toLowerCase()}}</i> {{s.Preposition2?.toLowerCase()}} <i>{{s.Object2?.toLowerCase()}}</i>
+                            </div>
+                        </td>
+                    </tr>
+                </ng-container>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="bg-grey-100" style="margin-top:16px; padding:16px; border-radius:16px;">
+        <h1 class="color-grey-900 pb-3">Object Action Functions</h1>
+        <p>
+            If the command passed the Room Action and Verb Pre-Action, these action functions get a chance to handle the command.
+            The indirect object gets a chance before the direct object.
+        </p>
+        <table *ngIf="isInitialized" class="table table-hover table-striped table-borderless shadow-lg" style="border-radius:8px; width:auto;">
+            <thead>
+                <tr>
+                    <th>Action Function</th>
+                    <th>For Object</th>
+                </tr>
+            </thead>
+            <tbody>
+                <ng-container *ngFor="let o of allRoutines">
+                    <tr *ngIf="allGameData.metadata[o.Name]['isActionForObjects'].length > 0">
+                        <td><a class="text-reset text-decoration-none" [href]="'games/'+gameId+'/routines/'+o.Name"><span class="color-primary-900" style="font-weight:bold">{{o.Name}}</span></a></td>
+                        <td class="color-grey-700">
+                            <span *ngFor="let objName of allGameData.metadata[o.Name]['isActionForObjects']; index as i"><span *ngIf="i>0">, </span>{{objName}}</span>
+                        </td>
+                    </tr>
+                </ng-container>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="bg-grey-100" style="margin-top:16px; padding:16px; border-radius:16px;">
+        <h1 class="color-grey-900 pb-3">Syntax Action Functions</h1>
+        <p>
+            These are called only if a command was not already handled by a room, verb pre-action, direct object, or indirect object.
+            So they usually handle generic scenarios with little consequence. Ex: V-SMELL just says "It smells like a _____."
+        </p>
+        <table *ngIf="isInitialized" class="table table-hover table-striped table-borderless shadow-lg" style="border-radius:8px; width:auto;">
+            <thead>
+                <tr>
+                    <th>Action Function</th>
+                    <th>For Syntax</th>
+                </tr>
+            </thead>
+            <tbody>
+                <ng-container *ngFor="let o of allRoutines">
+                    <tr *ngIf="allGameData.metadata[o.Name]['isActionForSyntaxes'].length > 0">
+                        <td><a class="text-reset text-decoration-none" [href]="'games/'+gameId+'/routines/'+o.Name"><span class="color-primary-900" style="font-weight:bold">{{o.Name}}</span></a></td>
+                        <td class="color-grey-700">
+                            <div *ngFor="let s of allGameData.metadata[o.Name]['isActionForSyntaxes']">
+                                <!-- TODO: extract the logic below to a common component, it's used also in all-syntaxes -->
+                                {{s.Verb.toLowerCase()}} {{s.Preposition1?.toLowerCase()}} <i>{{s.Object1?.toLowerCase()}}</i> {{s.Preposition2?.toLowerCase()}} <i>{{s.Object2?.toLowerCase()}}</i>
+                            </div>
+                        </td>
+                    </tr>
+                </ng-container>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="bg-grey-100" style="margin-top:16px; padding:16px; border-radius:16px;">
+        <h1 class="color-grey-900 pb-3">Interrupt/Daemon/Clocker Functions</h1>
+        <p>
+            Coming Soon!
+        </p>
+    </div>
+
+    <div class="bg-grey-100" style="margin-top:16px; padding:16px; border-radius:16px;">
+        <h1 class="color-grey-900 pb-3">Other Functions</h1>
+        <p>
+            All other functions not listed above.
+        </p>
+        <table *ngIf="isInitialized" class="table table-hover table-striped table-borderless shadow-lg" style="border-radius:8px;">
+            <thead>
+                <tr>
+                    <th>Source</th>
+                    <th>Name</th>
+                    <th>ArgSpec</th>
+                    <th>First Line</th>
+                </tr>
+            </thead>
+            <tbody>
+                <ng-container *ngFor="let o of allRoutines">
+                    <tr *ngIf=
+                            "allGameData.metadata[o.Name]['isActionForRooms'].length == 0 &&
+                            allGameData.metadata[o.Name]['isActionForObjects'].length == 0 &&
+                            allGameData.metadata[o.Name]['isPreactionForSyntaxes'].length == 0 &&
+                            allGameData.metadata[o.Name]['isActionForSyntaxes'].length == 0">
+                        <td class="color-grey-700"><i>{{o.Source}}</i></td>
+                        <td><a class="text-reset text-decoration-none" [href]="'games/'+gameId+'/routines/'+o.Name"><span class="color-primary-900" style="font-weight:bold">{{o.Name}}</span></a></td>
+                        <td class="color-grey-700" style="max-width:300px; white-space:nowrap; overflow:hidden; text-overflow: ellipsis;">{{o.ArgSpec}}</td>
+                        <td class="color-grey-700" style="max-width:300px; white-space:nowrap; overflow:hidden; text-overflow: ellipsis;">{{o.Body[0]?.Zil}}</td>
+                    </tr>
+                </ng-container>
+            </tbody>
+        </table>
+    </div>
+
+</div>

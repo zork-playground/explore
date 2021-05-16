@@ -1,0 +1,174 @@
+<div class="bg-grey-600" style="padding:16px;">
+    <div class="bg-grey-100" style="padding:16px; border-radius:16px;">
+        <ng-container *ngIf="isInitialized">
+            <h1 class="color-primary-900 pb-3">{{o.Name}}</h1>
+            <table class="table table-hover table-striped table-borderless shadow-lg" style="border-radius:8px; width:auto;">
+                <tbody>
+                    <tr *ngIf="o.Properties['DESC']">
+                        <td style="white-space:nowrap;">
+                            <div class="color-grey-900"><b>DESC</b></div>
+                            <div class="color-grey-700" style="font-size:smaller">Room Title</div>
+                        </td>
+                        <td><div class="game-text">{{o.Properties['DESC']}}</div></td>
+                    </tr>
+                    <tr *ngIf="o.Properties['FDESC']">
+                        <td style="white-space:nowrap;">
+                            <div class="color-grey-900"><b>FDESC</b></div>
+                            <div class="color-grey-700" style="font-size:smaller">First Description (untouched)</div>
+                        </td>
+                        <td><div class="game-text">{{o.Properties['FDESC']}}</div></td>
+                    </tr>
+                    <tr *ngIf="o.Properties['LDESC']">
+                        <td style="white-space:nowrap;">
+                            <div class="color-grey-900"><b>LDESC</b></div>
+                            <div class="color-grey-700" style="font-size:smaller">Long Description</div>
+                        </td>
+                        <td><div class="game-text">{{o.Properties['LDESC']}}</div></td>
+                    </tr>
+                    <tr *ngIf="o.Properties['ACTION']">
+                        <td style="white-space:nowrap;">
+                            <div class="color-grey-900"><b>ACTION</b></div>
+                            <div class="color-grey-700" style="font-size:smaller">Action Function</div>
+                        </td>
+                        <td style="color:var(--primary-900)">
+                            <a [href]="'games/'+gameId+'/routines/'+o.Properties['ACTION'][0].Atom" class="text-reset text-decoration-none">
+                                <b>{{o.Properties['ACTION'][0].Atom}}</b>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr *ngIf="o.Properties['FLAGS']">
+                        <td style="white-space:nowrap;">
+                            <div class="color-grey-900"><b>FLAGS</b></div>
+                            <div class="color-grey-700" style="font-size:smaller">On/Off Flags</div>
+                        </td>
+                        <td style="color:var(--primary-900)">
+                            <span *ngFor="let flag of o.Properties['FLAGS']; index as i"><span *ngIf="i!=0">, </span><b>{{flag}}</b></span>
+                        </td>
+                    </tr>
+                    <ng-container *ngFor="let p of o.Properties | keyvalue">
+                        <tr *ngIf="!isKnownProperty(p.key)">
+                            <td style="white-space:nowrap;">
+                                <div class="color-grey-900"><b>{{p.key}}</b></div>
+                            </td>
+                            <td style="color:var(--primary-900)">{{stringify(p.value[0])}}</td>
+                        </tr>
+                    </ng-container>
+                    <!--
+                    <tr *ngIf="o.Properties['#IN']">
+                        <td style="white-space:nowrap;">
+                            <div class="color-grey-900"><b>IN</b></div>
+                            <div class="color-grey-700" style="font-size:smaller">{{getContainerLabel(o.Properties['#IN'])}}</div>
+                        </td>
+                        <td><div style="color:var(--primary-900)"><b>{{o.Properties['#IN']}}</b></div></td>
+                    </tr>
+                    -->
+                </tbody>
+            </table>
+            <ng-container *ngIf="contains.length != 0">
+                <h2 class="mt-4">Objects in Room</h2>
+                <table class="table table-striped table-hover mt-3" style="width:auto">
+                    <tbody>
+                        <tr *ngFor="let obj of contains">
+                            <td style="color:var(--primary-900)">
+                                <a [href]="'games/'+gameId+'/objects/'+obj.Name" class="text-reset text-decoration-none">
+                                    <b>{{obj.Name}}</b>
+                                </a>
+                            </td>
+                            <td>
+                                <a [href]="'games/'+gameId+'/objects/'+obj.Name" class="text-reset text-decoration-none">
+                                    <span class="game-text">{{obj.Properties["DESC"]}}</span>
+                                </a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </ng-container>
+            <ng-container *ngIf="o.Properties['GLOBAL']">
+                <h2 class="mt-4">Local-Globals in Room</h2>
+                <table class="table table-striped table-hover mt-3" style="width:auto">
+                    <tbody>
+                        <tr *ngFor="let g of localGlobals">
+                            <td style="color:var(--primary-900)">
+                                <a [href]="'games/'+gameId+'/objects/'+g.Name" class="text-reset text-decoration-none">
+                                    <b>{{g.Name}}</b>
+                                </a>
+                            </td>
+                            <td>
+                                <a [href]="'games/'+gameId+'/objects/'+g.Name" class="text-reset text-decoration-none">
+                                    <span class="game-text">{{g.Properties["DESC"]}}</span>
+                                </a>
+                            </td>
+                        </tr>
+                </tbody>
+                </table>
+            </ng-container>
+
+            <h2>Exits</h2>
+            <div style="text-align:center">
+                <div class="row mb-3" style="max-width:600px;" *ngIf="o.Exits.NW || o.Exits.NORTH || o.Exits.NE">
+                    <div class="col " style="min-height:100px;">
+                        <app-room-exit [gameId]="gameId" [room]="o" [dir]="'NW'"></app-room-exit>
+                    </div>
+                    <div class="col " style="min-height:100px;">
+                        <app-room-exit [gameId]="gameId" [room]="o" [dir]="'NORTH'"></app-room-exit>
+                    </div>
+                    <div class="col " style="min-height:100px;">
+                        <app-room-exit [gameId]="gameId" [room]="o" [dir]="'NE'"></app-room-exit>
+                    </div>
+                </div>
+                <div class="row mb-3" style="max-width:600px;" *ngIf="o.Exits.LAUNCH || o.Exits.UP || o.Exits.IN">
+                    <div class="col " style="min-height:100px;">
+                        <app-room-exit [gameId]="gameId" [room]="o" [dir]="'LAUNCH'"></app-room-exit>
+                    </div>
+                    <div class="col " style="min-height:100px;">
+                        <app-room-exit [gameId]="gameId" [room]="o" [dir]="'UP'"></app-room-exit>
+                    </div>
+                    <div class="col " style="min-height:100px;">
+                        <app-room-exit [gameId]="gameId" [room]="o" [dir]="'IN'"></app-room-exit>
+                    </div>
+                </div>
+                <div class="row mb-3" style="max-width:600px;">
+                    <div class="col " style="min-height:100px;">
+                        <app-room-exit [gameId]="gameId" [room]="o" [dir]="'WEST'"></app-room-exit>
+                    </div>
+                    <div class="col " style="min-height:100px;">
+                        <app-room-exit [gameId]="gameId" [room]="o" [dir]="'HERE'"></app-room-exit>
+                    </div>
+                    <div class="col " style="min-height:100px;">
+                        <app-room-exit [gameId]="gameId" [room]="o" [dir]="'EAST'"></app-room-exit>
+                    </div>
+                </div>
+                <div class="row mb-3" style="max-width:600px;" *ngIf="o.Exits.OUT || o.Exits.DOWN || o.Exits.LAND">
+                    <div class="col " style="min-height:100px;">
+                        <app-room-exit [gameId]="gameId" [room]="o" [dir]="'OUT'"></app-room-exit>
+                    </div>
+                    <div class="col " style="min-height:100px;">
+                        <app-room-exit [gameId]="gameId" [room]="o" [dir]="'DOWN'"></app-room-exit>
+                    </div>
+                    <div class="col " style="min-height:100px;">
+                        <app-room-exit [gameId]="gameId" [room]="o" [dir]="'LAND'"></app-room-exit>
+                    </div>
+                </div>
+                <div class="row mb-3" style="max-width:600px;" *ngIf="o.Exits.SW || o.Exits.SOUTH || o.Exits.SE">
+                    <div class="col" style="min-height:100px;">
+                        <app-room-exit [gameId]="gameId" [room]="o" [dir]="'SW'"></app-room-exit>
+                    </div>
+                    <div class="col" style="min-height:100px;">
+                        <app-room-exit [gameId]="gameId" [room]="o" [dir]="'SOUTH'"></app-room-exit>
+                    </div>
+                    <div class="col" style="min-height:100px;">
+                        <app-room-exit [gameId]="gameId" [room]="o" [dir]="'SE'"></app-room-exit>
+                    </div>
+                </div>
+            </div>
+
+            <h2>Relationships</h2>
+            <p>Coming soon: Which routines refer to this room, etc.</p>
+            <table class="table table-hover table-striped table-borderless shadow-lg" style="border-radius:8px; width:auto;">
+                <tbody>
+                </tbody>
+            </table>
+
+        </ng-container>
+    </div>
+</div>

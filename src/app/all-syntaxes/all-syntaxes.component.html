@@ -1,0 +1,23 @@
+<div class="bg-grey-600" style="padding:16px;">
+    <div class="bg-grey-100" style="padding:16px; border-radius:16px;">
+        <h1 class="color-grey-900 pb-3">Syntaxes</h1>
+        <table *ngIf="isInitialized" class="table table-hover table-striped table-borderless shadow-lg" style="border-radius:8px; width:auto;">
+            <thead>
+                <tr>
+                    <th>Syntax</th>
+                    <th>Action</th>
+                    <th>Preaction</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let o of allSyntaxes">
+                    <td>
+                        <span style="padding:4px; border-radius:4px; color:var(--green-600); font-weight:bold">{{o.Verb.toLowerCase()}} {{o.Preposition1?.toLowerCase()}} <i>{{o.Object1?.toLowerCase()}}</i> {{o.Preposition2?.toLowerCase()}} <i>{{o.Object2?.toLowerCase()}}</i></span>
+                    </td>
+                    <td><a class="text-reset text-decoration-none" [href]="'games/'+gameId+'/routines/'+o.Action"><span class="color-primary-900" style="font-weight:bold">{{o.Action}}</span></a></td>
+                    <td><a class="text-reset text-decoration-none" [href]="'games/'+gameId+'/routines/'+o.Preaction"><span class="color-primary-900" style="font-weight:bold">{{o.Preaction}}</span></a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

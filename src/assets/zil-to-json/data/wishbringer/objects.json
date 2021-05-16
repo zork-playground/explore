@@ -1,0 +1,5942 @@
+[
+  {
+    "Zil": "#OBJECT (OBJECT DUMMY-OBJECT)",
+    "Name": "DUMMY-OBJECT",
+    "Properties": {},
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT NOT-HERE-OBJECT (DESC \"that\") (FLAGS NARTICLEBIT) (ACTION NOT-HERE-OBJECT-F))",
+    "Name": "NOT-HERE-OBJECT",
+    "Properties": {
+      "DESC": [
+        "that"
+      ],
+      "FLAGS": [
+        "NARTICLEBIT"
+      ],
+      "ACTION": [
+        {
+          "Atom": "NOT-HERE-OBJECT-F"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT C-OBJECT)",
+    "Name": "C-OBJECT",
+    "Properties": {},
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT GLOBAL-OBJECTS (FLAGS RMUNGBIT INVISIBLE TOUCHBIT SURFACEBIT TRYTAKEBIT OPENBIT SEARCHBIT TRANSBIT WEARBIT VOWELBIT ONBIT RLANDBIT ACTORBIT TAKEBIT NDESCBIT NARTICLEBIT TOOLBIT LOCKEDBIT WISHBIT INDOORSBIT FLAMEBIT WORNBIT THROWNBIT WETBIT VEHBIT))",
+    "Name": "GLOBAL-OBJECTS",
+    "Properties": {
+      "FLAGS": [
+        "RMUNGBIT",
+        "INVISIBLE",
+        "TOUCHBIT",
+        "SURFACEBIT",
+        "TRYTAKEBIT",
+        "OPENBIT",
+        "SEARCHBIT",
+        "TRANSBIT",
+        "WEARBIT",
+        "VOWELBIT",
+        "ONBIT",
+        "RLANDBIT",
+        "ACTORBIT",
+        "TAKEBIT",
+        "NDESCBIT",
+        "NARTICLEBIT",
+        "TOOLBIT",
+        "LOCKEDBIT",
+        "WISHBIT",
+        "INDOORSBIT",
+        "FLAMEBIT",
+        "WORNBIT",
+        "THROWNBIT",
+        "WETBIT",
+        "VEHBIT"
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT LOCAL-GLOBALS (IN GLOBAL-OBJECTS) (SYNONYM ZZZP) (DESCFCN 0) (GLOBAL GLOBAL-OBJECTS) (ADVFCN 0) (FDESC \"F\") (LDESC \"L\") (PSEUDO \"FOOBAR\" V-WALK) (CONTFCN 0) (SIZE 0) (CAPACITY 0))",
+    "Name": "LOCAL-GLOBALS",
+    "Properties": {
+      "#IN": "GLOBAL-OBJECTS",
+      "SYNONYM": [
+        "ZZZP"
+      ],
+      "DESCFCN": [
+        0
+      ],
+      "GLOBAL": [
+        {
+          "Atom": "GLOBAL-OBJECTS"
+        }
+      ],
+      "ADVFCN": [
+        0
+      ],
+      "FDESC": [
+        "F"
+      ],
+      "LDESC": [
+        "L"
+      ],
+      "PSEUDO": [
+        "FOOBAR",
+        {
+          "Atom": "V-WALK"
+        }
+      ],
+      "CONTFCN": [
+        0
+      ],
+      "SIZE": [
+        0
+      ],
+      "CAPACITY": [
+        0
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT ROOMS (IN TO ROOMS))",
+    "Name": "ROOMS",
+    "Properties": {
+      "#IN": "TO"
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT INTNUM (IN GLOBAL-OBJECTS) (SYNONYM INTNUM) (DESC \"number\"))",
+    "Name": "INTNUM",
+    "Properties": {
+      "#IN": "GLOBAL-OBJECTS",
+      "SYNONYM": [
+        "INTNUM"
+      ],
+      "DESC": [
+        "number"
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT PSEUDO-OBJECT (DESC \"pseudo\") (ACTION ME-F))",
+    "Name": "PSEUDO-OBJECT",
+    "Properties": {
+      "DESC": [
+        "pseudo"
+      ],
+      "ACTION": [
+        {
+          "Atom": "ME-F"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT IT (IN GLOBAL-OBJECTS) (SYNONYM IT THAT) (DESC \"it\") (FLAGS VOWELBIT NARTICLEBIT NDESCBIT TOUCHBIT))",
+    "Name": "IT",
+    "Properties": {
+      "#IN": "GLOBAL-OBJECTS",
+      "SYNONYM": [
+        "IT",
+        "THAT"
+      ],
+      "DESC": [
+        "it"
+      ],
+      "FLAGS": [
+        "VOWELBIT",
+        "NARTICLEBIT",
+        "NDESCBIT",
+        "TOUCHBIT"
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT DUST (IN GLOBAL-OBJECTS) (DESC \"dust\") (SYNONYM DUST DIRT GRIME FILTH))",
+    "Name": "DUST",
+    "Properties": {
+      "#IN": "GLOBAL-OBJECTS",
+      "DESC": [
+        "dust"
+      ],
+      "SYNONYM": [
+        "DUST",
+        "DIRT",
+        "GRIME",
+        "FILTH"
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT GROUND (IN GLOBAL-OBJECTS) (DESC \"ground\") (SYNONYM FLOOR GROUND LAWN GRASS) (FLAGS NDESCBIT SURFACEBIT) (CAPACITY 30000) (ACTION GROUND-F))",
+    "Name": "GROUND",
+    "Properties": {
+      "#IN": "GLOBAL-OBJECTS",
+      "DESC": [
+        "ground"
+      ],
+      "SYNONYM": [
+        "FLOOR",
+        "GROUND",
+        "LAWN",
+        "GRASS"
+      ],
+      "FLAGS": [
+        "NDESCBIT",
+        "SURFACEBIT"
+      ],
+      "CAPACITY": [
+        30000
+      ],
+      "ACTION": [
+        {
+          "Atom": "GROUND-F"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT ROAD (IN GLOBAL-OBJECTS) (DESC \"road\") (SYNONYM ROAD STREET PATH) (ACTION HERE-F))",
+    "Name": "ROAD",
+    "Properties": {
+      "#IN": "GLOBAL-OBJECTS",
+      "DESC": [
+        "road"
+      ],
+      "SYNONYM": [
+        "ROAD",
+        "STREET",
+        "PATH"
+      ],
+      "ACTION": [
+        {
+          "Atom": "HERE-F"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT WALLS (IN GLOBAL-OBJECTS) (FLAGS NDESCBIT TOUCHBIT) (DESC \"wall\") (SYNONYM WALL WALLS) (ACTION WALLS-F))",
+    "Name": "WALLS",
+    "Properties": {
+      "#IN": "GLOBAL-OBJECTS",
+      "FLAGS": [
+        "NDESCBIT",
+        "TOUCHBIT"
+      ],
+      "DESC": [
+        "wall"
+      ],
+      "SYNONYM": [
+        "WALL",
+        "WALLS"
+      ],
+      "ACTION": [
+        {
+          "Atom": "WALLS-F"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT CEILING (IN GLOBAL-OBJECTS) (FLAGS NDESCBIT TOUCHBIT) (DESC \"ceiling\") (SYNONYM CEILING) (ACTION CEILING-F))",
+    "Name": "CEILING",
+    "Properties": {
+      "#IN": "GLOBAL-OBJECTS",
+      "FLAGS": [
+        "NDESCBIT",
+        "TOUCHBIT"
+      ],
+      "DESC": [
+        "ceiling"
+      ],
+      "SYNONYM": [
+        "CEILING"
+      ],
+      "ACTION": [
+        {
+          "Atom": "CEILING-F"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT HANDS (IN GLOBAL-OBJECTS) (DESC \"your hand\") (SYNONYM HAND HANDS) (ADJECTIVE MY BARE) (FLAGS NDESCBIT TOOLBIT TOUCHBIT NARTICLEBIT))",
+    "Name": "HANDS",
+    "Properties": {
+      "#IN": "GLOBAL-OBJECTS",
+      "DESC": [
+        "your hand"
+      ],
+      "SYNONYM": [
+        "HAND",
+        "HANDS"
+      ],
+      "ADJECTIVE": [
+        "MY",
+        "BARE"
+      ],
+      "FLAGS": [
+        "NDESCBIT",
+        "TOOLBIT",
+        "TOUCHBIT",
+        "NARTICLEBIT"
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT PROTAGONIST (IN HILLTOP) (SYNONYM PROTAG) (DESC \"yourself\") (FLAGS NDESCBIT NARTICLEBIT INVISIBLE) (ACTION 0) (SIZE 0))",
+    "Name": "PROTAGONIST",
+    "Properties": {
+      "#IN": "HILLTOP",
+      "SYNONYM": [
+        "PROTAG"
+      ],
+      "DESC": [
+        "yourself"
+      ],
+      "FLAGS": [
+        "NDESCBIT",
+        "NARTICLEBIT",
+        "INVISIBLE"
+      ],
+      "ACTION": [
+        0
+      ],
+      "SIZE": [
+        0
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT ME (IN GLOBAL-OBJECTS) (SYNONYM I ME MYSELF) (DESC \"yourself\") (FLAGS ACTORBIT TOUCHBIT NARTICLEBIT) (ACTION ME-F))",
+    "Name": "ME",
+    "Properties": {
+      "#IN": "GLOBAL-OBJECTS",
+      "SYNONYM": [
+        "I",
+        "ME",
+        "MYSELF"
+      ],
+      "DESC": [
+        "yourself"
+      ],
+      "FLAGS": [
+        "ACTORBIT",
+        "TOUCHBIT",
+        "NARTICLEBIT"
+      ],
+      "ACTION": [
+        {
+          "Atom": "ME-F"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT GLOBAL-ROOM (IN GLOBAL-OBJECTS) (DESC \"room\") (SYNONYM ROOM AREA PLACE) (ACTION GLOBAL-ROOM-F))",
+    "Name": "GLOBAL-ROOM",
+    "Properties": {
+      "#IN": "GLOBAL-OBJECTS",
+      "DESC": [
+        "room"
+      ],
+      "SYNONYM": [
+        "ROOM",
+        "AREA",
+        "PLACE"
+      ],
+      "ACTION": [
+        {
+          "Atom": "GLOBAL-ROOM-F"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT SIGN (IN LOCAL-GLOBALS) (DESC \"sign\") (SYNONYM SIGN SIGNPOST POST MESSAGE) (ADJECTIVE PAINT PAINTED HANDPAINTED NEON) (FLAGS NDESCBIT READBIT TRYTAKEBIT) (ACTION SIGN-F))",
+    "Name": "SIGN",
+    "Properties": {
+      "#IN": "LOCAL-GLOBALS",
+      "DESC": [
+        "sign"
+      ],
+      "SYNONYM": [
+        "SIGN",
+        "SIGNPOST",
+        "POST",
+        "MESSAGE"
+      ],
+      "ADJECTIVE": [
+        "PAINT",
+        "PAINTED",
+        "HANDPAINTED",
+        "NEON"
+      ],
+      "FLAGS": [
+        "NDESCBIT",
+        "READBIT",
+        "TRYTAKEBIT"
+      ],
+      "ACTION": [
+        {
+          "Atom": "SIGN-F"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT CORNER (IN LOCAL-GLOBALS) (DESC \"corner\") (SYNONYM CORNER) (FLAGS NDESCBIT) (ACTION CORNER-F))",
+    "Name": "CORNER",
+    "Properties": {
+      "#IN": "LOCAL-GLOBALS",
+      "DESC": [
+        "corner"
+      ],
+      "SYNONYM": [
+        "CORNER"
+      ],
+      "FLAGS": [
+        "NDESCBIT"
+      ],
+      "ACTION": [
+        {
+          "Atom": "CORNER-F"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT SOUND (IN GLOBAL-OBJECTS) (DESC \"sound\") (SYNONYM SOUND VOICE VOICES MUSIC) (ADJECTIVE NOISE NOISES) (FLAGS NDESCBIT NARTICLEBIT) (ACTION SOUND-F))",
+    "Name": "SOUND",
+    "Properties": {
+      "#IN": "GLOBAL-OBJECTS",
+      "DESC": [
+        "sound"
+      ],
+      "SYNONYM": [
+        "SOUND",
+        "VOICE",
+        "VOICES",
+        "MUSIC"
+      ],
+      "ADJECTIVE": [
+        "NOISE",
+        "NOISES"
+      ],
+      "FLAGS": [
+        "NDESCBIT",
+        "NARTICLEBIT"
+      ],
+      "ACTION": [
+        {
+          "Atom": "SOUND-F"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT HER (IN GLOBAL-OBJECTS) (SYNONYM SHE HER) (DESC \"her\") (FLAGS NARTICLEBIT))",
+    "Name": "HER",
+    "Properties": {
+      "#IN": "GLOBAL-OBJECTS",
+      "SYNONYM": [
+        "SHE",
+        "HER"
+      ],
+      "DESC": [
+        "her"
+      ],
+      "FLAGS": [
+        "NARTICLEBIT"
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT HIM (IN GLOBAL-OBJECTS) (SYNONYM HE HIM) (DESC \"him\") (FLAGS NARTICLEBIT))",
+    "Name": "HIM",
+    "Properties": {
+      "#IN": "GLOBAL-OBJECTS",
+      "SYNONYM": [
+        "HE",
+        "HIM"
+      ],
+      "DESC": [
+        "him"
+      ],
+      "FLAGS": [
+        "NARTICLEBIT"
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT THEM (IN GLOBAL-OBJECTS) (SYNONYM THEY THEM) (DESC \"them\") (FLAGS NARTICLEBIT))",
+    "Name": "THEM",
+    "Properties": {
+      "#IN": "GLOBAL-OBJECTS",
+      "SYNONYM": [
+        "THEY",
+        "THEM"
+      ],
+      "DESC": [
+        "them"
+      ],
+      "FLAGS": [
+        "NARTICLEBIT"
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT INTDIR (IN GLOBAL-OBJECTS) (DESC \"direction\") (SYNONYM DIRECTION) (ADJECTIVE NORTH EAST SOUTH WEST))",
+    "Name": "INTDIR",
+    "Properties": {
+      "#IN": "GLOBAL-OBJECTS",
+      "DESC": [
+        "direction"
+      ],
+      "SYNONYM": [
+        "DIRECTION"
+      ],
+      "ADJECTIVE": [
+        "NORTH",
+        "EAST",
+        "SOUTH",
+        "WEST"
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT CRISP (IN INSIDE-POST-OFFICE) (DESC \"Mr. Crisp\") (SYNONYM CRISP BOSS POSTMASTER MAN) (ADJECTIVE MEAN OLD MR MISTER) (FLAGS ACTORBIT NDESCBIT NARTICLEBIT) (ACTION CRISP-F))",
+    "Name": "CRISP",
+    "Properties": {
+      "#IN": "INSIDE-POST-OFFICE",
+      "DESC": [
+        "Mr. Crisp"
+      ],
+      "SYNONYM": [
+        "CRISP",
+        "BOSS",
+        "POSTMASTER",
+        "MAN"
+      ],
+      "ADJECTIVE": [
+        "MEAN",
+        "OLD",
+        "MR",
+        "MISTER"
+      ],
+      "FLAGS": [
+        "ACTORBIT",
+        "NDESCBIT",
+        "NARTICLEBIT"
+      ],
+      "ACTION": [
+        {
+          "Atom": "CRISP-F"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT GRAVEDIGGER (IN SPOOKY-COPSE) (DESC \"gravedigger\") (SYNONYM GRAVEDIGGER DIGGER MAN) (ADJECTIVE OLD GRAVE) (FLAGS ACTORBIT NDESCBIT) (ACTION GRAVEDIGGER-F))",
+    "Name": "GRAVEDIGGER",
+    "Properties": {
+      "#IN": "SPOOKY-COPSE",
+      "DESC": [
+        "gravedigger"
+      ],
+      "SYNONYM": [
+        "GRAVEDIGGER",
+        "DIGGER",
+        "MAN"
+      ],
+      "ADJECTIVE": [
+        "OLD",
+        "GRAVE"
+      ],
+      "FLAGS": [
+        "ACTORBIT",
+        "NDESCBIT"
+      ],
+      "ACTION": [
+        {
+          "Atom": "GRAVEDIGGER-F"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT MACGUFFIN (IN INSIDE-POLICE-STATION) (DESC \"Sgt. MacGuffin\") (SYNONYM MACGUFFIN MAN) (ADJECTIVE SGT SERGEANT SARGE) (FLAGS NDESCBIT ACTORBIT NARTICLEBIT) (ACTION MACGUFFIN-F))",
+    "Name": "MACGUFFIN",
+    "Properties": {
+      "#IN": "INSIDE-POLICE-STATION",
+      "DESC": [
+        "Sgt. MacGuffin"
+      ],
+      "SYNONYM": [
+        "MACGUFFIN",
+        "MAN"
+      ],
+      "ADJECTIVE": [
+        "SGT",
+        "SERGEANT",
+        "SARGE"
+      ],
+      "FLAGS": [
+        "NDESCBIT",
+        "ACTORBIT",
+        "NARTICLEBIT"
+      ],
+      "ACTION": [
+        {
+          "Atom": "MACGUFFIN-F"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT MISS-VOSS (IN ROTARY-SOUTH) (DESC \"Miss Voss\") (SYNONYM VOSS WOMAN LADY) (ADJECTIVE MISS MS) (FLAGS NDESCBIT ACTORBIT NARTICLEBIT) (ACTION VOSS-F) (CONTFCN IN-VOSS))",
+    "Name": "MISS-VOSS",
+    "Properties": {
+      "#IN": "ROTARY-SOUTH",
+      "DESC": [
+        "Miss Voss"
+      ],
+      "SYNONYM": [
+        "VOSS",
+        "WOMAN",
+        "LADY"
+      ],
+      "ADJECTIVE": [
+        "MISS",
+        "MS"
+      ],
+      "FLAGS": [
+        "NDESCBIT",
+        "ACTORBIT",
+        "NARTICLEBIT"
+      ],
+      "ACTION": [
+        {
+          "Atom": "VOSS-F"
+        }
+      ],
+      "CONTFCN": [
+        {
+          "Atom": "IN-VOSS"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT VOSS-THINGS (IN MISS-VOSS) (DESC \"Miss Voss's things\") (SYNONYM BOOKS BOOK PURSE THINGS) (FLAGS NDESCBIT TRYTAKEBIT NARTICLEBIT READBIT) (ACTION VOSS-THINGS-F))",
+    "Name": "VOSS-THINGS",
+    "Properties": {
+      "#IN": "MISS-VOSS",
+      "DESC": [
+        "Miss Voss's things"
+      ],
+      "SYNONYM": [
+        "BOOKS",
+        "BOOK",
+        "PURSE",
+        "THINGS"
+      ],
+      "FLAGS": [
+        "NDESCBIT",
+        "TRYTAKEBIT",
+        "NARTICLEBIT",
+        "READBIT"
+      ],
+      "ACTION": [
+        {
+          "Atom": "VOSS-THINGS-F"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT HORSE (IN WHARF) (DESC \"seahorse\") (SYNONYM SEAHORSE HORSE) (ADJECTIVE SEA LITTLE DYING) (FLAGS TAKEBIT) (ACTION HORSE-F) (DESCFCN DESCRIBE-HORSE) (VALUE 0) (SIZE 5))",
+    "Name": "HORSE",
+    "Properties": {
+      "#IN": "WHARF",
+      "DESC": [
+        "seahorse"
+      ],
+      "SYNONYM": [
+        "SEAHORSE",
+        "HORSE"
+      ],
+      "ADJECTIVE": [
+        "SEA",
+        "LITTLE",
+        "DYING"
+      ],
+      "FLAGS": [
+        "TAKEBIT"
+      ],
+      "ACTION": [
+        {
+          "Atom": "HORSE-F"
+        }
+      ],
+      "DESCFCN": [
+        {
+          "Atom": "DESCRIBE-HORSE"
+        }
+      ],
+      "VALUE": [
+        0
+      ],
+      "SIZE": [
+        5
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT DHORSE (DESC \"dead seahorse\") (SYNONYM SEAHORSE HORSE) (ADJECTIVE SEA DEAD LITTLE) (FLAGS TAKEBIT) (SIZE 1) (VALUE 0) (ACTION DHORSE-F))",
+    "Name": "DHORSE",
+    "Properties": {
+      "DESC": [
+        "dead seahorse"
+      ],
+      "SYNONYM": [
+        "SEAHORSE",
+        "HORSE"
+      ],
+      "ADJECTIVE": [
+        "SEA",
+        "DEAD",
+        "LITTLE"
+      ],
+      "FLAGS": [
+        "TAKEBIT"
+      ],
+      "SIZE": [
+        1
+      ],
+      "VALUE": [
+        0
+      ],
+      "ACTION": [
+        {
+          "Atom": "DHORSE-F"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT PELICAN (IN FESTERON-POINT) (DESC \"pelican\") (SYNONYM PELICAN BIRD) (ADJECTIVE SLEEPY FAT) (FLAGS NDESCBIT ACTORBIT TRYTAKEBIT RMUNGBIT) (ACTION PELICAN-F))",
+    "Name": "PELICAN",
+    "Properties": {
+      "#IN": "FESTERON-POINT",
+      "DESC": [
+        "pelican"
+      ],
+      "SYNONYM": [
+        "PELICAN",
+        "BIRD"
+      ],
+      "ADJECTIVE": [
+        "SLEEPY",
+        "FAT"
+      ],
+      "FLAGS": [
+        "NDESCBIT",
+        "ACTORBIT",
+        "TRYTAKEBIT",
+        "RMUNGBIT"
+      ],
+      "ACTION": [
+        {
+          "Atom": "PELICAN-F"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT OLD-WOMAN (DESC \"old woman\") (SYNONYM WOMAN LADY Y\\'GAEL GAIL) (ADJECTIVE OLD) (FLAGS NDESCBIT ACTORBIT VOWELBIT) (ACTION OLD-WOMAN-F))",
+    "Name": "OLD-WOMAN",
+    "Properties": {
+      "DESC": [
+        "old woman"
+      ],
+      "SYNONYM": [
+        "WOMAN",
+        "LADY",
+        "Y'GAEL",
+        "GAIL"
+      ],
+      "ADJECTIVE": [
+        "OLD"
+      ],
+      "FLAGS": [
+        "NDESCBIT",
+        "ACTORBIT",
+        "VOWELBIT"
+      ],
+      "ACTION": [
+        {
+          "Atom": "OLD-WOMAN-F"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT HILL (IN LOCAL-GLOBALS) (DESC \"hill\") (SYNONYM HILL HILLTOP) (ADJECTIVE POST OFFICE LOOKOUT) (FLAGS NDESCBIT) (ACTION HILL-F))",
+    "Name": "HILL",
+    "Properties": {
+      "#IN": "LOCAL-GLOBALS",
+      "DESC": [
+        "hill"
+      ],
+      "SYNONYM": [
+        "HILL",
+        "HILLTOP"
+      ],
+      "ADJECTIVE": [
+        "POST",
+        "OFFICE",
+        "LOOKOUT"
+      ],
+      "FLAGS": [
+        "NDESCBIT"
+      ],
+      "ACTION": [
+        {
+          "Atom": "HILL-F"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT POST-OFFICE (IN LOCAL-GLOBALS) (DESC \"Post Office\") (SYNONYM OFFICE BUILDING) (ADJECTIVE POST LITTLE BRICK) (FLAGS NDESCBIT) (ACTION POST-OFFICE-F))",
+    "Name": "POST-OFFICE",
+    "Properties": {
+      "#IN": "LOCAL-GLOBALS",
+      "DESC": [
+        "Post Office"
+      ],
+      "SYNONYM": [
+        "OFFICE",
+        "BUILDING"
+      ],
+      "ADJECTIVE": [
+        "POST",
+        "LITTLE",
+        "BRICK"
+      ],
+      "FLAGS": [
+        "NDESCBIT"
+      ],
+      "ACTION": [
+        {
+          "Atom": "POST-OFFICE-F"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT POST-DOOR (IN LOCAL-GLOBALS) (DESC \"Post Office door\") (SYNONYM DOOR ENTRANCE ENTRY LOCK) (ADJECTIVE FRONT POST OFFICE) (FLAGS DOORBIT OPENBIT NDESCBIT) (ACTION POST-DOOR-F))",
+    "Name": "POST-DOOR",
+    "Properties": {
+      "#IN": "LOCAL-GLOBALS",
+      "DESC": [
+        "Post Office door"
+      ],
+      "SYNONYM": [
+        "DOOR",
+        "ENTRANCE",
+        "ENTRY",
+        "LOCK"
+      ],
+      "ADJECTIVE": [
+        "FRONT",
+        "POST",
+        "OFFICE"
+      ],
+      "FLAGS": [
+        "DOORBIT",
+        "OPENBIT",
+        "NDESCBIT"
+      ],
+      "ACTION": [
+        {
+          "Atom": "POST-DOOR-F"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT COUNTER (IN INSIDE-POST-OFFICE) (DESC \"service counter\") (SYNONYM COUNTER) (ADJECTIVE SERVICE) (FLAGS SURFACEBIT NDESCBIT) (ACTION COUNTER-F) (CAPACITY 10))",
+    "Name": "COUNTER",
+    "Properties": {
+      "#IN": "INSIDE-POST-OFFICE",
+      "DESC": [
+        "service counter"
+      ],
+      "SYNONYM": [
+        "COUNTER"
+      ],
+      "ADJECTIVE": [
+        "SERVICE"
+      ],
+      "FLAGS": [
+        "SURFACEBIT",
+        "NDESCBIT"
+      ],
+      "ACTION": [
+        {
+          "Atom": "COUNTER-F"
+        }
+      ],
+      "CAPACITY": [
+        10
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT POSTER (IN INSIDE-POST-OFFICE) (DESC \"wanted poster\") (SYNONYM POSTER) (ADJECTIVE WANTED) (FLAGS NDESCBIT READBIT) (ACTION POSTER-F))",
+    "Name": "POSTER",
+    "Properties": {
+      "#IN": "INSIDE-POST-OFFICE",
+      "DESC": [
+        "wanted poster"
+      ],
+      "SYNONYM": [
+        "POSTER"
+      ],
+      "ADJECTIVE": [
+        "WANTED"
+      ],
+      "FLAGS": [
+        "NDESCBIT",
+        "READBIT"
+      ],
+      "ACTION": [
+        {
+          "Atom": "POSTER-F"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT SOUTH-GATE (IN LOCAL-GLOBALS) (DESC \"iron gate\") (SYNONYM GATE GATES LOCK BARS) (ADJECTIVE IRON TALL) (FLAGS NDESCBIT VOWELBIT DOORBIT OPENBIT) (ACTION SOUTH-GATE-F))",
+    "Name": "SOUTH-GATE",
+    "Properties": {
+      "#IN": "LOCAL-GLOBALS",
+      "DESC": [
+        "iron gate"
+      ],
+      "SYNONYM": [
+        "GATE",
+        "GATES",
+        "LOCK",
+        "BARS"
+      ],
+      "ADJECTIVE": [
+        "IRON",
+        "TALL"
+      ],
+      "FLAGS": [
+        "NDESCBIT",
+        "VOWELBIT",
+        "DOORBIT",
+        "OPENBIT"
+      ],
+      "ACTION": [
+        {
+          "Atom": "SOUTH-GATE-F"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT POODLE (IN OUTSIDE-COTTAGE) (DESC \"poodle\") (SYNONYM POODLE DOG MUTT) (ADJECTIVE TINY SMALL LITTLE MEAN) (FLAGS ACTORBIT TRYTAKEBIT RMUNGBIT) (DESCFCN DESCRIBE-POOCH) (ACTION CANINE-F))",
+    "Name": "POODLE",
+    "Properties": {
+      "#IN": "OUTSIDE-COTTAGE",
+      "DESC": [
+        "poodle"
+      ],
+      "SYNONYM": [
+        "POODLE",
+        "DOG",
+        "MUTT"
+      ],
+      "ADJECTIVE": [
+        "TINY",
+        "SMALL",
+        "LITTLE",
+        "MEAN"
+      ],
+      "FLAGS": [
+        "ACTORBIT",
+        "TRYTAKEBIT",
+        "RMUNGBIT"
+      ],
+      "DESCFCN": [
+        {
+          "Atom": "DESCRIBE-POOCH"
+        }
+      ],
+      "ACTION": [
+        {
+          "Atom": "CANINE-F"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT HELLHOUND (DESC \"hellhound\") (SYNONYM HELLHOUND HOUND DOG MUTT) (ADJECTIVE BIG LARGE HELL) (FLAGS ACTORBIT TRYTAKEBIT) (DESCFCN DESCRIBE-POOCH) (ACTION CANINE-F))",
+    "Name": "HELLHOUND",
+    "Properties": {
+      "DESC": [
+        "hellhound"
+      ],
+      "SYNONYM": [
+        "HELLHOUND",
+        "HOUND",
+        "DOG",
+        "MUTT"
+      ],
+      "ADJECTIVE": [
+        "BIG",
+        "LARGE",
+        "HELL"
+      ],
+      "FLAGS": [
+        "ACTORBIT",
+        "TRYTAKEBIT"
+      ],
+      "DESCFCN": [
+        {
+          "Atom": "DESCRIBE-POOCH"
+        }
+      ],
+      "ACTION": [
+        {
+          "Atom": "CANINE-F"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT ALEXIS (IN OUTSIDE-COTTAGE) (DESC \"Alexis\") (SYNONYM ALEXIS) (FLAGS ACTORBIT NDESCBIT NARTICLEBIT) (ACTION ALEXIS-F))",
+    "Name": "ALEXIS",
+    "Properties": {
+      "#IN": "OUTSIDE-COTTAGE",
+      "DESC": [
+        "Alexis"
+      ],
+      "SYNONYM": [
+        "ALEXIS"
+      ],
+      "FLAGS": [
+        "ACTORBIT",
+        "NDESCBIT",
+        "NARTICLEBIT"
+      ],
+      "ACTION": [
+        {
+          "Atom": "ALEXIS-F"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT BONE (IN OPEN-GRAVE) (DESC \"old bone\") (SYNONYM BONE) (ADJECTIVE OLD) (FLAGS TAKEBIT VOWELBIT RMUNGBIT) (VALUE 1) (SIZE 5))",
+    "Name": "BONE",
+    "Properties": {
+      "#IN": "OPEN-GRAVE",
+      "DESC": [
+        "old bone"
+      ],
+      "SYNONYM": [
+        "BONE"
+      ],
+      "ADJECTIVE": [
+        "OLD"
+      ],
+      "FLAGS": [
+        "TAKEBIT",
+        "VOWELBIT",
+        "RMUNGBIT"
+      ],
+      "VALUE": [
+        1
+      ],
+      "SIZE": [
+        5
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT COTTAGE-DOOR (IN LOCAL-GLOBALS) (DESC \"cottage door\") (SYNONYM DOOR ENTRANCE ENTRY LOCK) (ADJECTIVE COTTAGE) (FLAGS NDESCBIT DOORBIT) (ACTION COTTAGE-DOOR-F))",
+    "Name": "COTTAGE-DOOR",
+    "Properties": {
+      "#IN": "LOCAL-GLOBALS",
+      "DESC": [
+        "cottage door"
+      ],
+      "SYNONYM": [
+        "DOOR",
+        "ENTRANCE",
+        "ENTRY",
+        "LOCK"
+      ],
+      "ADJECTIVE": [
+        "COTTAGE"
+      ],
+      "FLAGS": [
+        "NDESCBIT",
+        "DOORBIT"
+      ],
+      "ACTION": [
+        {
+          "Atom": "COTTAGE-DOOR-F"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT COTTAGE (IN LOCAL-GLOBALS) (DESC \"cottage\") (SYNONYM COTTAGE HOUSE BUILDING HOME) (FLAGS NDESCBIT) (ACTION COTTAGE-F))",
+    "Name": "COTTAGE",
+    "Properties": {
+      "#IN": "LOCAL-GLOBALS",
+      "DESC": [
+        "cottage"
+      ],
+      "SYNONYM": [
+        "COTTAGE",
+        "HOUSE",
+        "BUILDING",
+        "HOME"
+      ],
+      "FLAGS": [
+        "NDESCBIT"
+      ],
+      "ACTION": [
+        {
+          "Atom": "COTTAGE-F"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT BOOKCASE (IN INSIDE-COTTAGE) (DESC \"bookcase\") (SYNONYM BOOKCASE CASE) (ADJECTIVE BOOK) (FLAGS SURFACEBIT) (CAPACITY 10) (ACTION BOOKCASE-F) (DESCFCN DESCRIBE-BOOKCASE))",
+    "Name": "BOOKCASE",
+    "Properties": {
+      "#IN": "INSIDE-COTTAGE",
+      "DESC": [
+        "bookcase"
+      ],
+      "SYNONYM": [
+        "BOOKCASE",
+        "CASE"
+      ],
+      "ADJECTIVE": [
+        "BOOK"
+      ],
+      "FLAGS": [
+        "SURFACEBIT"
+      ],
+      "CAPACITY": [
+        10
+      ],
+      "ACTION": [
+        {
+          "Atom": "BOOKCASE-F"
+        }
+      ],
+      "DESCFCN": [
+        {
+          "Atom": "DESCRIBE-BOOKCASE"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT LIBRARY-KEY (IN BOOKCASE) (DESC \"steel key\") (SYNONYM KEY) (ADJECTIVE STEEL) (FLAGS TAKEBIT READBIT) (VALUE 3) (SIZE 1) (ACTION LIBRARY-KEY-F))",
+    "Name": "LIBRARY-KEY",
+    "Properties": {
+      "#IN": "BOOKCASE",
+      "DESC": [
+        "steel key"
+      ],
+      "SYNONYM": [
+        "KEY"
+      ],
+      "ADJECTIVE": [
+        "STEEL"
+      ],
+      "FLAGS": [
+        "TAKEBIT",
+        "READBIT"
+      ],
+      "VALUE": [
+        3
+      ],
+      "SIZE": [
+        1
+      ],
+      "ACTION": [
+        {
+          "Atom": "LIBRARY-KEY-F"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT SCRAWL (IN INSIDE-COTTAGE) (DESC \"scrawled message\") (SYNONYM MESSAGE) (ADJECTIVE SCRAWL DUST) (FLAGS NDESCBIT READBIT) (ACTION SCRAWL-F))",
+    "Name": "SCRAWL",
+    "Properties": {
+      "#IN": "INSIDE-COTTAGE",
+      "DESC": [
+        "scrawled message"
+      ],
+      "SYNONYM": [
+        "MESSAGE"
+      ],
+      "ADJECTIVE": [
+        "SCRAWL",
+        "DUST"
+      ],
+      "FLAGS": [
+        "NDESCBIT",
+        "READBIT"
+      ],
+      "ACTION": [
+        {
+          "Atom": "SCRAWL-F"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT BOOKS (IN INSIDE-COTTAGE) (DESC \"books and photographs\") (SYNONYM BOOK BOOKS PHOTOS PHOTOGRAPHS) (ADJECTIVE TIMEWORN DUSTY FADED) (FLAGS NDESCBIT READBIT TRYTAKEBIT) (ACTION BOOKS-F))",
+    "Name": "BOOKS",
+    "Properties": {
+      "#IN": "INSIDE-COTTAGE",
+      "DESC": [
+        "books and photographs"
+      ],
+      "SYNONYM": [
+        "BOOK",
+        "BOOKS",
+        "PHOTOS",
+        "PHOTOGRAPHS"
+      ],
+      "ADJECTIVE": [
+        "TIMEWORN",
+        "DUSTY",
+        "FADED"
+      ],
+      "FLAGS": [
+        "NDESCBIT",
+        "READBIT",
+        "TRYTAKEBIT"
+      ],
+      "ACTION": [
+        {
+          "Atom": "BOOKS-F"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT MOVIE-THEATER (IN LOCAL-GLOBALS) (DESC \"movie theater\") (SYNONYM THEATER THEATRE CINEMA BUILDING) (ADJECTIVE MOVIE SLEAZY CHARMING PALACE) (FLAGS NDESCBIT) (ACTION MOVIE-THEATER-F))",
+    "Name": "MOVIE-THEATER",
+    "Properties": {
+      "#IN": "LOCAL-GLOBALS",
+      "DESC": [
+        "movie theater"
+      ],
+      "SYNONYM": [
+        "THEATER",
+        "THEATRE",
+        "CINEMA",
+        "BUILDING"
+      ],
+      "ADJECTIVE": [
+        "MOVIE",
+        "SLEAZY",
+        "CHARMING",
+        "PALACE"
+      ],
+      "FLAGS": [
+        "NDESCBIT"
+      ],
+      "ACTION": [
+        {
+          "Atom": "MOVIE-THEATER-F"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT MARQUEE (IN ROTARY-EAST) (DESC \"marquee\") (SYNONYM MARQUEE) (FLAGS READBIT NDESCBIT) (ACTION MARQUEE-F))",
+    "Name": "MARQUEE",
+    "Properties": {
+      "#IN": "ROTARY-EAST",
+      "DESC": [
+        "marquee"
+      ],
+      "SYNONYM": [
+        "MARQUEE"
+      ],
+      "FLAGS": [
+        "READBIT",
+        "NDESCBIT"
+      ],
+      "ACTION": [
+        {
+          "Atom": "MARQUEE-F"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT ENTRANCE (IN LOCAL-GLOBALS) (DESC \"entrance\") (SYNONYM ENTRANCE ENTRY DOOR LOCK) (FLAGS DOORBIT LOCKEDBIT NDESCBIT) (ACTION ENTRANCE-F))",
+    "Name": "ENTRANCE",
+    "Properties": {
+      "#IN": "LOCAL-GLOBALS",
+      "DESC": [
+        "entrance"
+      ],
+      "SYNONYM": [
+        "ENTRANCE",
+        "ENTRY",
+        "DOOR",
+        "LOCK"
+      ],
+      "FLAGS": [
+        "DOORBIT",
+        "LOCKEDBIT",
+        "NDESCBIT"
+      ],
+      "ACTION": [
+        {
+          "Atom": "ENTRANCE-F"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT TICKET (DESC \"ticket\") (SYNONYM TICKET STUB) (ADJECTIVE MOVIE) (FLAGS NDESCBIT TAKEBIT RMUNGBIT) (VALUE 0) (SIZE 1) (ACTION TICKET-F))",
+    "Name": "TICKET",
+    "Properties": {
+      "DESC": [
+        "ticket"
+      ],
+      "SYNONYM": [
+        "TICKET",
+        "STUB"
+      ],
+      "ADJECTIVE": [
+        "MOVIE"
+      ],
+      "FLAGS": [
+        "NDESCBIT",
+        "TAKEBIT",
+        "RMUNGBIT"
+      ],
+      "VALUE": [
+        0
+      ],
+      "SIZE": [
+        1
+      ],
+      "ACTION": [
+        {
+          "Atom": "TICKET-F"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT GLOBBY (IN LOCAL-GLOBALS) (DESC \"lobby\") (SYNONYM LOBBY) (FLAGS NDESCBIT TOUCHBIT) (ACTION GLOBBY-F))",
+    "Name": "GLOBBY",
+    "Properties": {
+      "#IN": "LOCAL-GLOBALS",
+      "DESC": [
+        "lobby"
+      ],
+      "SYNONYM": [
+        "LOBBY"
+      ],
+      "FLAGS": [
+        "NDESCBIT",
+        "TOUCHBIT"
+      ],
+      "ACTION": [
+        {
+          "Atom": "GLOBBY-F"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT CARTON (IN LOBBY) (DESC \"carton\") (SYNONYM CARTON BOX) (ADJECTIVE CARDBOARD) (FLAGS READBIT TRYTAKEBIT NDESCBIT CONTBIT OPENBIT) (CAPACITY 10) (ACTION CARTON-F))",
+    "Name": "CARTON",
+    "Properties": {
+      "#IN": "LOBBY",
+      "DESC": [
+        "carton"
+      ],
+      "SYNONYM": [
+        "CARTON",
+        "BOX"
+      ],
+      "ADJECTIVE": [
+        "CARDBOARD"
+      ],
+      "FLAGS": [
+        "READBIT",
+        "TRYTAKEBIT",
+        "NDESCBIT",
+        "CONTBIT",
+        "OPENBIT"
+      ],
+      "CAPACITY": [
+        10
+      ],
+      "ACTION": [
+        {
+          "Atom": "CARTON-F"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT SCHEDULE (IN ROTARY-EAST) (DESC \"schedule\") (SYNONYM SCHEDULE LIST SHOWTIMES PRICES) (ADJECTIVE ADMISSION TIMES) (FLAGS NDESCBIT READBIT) (ACTION SCHEDULE-F))",
+    "Name": "SCHEDULE",
+    "Properties": {
+      "#IN": "ROTARY-EAST",
+      "DESC": [
+        "schedule"
+      ],
+      "SYNONYM": [
+        "SCHEDULE",
+        "LIST",
+        "SHOWTIMES",
+        "PRICES"
+      ],
+      "ADJECTIVE": [
+        "ADMISSION",
+        "TIMES"
+      ],
+      "FLAGS": [
+        "NDESCBIT",
+        "READBIT"
+      ],
+      "ACTION": [
+        {
+          "Atom": "SCHEDULE-F"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT SEAT (IN INSIDE-THEATER) (DESC \"seat\") (SYNONYM SEAT SEATS CHAIR CHAIRS) (FLAGS NDESCBIT SURFACEBIT) (CAPACITY 10) (ACTION SEAT-F))",
+    "Name": "SEAT",
+    "Properties": {
+      "#IN": "INSIDE-THEATER",
+      "DESC": [
+        "seat"
+      ],
+      "SYNONYM": [
+        "SEAT",
+        "SEATS",
+        "CHAIR",
+        "CHAIRS"
+      ],
+      "FLAGS": [
+        "NDESCBIT",
+        "SURFACEBIT"
+      ],
+      "CAPACITY": [
+        10
+      ],
+      "ACTION": [
+        {
+          "Atom": "SEAT-F"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT AISLE (IN LOCAL-GLOBALS) (DESC \"aisle\") (SYNONYM AISLE AISLES) (FLAGS NDESCBIT) (ACTION AISLE-F))",
+    "Name": "AISLE",
+    "Properties": {
+      "#IN": "LOCAL-GLOBALS",
+      "DESC": [
+        "aisle"
+      ],
+      "SYNONYM": [
+        "AISLE",
+        "AISLES"
+      ],
+      "FLAGS": [
+        "NDESCBIT"
+      ],
+      "ACTION": [
+        {
+          "Atom": "AISLE-F"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT GLASSES (DESC \"pair of 3D glasses\") (SYNONYM GLASSES SPECTACLES SUNGLASSES PAIR) (ADJECTIVE 3D CHEAP) (FLAGS TAKEBIT WEARBIT RMUNGBIT) (VALUE 3) (SIZE 3) (ACTION GLASSES-F))",
+    "Name": "GLASSES",
+    "Properties": {
+      "DESC": [
+        "pair of 3D glasses"
+      ],
+      "SYNONYM": [
+        "GLASSES",
+        "SPECTACLES",
+        "SUNGLASSES",
+        "PAIR"
+      ],
+      "ADJECTIVE": [
+        "3D",
+        "CHEAP"
+      ],
+      "FLAGS": [
+        "TAKEBIT",
+        "WEARBIT",
+        "RMUNGBIT"
+      ],
+      "VALUE": [
+        3
+      ],
+      "SIZE": [
+        3
+      ],
+      "ACTION": [
+        {
+          "Atom": "GLASSES-F"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT SCREEN (IN LOCAL-GLOBALS) (DESC \"movie screen\") (SYNONYM SCREEN FILM SHOW MOVIE) (ADJECTIVE SOUNDTRACK IMAGE PICTUR) (FLAGS NDESCBIT) (ACTION SCREEN-F))",
+    "Name": "SCREEN",
+    "Properties": {
+      "#IN": "LOCAL-GLOBALS",
+      "DESC": [
+        "movie screen"
+      ],
+      "SYNONYM": [
+        "SCREEN",
+        "FILM",
+        "SHOW",
+        "MOVIE"
+      ],
+      "ADJECTIVE": [
+        "SOUNDTRACK",
+        "IMAGE",
+        "PICTUR"
+      ],
+      "FLAGS": [
+        "NDESCBIT"
+      ],
+      "ACTION": [
+        {
+          "Atom": "SCREEN-F"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT FOUNTAIN (IN PARK) (DESC \"fountain\") (SYNONYM FOUNTAIN WATER) (ADJECTIVE MARBLE SPARKLING GREASY) (FLAGS NDESCBIT CONTBIT OPENBIT) (CAPACITY 50) (ACTION FOUNTAIN-F) (CONTFCN IN-FOUNTAIN))",
+    "Name": "FOUNTAIN",
+    "Properties": {
+      "#IN": "PARK",
+      "DESC": [
+        "fountain"
+      ],
+      "SYNONYM": [
+        "FOUNTAIN",
+        "WATER"
+      ],
+      "ADJECTIVE": [
+        "MARBLE",
+        "SPARKLING",
+        "GREASY"
+      ],
+      "FLAGS": [
+        "NDESCBIT",
+        "CONTBIT",
+        "OPENBIT"
+      ],
+      "CAPACITY": [
+        50
+      ],
+      "ACTION": [
+        {
+          "Atom": "FOUNTAIN-F"
+        }
+      ],
+      "CONTFCN": [
+        {
+          "Atom": "IN-FOUNTAIN"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT COIN (IN FOUNTAIN) (DESC \"gold coin\") (FDESC 0) (SYNONYM COIN GOLD MONEY) (ADJECTIVE GOLD PROFILE) (FLAGS NDESCBIT TAKEBIT) (ACTION COIN-F) (VALUE 1) (SIZE 1))",
+    "Name": "COIN",
+    "Properties": {
+      "#IN": "FOUNTAIN",
+      "DESC": [
+        "gold coin"
+      ],
+      "FDESC": [
+        0
+      ],
+      "SYNONYM": [
+        "COIN",
+        "GOLD",
+        "MONEY"
+      ],
+      "ADJECTIVE": [
+        "GOLD",
+        "PROFILE"
+      ],
+      "FLAGS": [
+        "NDESCBIT",
+        "TAKEBIT"
+      ],
+      "ACTION": [
+        {
+          "Atom": "COIN-F"
+        }
+      ],
+      "VALUE": [
+        1
+      ],
+      "SIZE": [
+        1
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT GOLDFISH (IN FOUNTAIN) (DESC \"goldfish\") (SYNONYM GOLDFISH FISH) (ADJECTIVE GOLD) (FLAGS NDESCBIT TRYTAKEBIT ACTORBIT) (ACTION GFISH-F))",
+    "Name": "GOLDFISH",
+    "Properties": {
+      "#IN": "FOUNTAIN",
+      "DESC": [
+        "goldfish"
+      ],
+      "SYNONYM": [
+        "GOLDFISH",
+        "FISH"
+      ],
+      "ADJECTIVE": [
+        "GOLD"
+      ],
+      "FLAGS": [
+        "NDESCBIT",
+        "TRYTAKEBIT",
+        "ACTORBIT"
+      ],
+      "ACTION": [
+        {
+          "Atom": "GFISH-F"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT PIRANHA (DESC \"piranha\") (SYNONYM PIRANHA FISH) (FLAGS NDESCBIT TRYTAKEBIT ACTORBIT RMUNGBIT) (ACTION GFISH-F))",
+    "Name": "PIRANHA",
+    "Properties": {
+      "DESC": [
+        "piranha"
+      ],
+      "SYNONYM": [
+        "PIRANHA",
+        "FISH"
+      ],
+      "FLAGS": [
+        "NDESCBIT",
+        "TRYTAKEBIT",
+        "ACTORBIT",
+        "RMUNGBIT"
+      ],
+      "ACTION": [
+        {
+          "Atom": "GFISH-F"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT STATUE (IN PARK) (DESC \"statue\") (SYNONYM STATUE COMMEMORATION FATHERS WOMAN) (ADJECTIVE HEROIC FOUNDING) (FLAGS TRYTAKEBIT NDESCBIT) (ACTION STATUE-F))",
+    "Name": "STATUE",
+    "Properties": {
+      "#IN": "PARK",
+      "DESC": [
+        "statue"
+      ],
+      "SYNONYM": [
+        "STATUE",
+        "COMMEMORATION",
+        "FATHERS",
+        "WOMAN"
+      ],
+      "ADJECTIVE": [
+        "HEROIC",
+        "FOUNDING"
+      ],
+      "FLAGS": [
+        "TRYTAKEBIT",
+        "NDESCBIT"
+      ],
+      "ACTION": [
+        {
+          "Atom": "STATUE-F"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT FESTERON (IN GLOBAL-OBJECTS) (DESC \"village\") (SYNONYM TOWN VILLAGE CENTER) (ADJECTIVE FESTERON WITCHVILLE) (FLAGS NDESCBIT) (ACTION FESTERON-F))",
+    "Name": "FESTERON",
+    "Properties": {
+      "#IN": "GLOBAL-OBJECTS",
+      "DESC": [
+        "village"
+      ],
+      "SYNONYM": [
+        "TOWN",
+        "VILLAGE",
+        "CENTER"
+      ],
+      "ADJECTIVE": [
+        "FESTERON",
+        "WITCHVILLE"
+      ],
+      "FLAGS": [
+        "NDESCBIT"
+      ],
+      "ACTION": [
+        {
+          "Atom": "FESTERON-F"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT POLICE-STATION (IN LOCAL-GLOBALS) (DESC \"police station\") (SYNONYM STATIO HEADQU OFFICE BUILDING) (ADJECTIVE POLICE FRONT) (FLAGS NDESCBIT) (ACTION POLICE-STATION-F))",
+    "Name": "POLICE-STATION",
+    "Properties": {
+      "#IN": "LOCAL-GLOBALS",
+      "DESC": [
+        "police station"
+      ],
+      "SYNONYM": [
+        "STATIO",
+        "HEADQU",
+        "OFFICE",
+        "BUILDING"
+      ],
+      "ADJECTIVE": [
+        "POLICE",
+        "FRONT"
+      ],
+      "FLAGS": [
+        "NDESCBIT"
+      ],
+      "ACTION": [
+        {
+          "Atom": "POLICE-STATION-F"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT POLICE-DOOR (IN LOCAL-GLOBALS) (DESC \"police station door\") (SYNONYM DOOR ENTRANCE ENTRY LOCK) (ADJECTIVE POLICE STATIO) (FLAGS NDESCBIT OPENBIT DOORBIT READBIT) (ACTION POLICE-DOOR-F))",
+    "Name": "POLICE-DOOR",
+    "Properties": {
+      "#IN": "LOCAL-GLOBALS",
+      "DESC": [
+        "police station door"
+      ],
+      "SYNONYM": [
+        "DOOR",
+        "ENTRANCE",
+        "ENTRY",
+        "LOCK"
+      ],
+      "ADJECTIVE": [
+        "POLICE",
+        "STATIO"
+      ],
+      "FLAGS": [
+        "NDESCBIT",
+        "OPENBIT",
+        "DOORBIT",
+        "READBIT"
+      ],
+      "ACTION": [
+        {
+          "Atom": "POLICE-DOOR-F"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT DESK (IN INSIDE-POLICE-STATION) (DESC \"desk\") (SYNONYM DESK DRAWER) (ADJECTIVE INTIMIDATINGLY TALL) (FLAGS NDESCBIT SURFACEBIT) (CAPACITY 25) (ACTION DESK-F))",
+    "Name": "DESK",
+    "Properties": {
+      "#IN": "INSIDE-POLICE-STATION",
+      "DESC": [
+        "desk"
+      ],
+      "SYNONYM": [
+        "DESK",
+        "DRAWER"
+      ],
+      "ADJECTIVE": [
+        "INTIMIDATINGLY",
+        "TALL"
+      ],
+      "FLAGS": [
+        "NDESCBIT",
+        "SURFACEBIT"
+      ],
+      "CAPACITY": [
+        25
+      ],
+      "ACTION": [
+        {
+          "Atom": "DESK-F"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT RADIO (IN INSIDE-POLICE-STATION) (DESC \"police radio\") (SYNONYM RADIO) (ADJECTIVE POLICE) (FLAGS NDESCBIT) (ACTION RADIO-F))",
+    "Name": "RADIO",
+    "Properties": {
+      "#IN": "INSIDE-POLICE-STATION",
+      "DESC": [
+        "police radio"
+      ],
+      "SYNONYM": [
+        "RADIO"
+      ],
+      "ADJECTIVE": [
+        "POLICE"
+      ],
+      "FLAGS": [
+        "NDESCBIT"
+      ],
+      "ACTION": [
+        {
+          "Atom": "RADIO-F"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT CHOCOLATE (IN DESK) (DESC \"piece of chocolate\") (SYNONYM CHOCOLATE PIECE CANDY) (ADJECTIVE CHOCOLATE CREAMY DELICIOUS) (FLAGS NDESCBIT TAKEBIT) (VALUE 0) (SIZE 1) (ACTION CHOCOLATE-F))",
+    "Name": "CHOCOLATE",
+    "Properties": {
+      "#IN": "DESK",
+      "DESC": [
+        "piece of chocolate"
+      ],
+      "SYNONYM": [
+        "CHOCOLATE",
+        "PIECE",
+        "CANDY"
+      ],
+      "ADJECTIVE": [
+        "CHOCOLATE",
+        "CREAMY",
+        "DELICIOUS"
+      ],
+      "FLAGS": [
+        "NDESCBIT",
+        "TAKEBIT"
+      ],
+      "VALUE": [
+        0
+      ],
+      "SIZE": [
+        1
+      ],
+      "ACTION": [
+        {
+          "Atom": "CHOCOLATE-F"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT LIBRARY (IN LOCAL-GLOBALS) (DESC \"library\") (SYNONYM LIBRARY BUILDING) (ADJECTIVE FREE PUBLIC) (FLAGS NDESCBIT) (ACTION LIBRARY-F))",
+    "Name": "LIBRARY",
+    "Properties": {
+      "#IN": "LOCAL-GLOBALS",
+      "DESC": [
+        "library"
+      ],
+      "SYNONYM": [
+        "LIBRARY",
+        "BUILDING"
+      ],
+      "ADJECTIVE": [
+        "FREE",
+        "PUBLIC"
+      ],
+      "FLAGS": [
+        "NDESCBIT"
+      ],
+      "ACTION": [
+        {
+          "Atom": "LIBRARY-F"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT LIBRARY-DOOR (IN LOCAL-GLOBALS) (DESC \"library door\") (SYNONYM DOOR ENTRANCE ENTRY LOCK) (ADJECTIVE LIBRARY) (FLAGS DOORBIT LOCKEDBIT NDESCBIT RMUNGBIT) (ACTION LIBRARY-DOOR-F))",
+    "Name": "LIBRARY-DOOR",
+    "Properties": {
+      "#IN": "LOCAL-GLOBALS",
+      "DESC": [
+        "library door"
+      ],
+      "SYNONYM": [
+        "DOOR",
+        "ENTRANCE",
+        "ENTRY",
+        "LOCK"
+      ],
+      "ADJECTIVE": [
+        "LIBRARY"
+      ],
+      "FLAGS": [
+        "DOORBIT",
+        "LOCKEDBIT",
+        "NDESCBIT",
+        "RMUNGBIT"
+      ],
+      "ACTION": [
+        {
+          "Atom": "LIBRARY-DOOR-F"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT VIOLET-NOTE (DESC \"violet note\") (SYNONYM NOTE PAPER SLIP) (ADJECTIVE VIOLET PURPLE PALE) (FLAGS TAKEBIT READBIT RMUNGBIT) (VALUE 3) (SIZE 1) (ACTION VIOLET-NOTE-F))",
+    "Name": "VIOLET-NOTE",
+    "Properties": {
+      "DESC": [
+        "violet note"
+      ],
+      "SYNONYM": [
+        "NOTE",
+        "PAPER",
+        "SLIP"
+      ],
+      "ADJECTIVE": [
+        "VIOLET",
+        "PURPLE",
+        "PALE"
+      ],
+      "FLAGS": [
+        "TAKEBIT",
+        "READBIT",
+        "RMUNGBIT"
+      ],
+      "VALUE": [
+        3
+      ],
+      "SIZE": [
+        1
+      ],
+      "ACTION": [
+        {
+          "Atom": "VIOLET-NOTE-F"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT CDESK (IN CIRCULATION-DESK) (DESC \"circulation desk\") (SYNONYM DESK) (ADJECTIVE CIRCUL LARGE) (FLAGS NDESCBIT DOORBIT LOCKEDBIT SURFACEBIT) (CAPACITY 25) (ACTION CDESK-F))",
+    "Name": "CDESK",
+    "Properties": {
+      "#IN": "CIRCULATION-DESK",
+      "DESC": [
+        "circulation desk"
+      ],
+      "SYNONYM": [
+        "DESK"
+      ],
+      "ADJECTIVE": [
+        "CIRCUL",
+        "LARGE"
+      ],
+      "FLAGS": [
+        "NDESCBIT",
+        "DOORBIT",
+        "LOCKEDBIT",
+        "SURFACEBIT"
+      ],
+      "CAPACITY": [
+        25
+      ],
+      "ACTION": [
+        {
+          "Atom": "CDESK-F"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT GMUSEUM (IN LOCAL-GLOBALS) (DESC \"museum\") (SYNONYM MUSEUM HALL) (ADJECTIVE DARK) (FLAGS NDESCBIT) (ACTION GMUSEUM-F))",
+    "Name": "GMUSEUM",
+    "Properties": {
+      "#IN": "LOCAL-GLOBALS",
+      "DESC": [
+        "museum"
+      ],
+      "SYNONYM": [
+        "MUSEUM",
+        "HALL"
+      ],
+      "ADJECTIVE": [
+        "DARK"
+      ],
+      "FLAGS": [
+        "NDESCBIT"
+      ],
+      "ACTION": [
+        {
+          "Atom": "GMUSEUM-F"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT CLUTTER (IN CIRCULATION-DESK) (DESC \"clutter of books\") (SYNONYM BOOKS BOOK) (ADJECTIVE CLUTTER PILE) (FLAGS NDESCBIT READBIT TRYTAKEBIT) (ACTION CLUTTER-F))",
+    "Name": "CLUTTER",
+    "Properties": {
+      "#IN": "CIRCULATION-DESK",
+      "DESC": [
+        "clutter of books"
+      ],
+      "SYNONYM": [
+        "BOOKS",
+        "BOOK"
+      ],
+      "ADJECTIVE": [
+        "CLUTTER",
+        "PILE"
+      ],
+      "FLAGS": [
+        "NDESCBIT",
+        "READBIT",
+        "TRYTAKEBIT"
+      ],
+      "ACTION": [
+        {
+          "Atom": "CLUTTER-F"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT EXHIBITS (IN MUSEUM) (DESC \"exhibits\") (SYNONYM EXHIBIT DISPLAY) (FLAGS NDESCBIT) (ACTION EXHIBITS-F))",
+    "Name": "EXHIBITS",
+    "Properties": {
+      "#IN": "MUSEUM",
+      "DESC": [
+        "exhibits"
+      ],
+      "SYNONYM": [
+        "EXHIBIT",
+        "DISPLAY"
+      ],
+      "FLAGS": [
+        "NDESCBIT"
+      ],
+      "ACTION": [
+        {
+          "Atom": "EXHIBITS-F"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT FOSSIL (DESC \"fossil exhibit\") (SYNONYM FOSSIL MAILBOX BOXES EXHIBIT) (ADJECTIVE LARGE SMALL RIBS BONES) (FLAGS NDESCBIT CONTBIT TRANSBIT OPENBIT TRYTAKEBIT) (CAPACITY 100) (CONTFCN IN-FOSSIL) (ACTION FOSSIL-F))",
+    "Name": "FOSSIL",
+    "Properties": {
+      "DESC": [
+        "fossil exhibit"
+      ],
+      "SYNONYM": [
+        "FOSSIL",
+        "MAILBOX",
+        "BOXES",
+        "EXHIBIT"
+      ],
+      "ADJECTIVE": [
+        "LARGE",
+        "SMALL",
+        "RIBS",
+        "BONES"
+      ],
+      "FLAGS": [
+        "NDESCBIT",
+        "CONTBIT",
+        "TRANSBIT",
+        "OPENBIT",
+        "TRYTAKEBIT"
+      ],
+      "CAPACITY": [
+        100
+      ],
+      "CONTFCN": [
+        {
+          "Atom": "IN-FOSSIL"
+        }
+      ],
+      "ACTION": [
+        {
+          "Atom": "FOSSIL-F"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT DCASE (IN MUSEUM) (DESC \"display case\") (SYNONYM CASE) (ADJECTIVE DISPLAY GLASS) (FLAGS NDESCBIT CONTBIT LOCKEDBIT TRANSBIT TRYTAKEBIT) (CAPACITY 10) (ACTION DCASE-F) (CONTFCN IN-DCASE))",
+    "Name": "DCASE",
+    "Properties": {
+      "#IN": "MUSEUM",
+      "DESC": [
+        "display case"
+      ],
+      "SYNONYM": [
+        "CASE"
+      ],
+      "ADJECTIVE": [
+        "DISPLAY",
+        "GLASS"
+      ],
+      "FLAGS": [
+        "NDESCBIT",
+        "CONTBIT",
+        "LOCKEDBIT",
+        "TRANSBIT",
+        "TRYTAKEBIT"
+      ],
+      "CAPACITY": [
+        10
+      ],
+      "ACTION": [
+        {
+          "Atom": "DCASE-F"
+        }
+      ],
+      "CONTFCN": [
+        {
+          "Atom": "IN-DCASE"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT SCULPTURE (IN DCASE) (DESC \"sculpture\") (SYNONYM SCULPTURE HOLE CHAOS) (ADJECTIVE BLACK MARBLE FOREHEAD HEAD) (FLAGS NDESCBIT TAKEBIT SURFACEBIT CONTBIT OPENBIT) (SIZE 5) (CAPACITY 1) (VALUE 0) (ACTION SCULPTURE-F))",
+    "Name": "SCULPTURE",
+    "Properties": {
+      "#IN": "DCASE",
+      "DESC": [
+        "sculpture"
+      ],
+      "SYNONYM": [
+        "SCULPTURE",
+        "HOLE",
+        "CHAOS"
+      ],
+      "ADJECTIVE": [
+        "BLACK",
+        "MARBLE",
+        "FOREHEAD",
+        "HEAD"
+      ],
+      "FLAGS": [
+        "NDESCBIT",
+        "TAKEBIT",
+        "SURFACEBIT",
+        "CONTBIT",
+        "OPENBIT"
+      ],
+      "SIZE": [
+        5
+      ],
+      "CAPACITY": [
+        1
+      ],
+      "VALUE": [
+        0
+      ],
+      "ACTION": [
+        {
+          "Atom": "SCULPTURE-F"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT EVIL-ONE (DESC \"old woman\") (SYNONYM ONE WOMAN LADY BEING) (ADJECTIVE EVIL OLD WITCH) (FLAGS VOWELBIT NDESCBIT ACTORBIT) (ACTION EVIL-ONE-F))",
+    "Name": "EVIL-ONE",
+    "Properties": {
+      "DESC": [
+        "old woman"
+      ],
+      "SYNONYM": [
+        "ONE",
+        "WOMAN",
+        "LADY",
+        "BEING"
+      ],
+      "ADJECTIVE": [
+        "EVIL",
+        "OLD",
+        "WITCH"
+      ],
+      "FLAGS": [
+        "VOWELBIT",
+        "NDESCBIT",
+        "ACTORBIT"
+      ],
+      "ACTION": [
+        {
+          "Atom": "EVIL-ONE-F"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT SPEAKER (DESC \"speaker\") (SYNONYM SPEAKER LOUDSPEAKER) (FLAGS NDESCBIT) (ACTION SPEAKER-F))",
+    "Name": "SPEAKER",
+    "Properties": {
+      "DESC": [
+        "speaker"
+      ],
+      "SYNONYM": [
+        "SPEAKER",
+        "LOUDSPEAKER"
+      ],
+      "FLAGS": [
+        "NDESCBIT"
+      ],
+      "ACTION": [
+        {
+          "Atom": "SPEAKER-F"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT CANDLE (IN INSIDE-CHURCH) (DESC \"candle\") (FDESC \"A lighted candle is visible in a nook near the exit.\") (SYNONYM CANDLE LIGHT) (ADJECTIVE LIGHTED LIT) (FLAGS TAKEBIT ONBIT FLAMEBIT) (ACTION CANDLE-F) (VALUE 0) (SIZE 5))",
+    "Name": "CANDLE",
+    "Properties": {
+      "#IN": "INSIDE-CHURCH",
+      "DESC": [
+        "candle"
+      ],
+      "FDESC": [
+        "A lighted candle is visible in a nook near the exit."
+      ],
+      "SYNONYM": [
+        "CANDLE",
+        "LIGHT"
+      ],
+      "ADJECTIVE": [
+        "LIGHTED",
+        "LIT"
+      ],
+      "FLAGS": [
+        "TAKEBIT",
+        "ONBIT",
+        "FLAMEBIT"
+      ],
+      "ACTION": [
+        {
+          "Atom": "CANDLE-F"
+        }
+      ],
+      "VALUE": [
+        0
+      ],
+      "SIZE": [
+        5
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT CHURCH-DOOR (IN LOCAL-GLOBALS) (DESC \"church door\") (SYNONYM DOOR ENTRANCE ENTRY LOCK) (ADJECTIVE CHURCH) (FLAGS DOORBIT OPENBIT NDESCBIT))",
+    "Name": "CHURCH-DOOR",
+    "Properties": {
+      "#IN": "LOCAL-GLOBALS",
+      "DESC": [
+        "church door"
+      ],
+      "SYNONYM": [
+        "DOOR",
+        "ENTRANCE",
+        "ENTRY",
+        "LOCK"
+      ],
+      "ADJECTIVE": [
+        "CHURCH"
+      ],
+      "FLAGS": [
+        "DOORBIT",
+        "OPENBIT",
+        "NDESCBIT"
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT CHURCH (IN LOCAL-GLOBALS) (DESC \"church\") (SYNONYM CHURCH BUILDING TEMPLE SYNAGO) (ADJECTIVE BROKEN OLD) (FLAGS NDESCBIT RMUNGBIT TOUCHBIT TOOLBIT) (ACTION CHURCH-F))",
+    "Name": "CHURCH",
+    "Properties": {
+      "#IN": "LOCAL-GLOBALS",
+      "DESC": [
+        "church"
+      ],
+      "SYNONYM": [
+        "CHURCH",
+        "BUILDING",
+        "TEMPLE",
+        "SYNAGO"
+      ],
+      "ADJECTIVE": [
+        "BROKEN",
+        "OLD"
+      ],
+      "FLAGS": [
+        "NDESCBIT",
+        "RMUNGBIT",
+        "TOUCHBIT",
+        "TOOLBIT"
+      ],
+      "ACTION": [
+        {
+          "Atom": "CHURCH-F"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT CDEBRIS (DESC \"debris\") (SYNONYM DEBRIS GLASS BITS) (ADJECTIVE COLORED BROKEN) (FLAGS NDESCBIT) (ACTION CDEBRIS-F))",
+    "Name": "CDEBRIS",
+    "Properties": {
+      "DESC": [
+        "debris"
+      ],
+      "SYNONYM": [
+        "DEBRIS",
+        "GLASS",
+        "BITS"
+      ],
+      "ADJECTIVE": [
+        "COLORED",
+        "BROKEN"
+      ],
+      "FLAGS": [
+        "NDESCBIT"
+      ],
+      "ACTION": [
+        {
+          "Atom": "CDEBRIS-F"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT CELL (IN LOCAL-GLOBALS) (DESC \"cell\") (SYNONYM CELL CELLS) (ADJECTIVE JAIL) (FLAGS NDESCBIT) (ACTION CELL-F))",
+    "Name": "CELL",
+    "Properties": {
+      "#IN": "LOCAL-GLOBALS",
+      "DESC": [
+        "cell"
+      ],
+      "SYNONYM": [
+        "CELL",
+        "CELLS"
+      ],
+      "ADJECTIVE": [
+        "JAIL"
+      ],
+      "FLAGS": [
+        "NDESCBIT"
+      ],
+      "ACTION": [
+        {
+          "Atom": "CELL-F"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT CELL-DOOR (IN LOCAL-GLOBALS) (DESC \"cell door\") (SYNONYM DOOR BARS LOCK) (ADJECTIVE CELL) (FLAGS DOORBIT LOCKEDBIT NDESCBIT) (ACTION CELL-DOOR-F))",
+    "Name": "CELL-DOOR",
+    "Properties": {
+      "#IN": "LOCAL-GLOBALS",
+      "DESC": [
+        "cell door"
+      ],
+      "SYNONYM": [
+        "DOOR",
+        "BARS",
+        "LOCK"
+      ],
+      "ADJECTIVE": [
+        "CELL"
+      ],
+      "FLAGS": [
+        "DOORBIT",
+        "LOCKEDBIT",
+        "NDESCBIT"
+      ],
+      "ACTION": [
+        {
+          "Atom": "CELL-DOOR-F"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT BUNK (IN JAIL-CELL) (DESC \"bunk\") (SYNONYM BUNK BED FURNITURE) (ADJECTIVE FLIMSY) (FLAGS NDESCBIT TRYTAKEBIT SURFACEBIT) (CAPACITY 25) (ACTION BUNK-F))",
+    "Name": "BUNK",
+    "Properties": {
+      "#IN": "JAIL-CELL",
+      "DESC": [
+        "bunk"
+      ],
+      "SYNONYM": [
+        "BUNK",
+        "BED",
+        "FURNITURE"
+      ],
+      "ADJECTIVE": [
+        "FLIMSY"
+      ],
+      "FLAGS": [
+        "NDESCBIT",
+        "TRYTAKEBIT",
+        "SURFACEBIT"
+      ],
+      "CAPACITY": [
+        25
+      ],
+      "ACTION": [
+        {
+          "Atom": "BUNK-F"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT BLANKET (IN BUNK) (DESC \"thick blanket\") (SYNONYM BLANKET) (ADJECTIVE THICK) (FLAGS WEARBIT TAKEBIT CONTBIT TRANSBIT SURFACEBIT OPENBIT) (VALUE 3) (SIZE 10) (CAPACITY 5) (ACTION BLANKET-F))",
+    "Name": "BLANKET",
+    "Properties": {
+      "#IN": "BUNK",
+      "DESC": [
+        "thick blanket"
+      ],
+      "SYNONYM": [
+        "BLANKET"
+      ],
+      "ADJECTIVE": [
+        "THICK"
+      ],
+      "FLAGS": [
+        "WEARBIT",
+        "TAKEBIT",
+        "CONTBIT",
+        "TRANSBIT",
+        "SURFACEBIT",
+        "OPENBIT"
+      ],
+      "VALUE": [
+        3
+      ],
+      "SIZE": [
+        10
+      ],
+      "CAPACITY": [
+        5
+      ],
+      "ACTION": [
+        {
+          "Atom": "BLANKET-F"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT HIDDEN-HATCH (IN LOCAL-GLOBALS) (DESC \"hole\") (SYNONYM HOLE CEMENT CONCRETE OPENING) (ADJECTIVE DARK NARROW) (FLAGS NDESCBIT) (ACTION HIDDEN-HATCH-F))",
+    "Name": "HIDDEN-HATCH",
+    "Properties": {
+      "#IN": "LOCAL-GLOBALS",
+      "DESC": [
+        "hole"
+      ],
+      "SYNONYM": [
+        "HOLE",
+        "CEMENT",
+        "CONCRETE",
+        "OPENING"
+      ],
+      "ADJECTIVE": [
+        "DARK",
+        "NARROW"
+      ],
+      "FLAGS": [
+        "NDESCBIT"
+      ],
+      "ACTION": [
+        {
+          "Atom": "HIDDEN-HATCH-F"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT PSEUDO-BUNK (IN UNDER-CELL) (DESC \"bunk\") (SYNONYM BUNK BED UNDERSIDE BOTTOM) (ADJECTIVE FLIMSY) (FLAGS NDESCBIT) (ACTION PBUNK-F))",
+    "Name": "PSEUDO-BUNK",
+    "Properties": {
+      "#IN": "UNDER-CELL",
+      "DESC": [
+        "bunk"
+      ],
+      "SYNONYM": [
+        "BUNK",
+        "BED",
+        "UNDERSIDE",
+        "BOTTOM"
+      ],
+      "ADJECTIVE": [
+        "FLIMSY"
+      ],
+      "FLAGS": [
+        "NDESCBIT"
+      ],
+      "ACTION": [
+        {
+          "Atom": "PBUNK-F"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT ISLE (IN LOCAL-GLOBALS) (DESC \"island\") (SYNONYM ISLAND ISLE MIST FOG) (ADJECTIVE MISTY) (FLAGS NDESCBIT) (ACTION ISLE-F))",
+    "Name": "ISLE",
+    "Properties": {
+      "#IN": "LOCAL-GLOBALS",
+      "DESC": [
+        "island"
+      ],
+      "SYNONYM": [
+        "ISLAND",
+        "ISLE",
+        "MIST",
+        "FOG"
+      ],
+      "ADJECTIVE": [
+        "MISTY"
+      ],
+      "FLAGS": [
+        "NDESCBIT"
+      ],
+      "ACTION": [
+        {
+          "Atom": "ISLE-F"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT LAKE-SAND (IN EDGE-OF-LAKE) (DESC \"sand\") (SYNONYM SAND MESSAGE TRACKS X) (ADJECTIVE SCRAWL ANIMAL) (FLAGS TRYTAKEBIT NDESCBIT READBIT) (ACTION LAKE-SAND-F))",
+    "Name": "LAKE-SAND",
+    "Properties": {
+      "#IN": "EDGE-OF-LAKE",
+      "DESC": [
+        "sand"
+      ],
+      "SYNONYM": [
+        "SAND",
+        "MESSAGE",
+        "TRACKS",
+        "X"
+      ],
+      "ADJECTIVE": [
+        "SCRAWL",
+        "ANIMAL"
+      ],
+      "FLAGS": [
+        "TRYTAKEBIT",
+        "NDESCBIT",
+        "READBIT"
+      ],
+      "ACTION": [
+        {
+          "Atom": "LAKE-SAND-F"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT PIT (IN EDGE-OF-LAKE) (DESC \"pit\") (SYNONYM PIT HOLE TRAP SNARE) (ADJECTIVE DEEP NARROW) (FLAGS CONTBIT NDESCBIT) (CAPACITY 25) (ACTION PIT-F) (CONTFCN IN-PIT))",
+    "Name": "PIT",
+    "Properties": {
+      "#IN": "EDGE-OF-LAKE",
+      "DESC": [
+        "pit"
+      ],
+      "SYNONYM": [
+        "PIT",
+        "HOLE",
+        "TRAP",
+        "SNARE"
+      ],
+      "ADJECTIVE": [
+        "DEEP",
+        "NARROW"
+      ],
+      "FLAGS": [
+        "CONTBIT",
+        "NDESCBIT"
+      ],
+      "CAPACITY": [
+        25
+      ],
+      "ACTION": [
+        {
+          "Atom": "PIT-F"
+        }
+      ],
+      "CONTFCN": [
+        {
+          "Atom": "IN-PIT"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT LEAVES (IN EDGE-OF-LAKE) (DESC \"pile of leaves\") (SYNONYM LEAVES) (ADJECTIVE PATCH PILE CIRCUL ROUND) (FLAGS NDESCBIT TAKEBIT RMUNGBIT) (ACTION LEAVES-F) (VALUE 0) (SIZE 5))",
+    "Name": "LEAVES",
+    "Properties": {
+      "#IN": "EDGE-OF-LAKE",
+      "DESC": [
+        "pile of leaves"
+      ],
+      "SYNONYM": [
+        "LEAVES"
+      ],
+      "ADJECTIVE": [
+        "PATCH",
+        "PILE",
+        "CIRCUL",
+        "ROUND"
+      ],
+      "FLAGS": [
+        "NDESCBIT",
+        "TAKEBIT",
+        "RMUNGBIT"
+      ],
+      "ACTION": [
+        {
+          "Atom": "LEAVES-F"
+        }
+      ],
+      "VALUE": [
+        0
+      ],
+      "SIZE": [
+        5
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT PLATYPUS (DESC \"platypus\") (SYNONYM PLATYPUS TASMANIA) (ADJECTIVE PRINCESS) (FLAGS ACTORBIT TRYTAKEBIT NDESCBIT) (ACTION PLATYPUS-F) (VALUE 0) (SIZE 10))",
+    "Name": "PLATYPUS",
+    "Properties": {
+      "DESC": [
+        "platypus"
+      ],
+      "SYNONYM": [
+        "PLATYPUS",
+        "TASMANIA"
+      ],
+      "ADJECTIVE": [
+        "PRINCESS"
+      ],
+      "FLAGS": [
+        "ACTORBIT",
+        "TRYTAKEBIT",
+        "NDESCBIT"
+      ],
+      "ACTION": [
+        {
+          "Atom": "PLATYPUS-F"
+        }
+      ],
+      "VALUE": [
+        0
+      ],
+      "SIZE": [
+        10
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT TRAIL (IN LOCAL-GLOBALS) (DESC \"trail\") (SYNONYM TRAIL) (ADJECTIVE STEEP NARROW SHIMMERING) (FLAGS NDESCBIT) (ACTION TRAIL-F))",
+    "Name": "TRAIL",
+    "Properties": {
+      "#IN": "LOCAL-GLOBALS",
+      "DESC": [
+        "trail"
+      ],
+      "SYNONYM": [
+        "TRAIL"
+      ],
+      "ADJECTIVE": [
+        "STEEP",
+        "NARROW",
+        "SHIMMERING"
+      ],
+      "FLAGS": [
+        "NDESCBIT"
+      ],
+      "ACTION": [
+        {
+          "Atom": "TRAIL-F"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT STUMP (IN LOCAL-GLOBALS) (DESC \"stump\") (SYNONYM STUMP UNDERSIDE) (FLAGS NDESCBIT TRYTAKEBIT DOORBIT RMUNGBIT) (ACTION STUMP-F))",
+    "Name": "STUMP",
+    "Properties": {
+      "#IN": "LOCAL-GLOBALS",
+      "DESC": [
+        "stump"
+      ],
+      "SYNONYM": [
+        "STUMP",
+        "UNDERSIDE"
+      ],
+      "FLAGS": [
+        "NDESCBIT",
+        "TRYTAKEBIT",
+        "DOORBIT",
+        "RMUNGBIT"
+      ],
+      "ACTION": [
+        {
+          "Atom": "STUMP-F"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT SHOE (IN LOOKOUT-HILL) (DESC \"horseshoe\") (FDESC \"A horseshoe is lying in the grass near the stump.\") (SYNONYM HORSESHOE SHOE) (FLAGS TAKEBIT WEARBIT) (SIZE 5) (VALUE 0) (ACTION SHOE-F))",
+    "Name": "SHOE",
+    "Properties": {
+      "#IN": "LOOKOUT-HILL",
+      "DESC": [
+        "horseshoe"
+      ],
+      "FDESC": [
+        "A horseshoe is lying in the grass near the stump."
+      ],
+      "SYNONYM": [
+        "HORSESHOE",
+        "SHOE"
+      ],
+      "FLAGS": [
+        "TAKEBIT",
+        "WEARBIT"
+      ],
+      "SIZE": [
+        5
+      ],
+      "VALUE": [
+        0
+      ],
+      "ACTION": [
+        {
+          "Atom": "SHOE-F"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT LAKE (IN LOCAL-GLOBALS) (DESC \"lake\") (SYNONYM LAKE POND WATER) (FLAGS NDESCBIT TRYTAKEBIT CONTBIT OPENBIT) (ACTION LAKE-F))",
+    "Name": "LAKE",
+    "Properties": {
+      "#IN": "LOCAL-GLOBALS",
+      "DESC": [
+        "lake"
+      ],
+      "SYNONYM": [
+        "LAKE",
+        "POND",
+        "WATER"
+      ],
+      "FLAGS": [
+        "NDESCBIT",
+        "TRYTAKEBIT",
+        "CONTBIT",
+        "OPENBIT"
+      ],
+      "ACTION": [
+        {
+          "Atom": "LAKE-F"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT SHARKS (DESC \"sharks\") (SYNONYM SHARK SHARKS FIN FINS) (ADJECTIVE BLACK) (FLAGS NDESCBIT) (ACTION SHARKS-F))",
+    "Name": "SHARKS",
+    "Properties": {
+      "DESC": [
+        "sharks"
+      ],
+      "SYNONYM": [
+        "SHARK",
+        "SHARKS",
+        "FIN",
+        "FINS"
+      ],
+      "ADJECTIVE": [
+        "BLACK"
+      ],
+      "FLAGS": [
+        "NDESCBIT"
+      ],
+      "ACTION": [
+        {
+          "Atom": "SHARKS-F"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT BAY (IN LOCAL-GLOBALS) (DESC \"bay\") (SYNONYM BAY SEA OCEAN WATER) (ADJECTIVE FESTERON) (FLAGS NDESCBIT TRYTAKEBIT CONTBIT OPENBIT) (ACTION BAY-F))",
+    "Name": "BAY",
+    "Properties": {
+      "#IN": "LOCAL-GLOBALS",
+      "DESC": [
+        "bay"
+      ],
+      "SYNONYM": [
+        "BAY",
+        "SEA",
+        "OCEAN",
+        "WATER"
+      ],
+      "ADJECTIVE": [
+        "FESTERON"
+      ],
+      "FLAGS": [
+        "NDESCBIT",
+        "TRYTAKEBIT",
+        "CONTBIT",
+        "OPENBIT"
+      ],
+      "ACTION": [
+        {
+          "Atom": "BAY-F"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT ARCADE (IN LOCAL-GLOBALS) (DESC \"arcade\") (SYNONYM ARCADE BUILDING ENTRANCE ENTRY) (ADJECTIVE VIDEO OLD RAMSHACKLE) (ACTION ARCADE-F))",
+    "Name": "ARCADE",
+    "Properties": {
+      "#IN": "LOCAL-GLOBALS",
+      "DESC": [
+        "arcade"
+      ],
+      "SYNONYM": [
+        "ARCADE",
+        "BUILDING",
+        "ENTRANCE",
+        "ENTRY"
+      ],
+      "ADJECTIVE": [
+        "VIDEO",
+        "OLD",
+        "RAMSHACKLE"
+      ],
+      "ACTION": [
+        {
+          "Atom": "ARCADE-F"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT HUMANOIDS (DESC \"stunted humanoids\") (SYNONYM HUMANOIDS) (ADJECTIVE STUNTED) (FLAGS NDESCBIT NARTICLEBIT ACTORBIT) (ACTION HUMANOIDS-F))",
+    "Name": "HUMANOIDS",
+    "Properties": {
+      "DESC": [
+        "stunted humanoids"
+      ],
+      "SYNONYM": [
+        "HUMANOIDS"
+      ],
+      "ADJECTIVE": [
+        "STUNTED"
+      ],
+      "FLAGS": [
+        "NDESCBIT",
+        "NARTICLEBIT",
+        "ACTORBIT"
+      ],
+      "ACTION": [
+        {
+          "Atom": "HUMANOIDS-F"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT MACHINE (IN VIDEO-ARCADE) (DESC \"game machine\") (SYNONYM MACHINE UNIT GAME LOGO) (ADJECTIVE GAME ARCADE VIDEO SIDES BROKEN) (FLAGS NDESCBIT CONTBIT OPENBIT READBIT) (CAPACITY 1) (ACTION MACHINE-F))",
+    "Name": "MACHINE",
+    "Properties": {
+      "#IN": "VIDEO-ARCADE",
+      "DESC": [
+        "game machine"
+      ],
+      "SYNONYM": [
+        "MACHINE",
+        "UNIT",
+        "GAME",
+        "LOGO"
+      ],
+      "ADJECTIVE": [
+        "GAME",
+        "ARCADE",
+        "VIDEO",
+        "SIDES",
+        "BROKEN"
+      ],
+      "FLAGS": [
+        "NDESCBIT",
+        "CONTBIT",
+        "OPENBIT",
+        "READBIT"
+      ],
+      "CAPACITY": [
+        1
+      ],
+      "ACTION": [
+        {
+          "Atom": "MACHINE-F"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT VIDEO-SCREEN (IN VIDEO-ARCADE) (DESC \"video screen\") (SYNONYM SCREEN GRID MAP MESSAGE) (ADJECTIVE VIDEO FLASHING DIAMOND) (FLAGS NDESCBIT READBIT) (ACTION VIDEO-SCREEN-F))",
+    "Name": "VIDEO-SCREEN",
+    "Properties": {
+      "#IN": "VIDEO-ARCADE",
+      "DESC": [
+        "video screen"
+      ],
+      "SYNONYM": [
+        "SCREEN",
+        "GRID",
+        "MAP",
+        "MESSAGE"
+      ],
+      "ADJECTIVE": [
+        "VIDEO",
+        "FLASHING",
+        "DIAMOND"
+      ],
+      "FLAGS": [
+        "NDESCBIT",
+        "READBIT"
+      ],
+      "ACTION": [
+        {
+          "Atom": "VIDEO-SCREEN-F"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT STAR (IN VIDEO-ARCADE) (DESC \"blinking star\") (SYNONYM STAR CURSOR) (ADJECTIVE BLINKING) (FLAGS NDESCBIT READBIT) (ACTION STAR-F))",
+    "Name": "STAR",
+    "Properties": {
+      "#IN": "VIDEO-ARCADE",
+      "DESC": [
+        "blinking star"
+      ],
+      "SYNONYM": [
+        "STAR",
+        "CURSOR"
+      ],
+      "ADJECTIVE": [
+        "BLINKING"
+      ],
+      "FLAGS": [
+        "NDESCBIT",
+        "READBIT"
+      ],
+      "ACTION": [
+        {
+          "Atom": "STAR-F"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT SLOT (IN VIDEO-ARCADE) (DESC \"slot\") (SYNONYM SLOT) (ADJECTIVE NARROW) (FLAGS NDESCBIT CONTBIT OPENBIT READBIT) (CAPACITY 1) (ACTION SLOT-F))",
+    "Name": "SLOT",
+    "Properties": {
+      "#IN": "VIDEO-ARCADE",
+      "DESC": [
+        "slot"
+      ],
+      "SYNONYM": [
+        "SLOT"
+      ],
+      "ADJECTIVE": [
+        "NARROW"
+      ],
+      "FLAGS": [
+        "NDESCBIT",
+        "CONTBIT",
+        "OPENBIT",
+        "READBIT"
+      ],
+      "CAPACITY": [
+        1
+      ],
+      "ACTION": [
+        {
+          "Atom": "SLOT-F"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT JOYSTICK (IN VIDEO-ARCADE) (DESC \"joystick\") (SYNONYM JOYSTICK STICK) (ADJECTIVE JOY CONTROL) (FLAGS NDESCBIT) (ACTION JOYSTICK-F))",
+    "Name": "JOYSTICK",
+    "Properties": {
+      "#IN": "VIDEO-ARCADE",
+      "DESC": [
+        "joystick"
+      ],
+      "SYNONYM": [
+        "JOYSTICK",
+        "STICK"
+      ],
+      "ADJECTIVE": [
+        "JOY",
+        "CONTROL"
+      ],
+      "FLAGS": [
+        "NDESCBIT"
+      ],
+      "ACTION": [
+        {
+          "Atom": "JOYSTICK-F"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT BUTTON (IN VIDEO-ARCADE) (DESC \"big red button\") (SYNONYM BUTTON SWITCH) (ADJECTIVE BIG RED LARGE CRIMSON) (FLAGS NDESCBIT) (ACTION BUTTON-F))",
+    "Name": "BUTTON",
+    "Properties": {
+      "#IN": "VIDEO-ARCADE",
+      "DESC": [
+        "big red button"
+      ],
+      "SYNONYM": [
+        "BUTTON",
+        "SWITCH"
+      ],
+      "ADJECTIVE": [
+        "BIG",
+        "RED",
+        "LARGE",
+        "CRIMSON"
+      ],
+      "FLAGS": [
+        "NDESCBIT"
+      ],
+      "ACTION": [
+        {
+          "Atom": "BUTTON-F"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT TOKEN (DESC \"brass token\") (SYNONYM TOKEN) (ADJECTIVE BRASS) (FLAGS NDESCBIT TAKEBIT READBIT) (VALUE 3) (SIZE 1) (ACTION TOKEN-F))",
+    "Name": "TOKEN",
+    "Properties": {
+      "DESC": [
+        "brass token"
+      ],
+      "SYNONYM": [
+        "TOKEN"
+      ],
+      "ADJECTIVE": [
+        "BRASS"
+      ],
+      "FLAGS": [
+        "NDESCBIT",
+        "TAKEBIT",
+        "READBIT"
+      ],
+      "VALUE": [
+        3
+      ],
+      "SIZE": [
+        1
+      ],
+      "ACTION": [
+        {
+          "Atom": "TOKEN-F"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT CONCH-SHELL (IN TIDAL-POOL) (DESC \"conch shell\") (FDESC \"A large conch shell is lying in the sand at your feet.\") (SYNONYM SHELL) (ADJECTIVE CONCH ADVICE) (FLAGS TAKEBIT CONTBIT OPENBIT RMUNGBIT) (ACTION CONCH-SHELL-F) (CAPACITY 1) (SIZE 5) (VALUE 0))",
+    "Name": "CONCH-SHELL",
+    "Properties": {
+      "#IN": "TIDAL-POOL",
+      "DESC": [
+        "conch shell"
+      ],
+      "FDESC": [
+        "A large conch shell is lying in the sand at your feet."
+      ],
+      "SYNONYM": [
+        "SHELL"
+      ],
+      "ADJECTIVE": [
+        "CONCH",
+        "ADVICE"
+      ],
+      "FLAGS": [
+        "TAKEBIT",
+        "CONTBIT",
+        "OPENBIT",
+        "RMUNGBIT"
+      ],
+      "ACTION": [
+        {
+          "Atom": "CONCH-SHELL-F"
+        }
+      ],
+      "CAPACITY": [
+        1
+      ],
+      "SIZE": [
+        5
+      ],
+      "VALUE": [
+        0
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT SAND (IN LOCAL-GLOBALS) (DESC \"sand\") (SYNONYM SAND BEACH BANK) (FLAGS TRYTAKEBIT NDESCBIT) (ACTION SAND-F) (VALUE 0))",
+    "Name": "SAND",
+    "Properties": {
+      "#IN": "LOCAL-GLOBALS",
+      "DESC": [
+        "sand"
+      ],
+      "SYNONYM": [
+        "SAND",
+        "BEACH",
+        "BANK"
+      ],
+      "FLAGS": [
+        "TRYTAKEBIT",
+        "NDESCBIT"
+      ],
+      "ACTION": [
+        {
+          "Atom": "SAND-F"
+        }
+      ],
+      "VALUE": [
+        0
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT LIGHTHOUSE (IN FESTERON-POINT) (DESC \"lighthouse\") (SYNONYM LIGHTHOUSE HOUSE BEACON) (ADJECTIVE MINIATURE MINI AUTOMATIC AUTO BROKEN) (FLAGS SURFACEBIT NDESCBIT) (ACTION LIGHTHOUSE-F) (CAPACITY 10))",
+    "Name": "LIGHTHOUSE",
+    "Properties": {
+      "#IN": "FESTERON-POINT",
+      "DESC": [
+        "lighthouse"
+      ],
+      "SYNONYM": [
+        "LIGHTHOUSE",
+        "HOUSE",
+        "BEACON"
+      ],
+      "ADJECTIVE": [
+        "MINIATURE",
+        "MINI",
+        "AUTOMATIC",
+        "AUTO",
+        "BROKEN"
+      ],
+      "FLAGS": [
+        "SURFACEBIT",
+        "NDESCBIT"
+      ],
+      "ACTION": [
+        {
+          "Atom": "LIGHTHOUSE-F"
+        }
+      ],
+      "CAPACITY": [
+        10
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT WHITE-HOUSE (IN WEST-OF-HOUSE) (DESC \"house\") (SYNONYM HOUSE) (ADJECTIVE WHITE) (FLAGS NDESCBIT) (ACTION WHITE-HOUSE-F))",
+    "Name": "WHITE-HOUSE",
+    "Properties": {
+      "#IN": "WEST-OF-HOUSE",
+      "DESC": [
+        "house"
+      ],
+      "SYNONYM": [
+        "HOUSE"
+      ],
+      "ADJECTIVE": [
+        "WHITE"
+      ],
+      "FLAGS": [
+        "NDESCBIT"
+      ],
+      "ACTION": [
+        {
+          "Atom": "WHITE-HOUSE-F"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT HOUSE-DOOR (IN WEST-OF-HOUSE) (DESC \"front door\") (SYNONYM DOOR ENTRANCE ENTRY BOARDS) (ADJECTIVE FRONT BOARDED) (FLAGS NDESCBIT DOORBIT) (ACTION HOUSE-DOOR-F))",
+    "Name": "HOUSE-DOOR",
+    "Properties": {
+      "#IN": "WEST-OF-HOUSE",
+      "DESC": [
+        "front door"
+      ],
+      "SYNONYM": [
+        "DOOR",
+        "ENTRANCE",
+        "ENTRY",
+        "BOARDS"
+      ],
+      "ADJECTIVE": [
+        "FRONT",
+        "BOARDED"
+      ],
+      "FLAGS": [
+        "NDESCBIT",
+        "DOORBIT"
+      ],
+      "ACTION": [
+        {
+          "Atom": "HOUSE-DOOR-F"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT LEAFLET (IN SMALL-BOX) (DESC \"leaflet\") (SYNONYM LEAFLET MAIL ADVERT AD) (ADJECTIVE JUNK-MAIL CANCEL JUNK STAMPED STAMP) (FLAGS TAKEBIT READBIT) (ACTION LEAFLET-F) (VALUE 0) (SIZE 1))",
+    "Name": "LEAFLET",
+    "Properties": {
+      "#IN": "SMALL-BOX",
+      "DESC": [
+        "leaflet"
+      ],
+      "SYNONYM": [
+        "LEAFLET",
+        "MAIL",
+        "ADVERT",
+        "AD"
+      ],
+      "ADJECTIVE": [
+        "JUNK-MAIL",
+        "CANCEL",
+        "JUNK",
+        "STAMPED",
+        "STAMP"
+      ],
+      "FLAGS": [
+        "TAKEBIT",
+        "READBIT"
+      ],
+      "ACTION": [
+        {
+          "Atom": "LEAFLET-F"
+        }
+      ],
+      "VALUE": [
+        0
+      ],
+      "SIZE": [
+        1
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT RIVER (IN LOCAL-GLOBALS) (DESC \"river\") (SYNONYM RIVER WATER) (ADJECTIVE FESTERON WITCHVILLE) (FLAGS NDESCBIT TRYTAKEBIT CONTBIT OPENBIT) (ACTION RIVER-F))",
+    "Name": "RIVER",
+    "Properties": {
+      "#IN": "LOCAL-GLOBALS",
+      "DESC": [
+        "river"
+      ],
+      "SYNONYM": [
+        "RIVER",
+        "WATER"
+      ],
+      "ADJECTIVE": [
+        "FESTERON",
+        "WITCHVILLE"
+      ],
+      "FLAGS": [
+        "NDESCBIT",
+        "TRYTAKEBIT",
+        "CONTBIT",
+        "OPENBIT"
+      ],
+      "ACTION": [
+        {
+          "Atom": "RIVER-F"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT BRIDGE (IN LOCAL-GLOBALS) (DESC \"covered bridge\") (SYNONYM BRIDGE) (ADJECTIVE COVERED) (FLAGS NDESCBIT) (ACTION BRIDGE-F))",
+    "Name": "BRIDGE",
+    "Properties": {
+      "#IN": "LOCAL-GLOBALS",
+      "DESC": [
+        "covered bridge"
+      ],
+      "SYNONYM": [
+        "BRIDGE"
+      ],
+      "ADJECTIVE": [
+        "COVERED"
+      ],
+      "FLAGS": [
+        "NDESCBIT"
+      ],
+      "ACTION": [
+        {
+          "Atom": "BRIDGE-F"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT BRIDGE-SIGN (IN ON-BRIDGE) (DESC \"sign\") (SYNONYM SIGN ARCH) (ADJECTIVE BIG) (FLAGS NDESCBIT READBIT) (ACTION BRIDGE-SIGN-F))",
+    "Name": "BRIDGE-SIGN",
+    "Properties": {
+      "#IN": "ON-BRIDGE",
+      "DESC": [
+        "sign"
+      ],
+      "SYNONYM": [
+        "SIGN",
+        "ARCH"
+      ],
+      "ADJECTIVE": [
+        "BIG"
+      ],
+      "FLAGS": [
+        "NDESCBIT",
+        "READBIT"
+      ],
+      "ACTION": [
+        {
+          "Atom": "BRIDGE-SIGN-F"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT TROLL (DESC \"troll\") (SYNONYM TROLL CREATURE) (ADJECTIVE UGLY GNOMELIKE) (FLAGS ACTORBIT NDESCBIT RMUNGBIT TOOLBIT) (ACTION TROLL-F))",
+    "Name": "TROLL",
+    "Properties": {
+      "DESC": [
+        "troll"
+      ],
+      "SYNONYM": [
+        "TROLL",
+        "CREATURE"
+      ],
+      "ADJECTIVE": [
+        "UGLY",
+        "GNOMELIKE"
+      ],
+      "FLAGS": [
+        "ACTORBIT",
+        "NDESCBIT",
+        "RMUNGBIT",
+        "TOOLBIT"
+      ],
+      "ACTION": [
+        {
+          "Atom": "TROLL-F"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT TOLL-GATE (DESC \"toll gate\") (SYNONYM GATE) (ADJECTIVE TOLL) (FLAGS NDESCBIT DOORBIT) (ACTION TOLL-GATE-F))",
+    "Name": "TOLL-GATE",
+    "Properties": {
+      "DESC": [
+        "toll gate"
+      ],
+      "SYNONYM": [
+        "GATE"
+      ],
+      "ADJECTIVE": [
+        "TOLL"
+      ],
+      "FLAGS": [
+        "NDESCBIT",
+        "DOORBIT"
+      ],
+      "ACTION": [
+        {
+          "Atom": "TOLL-GATE-F"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT CLIFF (IN LOCAL-GLOBALS) (DESC \"cliff\") (SYNONYM CLIFF WALL FACE) (ADJECTIVE SHEER ROCK ROCKY STEEP FEATURELESS) (FLAGS NDESCBIT) (ACTION CLIFF-F))",
+    "Name": "CLIFF",
+    "Properties": {
+      "#IN": "LOCAL-GLOBALS",
+      "DESC": [
+        "cliff"
+      ],
+      "SYNONYM": [
+        "CLIFF",
+        "WALL",
+        "FACE"
+      ],
+      "ADJECTIVE": [
+        "SHEER",
+        "ROCK",
+        "ROCKY",
+        "STEEP",
+        "FEATURELESS"
+      ],
+      "FLAGS": [
+        "NDESCBIT"
+      ],
+      "ACTION": [
+        {
+          "Atom": "CLIFF-F"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT BRANCH (IN GNARLED-TREE) (DESC \"dead branch\") (SYNONYM BRANCH) (ADJECTIVE LONE HORIZONTAL DEAD) (FLAGS BURNBIT TAKEBIT) (ACTION BRANCH-F) (DESCFCN DESCRIBE-BRANCH) (VALUE 0) (SIZE 23))",
+    "Name": "BRANCH",
+    "Properties": {
+      "#IN": "GNARLED-TREE",
+      "DESC": [
+        "dead branch"
+      ],
+      "SYNONYM": [
+        "BRANCH"
+      ],
+      "ADJECTIVE": [
+        "LONE",
+        "HORIZONTAL",
+        "DEAD"
+      ],
+      "FLAGS": [
+        "BURNBIT",
+        "TAKEBIT"
+      ],
+      "ACTION": [
+        {
+          "Atom": "BRANCH-F"
+        }
+      ],
+      "DESCFCN": [
+        {
+          "Atom": "DESCRIBE-BRANCH"
+        }
+      ],
+      "VALUE": [
+        0
+      ],
+      "SIZE": [
+        23
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT VULTURE (DESC \"vulture\") (SYNONYM VULTURE BIRD) (FLAGS ACTORBIT TRYTAKEBIT NDESCBIT) (ACTION VULTURE-F))",
+    "Name": "VULTURE",
+    "Properties": {
+      "DESC": [
+        "vulture"
+      ],
+      "SYNONYM": [
+        "VULTURE",
+        "BIRD"
+      ],
+      "FLAGS": [
+        "ACTORBIT",
+        "TRYTAKEBIT",
+        "NDESCBIT"
+      ],
+      "ACTION": [
+        {
+          "Atom": "VULTURE-F"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT GNARLED-TREE (IN CLIFF-BOTTOM) (DESC \"gnarled tree trunk\") (SYNONYM TRUNK TREE) (ADJECTIVE GNARLED OLD DEAD) (FLAGS SURFACEBIT) (DESCFCN DESCRIBE-TREE) (ACTION GNARLED-TREE-F))",
+    "Name": "GNARLED-TREE",
+    "Properties": {
+      "#IN": "CLIFF-BOTTOM",
+      "DESC": [
+        "gnarled tree trunk"
+      ],
+      "SYNONYM": [
+        "TRUNK",
+        "TREE"
+      ],
+      "ADJECTIVE": [
+        "GNARLED",
+        "OLD",
+        "DEAD"
+      ],
+      "FLAGS": [
+        "SURFACEBIT"
+      ],
+      "DESCFCN": [
+        {
+          "Atom": "DESCRIBE-TREE"
+        }
+      ],
+      "ACTION": [
+        {
+          "Atom": "GNARLED-TREE-F"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT MAGICK-SHOPPE (IN LOCAL-GLOBALS) (DESC \"Magick Shoppe\") (SYNONYM SHOPPE SHOP STORE BUILDING) (ADJECTIVE MAGICK MAGIC) (ACTION MAGICK-SHOPPE-F))",
+    "Name": "MAGICK-SHOPPE",
+    "Properties": {
+      "#IN": "LOCAL-GLOBALS",
+      "DESC": [
+        "Magick Shoppe"
+      ],
+      "SYNONYM": [
+        "SHOPPE",
+        "SHOP",
+        "STORE",
+        "BUILDING"
+      ],
+      "ADJECTIVE": [
+        "MAGICK",
+        "MAGIC"
+      ],
+      "ACTION": [
+        {
+          "Atom": "MAGICK-SHOPPE-F"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT SHOPPE-DOOR (IN LOCAL-GLOBALS) (DESC \"Magick Shoppe door\") (SYNONYM DOOR ENTRANCE ENTRY LOCK) (ADJECTIVE FRONT SHOPPE SHOP MAGICK MAGIC) (FLAGS DOORBIT NDESCBIT) (ACTION SHOPPE-DOOR-F))",
+    "Name": "SHOPPE-DOOR",
+    "Properties": {
+      "#IN": "LOCAL-GLOBALS",
+      "DESC": [
+        "Magick Shoppe door"
+      ],
+      "SYNONYM": [
+        "DOOR",
+        "ENTRANCE",
+        "ENTRY",
+        "LOCK"
+      ],
+      "ADJECTIVE": [
+        "FRONT",
+        "SHOPPE",
+        "SHOP",
+        "MAGICK",
+        "MAGIC"
+      ],
+      "FLAGS": [
+        "DOORBIT",
+        "NDESCBIT"
+      ],
+      "ACTION": [
+        {
+          "Atom": "SHOPPE-DOOR-F"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT CLOCK (IN INSIDE-SHOPPE) (DESC \"grandfather clock\") (SYNONYM CLOCK MOON TIME DIAL) (ADJECTIVE GRANDFATHER) (FLAGS NDESCBIT TRYTAKEBIT CONTBIT TRANSBIT LOCKEDBIT READBIT RMUNGBIT) (ACTION CLOCK-F))",
+    "Name": "CLOCK",
+    "Properties": {
+      "#IN": "INSIDE-SHOPPE",
+      "DESC": [
+        "grandfather clock"
+      ],
+      "SYNONYM": [
+        "CLOCK",
+        "MOON",
+        "TIME",
+        "DIAL"
+      ],
+      "ADJECTIVE": [
+        "GRANDFATHER"
+      ],
+      "FLAGS": [
+        "NDESCBIT",
+        "TRYTAKEBIT",
+        "CONTBIT",
+        "TRANSBIT",
+        "LOCKEDBIT",
+        "READBIT",
+        "RMUNGBIT"
+      ],
+      "ACTION": [
+        {
+          "Atom": "CLOCK-F"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT STOCK (IN INSIDE-SHOPPE) (DESC \"magic tricks\") (SYNONYM TRICK TRICKS PUZZLE PARAPH) (ADJECTIVE MAGIC MYSTIC) (FLAGS NDESCBIT NARTICLEBIT) (ACTION STOCK-F))",
+    "Name": "STOCK",
+    "Properties": {
+      "#IN": "INSIDE-SHOPPE",
+      "DESC": [
+        "magic tricks"
+      ],
+      "SYNONYM": [
+        "TRICK",
+        "TRICKS",
+        "PUZZLE",
+        "PARAPH"
+      ],
+      "ADJECTIVE": [
+        "MAGIC",
+        "MYSTIC"
+      ],
+      "FLAGS": [
+        "NDESCBIT",
+        "NARTICLEBIT"
+      ],
+      "ACTION": [
+        {
+          "Atom": "STOCK-F"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT NAUGHTY-STOCK (IN GLASS-CASE) (DESC \"naughty jokes\") (SYNONYM JOKE JOKES CARD CARDS) (ADJECTIVE OBSCENE PRACTICAL NAUGHTY BIRTHDAY) (FLAGS READBIT NDESCBIT NARTICLEBIT) (ACTION NAUGHTY-STOCK-F))",
+    "Name": "NAUGHTY-STOCK",
+    "Properties": {
+      "#IN": "GLASS-CASE",
+      "DESC": [
+        "naughty jokes"
+      ],
+      "SYNONYM": [
+        "JOKE",
+        "JOKES",
+        "CARD",
+        "CARDS"
+      ],
+      "ADJECTIVE": [
+        "OBSCENE",
+        "PRACTICAL",
+        "NAUGHTY",
+        "BIRTHDAY"
+      ],
+      "FLAGS": [
+        "READBIT",
+        "NDESCBIT",
+        "NARTICLEBIT"
+      ],
+      "ACTION": [
+        {
+          "Atom": "NAUGHTY-STOCK-F"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT GLASS-CASE (IN INSIDE-SHOPPE) (DESC \"glass case\") (SYNONYM CASE) (ADJECTIVE GLASS) (FLAGS NDESCBIT CONTBIT DOORBIT TRANSBIT LOCKEDBIT) (CAPACITY 25) (ACTION GLASS-CASE-F))",
+    "Name": "GLASS-CASE",
+    "Properties": {
+      "#IN": "INSIDE-SHOPPE",
+      "DESC": [
+        "glass case"
+      ],
+      "SYNONYM": [
+        "CASE"
+      ],
+      "ADJECTIVE": [
+        "GLASS"
+      ],
+      "FLAGS": [
+        "NDESCBIT",
+        "CONTBIT",
+        "DOORBIT",
+        "TRANSBIT",
+        "LOCKEDBIT"
+      ],
+      "CAPACITY": [
+        25
+      ],
+      "ACTION": [
+        {
+          "Atom": "GLASS-CASE-F"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT CURTAIN (IN INSIDE-SHOPPE) (DESC \"curtain\") (SYNONYM CURTAIN) (ADJECTIVE DARK) (FLAGS NDESCBIT) (ACTION CURTAIN-F))",
+    "Name": "CURTAIN",
+    "Properties": {
+      "#IN": "INSIDE-SHOPPE",
+      "DESC": [
+        "curtain"
+      ],
+      "SYNONYM": [
+        "CURTAIN"
+      ],
+      "ADJECTIVE": [
+        "DARK"
+      ],
+      "FLAGS": [
+        "NDESCBIT"
+      ],
+      "ACTION": [
+        {
+          "Atom": "CURTAIN-F"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT ENVELOPE (DESC \"mysterious envelope\") (SYNONYM ENVELOPE MAIL LETTER) (ADJECTIVE MYSTERIOUS) (ACTION ENVELOPE-F) (FLAGS TAKEBIT READBIT CONTBIT) (VALUE 5) (SIZE 3) (CAPACITY 1))",
+    "Name": "ENVELOPE",
+    "Properties": {
+      "DESC": [
+        "mysterious envelope"
+      ],
+      "SYNONYM": [
+        "ENVELOPE",
+        "MAIL",
+        "LETTER"
+      ],
+      "ADJECTIVE": [
+        "MYSTERIOUS"
+      ],
+      "ACTION": [
+        {
+          "Atom": "ENVELOPE-F"
+        }
+      ],
+      "FLAGS": [
+        "TAKEBIT",
+        "READBIT",
+        "CONTBIT"
+      ],
+      "VALUE": [
+        5
+      ],
+      "SIZE": [
+        3
+      ],
+      "CAPACITY": [
+        1
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT OPEN-ENVELOPE (DESC \"mysterious envelope\") (SYNONYM ENVELOPE) (ADJECTIVE MYSTERIOUS) (FLAGS TAKEBIT READBIT CONTBIT OPENBIT) (VALUE 0) (CAPACITY 1) (SIZE 5) (ACTION OPEN-ENVELOPE-F))",
+    "Name": "OPEN-ENVELOPE",
+    "Properties": {
+      "DESC": [
+        "mysterious envelope"
+      ],
+      "SYNONYM": [
+        "ENVELOPE"
+      ],
+      "ADJECTIVE": [
+        "MYSTERIOUS"
+      ],
+      "FLAGS": [
+        "TAKEBIT",
+        "READBIT",
+        "CONTBIT",
+        "OPENBIT"
+      ],
+      "VALUE": [
+        0
+      ],
+      "CAPACITY": [
+        1
+      ],
+      "SIZE": [
+        5
+      ],
+      "ACTION": [
+        {
+          "Atom": "OPEN-ENVELOPE-F"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT RANSOM-LETTER (DESC \"letter\") (SYNONYM LETTER MAIL) (ADJECTIVE RANSOM) (FLAGS TAKEBIT READBIT) (ACTION RANSOM-LETTER-F) (SIZE 1) (VALUE 0))",
+    "Name": "RANSOM-LETTER",
+    "Properties": {
+      "DESC": [
+        "letter"
+      ],
+      "SYNONYM": [
+        "LETTER",
+        "MAIL"
+      ],
+      "ADJECTIVE": [
+        "RANSOM"
+      ],
+      "FLAGS": [
+        "TAKEBIT",
+        "READBIT"
+      ],
+      "ACTION": [
+        {
+          "Atom": "RANSOM-LETTER-F"
+        }
+      ],
+      "SIZE": [
+        1
+      ],
+      "VALUE": [
+        0
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT SNAKE-CAN (DESC \"metal can\") (SYNONYM CAN NUTS LID) (ADJECTIVE METAL SMALL LITTLE TRINKET GIFT) (FLAGS TAKEBIT CONTBIT READBIT) (CAPACITY 1) (VALUE 3) (SIZE 3) (CONTFCN IN-CAN) (ACTION SNAKE-CAN-F))",
+    "Name": "SNAKE-CAN",
+    "Properties": {
+      "DESC": [
+        "metal can"
+      ],
+      "SYNONYM": [
+        "CAN",
+        "NUTS",
+        "LID"
+      ],
+      "ADJECTIVE": [
+        "METAL",
+        "SMALL",
+        "LITTLE",
+        "TRINKET",
+        "GIFT"
+      ],
+      "FLAGS": [
+        "TAKEBIT",
+        "CONTBIT",
+        "READBIT"
+      ],
+      "CAPACITY": [
+        1
+      ],
+      "VALUE": [
+        3
+      ],
+      "SIZE": [
+        3
+      ],
+      "CONTFCN": [
+        {
+          "Atom": "IN-CAN"
+        }
+      ],
+      "ACTION": [
+        {
+          "Atom": "SNAKE-CAN-F"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT SQUASHED-CAN (DESC \"squashed can\") (SYNONYM CAN NUTS LID) (ADJECTIVE METAL SMALL FLAT SQUASH) (FLAGS TOUCHBIT TAKEBIT CONTBIT OPENBIT READBIT) (ACTION SQUASHED-CAN-F) (CAPACITY 1) (VALUE 0) (SIZE 3))",
+    "Name": "SQUASHED-CAN",
+    "Properties": {
+      "DESC": [
+        "squashed can"
+      ],
+      "SYNONYM": [
+        "CAN",
+        "NUTS",
+        "LID"
+      ],
+      "ADJECTIVE": [
+        "METAL",
+        "SMALL",
+        "FLAT",
+        "SQUASH"
+      ],
+      "FLAGS": [
+        "TOUCHBIT",
+        "TAKEBIT",
+        "CONTBIT",
+        "OPENBIT",
+        "READBIT"
+      ],
+      "ACTION": [
+        {
+          "Atom": "SQUASHED-CAN-F"
+        }
+      ],
+      "CAPACITY": [
+        1
+      ],
+      "VALUE": [
+        0
+      ],
+      "SIZE": [
+        3
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT CAN-BOTTOM (IN SNAKE-CAN) (DESC \"false bottom\") (SYNONYM BOTTOM) (ADJECTIVE FALSE) (FLAGS NDESCBIT TRYTAKEBIT) (ACTION CAN-BOTTOM-F))",
+    "Name": "CAN-BOTTOM",
+    "Properties": {
+      "#IN": "SNAKE-CAN",
+      "DESC": [
+        "false bottom"
+      ],
+      "SYNONYM": [
+        "BOTTOM"
+      ],
+      "ADJECTIVE": [
+        "FALSE"
+      ],
+      "FLAGS": [
+        "NDESCBIT",
+        "TRYTAKEBIT"
+      ],
+      "ACTION": [
+        {
+          "Atom": "CAN-BOTTOM-F"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT CHAOS (DESC \"Chaos\") (SYNONYM CHAOS CAT KITTY PUSSY) (ADJECTIVE BLACK) (FLAGS NDESCBIT ACTORBIT NARTICLEBIT TAKEBIT) (SIZE 10) (VALUE 0) (ACTION CHAOS-F))",
+    "Name": "CHAOS",
+    "Properties": {
+      "DESC": [
+        "Chaos"
+      ],
+      "SYNONYM": [
+        "CHAOS",
+        "CAT",
+        "KITTY",
+        "PUSSY"
+      ],
+      "ADJECTIVE": [
+        "BLACK"
+      ],
+      "FLAGS": [
+        "NDESCBIT",
+        "ACTORBIT",
+        "NARTICLEBIT",
+        "TAKEBIT"
+      ],
+      "SIZE": [
+        10
+      ],
+      "VALUE": [
+        0
+      ],
+      "ACTION": [
+        {
+          "Atom": "CHAOS-F"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT NORTH-GATE (IN LOCAL-GLOBALS) (DESC \"iron gate\") (SYNONYM GATE GATES LOCK BARS) (ADJECTIVE IRON TALL) (FLAGS NDESCBIT VOWELBIT DOORBIT LOCKEDBIT OPENBIT RMUNGBIT) (ACTION NORTH-GATE-F))",
+    "Name": "NORTH-GATE",
+    "Properties": {
+      "#IN": "LOCAL-GLOBALS",
+      "DESC": [
+        "iron gate"
+      ],
+      "SYNONYM": [
+        "GATE",
+        "GATES",
+        "LOCK",
+        "BARS"
+      ],
+      "ADJECTIVE": [
+        "IRON",
+        "TALL"
+      ],
+      "FLAGS": [
+        "NDESCBIT",
+        "VOWELBIT",
+        "DOORBIT",
+        "LOCKEDBIT",
+        "OPENBIT",
+        "RMUNGBIT"
+      ],
+      "ACTION": [
+        {
+          "Atom": "NORTH-GATE-F"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT CEMETERY (IN LOCAL-GLOBALS) (DESC \"cemetery\") (SYNONYM CEMETERY GRAVEYARD) (ADJECTIVE FESTERON) (FLAGS NDESCBIT) (ACTION CEMETERY-F))",
+    "Name": "CEMETERY",
+    "Properties": {
+      "#IN": "LOCAL-GLOBALS",
+      "DESC": [
+        "cemetery"
+      ],
+      "SYNONYM": [
+        "CEMETERY",
+        "GRAVEYARD"
+      ],
+      "ADJECTIVE": [
+        "FESTERON"
+      ],
+      "FLAGS": [
+        "NDESCBIT"
+      ],
+      "ACTION": [
+        {
+          "Atom": "CEMETERY-F"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT MONUMENTS (IN LOCAL-GLOBALS) (DESC \"tombstone\") (SYNONYM STONES STONE TOMBSTONES MONUMENTS) (ADJECTIVE TOMB TOMBS) (FLAGS READBIT) (ACTION MONUMENTS-F))",
+    "Name": "MONUMENTS",
+    "Properties": {
+      "#IN": "LOCAL-GLOBALS",
+      "DESC": [
+        "tombstone"
+      ],
+      "SYNONYM": [
+        "STONES",
+        "STONE",
+        "TOMBSTONES",
+        "MONUMENTS"
+      ],
+      "ADJECTIVE": [
+        "TOMB",
+        "TOMBS"
+      ],
+      "FLAGS": [
+        "READBIT"
+      ],
+      "ACTION": [
+        {
+          "Atom": "MONUMENTS-F"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT OPEN-GRAVE (IN SPOOKY-COPSE) (DESC \"open grave\") (SYNONYM GRAVE HOLE) (ADJECTIVE OPEN) (FLAGS NDESCBIT VOWELBIT CONTBIT OPENBIT TRANSBIT) (CAPACITY 50) (CONTFCN IN-OPEN-GRAVE) (ACTION OPEN-GRAVE-F))",
+    "Name": "OPEN-GRAVE",
+    "Properties": {
+      "#IN": "SPOOKY-COPSE",
+      "DESC": [
+        "open grave"
+      ],
+      "SYNONYM": [
+        "GRAVE",
+        "HOLE"
+      ],
+      "ADJECTIVE": [
+        "OPEN"
+      ],
+      "FLAGS": [
+        "NDESCBIT",
+        "VOWELBIT",
+        "CONTBIT",
+        "OPENBIT",
+        "TRANSBIT"
+      ],
+      "CAPACITY": [
+        50
+      ],
+      "CONTFCN": [
+        {
+          "Atom": "IN-OPEN-GRAVE"
+        }
+      ],
+      "ACTION": [
+        {
+          "Atom": "OPEN-GRAVE-F"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT GRAVE (IN INSIDE-GRAVE) (DESC \"open grave\") (SYNONYM GRAVE HOLE) (ADJECTIVE OPEN) (FLAGS NDESCBIT VOWELBIT CONTBIT OPENBIT TRANSBIT) (CAPACITY 50) (ACTION GRAVE-F))",
+    "Name": "GRAVE",
+    "Properties": {
+      "#IN": "INSIDE-GRAVE",
+      "DESC": [
+        "open grave"
+      ],
+      "SYNONYM": [
+        "GRAVE",
+        "HOLE"
+      ],
+      "ADJECTIVE": [
+        "OPEN"
+      ],
+      "FLAGS": [
+        "NDESCBIT",
+        "VOWELBIT",
+        "CONTBIT",
+        "OPENBIT",
+        "TRANSBIT"
+      ],
+      "CAPACITY": [
+        50
+      ],
+      "ACTION": [
+        {
+          "Atom": "GRAVE-F"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT WILLOWS (IN SPOOKY-COPSE) (DESC \"willow tree\") (SYNONYM TREE TREES BOUGH BOUGHS) (ADJECTIVE WILLOW) (FLAGS NDESCBIT) (ACTION WILLOWS-F))",
+    "Name": "WILLOWS",
+    "Properties": {
+      "#IN": "SPOOKY-COPSE",
+      "DESC": [
+        "willow tree"
+      ],
+      "SYNONYM": [
+        "TREE",
+        "TREES",
+        "BOUGH",
+        "BOUGHS"
+      ],
+      "ADJECTIVE": [
+        "WILLOW"
+      ],
+      "FLAGS": [
+        "NDESCBIT"
+      ],
+      "ACTION": [
+        {
+          "Atom": "WILLOWS-F"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT VAPORS (IN LOCAL-GLOBALS) (DESC \"eldritch vapor\") (SYNONYM VAPOR VAPORS MIST MISTS) (ADJECTIVE ELDRITCH RIBBON GHOSTLY) (FLAGS VOWELBIT NDESCBIT NARTICLEBIT) (ACTION VAPORS-F))",
+    "Name": "VAPORS",
+    "Properties": {
+      "#IN": "LOCAL-GLOBALS",
+      "DESC": [
+        "eldritch vapor"
+      ],
+      "SYNONYM": [
+        "VAPOR",
+        "VAPORS",
+        "MIST",
+        "MISTS"
+      ],
+      "ADJECTIVE": [
+        "ELDRITCH",
+        "RIBBON",
+        "GHOSTLY"
+      ],
+      "FLAGS": [
+        "VOWELBIT",
+        "NDESCBIT",
+        "NARTICLEBIT"
+      ],
+      "ACTION": [
+        {
+          "Atom": "VAPORS-F"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT HOLE (IN LOCAL-GLOBALS) (DESC \"hole\") (SYNONYM HOLE OPENING) (ADJECTIVE DARK) (ACTION HOLE-F))",
+    "Name": "HOLE",
+    "Properties": {
+      "#IN": "LOCAL-GLOBALS",
+      "DESC": [
+        "hole"
+      ],
+      "SYNONYM": [
+        "HOLE",
+        "OPENING"
+      ],
+      "ADJECTIVE": [
+        "DARK"
+      ],
+      "ACTION": [
+        {
+          "Atom": "HOLE-F"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT UMBRELLA (IN TWILIGHT-GLEN) (DESC \"umbrella\") (FDESC \"There must have been a burial here recently. Somebody left their umbrella leaning up against a tombstone.\") (SYNONYM UMBRELLA HANDLE HEAD) (ADJECTIVE PARROT) (FLAGS VOWELBIT CONTBIT TAKEBIT) (SIZE 10) (CAPACITY 10) (VALUE 0) (ACTION UMBRELLA-F))",
+    "Name": "UMBRELLA",
+    "Properties": {
+      "#IN": "TWILIGHT-GLEN",
+      "DESC": [
+        "umbrella"
+      ],
+      "FDESC": [
+        "There must have been a burial here recently. Somebody left their umbrella leaning up against a tombstone."
+      ],
+      "SYNONYM": [
+        "UMBRELLA",
+        "HANDLE",
+        "HEAD"
+      ],
+      "ADJECTIVE": [
+        "PARROT"
+      ],
+      "FLAGS": [
+        "VOWELBIT",
+        "CONTBIT",
+        "TAKEBIT"
+      ],
+      "SIZE": [
+        10
+      ],
+      "CAPACITY": [
+        10
+      ],
+      "VALUE": [
+        0
+      ],
+      "ACTION": [
+        {
+          "Atom": "UMBRELLA-F"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT TREE (IN LOCAL-GLOBALS) (DESC \"tree\") (SYNONYM TREE TREES) (FLAGS NDESCBIT) (ACTION TREE-F))",
+    "Name": "TREE",
+    "Properties": {
+      "#IN": "LOCAL-GLOBALS",
+      "DESC": [
+        "tree"
+      ],
+      "SYNONYM": [
+        "TREE",
+        "TREES"
+      ],
+      "FLAGS": [
+        "NDESCBIT"
+      ],
+      "ACTION": [
+        {
+          "Atom": "TREE-F"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT BABY (IN GRUE-NEST) (DESC \"little beast\") (SYNONYM BEAST ANIMAL GRUE GRUB) (ADJECTIVE LITTLE BABY SLEEPING SMALL) (FLAGS NDESCBIT ACTORBIT SURFACEBIT) (CAPACITY 10) (SIZE 10) (ACTION BABY-F))",
+    "Name": "BABY",
+    "Properties": {
+      "#IN": "GRUE-NEST",
+      "DESC": [
+        "little beast"
+      ],
+      "SYNONYM": [
+        "BEAST",
+        "ANIMAL",
+        "GRUE",
+        "GRUB"
+      ],
+      "ADJECTIVE": [
+        "LITTLE",
+        "BABY",
+        "SLEEPING",
+        "SMALL"
+      ],
+      "FLAGS": [
+        "NDESCBIT",
+        "ACTORBIT",
+        "SURFACEBIT"
+      ],
+      "CAPACITY": [
+        10
+      ],
+      "SIZE": [
+        10
+      ],
+      "ACTION": [
+        {
+          "Atom": "BABY-F"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT REFRIGERATOR (IN GRUE-NEST) (DESC \"refrigerator\") (SYNONYM REFRIGERATOR FRIGE FRIDGE) (ADJECTIVE GRUE) (FLAGS CONTBIT NDESCBIT TRYTAKEBIT READBIT) (CAPACITY 10) (ACTION REFRIGERATOR-F))",
+    "Name": "REFRIGERATOR",
+    "Properties": {
+      "#IN": "GRUE-NEST",
+      "DESC": [
+        "refrigerator"
+      ],
+      "SYNONYM": [
+        "REFRIGERATOR",
+        "FRIGE",
+        "FRIDGE"
+      ],
+      "ADJECTIVE": [
+        "GRUE"
+      ],
+      "FLAGS": [
+        "CONTBIT",
+        "NDESCBIT",
+        "TRYTAKEBIT",
+        "READBIT"
+      ],
+      "CAPACITY": [
+        10
+      ],
+      "ACTION": [
+        {
+          "Atom": "REFRIGERATOR-F"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT BOTTLE (IN REFRIGERATOR) (DESC \"bottle\") (SYNONYM BOTTLE) (ADJECTIVE MILK) (FLAGS CONTBIT TAKEBIT TRANSBIT READBIT) (VALUE 0) (CAPACITY 1) (SIZE 5) (ACTION BOTTLE-F))",
+    "Name": "BOTTLE",
+    "Properties": {
+      "#IN": "REFRIGERATOR",
+      "DESC": [
+        "bottle"
+      ],
+      "SYNONYM": [
+        "BOTTLE"
+      ],
+      "ADJECTIVE": [
+        "MILK"
+      ],
+      "FLAGS": [
+        "CONTBIT",
+        "TAKEBIT",
+        "TRANSBIT",
+        "READBIT"
+      ],
+      "VALUE": [
+        0
+      ],
+      "CAPACITY": [
+        1
+      ],
+      "SIZE": [
+        5
+      ],
+      "ACTION": [
+        {
+          "Atom": "BOTTLE-F"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT MILK (IN BOTTLE) (DESC \"grue milk\") (SYNONYM MILK LIQUID) (ADJECTIVE GRUE LITTLE ICKY) (FLAGS NDESCBIT NARTICLEBIT TAKEBIT) (ACTION MILK-F) (SIZE 0))",
+    "Name": "MILK",
+    "Properties": {
+      "#IN": "BOTTLE",
+      "DESC": [
+        "grue milk"
+      ],
+      "SYNONYM": [
+        "MILK",
+        "LIQUID"
+      ],
+      "ADJECTIVE": [
+        "GRUE",
+        "LITTLE",
+        "ICKY"
+      ],
+      "FLAGS": [
+        "NDESCBIT",
+        "NARTICLEBIT",
+        "TAKEBIT"
+      ],
+      "ACTION": [
+        {
+          "Atom": "MILK-F"
+        }
+      ],
+      "SIZE": [
+        0
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT WORM (IN REFRIGERATOR) (DESC \"earthworm\") (SYNONYM WORM EARTHWORM) (ADJECTIVE EARTH WORMS) (FLAGS VOWELBIT TAKEBIT) (VALUE 3) (SIZE 1) (ACTION WORM-F))",
+    "Name": "WORM",
+    "Properties": {
+      "#IN": "REFRIGERATOR",
+      "DESC": [
+        "earthworm"
+      ],
+      "SYNONYM": [
+        "WORM",
+        "EARTHWORM"
+      ],
+      "ADJECTIVE": [
+        "EARTH",
+        "WORMS"
+      ],
+      "FLAGS": [
+        "VOWELBIT",
+        "TAKEBIT"
+      ],
+      "VALUE": [
+        3
+      ],
+      "SIZE": [
+        1
+      ],
+      "ACTION": [
+        {
+          "Atom": "WORM-F"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT DEBRIS (IN GRUE-NEST) (DESC \"debris\") (SYNONYM DEBRIS BONE SWORDS BONES) (ADJECTIVE SWORD ELVISH) (FLAGS NDESCBIT) (ACTION DEBRIS-F))",
+    "Name": "DEBRIS",
+    "Properties": {
+      "#IN": "GRUE-NEST",
+      "DESC": [
+        "debris"
+      ],
+      "SYNONYM": [
+        "DEBRIS",
+        "BONE",
+        "SWORDS",
+        "BONES"
+      ],
+      "ADJECTIVE": [
+        "SWORD",
+        "ELVISH"
+      ],
+      "FLAGS": [
+        "NDESCBIT"
+      ],
+      "ACTION": [
+        {
+          "Atom": "DEBRIS-F"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT TOWER (IN LOCAL-GLOBALS) (DESC \"tower\") (SYNONYM TOWER) (FLAGS NDESCBIT) (ACTION TOWER-F))",
+    "Name": "TOWER",
+    "Properties": {
+      "#IN": "LOCAL-GLOBALS",
+      "DESC": [
+        "tower"
+      ],
+      "SYNONYM": [
+        "TOWER"
+      ],
+      "FLAGS": [
+        "NDESCBIT"
+      ],
+      "ACTION": [
+        {
+          "Atom": "TOWER-F"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT DRAWBRIDGE (IN LOCAL-GLOBALS) (DESC \"drawbridge\") (SYNONYM DRAWBRIDGE BRIDGE WALKWAY) (FLAGS NDESCBIT DOORBIT) (ACTION DRAWBRIDGE-F))",
+    "Name": "DRAWBRIDGE",
+    "Properties": {
+      "#IN": "LOCAL-GLOBALS",
+      "DESC": [
+        "drawbridge"
+      ],
+      "SYNONYM": [
+        "DRAWBRIDGE",
+        "BRIDGE",
+        "WALKWAY"
+      ],
+      "FLAGS": [
+        "NDESCBIT",
+        "DOORBIT"
+      ],
+      "ACTION": [
+        {
+          "Atom": "DRAWBRIDGE-F"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT MOAT (DESC \"moat\") (SYNONYM MOAT WATER) (ADJECTIVE DEEP) (FLAGS NDESCBIT CONTBIT OPENBIT TRANSBIT) (CAPACITY 200) (ACTION MOAT-F))",
+    "Name": "MOAT",
+    "Properties": {
+      "DESC": [
+        "moat"
+      ],
+      "SYNONYM": [
+        "MOAT",
+        "WATER"
+      ],
+      "ADJECTIVE": [
+        "DEEP"
+      ],
+      "FLAGS": [
+        "NDESCBIT",
+        "CONTBIT",
+        "OPENBIT",
+        "TRANSBIT"
+      ],
+      "CAPACITY": [
+        200
+      ],
+      "ACTION": [
+        {
+          "Atom": "MOAT-F"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT STAIRWAY (IN LOCAL-GLOBALS) (DESC \"stairway\") (SYNONYM STAIRWAY STAIRS STAIR STEPS) (ADJECTIVE DAMP) (FLAGS NDESCBIT SURFACEBIT) (CAPACITY 100) (ACTION STAIRWAY-F))",
+    "Name": "STAIRWAY",
+    "Properties": {
+      "#IN": "LOCAL-GLOBALS",
+      "DESC": [
+        "stairway"
+      ],
+      "SYNONYM": [
+        "STAIRWAY",
+        "STAIRS",
+        "STAIR",
+        "STEPS"
+      ],
+      "ADJECTIVE": [
+        "DAMP"
+      ],
+      "FLAGS": [
+        "NDESCBIT",
+        "SURFACEBIT"
+      ],
+      "CAPACITY": [
+        100
+      ],
+      "ACTION": [
+        {
+          "Atom": "STAIRWAY-F"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT ART (IN ROUND-CHAMBER) (DESC \"series of paintings\") (SYNONYM PAINTING PICTUR SERIES SEQUENCE) (ADJECTIVE ART PRINCESS QUEEN) (FLAGS NDESCBIT TRYTAKEBIT) (ACTION ART-F))",
+    "Name": "ART",
+    "Properties": {
+      "#IN": "ROUND-CHAMBER",
+      "DESC": [
+        "series of paintings"
+      ],
+      "SYNONYM": [
+        "PAINTING",
+        "PICTUR",
+        "SERIES",
+        "SEQUENCE"
+      ],
+      "ADJECTIVE": [
+        "ART",
+        "PRINCESS",
+        "QUEEN"
+      ],
+      "FLAGS": [
+        "NDESCBIT",
+        "TRYTAKEBIT"
+      ],
+      "ACTION": [
+        {
+          "Atom": "ART-F"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT CRANK (DESC \"metal crank\") (SYNONYM CRANK) (ADJECTIVE METAL) (FLAGS TRYTAKEBIT NDESCBIT RMUNGBIT) (ACTION CRANK-F))",
+    "Name": "CRANK",
+    "Properties": {
+      "DESC": [
+        "metal crank"
+      ],
+      "SYNONYM": [
+        "CRANK"
+      ],
+      "ADJECTIVE": [
+        "METAL"
+      ],
+      "FLAGS": [
+        "TRYTAKEBIT",
+        "NDESCBIT",
+        "RMUNGBIT"
+      ],
+      "ACTION": [
+        {
+          "Atom": "CRANK-F"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT CORRIDOR (IN LOCAL-GLOBALS) (DESC \"corridor\") (SYNONYM HALL HALLWAY CORRIDOR ENTRANCE) (ADJECTIVE SHORT DARK) (FLAGS NDESCBIT) (ACTION CORRIDOR-F))",
+    "Name": "CORRIDOR",
+    "Properties": {
+      "#IN": "LOCAL-GLOBALS",
+      "DESC": [
+        "corridor"
+      ],
+      "SYNONYM": [
+        "HALL",
+        "HALLWAY",
+        "CORRIDOR",
+        "ENTRANCE"
+      ],
+      "ADJECTIVE": [
+        "SHORT",
+        "DARK"
+      ],
+      "FLAGS": [
+        "NDESCBIT"
+      ],
+      "ACTION": [
+        {
+          "Atom": "CORRIDOR-F"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT HATCH (IN LOCAL-GLOBALS) (DESC \"hatch\") (SYNONYM HATCH HATCHWAY DOOR) (ADJECTIVE MASSIVE OAK) (FLAGS NDESCBIT DOORBIT OPENBIT) (ACTION HATCH-F))",
+    "Name": "HATCH",
+    "Properties": {
+      "#IN": "LOCAL-GLOBALS",
+      "DESC": [
+        "hatch"
+      ],
+      "SYNONYM": [
+        "HATCH",
+        "HATCHWAY",
+        "DOOR"
+      ],
+      "ADJECTIVE": [
+        "MASSIVE",
+        "OAK"
+      ],
+      "FLAGS": [
+        "NDESCBIT",
+        "DOORBIT",
+        "OPENBIT"
+      ],
+      "ACTION": [
+        {
+          "Atom": "HATCH-F"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT LADDER (IN LOCAL-GLOBALS) (DESC \"ladder\") (SYNONYM LADDER) (ADJECTIVE WOOD WOODEN) (FLAGS NDESCBIT) (ACTION LADDER-F))",
+    "Name": "LADDER",
+    "Properties": {
+      "#IN": "LOCAL-GLOBALS",
+      "DESC": [
+        "ladder"
+      ],
+      "SYNONYM": [
+        "LADDER"
+      ],
+      "ADJECTIVE": [
+        "WOOD",
+        "WOODEN"
+      ],
+      "FLAGS": [
+        "NDESCBIT"
+      ],
+      "ACTION": [
+        {
+          "Atom": "LADDER-F"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT INSTRUMENTS (IN TORTURE-CHAMBER) (DESC \"medical instrument\") (SYNONYM INSTRUMENTS) (ADJECTIVE OBSCURE MEDICAL TORTURE) (FLAGS NDESCBIT TRYTAKEBIT READBIT) (ACTION INSTRUMENTS-F))",
+    "Name": "INSTRUMENTS",
+    "Properties": {
+      "#IN": "TORTURE-CHAMBER",
+      "DESC": [
+        "medical instrument"
+      ],
+      "SYNONYM": [
+        "INSTRUMENTS"
+      ],
+      "ADJECTIVE": [
+        "OBSCURE",
+        "MEDICAL",
+        "TORTURE"
+      ],
+      "FLAGS": [
+        "NDESCBIT",
+        "TRYTAKEBIT",
+        "READBIT"
+      ],
+      "ACTION": [
+        {
+          "Atom": "INSTRUMENTS-F"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT CHAINS (IN VESTIBULE) (DESC \"chain\") (SYNONYM CHAIN CHAINS SHACKLES BONDS) (ADJECTIVE HEAVY) (FLAGS NDESCBIT TRYTAKEBIT DOORBIT LOCKEDBIT) (ACTION CHAINS-F))",
+    "Name": "CHAINS",
+    "Properties": {
+      "#IN": "VESTIBULE",
+      "DESC": [
+        "chain"
+      ],
+      "SYNONYM": [
+        "CHAIN",
+        "CHAINS",
+        "SHACKLES",
+        "BONDS"
+      ],
+      "ADJECTIVE": [
+        "HEAVY"
+      ],
+      "FLAGS": [
+        "NDESCBIT",
+        "TRYTAKEBIT",
+        "DOORBIT",
+        "LOCKEDBIT"
+      ],
+      "ACTION": [
+        {
+          "Atom": "CHAINS-F"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT COAT (IN TORTURE-CHAMBER) (DESC \"white lab coat\") (SYNONYM COAT JACKET SMOCK) (ADJECTIVE WHITE POCKET LAB LABORA DIRTY COLLAR) (FLAGS NDESCBIT TAKEBIT WEARBIT CONTBIT OPENBIT) (VALUE 0) (SIZE 5) (CAPACITY 2) (ACTION COAT-F) (CONTFCN IN-COAT))",
+    "Name": "COAT",
+    "Properties": {
+      "#IN": "TORTURE-CHAMBER",
+      "DESC": [
+        "white lab coat"
+      ],
+      "SYNONYM": [
+        "COAT",
+        "JACKET",
+        "SMOCK"
+      ],
+      "ADJECTIVE": [
+        "WHITE",
+        "POCKET",
+        "LAB",
+        "LABORA",
+        "DIRTY",
+        "COLLAR"
+      ],
+      "FLAGS": [
+        "NDESCBIT",
+        "TAKEBIT",
+        "WEARBIT",
+        "CONTBIT",
+        "OPENBIT"
+      ],
+      "VALUE": [
+        0
+      ],
+      "SIZE": [
+        5
+      ],
+      "CAPACITY": [
+        2
+      ],
+      "ACTION": [
+        {
+          "Atom": "COAT-F"
+        }
+      ],
+      "CONTFCN": [
+        {
+          "Atom": "IN-COAT"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT KEY (IN COAT) (DESC \"rusty key\") (SYNONYM KEY) (ADJECTIVE RUSTY RUSTED) (FLAGS NDESCBIT TAKEBIT TOOLBIT) (VALUE 3) (SIZE 1) (ACTION KEY-F))",
+    "Name": "KEY",
+    "Properties": {
+      "#IN": "COAT",
+      "DESC": [
+        "rusty key"
+      ],
+      "SYNONYM": [
+        "KEY"
+      ],
+      "ADJECTIVE": [
+        "RUSTY",
+        "RUSTED"
+      ],
+      "FLAGS": [
+        "NDESCBIT",
+        "TAKEBIT",
+        "TOOLBIT"
+      ],
+      "VALUE": [
+        3
+      ],
+      "SIZE": [
+        1
+      ],
+      "ACTION": [
+        {
+          "Atom": "KEY-F"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT TMACHINE (IN TORTURE-CHAMBER) (DESC \"torture machine\") (SYNONYM MACHINE MECHANISM CLAMP CLAMPS) (ADJECTIVE TORTURE DIABOLICAL) (FLAGS TRYTAKEBIT NDESCBIT CONTBIT OPENBIT) (CAPACITY 20) (ACTION TMACHINE-F))",
+    "Name": "TMACHINE",
+    "Properties": {
+      "#IN": "TORTURE-CHAMBER",
+      "DESC": [
+        "torture machine"
+      ],
+      "SYNONYM": [
+        "MACHINE",
+        "MECHANISM",
+        "CLAMP",
+        "CLAMPS"
+      ],
+      "ADJECTIVE": [
+        "TORTURE",
+        "DIABOLICAL"
+      ],
+      "FLAGS": [
+        "TRYTAKEBIT",
+        "NDESCBIT",
+        "CONTBIT",
+        "OPENBIT"
+      ],
+      "CAPACITY": [
+        20
+      ],
+      "ACTION": [
+        {
+          "Atom": "TMACHINE-F"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT LEVER (IN TORTURE-CHAMBER) (DESC \"lever\") (SYNONYM LEVER) (FLAGS NDESCBIT TRYTAKEBIT) (ACTION LEVER-F))",
+    "Name": "LEVER",
+    "Properties": {
+      "#IN": "TORTURE-CHAMBER",
+      "DESC": [
+        "lever"
+      ],
+      "SYNONYM": [
+        "LEVER"
+      ],
+      "FLAGS": [
+        "NDESCBIT",
+        "TRYTAKEBIT"
+      ],
+      "ACTION": [
+        {
+          "Atom": "LEVER-F"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT SCOPE (IN LABORATORY) (DESC \"antique telescope\") (SYNONYM TELESCOPE SCOPE) (ADJECTIVE ANTIQUE) (FLAGS NDESCBIT TRYTAKEBIT VOWELBIT) (ACTION SCOPE-F))",
+    "Name": "SCOPE",
+    "Properties": {
+      "#IN": "LABORATORY",
+      "DESC": [
+        "antique telescope"
+      ],
+      "SYNONYM": [
+        "TELESCOPE",
+        "SCOPE"
+      ],
+      "ADJECTIVE": [
+        "ANTIQUE"
+      ],
+      "FLAGS": [
+        "NDESCBIT",
+        "TRYTAKEBIT",
+        "VOWELBIT"
+      ],
+      "ACTION": [
+        {
+          "Atom": "SCOPE-F"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT WINDOW (IN LOCAL-GLOBALS) (DESC \"window\") (SYNONYM WINDOW) (ADJECTIVE DARK) (FLAGS NDESCBIT) (ACTION WINDOW-F))",
+    "Name": "WINDOW",
+    "Properties": {
+      "#IN": "LOCAL-GLOBALS",
+      "DESC": [
+        "window"
+      ],
+      "SYNONYM": [
+        "WINDOW"
+      ],
+      "ADJECTIVE": [
+        "DARK"
+      ],
+      "FLAGS": [
+        "NDESCBIT"
+      ],
+      "ACTION": [
+        {
+          "Atom": "WINDOW-F"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT KITTY (IN LABORATORY) (DESC \"black cat\") (SYNONYM CAT KITTY KITTEN) (ADJECTIVE BLACK SLEEPING) (FLAGS ACTORBIT TAKEBIT RMUNGBIT) (VALUE 0) (SIZE 10) (ACTION KITTY-F) (DESCFCN DESCRIBE-KITTY))",
+    "Name": "KITTY",
+    "Properties": {
+      "#IN": "LABORATORY",
+      "DESC": [
+        "black cat"
+      ],
+      "SYNONYM": [
+        "CAT",
+        "KITTY",
+        "KITTEN"
+      ],
+      "ADJECTIVE": [
+        "BLACK",
+        "SLEEPING"
+      ],
+      "FLAGS": [
+        "ACTORBIT",
+        "TAKEBIT",
+        "RMUNGBIT"
+      ],
+      "VALUE": [
+        0
+      ],
+      "SIZE": [
+        10
+      ],
+      "ACTION": [
+        {
+          "Atom": "KITTY-F"
+        }
+      ],
+      "DESCFCN": [
+        {
+          "Atom": "DESCRIBE-KITTY"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT CHEMICALS (IN LABORATORY) (DESC \"chemicals\") (SYNONYM CHEMICALS ICE WATER) (ADJECTIVE BUBBLING FLOATING DRY WARM) (FLAGS NDESCBIT TRYTAKEBIT) (ACTION CHEMICALS-F))",
+    "Name": "CHEMICALS",
+    "Properties": {
+      "#IN": "LABORATORY",
+      "DESC": [
+        "chemicals"
+      ],
+      "SYNONYM": [
+        "CHEMICALS",
+        "ICE",
+        "WATER"
+      ],
+      "ADJECTIVE": [
+        "BUBBLING",
+        "FLOATING",
+        "DRY",
+        "WARM"
+      ],
+      "FLAGS": [
+        "NDESCBIT",
+        "TRYTAKEBIT"
+      ],
+      "ACTION": [
+        {
+          "Atom": "CHEMICALS-F"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT PANEL (IN LABORATORY) (DESC \"control panel\") (SYNONYM PANEL) (ADJECTIVE CONTROL) (FLAGS NDESCBIT TRYTAKEBIT) (ACTION PANEL-F))",
+    "Name": "PANEL",
+    "Properties": {
+      "#IN": "LABORATORY",
+      "DESC": [
+        "control panel"
+      ],
+      "SYNONYM": [
+        "PANEL"
+      ],
+      "ADJECTIVE": [
+        "CONTROL"
+      ],
+      "FLAGS": [
+        "NDESCBIT",
+        "TRYTAKEBIT"
+      ],
+      "ACTION": [
+        {
+          "Atom": "PANEL-F"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT SW2 (IN LABORATORY) (DESC \"second switch\") (SYNONYM SWITCH) (ADJECTIVE SECOND LARGE SECURITY) (FLAGS NDESCBIT TRYTAKEBIT READBIT RMUNGBIT) (ACTION SW2-F))",
+    "Name": "SW2",
+    "Properties": {
+      "#IN": "LABORATORY",
+      "DESC": [
+        "second switch"
+      ],
+      "SYNONYM": [
+        "SWITCH"
+      ],
+      "ADJECTIVE": [
+        "SECOND",
+        "LARGE",
+        "SECURITY"
+      ],
+      "FLAGS": [
+        "NDESCBIT",
+        "TRYTAKEBIT",
+        "READBIT",
+        "RMUNGBIT"
+      ],
+      "ACTION": [
+        {
+          "Atom": "SW2-F"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT SW1 (IN LABORATORY) (DESC \"first switch\") (SYNONYM SWITCH) (ADJECTIVE FIRST LARGE PALACE THEATER) (FLAGS NDESCBIT TRYTAKEBIT READBIT) (ACTION SW1-F))",
+    "Name": "SW1",
+    "Properties": {
+      "#IN": "LABORATORY",
+      "DESC": [
+        "first switch"
+      ],
+      "SYNONYM": [
+        "SWITCH"
+      ],
+      "ADJECTIVE": [
+        "FIRST",
+        "LARGE",
+        "PALACE",
+        "THEATER"
+      ],
+      "FLAGS": [
+        "NDESCBIT",
+        "TRYTAKEBIT",
+        "READBIT"
+      ],
+      "ACTION": [
+        {
+          "Atom": "SW1-F"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT BROOM (IN LABORATORY) (DESC \"broom\") (SYNONYM BROOM BROOMSTICK) (FLAGS TAKEBIT) (VALUE 0) (SIZE 20) (CAPACITY 10) (ACTION BROOM-F))",
+    "Name": "BROOM",
+    "Properties": {
+      "#IN": "LABORATORY",
+      "DESC": [
+        "broom"
+      ],
+      "SYNONYM": [
+        "BROOM",
+        "BROOMSTICK"
+      ],
+      "FLAGS": [
+        "TAKEBIT"
+      ],
+      "VALUE": [
+        0
+      ],
+      "SIZE": [
+        20
+      ],
+      "CAPACITY": [
+        10
+      ],
+      "ACTION": [
+        {
+          "Atom": "BROOM-F"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT WHISTLE (DESC \"silver whistle\") (SYNONYM WHISTLE) (ADJECTIVE SILVER) (FLAGS TAKEBIT) (ACTION WHISTLE-F) (VALUE 3) (SIZE 1))",
+    "Name": "WHISTLE",
+    "Properties": {
+      "DESC": [
+        "silver whistle"
+      ],
+      "SYNONYM": [
+        "WHISTLE"
+      ],
+      "ADJECTIVE": [
+        "SILVER"
+      ],
+      "FLAGS": [
+        "TAKEBIT"
+      ],
+      "ACTION": [
+        {
+          "Atom": "WHISTLE-F"
+        }
+      ],
+      "VALUE": [
+        3
+      ],
+      "SIZE": [
+        1
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT HAT (DESC \"wizard's hat\") (SYNONYM HAT) (ADJECTIVE WIZARD) (FLAGS TAKEBIT WEARBIT RMUNGBIT READBIT) (SIZE 5) (CAPACITY 5) (VALUE 1) (ACTION HAT-F))",
+    "Name": "HAT",
+    "Properties": {
+      "DESC": [
+        "wizard's hat"
+      ],
+      "SYNONYM": [
+        "HAT"
+      ],
+      "ADJECTIVE": [
+        "WIZARD"
+      ],
+      "FLAGS": [
+        "TAKEBIT",
+        "WEARBIT",
+        "RMUNGBIT",
+        "READBIT"
+      ],
+      "SIZE": [
+        5
+      ],
+      "CAPACITY": [
+        5
+      ],
+      "VALUE": [
+        1
+      ],
+      "ACTION": [
+        {
+          "Atom": "HAT-F"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT PRINCESS (IN THRONE-ROOM) (DESC \"Princess Tasmania\") (SYNONYM TASMANIA PLATYPUS) (ADJECTIVE PRINCESS) (FLAGS NDESCBIT NARTICLEBIT ACTORBIT TRYTAKEBIT) (ACTION PRINCESS-F))",
+    "Name": "PRINCESS",
+    "Properties": {
+      "#IN": "THRONE-ROOM",
+      "DESC": [
+        "Princess Tasmania"
+      ],
+      "SYNONYM": [
+        "TASMANIA",
+        "PLATYPUS"
+      ],
+      "ADJECTIVE": [
+        "PRINCESS"
+      ],
+      "FLAGS": [
+        "NDESCBIT",
+        "NARTICLEBIT",
+        "ACTORBIT",
+        "TRYTAKEBIT"
+      ],
+      "ACTION": [
+        {
+          "Atom": "PRINCESS-F"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT KING (IN THRONE-ROOM) (DESC \"King Anatinus\") (SYNONYM ANATINUS PLATYPUS) (ADJECTIVE KING OLD WHITE) (FLAGS NDESCBIT NARTICLEBIT ACTORBIT) (ACTION CROWD-F))",
+    "Name": "KING",
+    "Properties": {
+      "#IN": "THRONE-ROOM",
+      "DESC": [
+        "King Anatinus"
+      ],
+      "SYNONYM": [
+        "ANATINUS",
+        "PLATYPUS"
+      ],
+      "ADJECTIVE": [
+        "KING",
+        "OLD",
+        "WHITE"
+      ],
+      "FLAGS": [
+        "NDESCBIT",
+        "NARTICLEBIT",
+        "ACTORBIT"
+      ],
+      "ACTION": [
+        {
+          "Atom": "CROWD-F"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT CROWD (IN THRONE-ROOM) (DESC \"crowd\") (SYNONYM CROWD) (FLAGS NDESCBIT ACTORBIT) (ACTION CROWD-F))",
+    "Name": "CROWD",
+    "Properties": {
+      "#IN": "THRONE-ROOM",
+      "DESC": [
+        "crowd"
+      ],
+      "SYNONYM": [
+        "CROWD"
+      ],
+      "FLAGS": [
+        "NDESCBIT",
+        "ACTORBIT"
+      ],
+      "ACTION": [
+        {
+          "Atom": "CROWD-F"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT CASTLE (IN LOCAL-GLOBALS) (DESC \"castle\") (SYNONYM CASTLE PALACE BUILDING ENTRANCE) (FLAGS NDESCBIT) (ACTION CASTLE-F))",
+    "Name": "CASTLE",
+    "Properties": {
+      "#IN": "LOCAL-GLOBALS",
+      "DESC": [
+        "castle"
+      ],
+      "SYNONYM": [
+        "CASTLE",
+        "PALACE",
+        "BUILDING",
+        "ENTRANCE"
+      ],
+      "FLAGS": [
+        "NDESCBIT"
+      ],
+      "ACTION": [
+        {
+          "Atom": "CASTLE-F"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT CASTLE-JUNK (IN THRONE-ROOM) (DESC \"that\") (SYNONYM THRONE CHEST SCEPTER FIREPLACE) (FLAGS NDESCBIT NARTICLEBIT) (ACTION CASTLE-JUNK-F))",
+    "Name": "CASTLE-JUNK",
+    "Properties": {
+      "#IN": "THRONE-ROOM",
+      "DESC": [
+        "that"
+      ],
+      "SYNONYM": [
+        "THRONE",
+        "CHEST",
+        "SCEPTER",
+        "FIREPLACE"
+      ],
+      "FLAGS": [
+        "NDESCBIT",
+        "NARTICLEBIT"
+      ],
+      "ACTION": [
+        {
+          "Atom": "CASTLE-JUNK-F"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT MAILBOX (IN PLEASURE-WHARF) (DESC \"big mailbox\") (SYNONYM MAILBOX BOX LID) (ADJECTIVE MAIL BIG LARGE) (FLAGS CONTBIT) (ACTION MAILBOX-F) (DESCFCN DESCRIBE-MAILBOX) (CAPACITY 15) (CONTFCN IN-MAILBOX))",
+    "Name": "MAILBOX",
+    "Properties": {
+      "#IN": "PLEASURE-WHARF",
+      "DESC": [
+        "big mailbox"
+      ],
+      "SYNONYM": [
+        "MAILBOX",
+        "BOX",
+        "LID"
+      ],
+      "ADJECTIVE": [
+        "MAIL",
+        "BIG",
+        "LARGE"
+      ],
+      "FLAGS": [
+        "CONTBIT"
+      ],
+      "ACTION": [
+        {
+          "Atom": "MAILBOX-F"
+        }
+      ],
+      "DESCFCN": [
+        {
+          "Atom": "DESCRIBE-MAILBOX"
+        }
+      ],
+      "CAPACITY": [
+        15
+      ],
+      "CONTFCN": [
+        {
+          "Atom": "IN-MAILBOX"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT SMALL-BOX (IN INSIDE-POST-OFFICE) (DESC \"little mailbox\") (SYNONYM MAILBOX BOX BOXES LID) (ADJECTIVE MAIL SMALL LITTLE PRIVATE) (FLAGS CONTBIT NDESCBIT) (CAPACITY 10) (ACTION SMALL-BOX-F))",
+    "Name": "SMALL-BOX",
+    "Properties": {
+      "#IN": "INSIDE-POST-OFFICE",
+      "DESC": [
+        "little mailbox"
+      ],
+      "SYNONYM": [
+        "MAILBOX",
+        "BOX",
+        "BOXES",
+        "LID"
+      ],
+      "ADJECTIVE": [
+        "MAIL",
+        "SMALL",
+        "LITTLE",
+        "PRIVATE"
+      ],
+      "FLAGS": [
+        "CONTBIT",
+        "NDESCBIT"
+      ],
+      "CAPACITY": [
+        10
+      ],
+      "ACTION": [
+        {
+          "Atom": "SMALL-BOX-F"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT BOOTS (DESC \"boots\") (SYNONYM BOOTS PATROL) (ADJECTIVE BOOT TALL) (FLAGS NARTICLEBIT ACTORBIT NDESCBIT))",
+    "Name": "BOOTS",
+    "Properties": {
+      "DESC": [
+        "boots"
+      ],
+      "SYNONYM": [
+        "BOOTS",
+        "PATROL"
+      ],
+      "ADJECTIVE": [
+        "BOOT",
+        "TALL"
+      ],
+      "FLAGS": [
+        "NARTICLEBIT",
+        "ACTORBIT",
+        "NDESCBIT"
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT WISHBRINGER (DESC \"small stone\") (FLAGS TOOLBIT RMUNGBIT TAKEBIT) (SYNONYM STONE ROCK LIGHT WISHBRINGER) (ADJECTIVE SMALL MAGIC MAGICK GLOWING VIOLET) (SIZE 1) (VALUE 5) (ACTION WISHBRINGER-F))",
+    "Name": "WISHBRINGER",
+    "Properties": {
+      "DESC": [
+        "small stone"
+      ],
+      "FLAGS": [
+        "TOOLBIT",
+        "RMUNGBIT",
+        "TAKEBIT"
+      ],
+      "SYNONYM": [
+        "STONE",
+        "ROCK",
+        "LIGHT",
+        "WISHBRINGER"
+      ],
+      "ADJECTIVE": [
+        "SMALL",
+        "MAGIC",
+        "MAGICK",
+        "GLOWING",
+        "VIOLET"
+      ],
+      "SIZE": [
+        1
+      ],
+      "VALUE": [
+        5
+      ],
+      "ACTION": [
+        {
+          "Atom": "WISHBRINGER-F"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT FLIGHT (LOC GLOBAL-OBJECTS) (DESC \"Flight\") (FLAGS WISHBIT NARTICLEBIT) (SYNONYM FLIGHT) (ACTION FLIGHT-F))",
+    "Name": "FLIGHT",
+    "Properties": {
+      "LOC": [
+        {
+          "Atom": "GLOBAL-OBJECTS"
+        }
+      ],
+      "DESC": [
+        "Flight"
+      ],
+      "FLAGS": [
+        "WISHBIT",
+        "NARTICLEBIT"
+      ],
+      "SYNONYM": [
+        "FLIGHT"
+      ],
+      "ACTION": [
+        {
+          "Atom": "FLIGHT-F"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT FREEDOM (LOC GLOBAL-OBJECTS) (DESC \"Freedom\") (FLAGS WISHBIT NARTICLEBIT) (SYNONYM FREEDOM) (ACTION FREEDOM-F))",
+    "Name": "FREEDOM",
+    "Properties": {
+      "LOC": [
+        {
+          "Atom": "GLOBAL-OBJECTS"
+        }
+      ],
+      "DESC": [
+        "Freedom"
+      ],
+      "FLAGS": [
+        "WISHBIT",
+        "NARTICLEBIT"
+      ],
+      "SYNONYM": [
+        "FREEDOM"
+      ],
+      "ACTION": [
+        {
+          "Atom": "FREEDOM-F"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT RAIN (LOC GLOBAL-OBJECTS) (DESC \"rain\") (FLAGS WISHBIT NARTICLEBIT) (SYNONYM RAIN RAINWATER) (ACTION RAIN-F))",
+    "Name": "RAIN",
+    "Properties": {
+      "LOC": [
+        {
+          "Atom": "GLOBAL-OBJECTS"
+        }
+      ],
+      "DESC": [
+        "rain"
+      ],
+      "FLAGS": [
+        "WISHBIT",
+        "NARTICLEBIT"
+      ],
+      "SYNONYM": [
+        "RAIN",
+        "RAINWATER"
+      ],
+      "ACTION": [
+        {
+          "Atom": "RAIN-F"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT FORESIGHT (LOC GLOBAL-OBJECTS) (DESC \"Foresight\") (FLAGS WISHBIT NARTICLEBIT) (SYNONYM FORESIGHT) (ACTION FORESIGHT-F))",
+    "Name": "FORESIGHT",
+    "Properties": {
+      "LOC": [
+        {
+          "Atom": "GLOBAL-OBJECTS"
+        }
+      ],
+      "DESC": [
+        "Foresight"
+      ],
+      "FLAGS": [
+        "WISHBIT",
+        "NARTICLEBIT"
+      ],
+      "SYNONYM": [
+        "FORESIGHT"
+      ],
+      "ACTION": [
+        {
+          "Atom": "FORESIGHT-F"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT LUCK (LOC GLOBAL-OBJECTS) (DESC \"Luck\") (FLAGS WISHBIT NARTICLEBIT) (SYNONYM LUCK) (ACTION LUCK-F))",
+    "Name": "LUCK",
+    "Properties": {
+      "LOC": [
+        {
+          "Atom": "GLOBAL-OBJECTS"
+        }
+      ],
+      "DESC": [
+        "Luck"
+      ],
+      "FLAGS": [
+        "WISHBIT",
+        "NARTICLEBIT"
+      ],
+      "SYNONYM": [
+        "LUCK"
+      ],
+      "ACTION": [
+        {
+          "Atom": "LUCK-F"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT ADVICE (LOC GLOBAL-OBJECTS) (DESC \"Advice\") (FLAGS WISHBIT NARTICLEBIT) (SYNONYM ADVICE) (ACTION ADVICE-F))",
+    "Name": "ADVICE",
+    "Properties": {
+      "LOC": [
+        {
+          "Atom": "GLOBAL-OBJECTS"
+        }
+      ],
+      "DESC": [
+        "Advice"
+      ],
+      "FLAGS": [
+        "WISHBIT",
+        "NARTICLEBIT"
+      ],
+      "SYNONYM": [
+        "ADVICE"
+      ],
+      "ACTION": [
+        {
+          "Atom": "ADVICE-F"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT DARKNESS (LOC GLOBAL-OBJECTS) (DESC \"darkness\") (FLAGS WISHBIT NARTICLEBIT) (SYNONYM DARKNESS DARK) (ACTION DARKNESS-F))",
+    "Name": "DARKNESS",
+    "Properties": {
+      "LOC": [
+        {
+          "Atom": "GLOBAL-OBJECTS"
+        }
+      ],
+      "DESC": [
+        "darkness"
+      ],
+      "FLAGS": [
+        "WISHBIT",
+        "NARTICLEBIT"
+      ],
+      "SYNONYM": [
+        "DARKNESS",
+        "DARK"
+      ],
+      "ACTION": [
+        {
+          "Atom": "DARKNESS-F"
+        }
+      ]
+    },
+    "IsRoom": false
+  },
+  {
+    "Zil": "#OBJECT (OBJECT MOON (LOC GLOBAL-OBJECTS) (DESC \"moon\") (FLAGS NDESCBIT) (SYNONYM MOON) (ACTION MOON-F))",
+    "Name": "MOON",
+    "Properties": {
+      "LOC": [
+        {
+          "Atom": "GLOBAL-OBJECTS"
+        }
+      ],
+      "DESC": [
+        "moon"
+      ],
+      "FLAGS": [
+        "NDESCBIT"
+      ],
+      "SYNONYM": [
+        "MOON"
+      ],
+      "ACTION": [
+        {
+          "Atom": "MOON-F"
+        }
+      ]
+    },
+    "IsRoom": false
+  }
+]

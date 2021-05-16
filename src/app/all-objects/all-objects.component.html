@@ -1,0 +1,84 @@
+<div class="bg-grey-600" style="padding:16px;">
+    <div class="bg-grey-100" style="padding:16px; border-radius:16px;">
+        <h1 class="color-grey-900 pb-3">Objects</h1>
+        <div *ngIf="isInitialized">
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+                <ng-container *ngFor="let o of allObjects">
+                    <div class="col" *ngIf="passesFilters(o)">
+                        <div class="card shadow-lg h-100 bg-grey-200">
+                            <a [href]="'games/'+gameId+'/objects/'+o.Name" class="text-reset text-decoration-none">
+                                <div class="card-img-top bg-grey-100" style="width:100%; height:225px;" role="div">
+                                    <div class="p-3" style="height: 225px; overflow-y: hidden;">
+                                        <div class="color-primary-900" style="font-size: 24pt;">{{o.Properties.DESC}}</div>
+                                        <div class="color-grey-900" style="font-size: 16pt;">{{o.Properties.FDESC || o.Properties.LDESC || ""}}</div>
+                                    </div>
+                                </div>
+                                <div class="card-body bg-grey-200">
+                                    <h5 class="card-title color-primary-900">{{o.Name}}</h5>
+                                    <div class="card-text color-grey-700">
+                                        <div>{{getAdjectivesDesc(o)}} {{getSynonymsDesc(o)}}</div>
+                                        <div style="width:100%; text-align:right; font-size:smaller;">{{o.Properties["#IN"] || "-"}}</div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </ng-container>
+            </div>
+        </div>
+    </div>
+</div>
+<!--
+    <div class="btn-group me-3 mb-3" role="group" aria-label="Basic radio toggle button group">
+        <input type="radio" class="btn-check" name="tryTakeRadio" id="tryTakeRadio1" value="Takeable" autocomplete="off" [(ngModel)]="tryTakeFilterValue">
+        <label class="btn btn-outline-primary" for="tryTakeRadio1">Takeable</label>
+        <input type="radio" class="btn-check" name="tryTakeRadio" id="tryTakeRadio2" value="Now" autocomplete="off" [(ngModel)]="tryTakeFilterValue">
+        <label class="btn btn-outline-primary" for="tryTakeRadio2">Now</label>
+        <input type="radio" class="btn-check" name="tryTakeRadio" id="tryTakeRadio3" value="Not Now" autocomplete="off" [(ngModel)]="tryTakeFilterValue">
+        <label class="btn btn-outline-primary" for="tryTakeRadio3">Not Now</label>
+        <input type="radio" class="btn-check" name="tryTakeRadio" id="tryTakeRadio4" value="Never" autocomplete="off" [(ngModel)]="tryTakeFilterValue">
+        <label class="btn btn-outline-primary" for="tryTakeRadio4">Never</label>
+        <input type="radio" class="btn-check" name="tryTakeRadio" id="tryTakeRadio5" value="Taunt" autocomplete="off" [(ngModel)]="tryTakeFilterValue">
+        <label class="btn btn-outline-primary" for="tryTakeRadio5">Taunt</label>
+        <input type="radio" class="btn-check" name="tryTakeRadio" id="tryTakeRadio6" value="All" autocomplete="off" [(ngModel)]="tryTakeFilterValue">
+        <label class="btn btn-outline-primary" for="tryTakeRadio6">All</label>
+    </div>
+    <div class="btn-group me-3 mb-3" role="group" aria-label="Basic radio toggle button group">
+        <input type="radio" class="btn-check" name="containerRadio" id="containerRadio1" value="Container" autocomplete="off" [(ngModel)]="containerFilterValue">
+        <label class="btn btn-outline-primary" for="containerRadio1">Container</label>
+        <input type="radio" class="btn-check" name="containerRadio" id="containerRadio2" value="Surface" autocomplete="off" [(ngModel)]="containerFilterValue">
+        <label class="btn btn-outline-primary" for="containerRadio2">Surface</label>
+        <input type="radio" class="btn-check" name="containerRadio" id="containerRadio3" value="Transparent" autocomplete="off" [(ngModel)]="containerFilterValue">
+        <label class="btn btn-outline-primary" for="containerRadio3">Transparent</label>
+        <input type="radio" class="btn-check" name="containerRadio" id="containerRadio4" value="NonContainer" autocomplete="off" [(ngModel)]="containerFilterValue">
+        <label class="btn btn-outline-primary" for="containerRadio4">NonContainer</label>
+        <input type="radio" class="btn-check" name="containerRadio" id="containerRadio5" value="All" autocomplete="off" [(ngModel)]="containerFilterValue">
+        <label class="btn btn-outline-primary" for="containerRadio5">All</label>
+    </div>
+    <div class="btn-group me-3 mb-3" role="group" aria-label="Basic radio toggle button group">
+        <input type="radio" class="btn-check" name="visibilityRadio" id="visibilityRadio1" value="Visible" autocomplete="off" [(ngModel)]="visibilityFilterValue">
+        <label class="btn btn-outline-primary" for="visibilityRadio1">Visible</label>
+        <input type="radio" class="btn-check" name="visibilityRadio" id="visibilityRadio2" value="Invisible" autocomplete="off" [(ngModel)]="visibilityFilterValue">
+        <label class="btn btn-outline-primary" for="visibilityRadio2">Invisible</label>
+        <input type="radio" class="btn-check" name="visibilityRadio" id="visibilityRadio3" value="All" autocomplete="off" [(ngModel)]="visibilityFilterValue">
+        <label class="btn btn-outline-primary" for="visibilityRadio3">All</label>
+    </div>
+    <div class="btn-group me-3 mb-3" role="group" aria-label="Basic radio toggle button group">
+        <input type="radio" class="btn-check" name="actorRadio" id="actorRadio1" value="Actor" autocomplete="off" [(ngModel)]="actorFilterValue">
+        <label class="btn btn-outline-primary" for="actorRadio1">Actor</label>
+        <input type="radio" class="btn-check" name="actorRadio" id="actorRadio2" value="NonActor" autocomplete="off" [(ngModel)]="actorFilterValue">
+        <label class="btn btn-outline-primary" for="actorRadio2">NonActor</label>
+        <input type="radio" class="btn-check" name="actorRadio" id="actorRadio3" value="All" autocomplete="off" [(ngModel)]="actorFilterValue">
+        <label class="btn btn-outline-primary" for="actorRadio3">All</label>
+    </div>
+    <div class="btn-group me-3 mb-3" role="group" aria-label="Basic radio toggle button group">
+        <input type="radio" class="btn-check" name="lightFireRadio" id="lightFireRadio1" value="Lightable" autocomplete="off" [(ngModel)]="lightFireFilterValue">
+        <label class="btn btn-outline-primary" for="lightFireRadio1">Lightable</label>
+        <input type="radio" class="btn-check" name="lightFireRadio" id="lightFireRadio2" value="Flaming" autocomplete="off" [(ngModel)]="lightFireFilterValue">
+        <label class="btn btn-outline-primary" for="lightFireRadio2">Flaming</label>
+        <input type="radio" class="btn-check" name="lightFireRadio" id="lightFireRadio3" value="Burnable" autocomplete="off" [(ngModel)]="lightFireFilterValue">
+        <label class="btn btn-outline-primary" for="lightFireRadio3">Burnable</label>
+        <input type="radio" class="btn-check" name="lightFireRadio" id="lightFireRadio4" value="All" autocomplete="off" [(ngModel)]="lightFireFilterValue">
+        <label class="btn btn-outline-primary" for="lightFireRadio4">All</label>
+    </div>
+-->

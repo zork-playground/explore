@@ -1,0 +1,21 @@
+<h1>{{selectedGameName}}</h1>
+<a class="btn btn-primary" href="games" role="button">Change Game</a>
+
+<h2 class="mt-5">Explore</h2>
+<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+        <div *ngFor="let card of cards" class="col">
+            <div class="card shadow-sm h-100" style="color:saddlebrown;">
+                <a [href]="card.link" class="text-reset text-decoration-none">
+                    <div class="card-img-top" style="width:100%; height:212px; background-image: url(assets/images/parchment3.jpg); background-color:tan;" role="div">
+                        <div class="p-3" style="height: 212px; overflow-y: hidden; font-size: 24pt; font-family: 'Crimson Text', serif; color:saddlebrown;">{{card.imageText}}</div>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">{{card.title}}</h5>
+                        <div class="card-text">
+                            <div>{{card.description}}</div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+</div>
