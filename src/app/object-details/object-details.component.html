@@ -5,59 +5,59 @@
             <table class="table table-hover table-striped table-borderless shadow-lg" style="border-radius:8px; width:auto;">
                 <tbody>
                     <tr *ngIf="o.Properties['DESC']">
-                        <td style="white-space:nowrap;">
+                        <td>
                             <div class="color-grey-900"><b>DESC</b></div>
                             <div class="color-grey-700" style="font-size:smaller">Description</div>
                         </td>
                         <td><div class="game-text">{{o.Properties['DESC']}}</div></td>
                     </tr>
                     <tr *ngIf="o.Properties['FDESC']">
-                        <td style="white-space:nowrap;">
+                        <td>
                             <div class="color-grey-900"><b>FDESC</b></div>
                             <div class="color-grey-700" style="font-size:smaller">First Description (untouched)</div>
                         </td>
                         <td><div class="game-text">{{o.Properties['FDESC']}}</div></td>
                     </tr>
                     <tr *ngIf="o.Properties['LDESC']">
-                        <td style="white-space:nowrap;">
+                        <td>
                             <div class="color-grey-900"><b>LDESC</b></div>
                             <div class="color-grey-700" style="font-size:smaller">Long Description</div>
                         </td>
                         <td><div class="game-text">{{o.Properties['LDESC']}}</div></td>
                     </tr>
                     <tr *ngIf="o.Properties['TEXT']">
-                        <td style="white-space:nowrap;">
+                        <td>
                             <div class="color-grey-900"><b>TEXT</b></div>
                             <div class="color-grey-700" style="font-size:smaller">Text when read</div>
                         </td>
                         <td><div class="game-text">{{o.Properties['TEXT'][0]}}</div></td>
                     </tr>
                     <tr *ngIf="o.Properties['ADJECTIVE']">
-                        <td style="white-space:nowrap;">
+                        <td>
                             <div class="color-grey-900"><b>ADJECTIVE</b></div>
                             <div class="color-grey-700" style="font-size:smaller">Adjectives</div>
                         </td>
                         <td style="color:var(--yellow-700); font-weight:bold">
                             <span *ngFor="let adj of o.Properties['ADJECTIVE']; index as i">
-                                <span *ngIf="i!=0">&nbsp;</span>
+                                <span *ngIf="i!=0">, </span>
                                 <span>{{adj.toLowerCase()}}</span>
                             </span>
                         </td>
                     </tr>
                     <tr *ngIf="o.Properties['SYNONYM']">
-                        <td style="white-space:nowrap;">
+                        <td>
                             <div class="color-grey-900"><b>SYNONYM</b></div>
                             <div class="color-grey-700" style="font-size:smaller">Synonyms</div>
                         </td>
                         <td style="color:var(--yellow-700); font-weight:bold">
                             <span *ngFor="let syn of o.Properties['SYNONYM']; index as i">
-                                <span *ngIf="i!=0">&nbsp;</span>
+                                <span *ngIf="i!=0">, </span>
                                 <span>{{syn.toLowerCase()}}</span>
                             </span>
                         </td>
                     </tr>
                     <tr *ngIf="o.Properties['FLAGS']">
-                        <td style="white-space:nowrap;">
+                        <td>
                             <div class="color-grey-900"><b>FLAGS</b></div>
                             <div class="color-grey-700" style="font-size:smaller">On/Off Flags</div>
                         </td>
@@ -66,7 +66,7 @@
                         </td>
                     </tr>
                     <tr *ngIf="o.Properties['ACTION']">
-                        <td style="white-space:nowrap;">
+                        <td>
                             <div class="color-grey-900"><b>ACTION</b></div>
                             <div class="color-grey-700" style="font-size:smaller">Action Function</div>
                         </td>
@@ -78,14 +78,14 @@
                     </tr>
                     <ng-container *ngFor="let p of o.Properties | keyvalue">
                         <tr *ngIf="!isKnownProperty(p.key)">
-                            <td style="white-space:nowrap;">
+                            <td>
                                 <div class="color-grey-900"><b>{{p.key}}</b></div>
                             </td>
                             <td style="color:var(--primary-900)">{{stringify(p.value[0])}}</td>
                         </tr>
                     </ng-container>
                     <tr *ngIf="o.Properties['#IN']">
-                        <td style="white-space:nowrap;">
+                        <td>
                             <div class="color-grey-900"><b>IN</b></div>
                             <div class="color-grey-700" style="font-size:smaller">{{getContainerLabel(o.Properties['#IN'])}}</div>
                         </td>
