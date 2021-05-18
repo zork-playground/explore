@@ -11,6 +11,7 @@ import { GameDataReceiver } from '../game-data-receiver';
 export class RoomDetailsComponent implements OnInit, GameDataReceiver {
 
   public gameId: string;
+  public gameData: any;
   public stringify = JSON.stringify;
   public id: string = null;
   public o: any = null;
@@ -47,60 +48,48 @@ export class RoomDetailsComponent implements OnInit, GameDataReceiver {
   }
 
   ngOnInit(): void {
-    let selectedGameId = this.gameDataService.getSelectedGameId(this.gameId);
-    if (selectedGameId != this.gameId) {
-      this.gameDataService.setSelectedGameId(this.gameId, this); // initialize later
-    } else {
-      this.initialize(); // initialize now
-    }
+    this.gameDataService.getAllGameData(this.gameId, this);
   }
 
   public receiveGameData(gameData: any) {
-    console.log("Finished re-fetching game data for newly selected game.");
-    this.initialize();
-  }
-
-  public initialize() {
-    this.gameDataService.getAllRooms().subscribe((allRooms) => {
-      console.log("allRooms:", allRooms);
-      for (let obj of allRooms) {
-        if (obj.Name == this.id) {
-          this.o = obj;
-        }
+    this.gameData = gameData;
+    let allRooms = gameData.Objects.filter(o => o.IsRoom);
+    console.log("allRooms:", allRooms);
+    for (let obj of allRooms) {
+      if (obj.Name == this.id) {
+        this.o = obj;
       }
-      if (!this.o) {
-        console.log("Error: object not found.");
+    }
+    if (!this.o) {
+      console.log("Error: object not found.");
+    }
+    console.log("Room = this.o:", this.o);
+    let localGlobalNames = [];
+    if (this.o.Properties['GLOBAL']) {
+      for (let g of this.o.Properties['GLOBAL']) {
+        localGlobalNames.push(g.Atom);
       }
-      console.log("Room = this.o:", this.o);
-      let localGlobalNames = [];
-      if (this.o.Properties['GLOBAL']) {
-        for (let g of this.o.Properties['GLOBAL']) {
-          localGlobalNames.push(g.Atom);
-        }
-      }
-      console.log("localGlobalNames:", localGlobalNames);
-      // Now look at all objects in the game...
-      this.gameDataService.getAllObjects().subscribe((allObjects) => {
-        console.log("allObjects:", allObjects);
-        for (let obj of allObjects) {
-            if (obj.Properties["#IN"] == this.id) {
-              this.contains.push(obj);
-            }
-        }
-        for (let obj of allObjects) {
-          if (this.o.Properties["#IN"] == obj.Name) {
-            this.parentObject = obj;
+    }
+    console.log("localGlobalNames:", localGlobalNames);
+    // Now look at all objects in the game...
+    let allObjects = gameData.Objects.filter(o => !o.IsRoom);
+      console.log("allObjects:", allObjects);
+      for (let obj of allObjects) {
+          if (obj.Properties["#IN"] == this.id) {
+            this.contains.push(obj);
           }
-          if (localGlobalNames.includes(obj.Name)) {
-            this.localGlobals.push(obj);
-          }
+      }
+      for (let obj of allObjects) {
+        if (this.o.Properties["#IN"] == obj.Name) {
+          this.parentObject = obj;
         }
-        console.log("localGlobals:", this.localGlobals);
-        this.isInitialized = true;
-      });
+        if (localGlobalNames.includes(obj.Name)) {
+          this.localGlobals.push(obj);
+        }
+      }
+      console.log("localGlobals:", this.localGlobals);
   
       this.isInitialized = true;
-    });
   }
 
   public getFriendlyExitType(t: string) {

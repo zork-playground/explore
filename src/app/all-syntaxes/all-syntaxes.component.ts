@@ -11,6 +11,7 @@ import { GameDataReceiver } from '../game-data-receiver';
 export class AllSyntaxesComponent implements OnInit, GameDataReceiver {
 
   public gameId: string;
+  public gameData: any;
   public isInitialized: boolean = false;
   public allSyntaxes: any[] = null;
 
@@ -23,24 +24,13 @@ export class AllSyntaxesComponent implements OnInit, GameDataReceiver {
   }
 
   ngOnInit(): void {
-    let selectedGameId = this.gameDataService.getSelectedGameId(this.gameId);
-    if (selectedGameId != this.gameId) {
-      this.gameDataService.setSelectedGameId(this.gameId, this); // initialize later
-    } else {
-      this.initialize(); // initialize now
-    }
+    this.gameDataService.getAllGameData(this.gameId, this);
   }
 
   public receiveGameData(gameData: any) {
-    console.log("Finished re-fetching game data for newly selected game.");
-    this.initialize();
-  }
-
-  initialize() {
-    this.gameDataService.getAllSyntaxes().subscribe((response: any[]) => {
-      this.allSyntaxes = response;
-      this.isInitialized = true;
-    });
+    this.gameData = gameData;
+    this.allSyntaxes = gameData.Syntaxes;
+    this.isInitialized = true;
   }
 
 }

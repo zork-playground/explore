@@ -14,19 +14,28 @@
         </svg>
         -->
         </a>
+        <span *ngIf="gameId" class="px-4 pe-3" style="color:var(--primary-500)">
+            <a href="games" class="text-reset text-decoration-none">
+                <b>{{gameId}}</b>
+            </a>
+        </span>
         <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-            <li class="nav-item"><a [routerLink]="'games'"                         routerLinkActive="true" class="nav-link color-primary-100">Games</a></li>
-            <li class="nav-item"><a [routerLink]="'games/' + gameId + '/objects'"  routerLinkActive="true" class="nav-link color-primary-100">Objects</a></li>
-            <li class="nav-item"><a [routerLink]="'games/' + gameId + '/rooms'"    routerLinkActive="true" class="nav-link color-primary-100">Rooms</a></li>
-            <li class="nav-item"><a [routerLink]="'games/' + gameId + '/routines'" routerLinkActive="true" class="nav-link color-primary-100">Routines</a></li>
-            <li class="nav-item"><a [routerLink]="'games/' + gameId + '/syntaxes'" routerLinkActive="true" class="nav-link color-primary-100">Syntaxes</a></li>
+            <ng-container *ngIf="gameId == null">
+                <li class="nav-item"><a [routerLink]="'games'" routerLinkActive="true" class="nav-link color-primary-100">Games</a></li>
+            </ng-container>
+            <ng-container *ngIf="gameId != null">
+                <li class="nav-item"><a [routerLink]="'games/' + gameId + '/objects'"  routerLinkActive="true" class="nav-link color-primary-100">Objects</a></li>
+                <li class="nav-item"><a [routerLink]="'games/' + gameId + '/rooms'"    routerLinkActive="true" class="nav-link color-primary-100">Rooms</a></li>
+                <li class="nav-item"><a [routerLink]="'games/' + gameId + '/routines'" routerLinkActive="true" class="nav-link color-primary-100">Routines</a></li>
+                <li class="nav-item"><a [routerLink]="'games/' + gameId + '/syntaxes'" routerLinkActive="true" class="nav-link color-primary-100">Syntaxes</a></li>
+            </ng-container>
         </ul>
         <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
           <input type="search" class="form-control form-control-dark" placeholder="Search..." aria-label="Search">
         </form>
       </div>
   </header>
-  <router-outlet style="background-color:orange"></router-outlet>
+  <router-outlet (activate)='onActivate($event)' style="background-color:orange"></router-outlet>
 </div>
 
 <!--

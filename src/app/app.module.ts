@@ -5,7 +5,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
+//import { HomeComponent } from './home/home.component';
 import { ObjectDetailsComponent } from './object-details/object-details.component';
 import { AllObjectsComponent } from './all-objects/all-objects.component';
 import { AllRoomsComponent } from './all-rooms/all-rooms.component';
@@ -25,7 +25,7 @@ import { LinkableZilAtomComponent } from './linkable-zil-atom/linkable-zil-atom.
 const routes: Routes = [
   //{ path: 'home', component: HomeComponent },
   { path: 'games', component: AllGamesComponent },
-  //{ path: 'games/:gameId', component: GameDetailsComponent },
+  { path: 'games/:gameId', component: GameDetailsComponent },
   { path: 'games/:gameId/objects', component: AllObjectsComponent },
   { path: 'games/:gameId/objects/:id', component: ObjectDetailsComponent },
   { path: 'games/:gameId/rooms', component: AllRoomsComponent },
@@ -41,7 +41,7 @@ const routes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
+    //HomeComponent,
     ObjectDetailsComponent,
     AllObjectsComponent,
     AllRoomsComponent,

@@ -11,6 +11,7 @@ import { GameDataReceiver } from '../game-data-receiver';
 export class AllObjectsComponent implements OnInit, GameDataReceiver {
 
   public gameId: string;
+  public gameData: any;
   public isInitialized: boolean = false;
   public allObjects: any[] = null;
   public filterActor: boolean = true;
@@ -32,24 +33,14 @@ export class AllObjectsComponent implements OnInit, GameDataReceiver {
   }
 
   ngOnInit(): void {
-    let selectedGameId = this.gameDataService.getSelectedGameId(this.gameId);
-    if (selectedGameId != this.gameId) {
-      this.gameDataService.setSelectedGameId(this.gameId, this); // initialize later
-    } else {
-      this.initialize(); // initialize now
-    }
+    this.gameDataService.getAllGameData(this.gameId, this);
   }
 
   public receiveGameData(gameData: any) {
-    console.log("Finished re-fetching game data for newly selected game.");
-    this.initialize();
-  }
-
-  public initialize() {
-    this.gameDataService.getAllObjects().subscribe((response: any[]) => {
-      this.allObjects = response;
-      this.isInitialized = true;
-    });
+    this.gameData = gameData;
+    this.allObjects = gameData.Objects;
+    this.allObjects.sort((o1, o2) => { return o1.Name < o2.Name ? -1 : 1 });
+    this.isInitialized = true;
   }
 
   public getObjectLabel(o) {

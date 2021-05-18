@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 import { GameDataService } from '../game-data.service';
 import { Router, ActivatedRoute } from '@angular/router';
 import { GameDataReceiver } from '../game-data-receiver';
@@ -10,7 +10,9 @@ import { GameDataReceiver } from '../game-data-receiver';
 })
 export class ObjectDetailsComponent implements OnInit, GameDataReceiver {
 
+  //@Output() gameIdInPath = new EventEmitter<string>();
   public gameId: string;
+  public gameData: any;
   public stringify = JSON.stringify;
   public id: string = null;
   public o: any = null;
@@ -41,44 +43,34 @@ export class ObjectDetailsComponent implements OnInit, GameDataReceiver {
   }
 
   ngOnInit(): void {
-    let selectedGameId = this.gameDataService.getSelectedGameId(this.gameId);
-    if (selectedGameId != this.gameId) {
-      this.gameDataService.setSelectedGameId(this.gameId, this); // initialize later
-    } else {
-      this.initialize(); // initialize now
-    }
+    this.gameDataService.getAllGameData(this.gameId, this);
   }
 
   public receiveGameData(gameData: any) {
-    console.log("Finished re-fetching game data for newly selected game.");
-    this.initialize();
-  }
-
-  initialize() {
-    this.gameDataService.getAllObjects().subscribe((allObjects) => {
-      console.log("allObjects:", allObjects);
-      for (let obj of allObjects) {
-        if (obj.Name == this.id) {
-          this.o = obj;
-        } else {
-          if (obj.Properties["#IN"] == this.id) {
-            this.contains.push(obj);
-          }
+    this.gameData = gameData;
+    let allObjects = gameData.Objects.filter(o => !o.IsRoom);
+    console.log("allObjects:", allObjects);
+    for (let obj of allObjects) {
+      if (obj.Name == this.id) {
+        this.o = obj;
+      } else {
+        if (obj.Properties["#IN"] == this.id) {
+          this.contains.push(obj);
         }
       }
-      for (let obj of allObjects) {
-        if (this.o.Properties["#IN"] == obj.Name) {
-          this.parentObject = obj;
-        }
+    }
+    for (let obj of allObjects) {
+      if (this.o.Properties["#IN"] == obj.Name) {
+        this.parentObject = obj;
       }
-      if (!this.o) {
-        console.log("Error: object not found.");
-      } else if (!this.parentObject) {
-        console.log("parentObject not found, probably a room.");
-      }
-      console.log("this.o:", this.o);
-      this.isInitialized = true;
-    });
+    }
+    if (!this.o) {
+      console.log("Error: object not found.");
+    } else if (!this.parentObject) {
+      console.log("parentObject not found, probably a room.");
+    }
+    console.log("this.o:", this.o);
+    this.isInitialized = true;
   }
 
   public getContainsLabel() {

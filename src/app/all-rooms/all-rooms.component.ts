@@ -8,9 +8,10 @@ import { GameDataReceiver } from '../game-data-receiver';
   templateUrl: './all-rooms.component.html',
   styleUrls: ['./all-rooms.component.css']
 })
-export class AllRoomsComponent implements OnInit {
+export class AllRoomsComponent implements OnInit, GameDataReceiver {
 
   public gameId: string;
+  public gameData: any;
   public isInitialized: boolean = false;
   public allRooms: any[] = null;
 
@@ -23,31 +24,20 @@ export class AllRoomsComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    let selectedGameId = this.gameDataService.getSelectedGameId(this.gameId);
-    if (selectedGameId != this.gameId) {
-      this.gameDataService.setSelectedGameId(this.gameId, this); // initialize later
-    } else {
-      this.initialize(); // initialize now
-    }
+    this.gameDataService.getAllGameData(this.gameId, this);
   }
 
   public receiveGameData(gameData: any) {
-    console.log("Finished re-fetching game data for newly selected game.");
-    this.initialize();
-  }
-
-  initialize() {
-    this.gameDataService.getAllRooms().subscribe((response: any[]) => {
-      this.allRooms = response;
-      this.isInitialized = true;
-    });
+    this.gameData = gameData;
+    this.allRooms = this.gameData.Objects.filter(o => o.IsRoom);
+    this.isInitialized = true;
   }
 
   public getRoomCardText(r) {
     if (r.Properties.FDESC) { return r.Properties.FDESC; }
     if (r.Properties.LDESC) { return r.Properties.LDESC; }
-    if (r.Properties.ACTION && r.Properties.ACTION[0] && r.Properties.ACTION[0].Atom) {
-      return "(described by " + r.Properties.ACTION[0].Atom + ")";
+    if (r.Properties.ACTION && r.Properties.ACTION[0] && r.Properties.ACTION[0].A) {
+      return "(described by " + r.Properties.ACTION[0].A + ")";
     }
     console.log("WARN: Could not find room description or ACTION for:", r);
     return "";

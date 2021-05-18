@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, ActivatedRoute } from '@angular/router';
+import { GameDataService } from '../game-data.service';
+
 
 @Component({
   selector: 'app-game-details',
@@ -7,9 +10,45 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GameDetailsComponent implements OnInit {
 
-  constructor() { }
+  public gameId: string;
+  public index: any;
+  public isInitialized: boolean = false;
+  public cards: any[] = [
+    {
+      "imageText": "Rooms",
+      "title": "Rooms",
+      "description": "All rooms in the game",
+      "link": "rooms"
+    },
+    {
+      "imageText": "Objects",
+      "title": "Objects",
+      "description": "All objects in the game",
+      "link": "objects"
+    },
+    {
+      "imageText": "Routines",
+      "title": "Routines",
+      "description": "All routines in the game",
+      "link": "routines"
+    },
+    {
+      "imageText": "Syntaxes",
+      "title": "Syntaxes",
+      "description": "All commands in the game",
+      "link": "syntaxes"
+    },
+  ];
+
+  constructor(private route: ActivatedRoute, private gameDataService: GameDataService) {
+    this.gameId = this.route.snapshot.params["gameId"];
+  }
 
   ngOnInit(): void {
+    this.gameDataService.getIndex().subscribe((response: any) => {
+      this.index = response;
+      this.isInitialized = true;
+    });
   }
 
 }

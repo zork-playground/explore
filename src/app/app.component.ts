@@ -1,26 +1,38 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, ActivatedRoute, RouterOutlet } from '@angular/router';
 import { GameDataService } from './game-data.service';
-import { GameChangeListener } from './game-change-listener';
+import { GameAwareMenu } from './game-aware-menu';
+import {map} from 'rxjs/operators';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit, GameChangeListener {
+export class AppComponent implements OnInit, GameAwareMenu {
 
   title = 'explore';
   public gameId: string;
 
-  constructor(private gameDataService: GameDataService) {
-    this.gameDataService.setMainAppComponent(this);
+  constructor(private route: ActivatedRoute, private gameDataService: GameDataService) {
+    //this.gameId = this.route.snapshot.params["gameId"];
+    console.log("In AppComponent, gameId=" + this.gameId);
+    this.gameDataService.registerGameAwareMenu(this);
   }
 
-  onChangeGame(newGameId: string): void {
-    this.gameId = newGameId;
+  setGameId(gameId: string): void {
+    console.log("AppComponent now knows that gameId=" + gameId);
+    //////this.gameId = gameId;
   }
 
   ngOnInit() {
-    this.gameId = this.gameDataService.getSelectedGameId(null);
+  }
+
+  onActivate($event) {
+    if ($event.route) {
+      this.gameId = $event.route.snapshot.params.gameId;
+    } else {
+      this.gameId = null;
+    }
   }
 }

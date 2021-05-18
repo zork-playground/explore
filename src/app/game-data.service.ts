@@ -3,39 +3,89 @@ import { HttpClient } from '@angular/common/http';
 import { Observable, throwError, of } from 'rxjs';
 import { map, catchError, retry } from 'rxjs/operators';
 import { GameDataReceiver } from './game-data-receiver';
-import { GameChangeListener } from './game-change-listener';
+import { GameAwareMenu } from './game-aware-menu';
 
 @Injectable({
   providedIn: 'root'
 })
 export class GameDataService {
 
-  private defaultSelectedGameId: string = "zork-1";
-  private cachedSelectedGameId: string = null;
+  //private defaultSelectedGameId: string = "zork-1";
+  //private cachedSelectedGameId: string = null;
   private indexCached: any = null;
-  private allObjectsCached: any[] = null;
-  private allRoomsCached: any[] = null;
-  private allRoutinesCached: any[] = null;
-  private allSyntaxesCached: any[] = null;
-  private allGameData: any = null;
-  private mainAppComponent: GameChangeListener = null;
+  //private allObjectsCached: any[] = null;
+  //private allRoomsCached: any[] = null;
+  //private allRoutinesCached: any[] = null;
+  //private allSyntaxesCached: any[] = null;
+  //private allGameData: any = null;
+  private allGameDataCache: any = {}; // {gameId => allGameData}
+  private gameAwareMenu: GameAwareMenu = null;
 
   constructor(private http: HttpClient) { }
 
-  public setMainAppComponent(mainAppComponent: GameChangeListener) {
-    this.mainAppComponent = mainAppComponent;
+  public registerGameAwareMenu(gameAwareMenu: GameAwareMenu) {
+    this.gameAwareMenu = gameAwareMenu;
   }
 
-  public getDataBaseUrl() {
+  public setGameIdForMenu(gameId: string) {
+    this.gameAwareMenu.setGameId(gameId);
+  }
+
+  private getDataBaseUrl() {
     return "assets/zil-to-json/data";
   }
 
-  public getGameBaseUrl() {
+  private getGameBaseUrl(gameId: string) {
     // Example: "assets/zil-to-json/data/zork1/"
-    return this.getDataBaseUrl() + "/" + this.getSelectedGameId(null);
+    return this.getDataBaseUrl() + "/" + gameId;
   }
 
-  public setSelectedGameId(selectedGameId: string, gameDataReceiver: GameDataReceiver) {
+  // Private. Components should use getIndex() instead.
+  private fetchIndex() {
+    return this.http.get(this.getDataBaseUrl() + "/index.json");
+  }
+
+  public getIndex() {
+    // If it's in the cache, just give it
+    if (this.indexCached != null) {
+      return of(this.indexCached);
+    } else {
+      // Otherwise, fetch and cache and give it
+      return this.fetchIndex().pipe(
+        map((res: any) => {
+          this.indexCached = res;
+          console.log("getIndex() returning just-fetched-and-cached:", this.indexCached);
+          return this.indexCached;
+        }),
+        catchError(err => of({}))
+      )
+    };
+  }
+
+  // Private. Components should use getAllGameData() instead.
+  private fetchAllGameData(gameId: string) {
+    return this.http.get(this.getGameBaseUrl(gameId) + "/all.json");
+  }
+
+  public getAllGameData(gameId: string, receiver: GameDataReceiver): void {
+    console.log("calling setGameIdForMenu with gameId=" + gameId);
+    this.setGameIdForMenu(gameId);
+    if (this.allGameDataCache[gameId]) {
+      // If it's in the cache, just give it
+      receiver.receiveGameData(this.allGameDataCache[gameId]);
+    } else {
+      // Otherwise, fetch and cache and give it
+      this.fetchAllGameData(gameId).subscribe(allGameData => {
+        console.log("Fetched allGameData for " + gameId + ":", allGameData);
+        this.allGameDataCache[gameId] = allGameData;
+        this.analyzeGameData(this.allGameDataCache[gameId]);
+        receiver.receiveGameData(this.allGameDataCache[gameId]);
+      });
+    }
+  }
+
+  /*
+  public setSelectedGameIdAndGetAllGameData(selectedGameId: string, gameDataReceiver: GameDataReceiver) {
     localStorage.setItem('selectedGameId', selectedGameId);
     this.cachedSelectedGameId = selectedGameId;
     this.clearAllCaches();
@@ -48,17 +98,18 @@ export class GameDataService {
 
   public clearAllCaches() {
     this.indexCached = null;
-    this.allObjectsCached = null;
-    this.allRoomsCached = null;
-    this.allRoutinesCached = null;
-    this.allSyntaxesCached = null;
+    this.allGameDataCached = null;
+    //this.allObjectsCached = null;
+    //this.allRoomsCached = null;
+    //this.allRoutinesCached = null;
+    //this.allSyntaxesCached = null;
   }
 
   // gameIdInPath is optional
   // if a user visits a link to a page for a specific game directly,
   // the gameIdInPath should be supplied, to prevent
   // unnecessarily fetching data for the default zork1 game
-  public getSelectedGameId(gameIdInPath: string) {
+  public getOrSetSelectedGameId(gameIdInPath: string) {
     if (this.cachedSelectedGameId) {
       console.log("selectedGameId from cache: " + this.cachedSelectedGameId);
       return this.cachedSelectedGameId;
@@ -79,26 +130,15 @@ export class GameDataService {
     this.cachedSelectedGameId = selectedGameId;
     return selectedGameId;
   }
+  */
 
-  public getIndex() {
-    if (this.indexCached != null) {
-      console.log("getIndex() returning already-cached:", this.indexCached);
-      return of(this.indexCached);
-    } else {
-      console.log("getIndex() not-yet-cached, fetching...");
-      return this.http
-        .get(this.getDataBaseUrl() + "/index.json")
-        .pipe(
-          map((res: any) => {
-            this.indexCached = res;
-            console.log("getIndex() returning just-fetched-and-cached:", this.indexCached);
-            return this.indexCached;
-          }),
-          catchError(err => of({})));
-    }
-  }
-
+  /*
   public getAllGameData(receiver: GameDataReceiver) {
+    this.fetchAllGameData().subscribe(allGameData => {
+      this.allGameDataCached = allGameData;
+      this.analyzeGameData(this.allGameDataCached);
+      receiver.receiveGameData(this.allGameDataCached);
+    });
     this.getAllObjects().subscribe(allObjects => {
       this.getAllRooms().subscribe(allRooms => {
         this.getAllRoutines().subscribe(allRoutines => {
@@ -109,26 +149,23 @@ export class GameDataService {
               allRoutines: allRoutines,
               allSyntaxes: allSyntaxes
             };
-            this.analyzeGameData();
-            receiver.receiveGameData(this.allGameData);
+            this.analyzeGameData(this.allGameDataCached);
+            receiver.receiveGameData();
           })
         })
       })
     });
   }
+    */
 
-  public analyzeGameData() {
-    this.allGameData["metadata"] = {};
-    var metadata = this.allGameData["metadata"];
-    for (let o of this.allGameData.allObjects) {
+  public analyzeGameData(gameData: any) {
+    gameData["metadata"] = {};
+    var metadata = gameData["metadata"];
+    for (let o of gameData.Objects) {
       if (metadata[o.Name]) { console.warn("WARN: Object name " + o.Name + " conflicts and overrides other entity:", metadata[o.Name]); }
-      metadata[o.Name] = {"name": o.Name, "type": "OBJECT"};
+      metadata[o.Name] = {"name": o.Name, "type": o.IsRoom? "ROOM" : "OBJECT"};
     }
-    for (let o of this.allGameData.allRooms) {
-      if (metadata[o.Name]) { console.warn("WARN: Room name " + o.Name + " conflicts and overrides other entity:", metadata[o.Name]); }
-      metadata[o.Name] = {"name": o.Name, "type": "ROOM"};
-    }
-    for (let o of this.allGameData.allRoutines) {
+    for (let o of gameData.Routines) {
       if (metadata[o.Name]) { console.warn("WARN: Routine name " + o.Name + " conflicts and overrides other entity:", metadata[o.Name]); }
       metadata[o.Name] = {
         "name": o.Name,
@@ -140,9 +177,9 @@ export class GameDataService {
       };
     }
     // Mark routines that are room action functions
-    for (let o of this.allGameData.allRooms) {
-      if (o.Properties["ACTION"]) {
-        let actionFunctionName = o.Properties["ACTION"][0].Atom;
+    for (let o of gameData.Objects) {
+      if (o.IsRoom && o.Properties["ACTION"]) {
+        let actionFunctionName = o.Properties["ACTION"][0].A;
         if (actionFunctionName) {
           let meta = metadata[actionFunctionName];
           meta["isActionForRooms"].push(o.Name);
@@ -150,9 +187,9 @@ export class GameDataService {
       }
     }
     // Mark routines that are object action functions
-    for (let o of this.allGameData.allObjects) {
-      if (o.Properties["ACTION"]) {
-        let actionFunctionName = o.Properties["ACTION"][0].Atom;
+    for (let o of gameData.Objects) {
+      if (!o.IsRoom && o.Properties["ACTION"]) {
+        let actionFunctionName = o.Properties["ACTION"][0].A;
         if (actionFunctionName) {
           let meta = metadata[actionFunctionName];
           meta["isActionForObjects"].push(o.Name);
@@ -160,7 +197,7 @@ export class GameDataService {
       }
     }
     // Mark routines that are syntax preaction functions
-    for (let syntax of this.allGameData.allSyntaxes) {
+    for (let syntax of gameData.Syntaxes) {
       let actionFunctionName = syntax["Preaction"];
       if (actionFunctionName) {
         let meta = metadata[actionFunctionName];
@@ -169,7 +206,7 @@ export class GameDataService {
       }
     }
     // Mark routines that are syntax action functions
-    for (let syntax of this.allGameData.allSyntaxes) {
+    for (let syntax of gameData.Syntaxes) {
       let actionFunctionName = syntax["Action"];
       if (actionFunctionName) {
         let meta = metadata[actionFunctionName];
@@ -182,6 +219,7 @@ export class GameDataService {
 
   // }
 
+  /*
   public getAllObjects() {
     if (this.allObjectsCached != null) {
       console.log("getAllObjects() returning already-cached:", this.allObjectsCached);
@@ -253,4 +291,5 @@ export class GameDataService {
           catchError(err => of([])));
     }
   }
+  */
 }
