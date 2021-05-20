@@ -7,31 +7,18 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class RoomExitComponent implements OnInit {
 
-  @Input() public gameId: string; // room object, e.g. {"Name":"...","Properties":{...}}
-  @Input() public room: any; // room object, e.g. {"Name":"...","Properties":{...}}
-  @Input() public dir: string; // direction property name, e.g. "NORTH"
-  public dirLabel: string;
+  @Input() public gameId: string;
+  @Input() public exit: any;
+  @Input() public dirLabel: string[];
   public textColor: string;
   public bgColor: string;
   public borderColor: string;
   public stringify = JSON.stringify;
   public isArray = Array.isArray;
-  public exit: any = null;
 
   constructor() { }
 
   ngOnInit(): void {
-    if (this.room != null && this.room.Exits != null) {
-      this.exit = this.room.Exits[this.dir];
-      console.log("for " + this.dir + ", this.exit:", this.exit);
-    }
-    let dirLabelLookup = {
-      "NORTH": "n",
-      "SOUTH": "s",
-      "EAST": "e",
-      "WEST": "w"
-    };
-    this.dirLabel = dirLabelLookup[this.dir] || this.dir.toLowerCase();
     let bgColorLookup = {
       "UEXIT": "var(--green-100)",
       "CEXIT": "var(--yellow-100)",
@@ -53,7 +40,7 @@ export class RoomExitComponent implements OnInit {
       "FEXIT": "var(--yellow-600)",
       "NEXIT": "var(--red-500)"
     };
-    if (this.dir == 'HERE') {
+    if (this.dirLabel && this.dirLabel[0] == 'HERE') {
       this.bgColor = "white";
       this.borderColor = "var(--grey-700)";
       this.textColor = "var(--primary-900)";
@@ -67,6 +54,10 @@ export class RoomExitComponent implements OnInit {
       this.textColor = "inherit";
     }
     console.log("textColor=" + this.textColor + ", bgColor=" + this.bgColor + ", borderColor=" + this.borderColor);
+  }
+
+  getPrettyLabel() {
+    return this.dirLabel[0] == "HERE" ? "here" : this.exit != null ? this.dirLabel.join(", ").toLowerCase() : "";
   }
 
 }

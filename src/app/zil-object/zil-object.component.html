@@ -1,4 +1,4 @@
-<ng-container *ngIf="o.A != undefined"><span>{{o.A}}</span></ng-container>
-<ng-container *ngIf="o.F != undefined"><app-zil-form [o]="o"></app-zil-form></ng-container>
-<ng-container *ngIf="isArray(o)"><app-zil-array [o]="o" [indented]="false"></app-zil-array></ng-container>
-<span *ngIf="!(   (o.A != undefined)   ||   (o.F != undefined)   ||   (isArray(o))   )">{{normalizeWhitespace(stringify(o))}}</span>
+<ng-container *ngIf="objType=='Atom'"><span>{{o.A}}</span></ng-container>
+<ng-container *ngIf="objType=='Form'"><app-zil-form [o]="o"></app-zil-form></ng-container>
+<ng-container *ngIf="objType=='Array'"><app-zil-array [o]="o" [indented]="false"></app-zil-array></ng-container>
+<ng-container *ngIf="objType=='Other'"><span>{{normalizeWhitespace(stringify(o))}}</span></ng-container>

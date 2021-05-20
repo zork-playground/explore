@@ -1,7 +1,10 @@
-<ng-container *ngIf="!o.F[0]">&lt;&gt;</ng-container>
-<ng-container *ngIf="o.F[0]?.A=='LVAL'">.{{o.F[1].A}}</ng-container>
-<ng-container *ngIf="o.F[0]?.A=='GVAL'">,{{o.F[1].A}}</ng-container>
-<ng-container *ngIf="o.F[0]?.A=='COND'">
+<ng-container *ngIf="formType=='Null'">&lt;&gt;</ng-container>
+<ng-container *ngIf="formType=='LVAL'">.{{o.F[1].A}}</ng-container>
+<ng-container *ngIf="formType=='GVAL'">
+    <a    *ngIf=" gvalType" [routerLink]="['../..', gvalType, gvalName]" class="text-reset text-decoration-none"><b [style.color]="gvalColor" [style.backgroundColor]="gvalBgColor">,{{gvalName}}</b></a>
+    <span *ngIf="!gvalType"                                              class="text-reset text-decoration-none">,{{gvalName}}</span>
+</ng-container>
+<ng-container *ngIf="formType=='COND'">
     <div>
         <ng-container *ngFor="let part of o.F; index as i">
             <ng-container *ngIf="i==0">&lt;COND</ng-container>
@@ -14,7 +17,7 @@
         &gt;
     </div>
 </ng-container>
-<ng-container *ngIf="!(   (o.F[0]?.A=='LVAL')   ||   (o.F[0]?.A=='GVAL')   ||   (o.F[0]?.A=='COND')   )">
+<ng-container *ngIf="formType=='Generic'">
     <ng-container *ngFor="let part of o.F; index as i">
         <span *ngIf="i==0">&lt;</span><span *ngIf="i!=0">&nbsp;</span><app-zil-object [o]="part"></app-zil-object><span *ngIf="i==o.F.length-1">&gt;</span>
     </ng-container>    

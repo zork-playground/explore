@@ -2,6 +2,125 @@
     <div class="bg-grey-100" style="padding:16px; border-radius:16px;">
         <ng-container *ngIf="isInitialized">
             <h1 class="color-primary-900 pb-3">{{o.Name}}</h1>
+
+            <!--<h2>Exits</h2>-->
+
+            <div style="text-align:center">
+                <div class="row mb-3" style="max-width:600px;" *ngIf="mapGrid[0][0] || mapGrid[0][1] || mapGrid[0][2]">
+                    <div class="col px-1" style="min-height:100px;">
+                        <app-room-exit [gameId]="gameId" [exit]="mapGrid[0][0]" [dirLabel]="mapGrid[0][0]?.allDirs"></app-room-exit>
+                    </div>
+                    <div class="col px-1" style="min-height:100px;">
+                        <app-room-exit [gameId]="gameId" [exit]="mapGrid[0][1]" [dirLabel]="mapGrid[0][1]?.allDirs"></app-room-exit>
+                    </div>
+                    <div class="col px-1" style="min-height:100px;">
+                        <app-room-exit [gameId]="gameId" [exit]="mapGrid[0][2]" [dirLabel]="mapGrid[0][2]?.allDirs"></app-room-exit>
+                    </div>
+                </div>
+                <div class="row mb-3" style="max-width:600px;" *ngIf="mapGrid[1][0] || mapGrid[1][1] || mapGrid[1][2]">
+                    <div class="col px-1" style="min-height:100px;">
+                        <app-room-exit [gameId]="gameId" [exit]="mapGrid[1][0]" [dirLabel]="mapGrid[1][0]?.allDirs"></app-room-exit>
+                    </div>
+                    <div class="col px-1" style="min-height:100px;">
+                        <app-room-exit [gameId]="gameId" [exit]="mapGrid[1][1]" [dirLabel]="mapGrid[1][1]?.allDirs"></app-room-exit>
+                    </div>
+                    <div class="col px-1" style="min-height:100px;">
+                        <app-room-exit [gameId]="gameId" [exit]="mapGrid[1][2]" [dirLabel]="mapGrid[1][2]?.allDirs"></app-room-exit>
+                    </div>
+                </div>
+                <div class="row mb-3" style="max-width:600px;" *ngIf="mapGrid[2][0] || mapGrid[2][1] || mapGrid[2][2]">
+                    <div class="col px-1" style="min-height:100px;">
+                        <app-room-exit [gameId]="gameId" [exit]="mapGrid[2][0]" [dirLabel]="mapGrid[2][0]?.allDirs"></app-room-exit>
+                    </div>
+                    <div class="col px-1" style="min-height:100px;">
+                        <app-room-exit [gameId]="gameId" [exit]="mapGrid[2][1]" [dirLabel]="mapGrid[2][1]?.allDirs"></app-room-exit>
+                    </div>
+                    <div class="col px-1" style="min-height:100px;">
+                        <app-room-exit [gameId]="gameId" [exit]="mapGrid[2][2]" [dirLabel]="mapGrid[2][2]?.allDirs"></app-room-exit>
+                    </div>
+                </div>
+                <div class="row mb-3" style="max-width:600px;" *ngIf="mapGrid[3][0] || mapGrid[3][1] || mapGrid[3][2]">
+                    <div class="col px-1" style="min-height:100px;">
+                        <app-room-exit [gameId]="gameId" [exit]="mapGrid[3][0]" [dirLabel]="mapGrid[3][0]?.allDirs"></app-room-exit>
+                    </div>
+                    <div class="col px-1" style="min-height:100px;">
+                        <app-room-exit [gameId]="gameId" [exit]="mapGrid[3][1]" [dirLabel]="mapGrid[3][1]?.allDirs"></app-room-exit>
+                    </div>
+                    <div class="col px-1" style="min-height:100px;">
+                        <app-room-exit [gameId]="gameId" [exit]="mapGrid[3][2]" [dirLabel]="mapGrid[3][2]?.allDirs"></app-room-exit>
+                    </div>
+                </div>
+                <div class="row mb-3" style="max-width:600px;" *ngIf="mapGrid[4][0] || mapGrid[4][1] || mapGrid[4][2]">
+                    <div class="col px-1" style="min-height:100px;">
+                        <app-room-exit [gameId]="gameId" [exit]="mapGrid[4][0]" [dirLabel]="mapGrid[4][0]?.allDirs"></app-room-exit>
+                    </div>
+                    <div class="col px-1" style="min-height:100px;">
+                        <app-room-exit [gameId]="gameId" [exit]="mapGrid[4][1]" [dirLabel]="mapGrid[4][1]?.allDirs"></app-room-exit>
+                    </div>
+                    <div class="col px-1" style="min-height:100px;">
+                        <app-room-exit [gameId]="gameId" [exit]="mapGrid[4][2]" [dirLabel]="mapGrid[4][2]?.allDirs"></app-room-exit>
+                    </div>
+                </div>
+                <!--
+                <div class="row mb-3" style="max-width:600px;" *ngIf="o.Exits.NW || o.Exits.NORTH || o.Exits.NE">
+                    <div class="col px-1" style="min-height:100px;">
+                        <app-room-exit [gameId]="gameId" [exit]="o.Exits.NW" [dirLabel]="o.Exits.NW?.allDirs"></app-room-exit>
+                    </div>
+                    <div class="col px-1" style="min-height:100px;">
+                        <app-room-exit [gameId]="gameId" [exit]="o.Exits.NORTH" [dirLabel]="o.Exits.NORTH?.allDirs"></app-room-exit>
+                    </div>
+                    <div class="col px-1" style="min-height:100px;">
+                        <app-room-exit [gameId]="gameId" [exit]="o.Exits.NE" [dirLabel]="o.Exits.NE?.allDirs"></app-room-exit>
+                    </div>
+                </div>
+                <div class="row mb-3" style="max-width:600px;" *ngIf="o.Exits.LAUNCH || o.Exits.UP || o.Exits.IN">
+                    <div class="col px-1" style="min-height:100px;">
+                        <app-room-exit [gameId]="gameId" [exit]="o.Exits.LAUNCH" [dirLabel]="o.Exits.LAUNCH?.allDirs"></app-room-exit>
+                    </div>
+                    <div class="col px-1" style="min-height:100px;">
+                        <app-room-exit [gameId]="gameId" [exit]="o.Exits.UP" [dirLabel]="o.Exits.UP?.allDirs"></app-room-exit>
+                    </div>
+                    <div class="col px-1" style="min-height:100px;">
+                        <app-room-exit [gameId]="gameId" [exit]="o.Exits.IN" [dirLabel]="o.Exits.IN?.allDirs"></app-room-exit>
+                    </div>
+                </div>
+                <div class="row mb-3" style="max-width:600px;">
+                    <div class="col px-1" style="min-height:100px;">
+                        <app-room-exit [gameId]="gameId" [exit]="o.Exits.WEST" [dirLabel]="o.Exits.WEST?.allDirs"></app-room-exit>
+                    </div>
+                    <div class="col px-1" style="min-height:100px;">
+                        <app-room-exit [gameId]="gameId" [exit]="{'TO':o.Name}" [dirLabel]="['HERE']"></app-room-exit>
+                    </div>
+                    <div class="col px-1" style="min-height:100px;">
+                        <app-room-exit [gameId]="gameId" [exit]="o.Exits.EAST" [dirLabel]="o.Exits.EAST?.allDirs"></app-room-exit>
+                    </div>
+                </div>
+                <div class="row mb-3" style="max-width:600px;" *ngIf="o.Exits.OUT || o.Exits.DOWN || o.Exits.LAND">
+                    <div class="col px-1" style="min-height:100px;">
+                        <app-room-exit [gameId]="gameId" [exit]="o.Exits.OUT" [dirLabel]="o.Exits.OUT?.allDirs"></app-room-exit>
+                    </div>
+                    <div class="col px-1" style="min-height:100px;">
+                        <app-room-exit [gameId]="gameId" [exit]="o.Exits.DOWN" [dirLabel]="o.Exits.DOWN?.allDirs"></app-room-exit>
+                    </div>
+                    <div class="col px-1" style="min-height:100px;">
+                        <app-room-exit [gameId]="gameId" [exit]="o.Exits.LAND" [dirLabel]="o.Exits.LAND?.allDirs"></app-room-exit>
+                    </div>
+                </div>
+                <div class="row mb-3" style="max-width:600px;" *ngIf="o.Exits.SW || o.Exits.SOUTH || o.Exits.SE">
+                    <div class="col px-1" style="min-height:100px;">
+                        <app-room-exit [gameId]="gameId" [exit]="o.Exits.SW" [dirLabel]="o.Exits.SW?.allDirs"></app-room-exit>
+                    </div>
+                    <div class="col px-1" style="min-height:100px;">
+                        <app-room-exit [gameId]="gameId" [exit]="o.Exits.SOUTH" [dirLabel]="o.Exits.SOUTH?.allDirs"></app-room-exit>
+                    </div>
+                    <div class="col px-1" style="min-height:100px;">
+                        <app-room-exit [gameId]="gameId" [exit]="o.Exits.SE" [dirLabel]="o.Exits.SE?.allDirs"></app-room-exit>
+                    </div>
+                </div>
+                -->
+            </div>
+
+
             <table class="table table-hover table-striped table-borderless shadow-lg" style="border-radius:8px; width:auto;">
                 <tbody>
                     <tr *ngIf="o.Properties['DESC']">
@@ -102,65 +221,6 @@
                 </tbody>
                 </table>
             </ng-container>
-
-            <h2>Exits</h2>
-            <div style="text-align:center">
-                <div class="row mb-3" style="max-width:600px;" *ngIf="o.Exits.NW || o.Exits.NORTH || o.Exits.NE">
-                    <div class="col px-1" style="min-height:100px;">
-                        <app-room-exit [gameId]="gameId" [room]="o" [dir]="'NW'"></app-room-exit>
-                    </div>
-                    <div class="col px-1" style="min-height:100px;">
-                        <app-room-exit [gameId]="gameId" [room]="o" [dir]="'NORTH'"></app-room-exit>
-                    </div>
-                    <div class="col px-1" style="min-height:100px;">
-                        <app-room-exit [gameId]="gameId" [room]="o" [dir]="'NE'"></app-room-exit>
-                    </div>
-                </div>
-                <div class="row mb-3" style="max-width:600px;" *ngIf="o.Exits.LAUNCH || o.Exits.UP || o.Exits.IN">
-                    <div class="col px-1" style="min-height:100px;">
-                        <app-room-exit [gameId]="gameId" [room]="o" [dir]="'LAUNCH'"></app-room-exit>
-                    </div>
-                    <div class="col px-1" style="min-height:100px;">
-                        <app-room-exit [gameId]="gameId" [room]="o" [dir]="'UP'"></app-room-exit>
-                    </div>
-                    <div class="col px-1" style="min-height:100px;">
-                        <app-room-exit [gameId]="gameId" [room]="o" [dir]="'IN'"></app-room-exit>
-                    </div>
-                </div>
-                <div class="row mb-3" style="max-width:600px;">
-                    <div class="col px-1" style="min-height:100px;">
-                        <app-room-exit [gameId]="gameId" [room]="o" [dir]="'WEST'"></app-room-exit>
-                    </div>
-                    <div class="col px-1" style="min-height:100px;">
-                        <app-room-exit [gameId]="gameId" [room]="o" [dir]="'HERE'"></app-room-exit>
-                    </div>
-                    <div class="col px-1" style="min-height:100px;">
-                        <app-room-exit [gameId]="gameId" [room]="o" [dir]="'EAST'"></app-room-exit>
-                    </div>
-                </div>
-                <div class="row mb-3" style="max-width:600px;" *ngIf="o.Exits.OUT || o.Exits.DOWN || o.Exits.LAND">
-                    <div class="col px-1" style="min-height:100px;">
-                        <app-room-exit [gameId]="gameId" [room]="o" [dir]="'OUT'"></app-room-exit>
-                    </div>
-                    <div class="col px-1" style="min-height:100px;">
-                        <app-room-exit [gameId]="gameId" [room]="o" [dir]="'DOWN'"></app-room-exit>
-                    </div>
-                    <div class="col px-1" style="min-height:100px;">
-                        <app-room-exit [gameId]="gameId" [room]="o" [dir]="'LAND'"></app-room-exit>
-                    </div>
-                </div>
-                <div class="row mb-3" style="max-width:600px;" *ngIf="o.Exits.SW || o.Exits.SOUTH || o.Exits.SE">
-                    <div class="col px-1" style="min-height:100px;">
-                        <app-room-exit [gameId]="gameId" [room]="o" [dir]="'SW'"></app-room-exit>
-                    </div>
-                    <div class="col px-1" style="min-height:100px;">
-                        <app-room-exit [gameId]="gameId" [room]="o" [dir]="'SOUTH'"></app-room-exit>
-                    </div>
-                    <div class="col px-1" style="min-height:100px;">
-                        <app-room-exit [gameId]="gameId" [room]="o" [dir]="'SE'"></app-room-exit>
-                    </div>
-                </div>
-            </div>
 
             <h2>Relationships</h2>
             <p>Coming soon: Which routines refer to this room, etc.</p>
