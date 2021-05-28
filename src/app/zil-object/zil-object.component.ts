@@ -12,7 +12,7 @@ export class ZilObjectComponent implements OnInit {
   @Input() public o: any;
   public objType: string;
   public stringify = JSON.stringify;
-  public routerLink: any;
+  ////public routerLink: any;
 
   constructor(private gameDataService: GameDataService) { }
 

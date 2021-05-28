@@ -1,6 +1,6 @@
 import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 import { GameDataService } from '../game-data.service';
-import { Router, ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Params } from '@angular/router';
 import { GameDataReceiver } from '../game-data-receiver';
 
 @Component({
@@ -10,16 +10,15 @@ import { GameDataReceiver } from '../game-data-receiver';
 })
 export class ObjectDetailsComponent implements OnInit, GameDataReceiver {
 
-  //@Output() gameIdInPath = new EventEmitter<string>();
-  public gameId: string;
-  public gameData: any;
   public stringify = JSON.stringify;
+  public isInitialized: boolean = false;
+  public gameId: string;
   public id: string = null;
+  public gameData: any;
   public o: any = null;
   public contains: any[] = [];
   public parentObject: any = null;
   public parentRoomName: any = null;
-  public isInitialized: boolean = false;
   public knownProperties: string[] = [
     "#IN",
     "FDESC",
@@ -33,16 +32,27 @@ export class ObjectDetailsComponent implements OnInit, GameDataReceiver {
   ];
 
   constructor(
-    private router: Router,
     private route: ActivatedRoute,
     private gameDataService: GameDataService
   ) {
-    this.id = route.snapshot.params["id"];
-    this.gameId = this.route.snapshot.params["gameId"];
-    console.log("this.selectedId:", this.id);
   }
 
   ngOnInit(): void {
+    this.route.params.subscribe(params => {
+      this.onRoute(params);
+    });
+  }
+
+  public onRoute(params: Params) {
+    console.log("Routed to ObjectDetails, params:", params);
+    this.isInitialized = false;
+    this.gameId = params["gameId"];
+    this.id = params["id"];
+    this.gameData = null;
+    this.o = null;
+    this.contains = [];
+    this.parentObject = null;
+    this.parentRoomName = null;
     this.gameDataService.getAllGameData(this.gameId, this);
   }
 

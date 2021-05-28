@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { GameDataService } from '../game-data.service';
-import { Router, ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Params } from '@angular/router';
 import { GameDataReceiver } from '../game-data-receiver';
 
 @Component({
@@ -13,11 +13,11 @@ export class RoomDetailsComponent implements OnInit, GameDataReceiver {
   public gameId: string;
   public gameData: any;
   public stringify = JSON.stringify;
-  public id: string = null;
-  public o: any = null;
-  public contains: any[] = [];
-  public localGlobals: any[] = [];
-  public parentObject: any = null;
+  public id: string;
+  public o: any;
+  public contains: any[];
+  public localGlobals: any[];
+  public parentObject: any;
   public isInitialized: boolean = false;
   public knownProperties: string[] = [
     "#IN", // always "ROOMS"
@@ -37,19 +37,30 @@ export class RoomDetailsComponent implements OnInit, GameDataReceiver {
     'LAUNCH', 'LAND'
   ];
   public mapGrid; // 5 rows of 3 columns
-  private preferredPlacements;
 
   constructor(
-    private router: Router,
     private route: ActivatedRoute,
     private gameDataService: GameDataService
   ) {
-    this.gameId = this.route.snapshot.params["gameId"];
-    this.id = route.snapshot.params["id"];
-    console.log("this.selectedId:", this.id);
   }
 
   ngOnInit(): void {
+    this.route.params.subscribe(params => {
+      this.onRoute(params);
+    });
+  }
+
+  public onRoute(params: Params) {
+    console.log("Routed to RoomDetails, params:", params);
+    this.isInitialized = false;
+    this.gameId = params["gameId"];
+    this.gameData = null;
+    this.id = params["id"];
+    this.o = null;
+    this.contains = [];
+    this.localGlobals = [];
+    this.parentObject = null;
+    this.mapGrid = null;
     this.gameDataService.getAllGameData(this.gameId, this);
   }
 
@@ -69,7 +80,7 @@ export class RoomDetailsComponent implements OnInit, GameDataReceiver {
     let localGlobalNames = [];
     if (this.o.Properties['GLOBAL']) {
       for (let g of this.o.Properties['GLOBAL']) {
-        localGlobalNames.push(g.Atom);
+        localGlobalNames.push(g.A);
       }
     }
     console.log("localGlobalNames:", localGlobalNames);

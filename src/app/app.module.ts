@@ -21,6 +21,7 @@ import { ZilObjectComponent } from './zil-object/zil-object.component';
 import { ZilArrayComponent } from './zil-array/zil-array.component';
 import { RoomExitComponent } from './room-exit/room-exit.component';
 import { LinkableZilAtomComponent } from './linkable-zil-atom/linkable-zil-atom.component';
+import { SpinnerComponent } from './spinner/spinner.component';
 
 const routes: Routes = [
   //{ path: 'home', component: HomeComponent },
@@ -56,7 +57,8 @@ const routes: Routes = [
     ZilObjectComponent,
     ZilArrayComponent,
     RoomExitComponent,
-    LinkableZilAtomComponent
+    LinkableZilAtomComponent,
+    SpinnerComponent
   ],
   imports: [
     BrowserModule,

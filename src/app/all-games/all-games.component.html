@@ -1,18 +1,23 @@
 <div class="bg-grey-600" style="padding:16px;">
     <div class="bg-grey-100" style="padding:16px; border-radius:16px;">
         <h1 class="color-primary-900 pb-3">Games</h1>
-        <table *ngIf="isInitialized" class="table table-hover table-striped table-borderless shadow-lg" style="border-radius:8px;">
-            <tbody>
-                <tr *ngFor="let gameId of getGameIdsSortedByRank()">
-                    <td>
-                        <a class="text-reset text-decoration-none"
-                            [style.color]="'var(--grey-800)'"
-                            [href]="'games/'+gameId">
-                            <span class="me-2"><b>{{index[gameId].name}}</b></span>
-                        </a>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+        <ng-container *ngIf="!isInitialized">
+            <app-spinner></app-spinner>
+        </ng-container>
+        <ng-container *ngIf="isInitialized">
+            <table class="table table-hover table-striped table-borderless shadow-lg" style="border-radius:8px;">
+                <tbody>
+                    <tr *ngFor="let gameId of getGameIdsSortedByRank()">
+                        <td>
+                            <a class="text-reset text-decoration-none"
+                                [style.color]="'var(--grey-800)'"
+                                [routerLink]="[gameId]">
+                                <span class="me-2"><b>{{index[gameId].name}}</b></span>
+                            </a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </ng-container>
     </div>
 </div>

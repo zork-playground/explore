@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router, ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Params } from '@angular/router';
 import { GameDataService } from '../game-data.service';
 
 
@@ -10,9 +10,9 @@ import { GameDataService } from '../game-data.service';
 })
 export class GameDetailsComponent implements OnInit {
 
+  public isInitialized: boolean = false;
   public gameId: string;
   public index: any;
-  public isInitialized: boolean = false;
   public cards: any[] = [
     {
       "imageText": "Rooms",
@@ -40,11 +40,23 @@ export class GameDetailsComponent implements OnInit {
     },
   ];
 
-  constructor(private route: ActivatedRoute, private gameDataService: GameDataService) {
-    this.gameId = this.route.snapshot.params["gameId"];
+  constructor(
+    private route: ActivatedRoute,
+    private gameDataService: GameDataService
+  ) {
   }
 
   ngOnInit(): void {
+    this.route.params.subscribe(params => {
+      this.onRoute(params);
+    });
+  }
+
+  public onRoute(params: Params) {
+    console.log("Routed to GameDetails, params:", params);
+    this.isInitialized = false;
+    this.gameId = params["gameId"];
+    this.index = null;
     this.gameDataService.getIndex().subscribe((response: any) => {
       this.index = response;
       this.isInitialized = true;

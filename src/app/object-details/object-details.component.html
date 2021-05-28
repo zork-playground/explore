@@ -1,5 +1,8 @@
 <div class="bg-grey-600" style="padding:16px;">
     <div class="bg-grey-100" style="padding:16px; border-radius:16px;">
+        <ng-container *ngIf="!isInitialized">
+            <app-spinner></app-spinner>
+        </ng-container>
         <ng-container *ngIf="isInitialized">
             <h1 class="color-grey-900 pb-3">{{o.Name}}</h1>
             <table class="table table-hover table-striped table-borderless shadow-lg" style="border-radius:8px; width:auto;">
@@ -71,7 +74,7 @@
                             <div class="color-grey-700" style="font-size:smaller">Action Function</div>
                         </td>
                         <td style="color:var(--primary-900)">
-                            <a [href]="'games/' + gameId + '/routines/'+o.Properties['ACTION'][0].A" class="text-reset text-decoration-none">
+                            <a [routerLink]="['../../routines', o.Properties['ACTION'][0].A]" class="text-reset text-decoration-none">
                                 <b>{{o.Properties['ACTION'][0].A}}</b>
                             </a>
                         </td>
@@ -90,11 +93,11 @@
                             <div class="color-grey-700" style="font-size:smaller">{{getContainerLabel(o.Properties['#IN'])}}</div>
                         </td>
                         <td>
-                            <a *ngIf="parentObject != null" [href]="'games/' + gameId + '/objects/'+o.Properties['#IN']" class="text-reset text-decoration-none">
+                            <a *ngIf="parentObject != null" [routerLink]="['..', o.Properties['#IN']]" class="text-reset text-decoration-none">
                                 <div style="color:var(--primary-900)"><b>{{o.Properties['#IN']}}</b></div>
                                 <div class="game-text">{{parentObject.Properties['DESC']}}</div>
                             </a>
-                            <a *ngIf="parentObject == null" [href]="'games/' + gameId + '/rooms/'+o.Properties['#IN']" class="text-reset text-decoration-none">
+                            <a *ngIf="parentObject == null" [routerLink]="['../../rooms', o.Properties['#IN']]" class="text-reset text-decoration-none">
                                 <div style="color:var(--primary-900)"><b>{{o.Properties['#IN']}}</b></div>
                             </a>
                         </td>
@@ -108,7 +111,7 @@
                     <tbody>
                         <tr *ngFor="let obj of contains">
                             <td style="color:var(--primary-900)">
-                                <a [href]="'games/' + gameId + '/objects/'+obj.Name" class="text-reset text-decoration-none">
+                                <a [routerLink]="['..', obj.Name]" class="text-reset text-decoration-none">
                                     <b>{{obj.Name}}</b>
                                 </a>
                             </td>

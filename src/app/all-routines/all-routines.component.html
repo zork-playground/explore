@@ -1,11 +1,7 @@
 <div class="bg-grey-600" style="padding:16px;">
 
     <ng-container *ngIf="!isInitialized">
-        <div class="bg-grey-100" style="padding:16px; border-radius:16px;">
-            <div class="spinner-border" role="status">
-                <span class="visually-hidden">Loading...</span>
-            </div>
-        </div>
+        <app-spinner></app-spinner>
     </ng-container>
 
     <ng-container *ngIf="isInitialized">
@@ -20,7 +16,7 @@
                 </thead>
                 <tbody>
                     <tr *ngFor="let r of foundationRoutines">
-                        <td><a class="text-reset text-decoration-none" [href]="'games/'+gameId+'/routines/'+r.name"><span class="color-primary-900" style="font-weight:bold">{{r.name}}</span></a></td>
+                        <td><a [routerLink]="[r.name]" class="text-reset text-decoration-none"><span class="color-primary-900" style="font-weight:bold">{{r.name}}</span></a></td>
                         <td class="color-grey-700">{{r.description}}</td>
                     </tr>
                 </tbody>
@@ -29,7 +25,7 @@
 
         <div class="bg-grey-100" style="margin-top:16px; padding:16px; border-radius:16px;">
             <h1 class="color-grey-900 pb-3">Room Action Functions</h1>
-            <p>These handle events like entering the room (M-ENTER, called by V-WALK&gt;GOTO and V-BOARD), looking in the room (M-LOOK), beginning of each turn (M-BEG), end of each turn (M-END).</p>
+            <p>These handle events like entering the room (M-ENTER), looking in the room (M-LOOK), beginning of each turn (M-BEG), end of each turn (M-END).</p>
             <table class="table table-hover table-striped table-borderless shadow-lg" style="border-radius:8px; width:auto;">
                 <thead>
                     <tr>
@@ -40,7 +36,7 @@
                 <tbody>
                     <ng-container *ngFor="let o of allRoutines">
                         <tr *ngIf="gameData.metadata[o.Name]['isActionForRooms'].length > 0">
-                            <td><a class="text-reset text-decoration-none" [href]="'games/'+gameId+'/routines/'+o.Name"><span class="color-primary-900" style="font-weight:bold">{{o.Name}}</span></a></td>
+                            <td><a [routerLink]="[o.Name]" class="text-reset text-decoration-none"><span class="color-primary-900" style="font-weight:bold">{{o.Name}}</span></a></td>
                             <td class="color-grey-700">
                                 <span *ngFor="let objName of gameData.metadata[o.Name]['isActionForRooms']; index as i"><span *ngIf="i>0">,<br/></span>
                                     {{objName}}</span>
@@ -64,7 +60,7 @@
                 <tbody>
                     <ng-container *ngFor="let o of allRoutines">
                         <tr *ngIf="gameData.metadata[o.Name]['isPreactionForSyntaxes'].length > 0">
-                            <td><a class="text-reset text-decoration-none" [href]="'games/'+gameId+'/routines/'+o.Name"><span class="color-primary-900" style="font-weight:bold">{{o.Name}}</span></a></td>
+                            <td><a [routerLink]="[o.Name]" class="text-reset text-decoration-none"><span class="color-primary-900" style="font-weight:bold">{{o.Name}}</span></a></td>
                             <td class="color-grey-700">
                                 <div *ngFor="let s of gameData.metadata[o.Name]['isPreactionForSyntaxes']">
                                     <!-- TODO: extract the logic below to a common component, it's used also in all-syntaxes -->
@@ -93,7 +89,7 @@
                 <tbody>
                     <ng-container *ngFor="let o of allRoutines">
                         <tr *ngIf="gameData.metadata[o.Name]['isActionForObjects'].length > 0">
-                            <td><a class="text-reset text-decoration-none" [href]="'games/'+gameId+'/routines/'+o.Name"><span class="color-primary-900" style="font-weight:bold">{{o.Name}}</span></a></td>
+                            <td><a [routerLink]="[o.Name]" class="text-reset text-decoration-none"><span class="color-primary-900" style="font-weight:bold">{{o.Name}}</span></a></td>
                             <td class="color-grey-700">
                                 <span *ngFor="let objName of gameData.metadata[o.Name]['isActionForObjects']; index as i"><span *ngIf="i>0">, </span>{{objName}}</span>
                             </td>
@@ -119,7 +115,7 @@
                 <tbody>
                     <ng-container *ngFor="let o of allRoutines">
                         <tr *ngIf="gameData.metadata[o.Name]['isActionForSyntaxes'].length > 0">
-                            <td><a class="text-reset text-decoration-none" [href]="'games/'+gameId+'/routines/'+o.Name"><span class="color-primary-900" style="font-weight:bold">{{o.Name}}</span></a></td>
+                            <td><a [routerLink]="[o.Name]" class="text-reset text-decoration-none"><span class="color-primary-900" style="font-weight:bold">{{o.Name}}</span></a></td>
                             <td class="color-grey-700">
                                 <div *ngFor="let s of gameData.metadata[o.Name]['isActionForSyntaxes']">
                                     <!-- TODO: extract the logic below to a common component, it's used also in all-syntaxes -->
@@ -161,8 +157,7 @@
                                 gameData.metadata[o.Name]['isPreactionForSyntaxes'].length == 0 &&
                                 gameData.metadata[o.Name]['isActionForSyntaxes'].length == 0">
                             <td class="color-grey-700"><i>{{o.Source}}</i></td>
-                            <!--<a class="text-reset text-decoration-none" [href]="'games/'+gameId+'/routines/'+o.Name">-->
-                            <td [routerLink]="[o.Name]"><span class="color-primary-900" style="font-weight:bold">{{o.Name}}</span></td>
+                            <td><a [routerLink]="[o.Name]" class="text-reset text-decoration-none"><span class="color-primary-900" style="font-weight:bold">{{o.Name}}</span></a></td>
                             <td class="color-grey-700" style="max-width:300px; white-space:nowrap; overflow:hidden; text-overflow: ellipsis;">{{o.ArgSpec}}</td>
                             <td class="color-grey-700" style="max-width:300px; white-space:nowrap; overflow:hidden; text-overflow: ellipsis;">{{o.Body[0]?.Zil}}</td>
                         </tr>

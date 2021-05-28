@@ -1,5 +1,8 @@
 <div class="bg-grey-600" style="padding:16px;">
     <div class="bg-grey-100" style="padding:16px; border-radius:16px;">
+        <ng-container *ngIf="!isInitialized">
+            <app-spinner></app-spinner>
+        </ng-container>
         <ng-container *ngIf="isInitialized">
             <h1 class="color-primary-900 pb-3">{{o.Name}}</h1>
 
@@ -150,7 +153,7 @@
                             <div class="color-grey-700" style="font-size:smaller">Action Function</div>
                         </td>
                         <td style="color:var(--primary-900)">
-                            <a [href]="'games/'+gameId+'/routines/'+o.Properties['ACTION'][0].A" class="text-reset text-decoration-none">
+                            <a [routerLink]="['../../routines', o.Properties['ACTION'][0].A]" class="text-reset text-decoration-none">
                                 <b>{{o.Properties['ACTION'][0].A}}</b>
                             </a>
                         </td>
@@ -189,12 +192,12 @@
                     <tbody>
                         <tr *ngFor="let obj of contains">
                             <td style="color:var(--primary-900)">
-                                <a [href]="'games/'+gameId+'/objects/'+obj.Name" class="text-reset text-decoration-none">
+                                <a [routerLink]="['../../objects', obj.Name]" class="text-reset text-decoration-none">
                                     <b>{{obj.Name}}</b>
                                 </a>
                             </td>
                             <td>
-                                <a [href]="'games/'+gameId+'/objects/'+obj.Name" class="text-reset text-decoration-none">
+                                <a [routerLink]="['../../objects', obj.Name]" class="text-reset text-decoration-none">
                                     <span class="game-text">{{obj.Properties["DESC"]}}</span>
                                 </a>
                             </td>
@@ -208,17 +211,17 @@
                     <tbody>
                         <tr *ngFor="let g of localGlobals">
                             <td style="color:var(--primary-900)">
-                                <a [href]="'games/'+gameId+'/objects/'+g.Name" class="text-reset text-decoration-none">
+                                <a [routerLink]="['../../objects', g.Name]" class="text-reset text-decoration-none">
                                     <b>{{g.Name}}</b>
                                 </a>
                             </td>
                             <td>
-                                <a [href]="'games/'+gameId+'/objects/'+g.Name" class="text-reset text-decoration-none">
+                                <a [routerLink]="['../../objects', g.Name]" class="text-reset text-decoration-none">
                                     <span class="game-text">{{g.Properties["DESC"]}}</span>
                                 </a>
                             </td>
                         </tr>
-                </tbody>
+                    </tbody>
                 </table>
             </ng-container>
 

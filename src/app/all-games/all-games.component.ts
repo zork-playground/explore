@@ -9,7 +9,6 @@ import { GameDataService } from '../game-data.service';
 })
 export class AllGamesComponent implements OnInit {
 
-  //public gameId: string;
   public index: any = null;
   public isInitialized: boolean = false;
 
@@ -28,12 +27,6 @@ export class AllGamesComponent implements OnInit {
     allKeys.sort((a,b)=>{return a["rank"]-b["rank"]});
     console.log("post-sort:", allKeys);
     return allKeys;
-  }
-
-  onClickGame(gameId: string) {
-    console.log("TODO: Go to game details page for: " + gameId);
-    //this.gameDataService.setSelectedGameId(gameId, this);
-    //this.gameId = gameId;
   }
 
 }

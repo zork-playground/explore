@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { GameDataService } from '../game-data.service';
-import { Router, ActivatedRoute } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 import { GameDataReceiver } from '../game-data-receiver';
 
 @Component({
@@ -16,7 +16,6 @@ export class AllRoomsComponent implements OnInit, GameDataReceiver {
   public allRooms: any[] = null;
 
   constructor(
-    private router: Router,
     private route: ActivatedRoute,
     private gameDataService: GameDataService
   ) {

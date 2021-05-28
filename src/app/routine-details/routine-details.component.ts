@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { GameDataService } from '../game-data.service';
-import { Router, ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Params } from '@angular/router';
 import { GameDataReceiver } from '../game-data-receiver';
 
 
@@ -11,15 +11,14 @@ import { GameDataReceiver } from '../game-data-receiver';
 })
 export class RoutineDetailsComponent implements OnInit, GameDataReceiver {
 
-  public gameId: string;
-  public gameData: any;
   public stringify = JSON.stringify;
-  public id: string = null;
-  public o: any = null;
-  public isInitialized: boolean = false;
+  public gameId: string;
+  public id: string;
+  public gameData: any;
+  public o: any;
+  public isInitialized: boolean;
 
   constructor(
-    private router: Router,
     private route: ActivatedRoute,
     private gameDataService: GameDataService) {
     this.gameId = this.route.snapshot.params["gameId"];
@@ -28,6 +27,18 @@ export class RoutineDetailsComponent implements OnInit, GameDataReceiver {
   }
 
   ngOnInit(): void {
+    this.route.params.subscribe(params => {
+      this.onRoute(params);
+    });
+  }
+
+  public onRoute(params: Params) {
+    console.log("Routed to RoutineDetails, params:", params);
+    this.isInitialized = false;
+    this.gameId = params["gameId"];
+    this.gameData = null;
+    this.id = params["id"];
+    this.o = null;
     this.gameDataService.getAllGameData(this.gameId, this);
   }
 

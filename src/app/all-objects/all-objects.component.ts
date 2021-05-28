@@ -38,7 +38,7 @@ export class AllObjectsComponent implements OnInit, GameDataReceiver {
 
   public receiveGameData(gameData: any) {
     this.gameData = gameData;
-    this.allObjects = gameData.Objects;
+    this.allObjects = gameData.Objects.filter(o => !o.IsRoom);
     this.allObjects.sort((o1, o2) => { return o1.Name < o2.Name ? -1 : 1 });
     this.isInitialized = true;
   }

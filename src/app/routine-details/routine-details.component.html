@@ -1,5 +1,8 @@
 <div class="bg-grey-600" style="padding:16px;">
     <div class="bg-grey-100" style="padding:16px; border-radius:16px;">
+        <ng-container *ngIf="!isInitialized">
+            <app-spinner></app-spinner>
+        </ng-container>
         <ng-container *ngIf="isInitialized">
             <h1 class="color-primary-900">{{o.Name}}</h1>
             <div style="font-size:medium" class="color-grey-700">Routine</div>
