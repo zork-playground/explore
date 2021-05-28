@@ -8,7 +8,7 @@ Browse every room, object, routine and command in the game.
 
 Made possible by:
 
-- [Zilf](https://foss.heptapod.net/zilf/zilf) by Jesse McGraw (thanks, Jesse!)
+- [Zilf](https://foss.heptapod.net/zilf/zilf) by Jesse McGrew (thanks, Jesse!)
 - [zil-to-json](https://github.com/zork-playground/zil-to-json)
 
 # Angular project info
