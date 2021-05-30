@@ -13,8 +13,9 @@ export class AppComponent implements OnInit, GameAwareMenu {
 
   title = 'explore';
   public gameId: string;
+  public searchText: string = "";
 
-  constructor(private route: ActivatedRoute, private gameDataService: GameDataService) {
+  constructor(private router: Router, private route: ActivatedRoute, private gameDataService: GameDataService) {
     //this.gameId = this.route.snapshot.params["gameId"];
     console.log("In AppComponent, gameId=" + this.gameId);
     this.gameDataService.registerGameAwareMenu(this);
@@ -34,5 +35,11 @@ export class AppComponent implements OnInit, GameAwareMenu {
     } else {
       this.gameId = null;
     }
+  }
+
+  public onSearchBarEnter() {
+    console.log("searchText=" + this.searchText);
+    console.log("gameId=" + this.searchText);
+    this.router.navigate(["games", this.gameId, "search", this.searchText]);
   }
 }

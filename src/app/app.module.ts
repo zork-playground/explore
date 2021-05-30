@@ -22,11 +22,13 @@ import { ZilArrayComponent } from './zil-array/zil-array.component';
 import { RoomExitComponent } from './room-exit/room-exit.component';
 import { LinkableZilAtomComponent } from './linkable-zil-atom/linkable-zil-atom.component';
 import { SpinnerComponent } from './spinner/spinner.component';
+import { SearchResultsComponent } from './search-results/search-results.component';
 
 const routes: Routes = [
   //{ path: 'home', component: HomeComponent },
   { path: 'games', component: AllGamesComponent },
   { path: 'games/:gameId', component: GameDetailsComponent },
+  { path: 'games/:gameId/search/:text', component: SearchResultsComponent },
   { path: 'games/:gameId/objects', component: AllObjectsComponent },
   { path: 'games/:gameId/objects/:id', component: ObjectDetailsComponent },
   { path: 'games/:gameId/rooms', component: AllRoomsComponent },
@@ -58,7 +60,8 @@ const routes: Routes = [
     ZilArrayComponent,
     RoomExitComponent,
     LinkableZilAtomComponent,
-    SpinnerComponent
+    SpinnerComponent,
+    SearchResultsComponent
   ],
   imports: [
     BrowserModule,

@@ -95,7 +95,8 @@ export class GameDataService {
         "isActionForSyntaxes": []
       };
     }
-    // Mark routines that are room action functions
+    // At this point, every object, room, and routine is guaranteed to have
+    // a metadata entry (keyed by o.Name) and fields name=o.Name and type=OBJECT|ROOM|ROUTINE.
     for (let o of gameData.Objects) {
       if (o.IsRoom && o.Properties["ACTION"]) {
         let actionFunctionName = o.Properties["ACTION"][0].A;
@@ -138,5 +139,37 @@ export class GameDataService {
     return this.allGameDataCache[this.mostRecentSelectedGameId]["metadata"][objName];
   }
 
+  public doSearch(searchText: string, gameData: any) {
+    let searchResults = [];
+    searchText = searchText.toLowerCase(); // all searches are case insensitive
+    var metadata = gameData["metadata"];
+    for (let o of gameData.Objects) {
+      let objMeta = metadata[o.Name];
+      if (o.Name.toLowerCase().includes(searchText)) {
+        searchResults.push({"type": objMeta.type, "name": o.Name, "desc": o.Properties["DESC"]});
+      } else if (typeof(o.Properties["DESC"])=="string" && o.Properties["DESC"].toLowerCase().includes(searchText)) {
+        searchResults.push({"type": objMeta.type, "name": o.Name, "desc": o.Properties["DESC"]});
+      }
+    }
+    for (let o of gameData.Routines) {
+      let objMeta = metadata[o.Name];
+      if (o.Name.toLowerCase().includes(searchText)) {
+        let desc = "Routine";
+        if (objMeta.isActionForObjects.length > 0) {
+          desc = "Action for Object: " + objMeta.isActionForObjects.join(", ");
+        } else if (objMeta.isActionForRooms.length > 0) {
+          desc = "Action for Room: " + objMeta.isActionForRooms.join(", ");
+        } else if (objMeta.isPreactionForSyntaxes.length > 0) {
+          desc = "Pre-Action for Syntax";
+        } else if (objMeta.isActionForSyntaxes.length > 0) {
+          desc = "Action for Syntax";
+        }
+        searchResults.push({"type": objMeta.type, "name": o.Name, "desc": desc});
+      }
+    }
+    // TODO: after syntax support is enhanced, add syntaxes/words to search
+    // TODO: after adding support for other types like global vars, add to search
+    return searchResults;
+  }
 
 }
