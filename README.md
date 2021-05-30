@@ -1,4 +1,17 @@
-# ZorkPlayground
+# Zork Playground: Explore
+
+Explore Zork and other interactive fiction games with this web app.
+
+Freely accessible at: [https://zork-playground.github.io/explore](https://zork-playground.github.io/explore)
+
+Browse every room, object, routine and command in the game.
+
+Made possible by:
+
+- [Zilf](https://foss.heptapod.net/zilf/zilf) by Jesse McGrew (thanks, Jesse!)
+- [zil-to-json](https://github.com/zork-playground/zil-to-json)
+
+# Angular project info
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.11.
 
