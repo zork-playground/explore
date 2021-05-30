@@ -10,14 +10,7 @@ import { GameAwareMenu } from './game-aware-menu';
 })
 export class GameDataService {
 
-  //private defaultSelectedGameId: string = "zork-1";
-  //private cachedSelectedGameId: string = null;
   private indexCached: any = null;
-  //private allObjectsCached: any[] = null;
-  //private allRoomsCached: any[] = null;
-  //private allRoutinesCached: any[] = null;
-  //private allSyntaxesCached: any[] = null;
-  //private allGameData: any = null;
   private allGameDataCache: any = {}; // {gameId => allGameData}
   private mostRecentSelectedGameId: string = null; // a bit of a hack
   private gameAwareMenu: GameAwareMenu = null;
@@ -33,12 +26,8 @@ export class GameDataService {
   }
 
   private getDataBaseUrl() {
-    return "assets/zil-to-json/data";
-  }
-
-  private getGameBaseUrl(gameId: string) {
-    // Example: "assets/zil-to-json/data/zork1/"
-    return this.getDataBaseUrl() + "/" + gameId;
+    return "https://raw.githubusercontent.com/zork-playground/zil-to-json/main/data";
+    ////return "assets/zil-to-json/data";
   }
 
   // Private. Components should use getIndex() instead.
@@ -46,9 +35,14 @@ export class GameDataService {
     return this.http.get(this.getDataBaseUrl() + "/index.json");
   }
 
+  // Private. Components should use getAllGameData() instead.
+  private fetchAllGameData(index: any, gameId: string) {
+    return this.http.get(this.getDataBaseUrl() + "/" + index[gameId]["src"]);
+  }
+
   public getIndex() {
-    // If it's in the cache, just give it
     if (this.indexCached != null) {
+      // If it's in the cache, just give it
       return of(this.indexCached);
     } else {
       // Otherwise, fetch and cache and give it
@@ -63,11 +57,6 @@ export class GameDataService {
     };
   }
 
-  // Private. Components should use getAllGameData() instead.
-  private fetchAllGameData(gameId: string) {
-    return this.http.get(this.getGameBaseUrl(gameId) + "/all.json");
-  }
-
   public getAllGameData(gameId: string, receiver: GameDataReceiver): void {
     this.mostRecentSelectedGameId = gameId;
     console.log("calling setGameIdForMenu with gameId=" + gameId);
@@ -77,11 +66,13 @@ export class GameDataService {
       receiver.receiveGameData(this.allGameDataCache[gameId]);
     } else {
       // Otherwise, fetch and cache and give it
-      this.fetchAllGameData(gameId).subscribe(allGameData => {
-        console.log("Fetched allGameData for " + gameId + ":", allGameData);
-        this.allGameDataCache[gameId] = allGameData;
-        this.analyzeGameData(this.allGameDataCache[gameId]);
-        receiver.receiveGameData(this.allGameDataCache[gameId]);
+      this.getIndex().subscribe((index) => {
+        this.fetchAllGameData(index, gameId).subscribe(allGameData => {
+          console.log("Fetched allGameData for " + gameId + ":", allGameData);
+          this.allGameDataCache[gameId] = allGameData;
+          this.analyzeGameData(this.allGameDataCache[gameId]);
+          receiver.receiveGameData(this.allGameDataCache[gameId]);
+        });
       });
     }
   }

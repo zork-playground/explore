@@ -2,17 +2,17 @@
 <div class="container">
   <header class="p-3 bg-primary-900 text-white">
       <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-        <a href="/" class="d-flex align-items-center  mb-2 mb-lg-0 text-white text-decoration-none">
+        <a [routerLink]="'games'" class="d-flex align-items-center  mb-2 mb-lg-0 text-white text-decoration-none">
             <img style="border-radius:8px;" width="48" height="48" src="assets/images/z-logo-2.png">
         </a>
         <span *ngIf="gameId" class="px-4 pe-3" style="color:var(--primary-500)">
-            <a [routerLink]="'games'" class="text-reset text-decoration-none">
+            <a [routerLink]="'games/' + gameId" class="text-reset text-decoration-none">
                 <b>{{gameId}}</b>
             </a>
         </span>
         <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
             <ng-container *ngIf="gameId == null">
-                <li class="nav-item"><a [routerLink]="'games'" routerLinkActive="true" class="nav-link color-primary-100">Games</a></li>
+                <li class="nav-item"><a [routerLink]="'games'" routerLinkActive="true" class="nav-link color-primary-100">Explore Games</a></li>
             </ng-container>
             <ng-container *ngIf="gameId != null">
                 <li class="nav-item"><a [routerLink]="'games/' + gameId + '/objects'"  routerLinkActive="true" class="nav-link color-primary-100">Objects</a></li>
@@ -22,7 +22,7 @@
             </ng-container>
         </ul>
         <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
-          <input type="search" class="form-control form-control-dark" placeholder="Search..." aria-label="Search">
+          <input type="search" class="form-control form-control-dark" placeholder="Search... coming soon!" aria-label="Search">
         </form>
       </div>
   </header>
