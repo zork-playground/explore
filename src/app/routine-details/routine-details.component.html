@@ -6,7 +6,11 @@
         <ng-container *ngIf="isInitialized">
             <h1 class="color-primary-900">{{o.Name}}</h1>
             <div style="font-size:medium" class="color-grey-700">Routine</div>
-            <div class="pb-3" style="color:var(--grey-700)"><i>Source: {{o.Source}}</i></div>
+            <a [href]="zilSourceUrl" target="_blank" class="text-reset text-decoration-none">
+                <div class="pb-3" style="color:var(--grey-700)">
+                    <i>Source: {{o.Source}}</i>
+                </div>
+            </a>
             <div style="color:var(--primary-900); font-family:Source Code Pro, monospace; font-size:11pt;">
                 <div>&lt;ROUTINE {{o.Name}} {{o.ArgSpec}}</div>
                 <div style="margin-left:2em;">

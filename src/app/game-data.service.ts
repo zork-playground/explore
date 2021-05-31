@@ -84,13 +84,15 @@ export class GameDataService {
     // First, ensure that every object, room, and routine has a metadata entry
     // keyed by ID (o.Name) and having fields:
     //   name (o.Name)
-    //   type (OBJECT|ROOM|ROUTINE)
+    //   type ("OBJECT"|"ROOM"|"ROUTINE")
+    //   desc (o.Properties["DESC"])
     //   references (array to be populated later)
     for (let o of gameData.Objects) {
       if (metadata[o.Name]) { console.warn("WARN: Object name " + o.Name + " conflicts and overrides other entity:", metadata[o.Name]); }
       metadata[o.Name] = {
         "name": o.Name,
-        "type": o.IsRoom? "ROOM" : "OBJECT",
+        "type": o.IsRoom ? "ROOM" : "OBJECT",
+        "desc": o.Properties ? o.Properties["DESC"] : o.Name,
         "references": []
       };
     }
@@ -99,6 +101,7 @@ export class GameDataService {
       metadata[o.Name] = {
         "name": o.Name,
         "type": "ROUTINE",
+        "desc": "Routine", // Note: logic below will often improve this description
         "references": [],
         "isActionForObjects": [],
         "isActionForRooms": [],
@@ -141,6 +144,22 @@ export class GameDataService {
       if (actionFunctionName) {
         let meta = metadata[actionFunctionName];
         meta["isActionForSyntaxes"].push(syntax);
+      }
+    }
+
+    // Now update desc for special routines
+    for (let o of gameData.Routines) {
+      let meta = metadata[o.Name];
+      if (meta.isActionForObjects.length > 0) {
+        meta.desc = "Action for " + meta.isActionForObjects.join(", ");
+      } else if (meta.isActionForRooms.length > 0) {
+        meta.desc = "Action for " + meta.isActionForRooms.join(", ") + " (Room)";
+      } else if (meta.isPreactionForSyntaxes.length > 0) {
+        meta.desc = "Pre-Action for (Syntax)";
+      } else if (meta.isActionForSyntaxes.length > 0) {
+        meta.desc = "Action for (Syntax)";
+      } else {
+        meta.desc = "Routine";
       }
     }
 
