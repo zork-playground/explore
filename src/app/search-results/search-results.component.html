@@ -5,24 +5,15 @@
             <app-spinner></app-spinner>
         </ng-container>
         <ng-container *ngIf="isInitialized">
+            <p *ngIf="!searchResults || searchResults.length == 0">
+                Nothing found.
+            </p>
             <table class="table table-hover table-striped table-borderless shadow-lg" style="border-radius:8px;">
                 <tbody>
                     <tr *ngFor="let sr of searchResults">
                         <td>
-                            <a class="text-reset text-decoration-none"
-                                [style.color]="'var(--grey-800)'"
-                                [routerLink]="['../..', getPathForType(sr.type), sr.name]">
-                                <div class="me-2">
-                                    <b>{{sr.name}}</b>
-                                    <span
-                                        class="ms-2 px-2 py-1"
-                                        [style.color]           = "sr.type=='ROUTINE'?'var(--red-700)':'var(--primary-900)'"
-                                        [style.backgroundColor] = "sr.type=='ROUTINE'?'var(--red-300)':'var(--primary-300)'"
-                                        style="border-radius:16px; font-size:8pt; font-weight:bold;"
-                                    >{{sr.type.toUpperCase()}}</span>
-                                </div>
-                                <div>{{sr.desc}}</div>
-                            </a>
+                            <app-zil-atom-mini-card [gameId]="gameId" [gameData]="gameData" [atomName]="sr.name">
+                            </app-zil-atom-mini-card>
                         </td>
                     </tr>
                 </tbody>

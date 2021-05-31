@@ -80,23 +80,36 @@ export class GameDataService {
   public analyzeGameData(gameData: any) {
     gameData["metadata"] = {};
     var metadata = gameData["metadata"];
+
+    // First, ensure that every object, room, and routine has a metadata entry
+    // keyed by ID (o.Name) and having fields:
+    //   name (o.Name)
+    //   type (OBJECT|ROOM|ROUTINE)
+    //   references (array to be populated later)
     for (let o of gameData.Objects) {
       if (metadata[o.Name]) { console.warn("WARN: Object name " + o.Name + " conflicts and overrides other entity:", metadata[o.Name]); }
-      metadata[o.Name] = {"name": o.Name, "type": o.IsRoom? "ROOM" : "OBJECT"};
+      metadata[o.Name] = {
+        "name": o.Name,
+        "type": o.IsRoom? "ROOM" : "OBJECT",
+        "references": []
+      };
     }
     for (let o of gameData.Routines) {
       if (metadata[o.Name]) { console.warn("WARN: Routine name " + o.Name + " conflicts and overrides other entity:", metadata[o.Name]); }
       metadata[o.Name] = {
         "name": o.Name,
         "type": "ROUTINE",
+        "references": [],
         "isActionForObjects": [],
         "isActionForRooms": [],
         "isPreactionForSyntaxes": [],
         "isActionForSyntaxes": []
       };
     }
-    // At this point, every object, room, and routine is guaranteed to have
-    // a metadata entry (keyed by o.Name) and fields name=o.Name and type=OBJECT|ROOM|ROUTINE.
+
+    // Here we annotate routines that are used as Object Actions,
+    // Room Actions, Syntax Pre-Action, Syntax Actions
+
     for (let o of gameData.Objects) {
       if (o.IsRoom && o.Properties["ACTION"]) {
         let actionFunctionName = o.Properties["ACTION"][0].A;
@@ -106,7 +119,6 @@ export class GameDataService {
         }
       }
     }
-    // Mark routines that are object action functions
     for (let o of gameData.Objects) {
       if (!o.IsRoom && o.Properties["ACTION"]) {
         let actionFunctionName = o.Properties["ACTION"][0].A;
@@ -116,7 +128,6 @@ export class GameDataService {
         }
       }
     }
-    // Mark routines that are syntax preaction functions
     for (let syntax of gameData.Syntaxes) {
       let actionFunctionName = syntax["Preaction"];
       if (actionFunctionName) {
@@ -125,7 +136,6 @@ export class GameDataService {
         ////console.log("meta:", meta);
       }
     }
-    // Mark routines that are syntax action functions
     for (let syntax of gameData.Syntaxes) {
       let actionFunctionName = syntax["Action"];
       if (actionFunctionName) {
@@ -133,6 +143,78 @@ export class GameDataService {
         meta["isActionForSyntaxes"].push(syntax);
       }
     }
+
+    // Now look in routines and find their references to objects, rooms, and other routines
+    // TODO: Finish this implementation
+    for (let routine of gameData.Routines) {
+      let hasProcessed = {}; // track which gvars we've already processed
+      let routineName = routine.Name;
+      // TODO: Remove the following condition
+      //////if (routineName == "GO") {
+        // routine.Body is an array of things
+        let gvars = this.getGlobalVarsRecursive(routine.Body);
+        // translate to set
+        let gvarSet = {};
+        for (let gvar of gvars) {
+          gvarSet[gvar] = true;
+        }
+        ////console.log("routine " + routineName + " contains atoms: " + JSON.stringify(Object.keys(gvarSet), null, 0));
+        for (let gvar in gvarSet) {
+          let objMeta = metadata[gvar];
+          if (objMeta && objMeta.references) {
+            objMeta.references.push(routineName);
+          }
+          hasProcessed[gvar] = true;
+        }
+      //////}
+    }
+  }
+
+  public getGlobalVarsRecursive(o: any) {
+    let gvars: any[] = [];
+    if (!o) {
+      ////console.log("AZ: null");
+      return gvars;
+    }
+    ////console.log("AZ: PROCESSING: ", o);
+    if (o.A != undefined) { // Atom
+      ////console.log("AZ: atom: " + o.A);
+      // let objMeta = metadata[o.A]; let objType = objMeta["type"] || "unknown";
+      gvars.push(o.A);
+      return gvars;
+    }
+    if (o.F != undefined) { // Form
+      ////console.log("AZ: form: " + o.F);
+      if (!o.F[0]) { // "Null" i.e. <>
+        ////console.log("AZ: Null <>");
+        return gvars;
+      }
+      let atom = o.F[0].A;
+      if (atom == "GVAL") { // Found a Global Var!
+        ////console.log("AZ: FOUND GVAL: " + o.F[1].A);
+        let gvalName = o.F[1].A;
+        gvars.push(gvalName);
+      } else if (atom != "LVAL") {
+        // o.F is always an array of things
+        ////console.log("AZ: recursively calling on o.F");
+        let childGvars = this.getGlobalVarsRecursive(o.F);
+        gvars = gvars.concat(childGvars);
+      }
+      ////console.log("AZ: returning gvars:", gvars);
+      return gvars;
+    }
+    if (Array.isArray(o)) {
+      // o is an Array
+      ////console.log("AZ: IS ARRAY");
+      for (let o2 of o) {
+        let childGvars = this.getGlobalVarsRecursive(o2);
+        gvars = gvars.concat(childGvars);
+      }
+      return gvars;
+    }
+    // o is Other
+    ////console.log("AZ: IS OTHER");
+    return gvars;
   }
 
   public getMetadata(objName: string) {

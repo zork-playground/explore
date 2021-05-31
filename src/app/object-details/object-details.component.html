@@ -120,10 +120,15 @@
                     </tbody>
                 </table>
             </ng-container>
-            <h2>Relationships</h2>
-            <p>Coming soon: Which routines refer to this object, etc.</p>
-            <table class="table table-hover table-striped table-borderless shadow-lg" style="border-radius:8px; width:auto;">
+            <h2>References</h2>
+            <table class="table table-striped table-hover mt-3" style="width:auto">
                 <tbody>
+                    <tr *ngFor="let atomName of gameData.metadata[o.Name].references">
+                        <td style="color:var(--primary-900)">
+                            <app-zil-atom-mini-card [gameId]="gameId" [gameData]="gameData" [atomName]="atomName">
+                            </app-zil-atom-mini-card>
+                        </td>
+                    </tr>
                 </tbody>
             </table>
         </ng-container>

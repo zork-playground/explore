@@ -23,6 +23,7 @@ import { RoomExitComponent } from './room-exit/room-exit.component';
 import { LinkableZilAtomComponent } from './linkable-zil-atom/linkable-zil-atom.component';
 import { SpinnerComponent } from './spinner/spinner.component';
 import { SearchResultsComponent } from './search-results/search-results.component';
+import { ZilAtomMiniCardComponent } from './zil-atom-mini-card/zil-atom-mini-card.component';
 
 const routes: Routes = [
   //{ path: 'home', component: HomeComponent },
@@ -61,7 +62,8 @@ const routes: Routes = [
     RoomExitComponent,
     LinkableZilAtomComponent,
     SpinnerComponent,
-    SearchResultsComponent
+    SearchResultsComponent,
+    ZilAtomMiniCardComponent
   ],
   imports: [
     BrowserModule,

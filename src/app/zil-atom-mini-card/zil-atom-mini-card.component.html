@@ -1,0 +1,14 @@
+<a class="text-reset text-decoration-none"
+    [style.color]="'var(--grey-800)'"
+    [routerLink]="['../..', getPathForType(atomType), atomName]">
+    <div class="me-2">
+        <b>{{atomName}}</b>
+        <span
+            class="ms-2 px-2 py-1"
+            [style.color]           = "typeColor"
+            [style.backgroundColor] = "typeBackgroundColor"
+            style="border-radius:16px; font-size:8pt; font-weight:bold;"
+        >{{atomType}}</span>
+    </div>
+    <div>{{desc}}</div>
+</a>
