@@ -212,32 +212,49 @@ export class GameDataService {
     return this.allGameDataCache[this.mostRecentSelectedGameId]["metadata"][objName];
   }
 
+  private propertyAsListString(o: any, propName: string): string {
+    if (o.Properties && Array.isArray(o.Properties[propName])) {
+      return o.Properties[propName].join(", ");
+    } else {
+      return "";
+    }
+  }
+
   public doSearch(searchText: string, gameData: any) {
     let searchResults = [];
     searchText = searchText.toLowerCase(); // all searches are case insensitive
     var metadata = gameData["metadata"];
     for (let o of gameData.Objects) {
-      let objMeta = metadata[o.Name];
+      let isMatch = false;
+      let otherProps = [];
       if (o.Name.toLowerCase().includes(searchText)) {
-        searchResults.push({"type": objMeta.type, "name": o.Name, "desc": o.Properties["DESC"]});
-      } else if (typeof(o.Properties["DESC"])=="string" && o.Properties["DESC"].toLowerCase().includes(searchText)) {
-        searchResults.push({"type": objMeta.type, "name": o.Name, "desc": o.Properties["DESC"]});
+        isMatch = true;
+      }
+      let desc = this.propertyAsListString(o, "DESC");
+      if (desc.toLowerCase().includes(searchText)) {
+        isMatch = true;
+      }
+      let otherPropNames = ["FDESC", "LDESC", "SYNONYM", "ADJECTIVE"];
+      for (let otherPropName of otherPropNames) {
+        let stringValue = this.propertyAsListString(o, otherPropName);
+        if (stringValue.toLowerCase().includes(searchText)) {
+          isMatch = true;
+          otherProps.push({"name": otherPropName, "stringValue": stringValue});
+        }
+      }
+      if (isMatch) {
+        searchResults.push({"name": o.Name, "otherProps": otherProps});
       }
     }
     for (let o of gameData.Routines) {
-      let objMeta = metadata[o.Name];
+      let isMatch = false;
+      let otherProps = [];
       if (o.Name.toLowerCase().includes(searchText)) {
-        let desc = "Routine";
-        if (objMeta.isActionForObjects.length > 0) {
-          desc = "Action for Object: " + objMeta.isActionForObjects.join(", ");
-        } else if (objMeta.isActionForRooms.length > 0) {
-          desc = "Action for Room: " + objMeta.isActionForRooms.join(", ");
-        } else if (objMeta.isPreactionForSyntaxes.length > 0) {
-          desc = "Pre-Action for Syntax";
-        } else if (objMeta.isActionForSyntaxes.length > 0) {
-          desc = "Action for Syntax";
-        }
-        searchResults.push({"type": objMeta.type, "name": o.Name, "desc": desc});
+        isMatch = true;
+      }
+      // in the future, we might search for text inside the routine
+      if (isMatch) {
+        searchResults.push({"name": o.Name, "otherProps": otherProps});
       }
     }
     // TODO: after syntax support is enhanced, add syntaxes/words to search

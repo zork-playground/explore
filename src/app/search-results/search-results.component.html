@@ -14,6 +14,11 @@
                         <td>
                             <app-zil-atom-mini-card [gameId]="gameId" [gameData]="gameData" [atomName]="sr.name">
                             </app-zil-atom-mini-card>
+                            <ng-container *ngIf="sr.otherProps && sr.otherProps.length != 0">
+                                <div *ngFor="let p of sr.otherProps">
+                                    <span style="color:var(--grey-600); font-size:smaller">{{p.name}}: {{p.stringValue}}</span>
+                                </div>
+                            </ng-container>
                         </td>
                     </tr>
                 </tbody>

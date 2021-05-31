@@ -44,16 +44,4 @@ export class SearchResultsComponent implements OnInit {
     this.isInitialized = true;
   }
 
-  public getPathForType(objType: any) {
-    if (objType == 'OBJECT') {
-      return "objects";
-    }
-    if (objType == 'ROOM') {
-      return "rooms";
-    }
-    if (objType == 'ROUTINE') {
-      return "routines";
-    }
-  }
-
 }
