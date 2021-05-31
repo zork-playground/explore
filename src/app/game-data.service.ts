@@ -145,76 +145,48 @@ export class GameDataService {
     }
 
     // Now look in routines and find their references to objects, rooms, and other routines
-    // TODO: Finish this implementation
     for (let routine of gameData.Routines) {
-      let hasProcessed = {}; // track which gvars we've already processed
       let routineName = routine.Name;
-      // TODO: Remove the following condition
-      //////if (routineName == "GO") {
-        // routine.Body is an array of things
-        let gvars = this.getGlobalVarsRecursive(routine.Body);
-        // translate to set
-        let gvarSet = {};
-        for (let gvar of gvars) {
-          gvarSet[gvar] = true;
+      // routine.Body is an array of things
+      let atomNames = this.getAtomNamesRecursive(routine.Body);
+      // translate to set to avoid duplicate references
+      let atomNameSet = {};
+      for (let atomName of atomNames) {
+        atomNameSet[atomName] = true;
+      }
+      for (let atomName in atomNameSet) {
+        let objMeta = metadata[atomName];
+        if (objMeta && objMeta.references) {
+          objMeta.references.push(routineName);
         }
-        ////console.log("routine " + routineName + " contains atoms: " + JSON.stringify(Object.keys(gvarSet), null, 0));
-        for (let gvar in gvarSet) {
-          let objMeta = metadata[gvar];
-          if (objMeta && objMeta.references) {
-            objMeta.references.push(routineName);
-          }
-          hasProcessed[gvar] = true;
-        }
-      //////}
+      }
     }
   }
 
-  public getGlobalVarsRecursive(o: any) {
-    let gvars: any[] = [];
-    if (!o) {
-      ////console.log("AZ: null");
-      return gvars;
-    }
-    ////console.log("AZ: PROCESSING: ", o);
-    if (o.A != undefined) { // Atom
-      ////console.log("AZ: atom: " + o.A);
-      // let objMeta = metadata[o.A]; let objType = objMeta["type"] || "unknown";
-      gvars.push(o.A);
-      return gvars;
-    }
-    if (o.F != undefined) { // Form
-      ////console.log("AZ: form: " + o.F);
-      if (!o.F[0]) { // "Null" i.e. <>
-        ////console.log("AZ: Null <>");
-        return gvars;
+  public getAtomNamesRecursive(o: any) {
+    let atomNames: any[] = [];
+    if (o) {
+      if (o.A != undefined) { // Atom
+        atomNames.push(o.A);
+      } else if (o.F != undefined) { // Form
+        if (o.F[0]) { // make sure it's not "Null" i.e. <>
+          // o.F is an array of things
+          let childAtomNames = this.getAtomNamesRecursive(o.F);
+          atomNames = atomNames.concat(childAtomNames);
+        }
+      } else if (Array.isArray(o)) {
+        // o is an Array
+        for (let child of o) {
+          let childAtomNames = this.getAtomNamesRecursive(child);
+          atomNames = atomNames.concat(childAtomNames);
+        }
+      } else if (typeof o == 'string' || typeof o == 'number' || typeof o == 'boolean') {
+        // ignore
+      } else {
+        console.log("WARN: don't know how to check references for: " + JSON.stringify(o, null, 2));
       }
-      let atom = o.F[0].A;
-      if (atom == "GVAL") { // Found a Global Var!
-        ////console.log("AZ: FOUND GVAL: " + o.F[1].A);
-        let gvalName = o.F[1].A;
-        gvars.push(gvalName);
-      } else if (atom != "LVAL") {
-        // o.F is always an array of things
-        ////console.log("AZ: recursively calling on o.F");
-        let childGvars = this.getGlobalVarsRecursive(o.F);
-        gvars = gvars.concat(childGvars);
-      }
-      ////console.log("AZ: returning gvars:", gvars);
-      return gvars;
     }
-    if (Array.isArray(o)) {
-      // o is an Array
-      ////console.log("AZ: IS ARRAY");
-      for (let o2 of o) {
-        let childGvars = this.getGlobalVarsRecursive(o2);
-        gvars = gvars.concat(childGvars);
-      }
-      return gvars;
-    }
-    // o is Other
-    ////console.log("AZ: IS OTHER");
-    return gvars;
+    return atomNames;
   }
 
   public getMetadata(objName: string) {
