@@ -1,0 +1,17 @@
+<div class="bg-grey-600" style="padding:16px;">
+    <div class="bg-grey-100" style="padding:16px; border-radius:16px;">
+        <!--
+        <h1 class="color-grey-900 pb-3">Map</h1>
+        <input [(ngModel)]="manyBodyForceStrength" type="text">
+        <button (click)="applyChanges()">Apply</button>
+        <div>Room repel strength is {{manyBodyForceStrength}}</div>
+        -->
+        <ng-container *ngIf="!isInitialized">
+            <app-spinner></app-spinner>
+        </ng-container>
+        <ng-container *ngIf="isInitialized">
+            <svg style="position:relative; width:2000px; height:2000px; background-color:var(--green-600)" class="map-container" viewBox="0,0,2000,2000">
+            </svg>
+        </ng-container>
+    </div>
+</div>

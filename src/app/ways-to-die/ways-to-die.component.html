@@ -1,0 +1,24 @@
+<div class="bg-grey-600" style="padding:16px;">
+
+    <div class="bg-grey-100" style="padding:16px; border-radius:16px;">
+        <h1 class="color-grey-900 pb-3">Ways to Die</h1>
+
+        <ng-container *ngIf="!isInitialized">
+            <app-spinner></app-spinner>
+        </ng-container>
+    
+        <ng-container *ngIf="isInitialized">
+            <ng-container *ngFor="let w of waysToDie">
+                <h2>{{w.title}}</h2>
+                <div *ngIf="w.room" class="game-text">{{w.roomMeta.desc}}</div>
+                <div *ngIf="w.syntaxDesc" class="game-text">&gt; <i>{{w.syntaxDesc}}</i></div>
+                <div><i>{{w.routine.Name}}</i></div>
+                <!--
+                <div style="color:var(--grey-500)">{{stringify(w.routine, null, 2)}}</div>
+                <div style="color:var(--grey-500)">{{stringify(w.routineMeta, null, 2)}}</div>
+                -->
+            </ng-container>
+        </ng-container>
+    </div>
+
+</div>

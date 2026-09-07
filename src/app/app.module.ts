@@ -24,11 +24,15 @@ import { LinkableZilAtomComponent } from './linkable-zil-atom/linkable-zil-atom.
 import { SpinnerComponent } from './spinner/spinner.component';
 import { SearchResultsComponent } from './search-results/search-results.component';
 import { ZilAtomMiniCardComponent } from './zil-atom-mini-card/zil-atom-mini-card.component';
+import { MapGeneratorComponent } from './map-generator/map-generator.component';
+import { WaysToDieComponent } from './ways-to-die/ways-to-die.component';
 
 const routes: Routes = [
   //{ path: 'home', component: HomeComponent },
   { path: 'games', component: AllGamesComponent },
   { path: 'games/:gameId', component: GameDetailsComponent },
+  { path: 'games/:gameId/map-generator', component: MapGeneratorComponent },
+  { path: 'games/:gameId/ways-to-die', component: WaysToDieComponent },
   { path: 'games/:gameId/search/:text', component: SearchResultsComponent },
   { path: 'games/:gameId/objects', component: AllObjectsComponent },
   { path: 'games/:gameId/objects/:id', component: ObjectDetailsComponent },
@@ -63,7 +67,9 @@ const routes: Routes = [
     LinkableZilAtomComponent,
     SpinnerComponent,
     SearchResultsComponent,
-    ZilAtomMiniCardComponent
+    ZilAtomMiniCardComponent,
+    MapGeneratorComponent,
+    WaysToDieComponent
   ],
   imports: [
     BrowserModule,
